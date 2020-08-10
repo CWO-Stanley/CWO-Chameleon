@@ -42,27 +42,27 @@ class Config {
          */
         $this->_errorMode = "prd";
         $this->_rootDirectory = "";
-        $this->_fullUrl = "siteurl"; //zonder / achter de link
-		$this->_logo = "siteurl/logo"; //zonder / achter de link
+        $this->_fullUrl = "https://chameleon.chattersworld.nl"; //zonder / achter de link
+		$this->_logo = "https://chameleon.chattersworld.nl/dist/img/c4all-horus.png"; //zonder / achter de link
         /**
          * MySQL gegevens
          */
-        $this->_mysqlHost = "chameleon_db_host";
-        $this->_mysqlUser = "chameleon_db_user";
-        $this->_mysqlPass = "chameleon_db_pass";
-        $this->_mysqlDbName = "chameleon";
+        $this->_mysqlHost = "127.0.0.1";
+        $this->_mysqlUser = "chatters_chameleon";
+        $this->_mysqlPass = "Q7srAfsW";
+        $this->_mysqlDbName = "chatters_chameleon";
         $this->_mysqlPrefix = "chameleon_";
 
-        $this->_mysqlHostDev = "chameleon_db_dev_host";
-        $this->_mysqlUserDev = "chameleon_db_dev_user";
-        $this->_mysqlPassDev = "chameleon_db_dev_pass";
-        $this->_mysqlDbNameDev = "chameleon";
+        $this->_mysqlHostDev = "127.0.0.1";
+        $this->_mysqlUserDev = "chatters_chameleon";
+        $this->_mysqlPassDev = "Q7srAfsW";
+        $this->_mysqlDbNameDev = "chatters_chameleon";
         $this->_mysqlPrefixDev = "chameleon_";
 
-        $this->_mysqlAnopeHost = "anope_db_host";
-        $this->_mysqlAnopeUser = "anope_db_user";
-        $this->_mysqlAnopePass = "anope_db_pass";
-        $this->_mysqlAnopeDbName = "Anope_DB";
+        $this->_mysqlAnopeHost = "127.0.0.1";
+        $this->_mysqlAnopeUser = "da_admin";
+        $this->_mysqlAnopePass = "GytvVp5Z";
+        $this->_mysqlAnopeDbName = "anope";
     }
 
     /**
