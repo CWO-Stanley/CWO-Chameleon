@@ -227,8 +227,7 @@ position: absolute;
 	background-size: 100% 100%; }
 	
 	 
-}
-.kiwi-statebrowser-channel[data-name="#{/literal}{$metadata['name']}{literal}"]::before {
+.kiwi-statebrowser-channel[data-name="#{/literal}{$metadata['name']|lower}{literal}"]::before {
     content: "\f075";
     font-family: fontawesome;
     margin-right: 5px;
