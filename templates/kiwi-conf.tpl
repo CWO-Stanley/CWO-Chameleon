@@ -8,6 +8,7 @@ window.kiwiConfig = function kiwiConfig() {
 		"windowTitle": "..::Chattersworld - #{/literal}{$metadata['name']}{literal}::.. The web IRC client",
 		"kiwiServer": "https://gateway.chattersworld.nl:1085/webirc/kiwiirc/",
 		"theme": "Osprey",
+		"disconnectOnSaslFail": false,
 		"themes": [
 				{ "name": "Default", "url": "static/themes/default" },
 				{ "name": "Dark", "url": "static/themes/dark" },

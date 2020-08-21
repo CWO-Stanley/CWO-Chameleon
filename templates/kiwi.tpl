@@ -222,9 +222,9 @@ position: absolute;
                background-image: linear-gradient(rgba(255,255,255, .50), rgba(255,255,255, .50)), url({/literal}cwobg.jpg{literal});background-size: 100% 100%;{/literal}{/if}{literal}	
 			   }
 			   {/literal}{else}{literal}
-    background-image: linear-gradient(rgba(255,255,255, .50), rgba(255,255,255, .50)), url({/literal}{$metadata['bgurl']}{literal}); 
+    background-image: linear-gradient(rgba(255,255,255, .50), rgba(255,255,255, .50)), url({/literal}{$metadata['bgurl']}{literal});background-size: 100% 100%; } 
 	{/literal}{/if}{literal}
-	background-size: 100% 100%; }
+	
 	
 	 
 .kiwi-statebrowser-channel[data-name="#{/literal}{$metadata['name']|lower}{literal}"]::before {
