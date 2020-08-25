@@ -40,6 +40,7 @@ if (isset($_GET['id'])) {
 
         $smarty->assign('metadata',$metadata);
 		$smarty->display('kiwi-conf.tpl');
+		$smarty->display('kiwi-style.tpl');
         $smarty->display('kiwi.tpl');
 
         if ($metadata['radio'] == "true") {
