@@ -237,7 +237,52 @@ position: absolute;
     font-family: fontawesome;
     margin-right: 5px;
 }
+:root {
+    /* Primary Variables */
+    --brand-primary: {/literal}{if $metadata['style'] != "transparent"}{$metadata['bgcolor']}{else}#001a33{/if}{literal};
+    --brand-primary-hover: #990033;
+    --brand-midtone: #f1f1f1;
+    --brand-darktone: #969696;
+    --brand-default-bg: #fff;
+    --brand-default-fg: #22231f;
 
+    /* Warning colors */
+    --brand-notice: #f6c358;
+    --brand-warning: #fcb46e;
+    --brand-error: #bf5155;
+
+    /* Connection Indicator top */
+    --comp-workspace-before-bg: var(--brand-primary);
+    --comp-bg-kiwi-workspace--disconnected-after-bg: var(--brand-error);
+
+    /* Container Header */
+    --comp-header-bg: var(--brand-default-bg);
+    --comp-header-name-fg: var(--brand-default-fg);
+    --comp-header-option-active-fg: var(--brand-default-bg);
+    --comp-header-option-active-bg: var(--brand-primary);
+
+    /* StateBrowser */
+    --comp-statebrowser-fg: #fff;
+    --comp-statebrowser-bg: {/literal}{if $metadata['style'] != "transparent"}{$metadata['bgcolor']}{else}#001a33{/if}{literal};
+    --comp-statebrowser-bg-networkname: #687282;
+    --comp-statebrowser-channel-active-bg: #ffffff0d;
+    --comp-statebrowser-channel-active-fg: #fff;
+    --comp-usermenu-open-bg: #161d25;
+    --comp-statebrowser-network-border: #656565;
+
+
+    /* Sidebars ( Right Side ) */
+    --comp-sidebar-bg: #c0c0c0;
+    --comp-sidebar-fg: #22231f;
+    --comp-aboutbuffer-bg: rgba(0, 0, 0, 0.03);
+    --comp-aboutbuffer-header-bg: var(--brand-primary);
+
+    /* Misc */
+    --brand-link-normal: var(--brand-primary);
+    --brand-link--hover: var(--brand-primary-hover);
+    --brand-shadow: rgba(0, 0, 0, 0.1);
+    --comp-border: #b2b2b2;
+}
 </style>
 {/literal}
 </head><body>
