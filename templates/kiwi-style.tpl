@@ -1,33 +1,39 @@
 <style>/* target specific styles */
-    html { height: 100%; overflow: hidden; }
-	body { height:100%;
-               margin:0;
-               padding:0;
-			   {if $metadata['style'] != "transparent"}
-               background-color:{$metadata['bgcolor']};	}
-			   {else}
-			   {if $metadata['bgurl'] != ""}
-			   background-image:url("{$metadata['bgurl']}");
-			   {else}
-			   background-image:url("cwobg.jpg");
-			   {/if}
-			   background-repeat: no-repeat;
-			      background-size: 100% 100%; }
-			   {/if}
-			   body {
+html { 
+	height: 100%; 
+	overflow: hidden; 
+}
+body {
+	height:100%;
+    margin:0;
+    padding:0;
+{if $metadata['style'] != "transparent"}
+    background-color:{$metadata['bgcolor']};	
+}
+{else}
+{if $metadata['bgurl'] != ""}
+	background-image:url("{$metadata['bgurl']}");
+{else}
+	background-image:url("cwobg.jpg");
+{/if}
+	background-repeat: no-repeat;
+	background-size: 100% 100%; 
+}
+	{/if}
+body {
     font-family: "Lato", sans-serif;
 }
 			   {literal}
-	#BbfWjPzRoMSm {
-display: none;
-margin-bottom: 0;
-height: 60px;
-padding: 20px 10px;
-background: #D30000;
-font-weight: bold;
-text-align: center;
-color: #fff;
-border-radius: 0px;
+#BbfWjPzRoMSm {
+	display: none;
+	margin-bottom: 0;
+	height: 60px;
+	padding: 20px 10px;
+	background: #D30000;
+	font-weight: bold;
+	text-align: center;
+	color: #fff;
+	border-radius: 0px;
 }
 .sidenav {
     height: 100%;
@@ -40,7 +46,7 @@ border-radius: 0px;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
-overflow: hidden;
+	overflow: hidden;
 }
 .sidenav span {
     padding: 8px 8px 8px 32px;
@@ -75,30 +81,30 @@ overflow: hidden;
     margin-left: 50px;
 }
 .white-popup {
-  position: relative;
-  background: #000000;
-  padding: 0px;
-  width: auto;
-  max-width: 810px;
-  margin: 0px auto;
+	position: relative;
+	background: #000000;
+	padding: 0px;
+	width: auto;
+	max-width: 810px;
+	margin: 0px auto;
 }
 
 .right { 
 {if $metadata['radio_player'] != "hero"}
-float:right; 
-right: 5px;
+	float:right; 
+	right: 5px;
 {else}
-float:right;
-right: 356px;
+	float:right;
+	right: 356px;
 {/if}
-display: block; 
-position: absolute;
-bottom: 2px;
+	display: block; 
+	position: absolute;
+	bottom: 2px;
 }
 .left { 
-float:left; 
-display: block; 
-position: absolute;
+	float:left; 
+	display: block; 
+	position: absolute;
     left: 2px;
     bottom: 2px;
 }
@@ -123,39 +129,39 @@ position: absolute;
 {/literal}
 </style>
 {literal}
-<style class=embedly-css>.card .hdr {
+<style class=embedly-css>
+.card .hdr {
      display:none;
 }
-		   
 .kiwi-nicklist-user--mode-q .kiwi-nicklist-user-prefix {
 	content: url(lirc-resources/icons/{/literal}{$metadata['icons']}{literal}/owner.png)
 }
- .kiwi-nicklist-user--mode-a .kiwi-nicklist-user-prefix {
+.kiwi-nicklist-user--mode-a .kiwi-nicklist-user-prefix {
 	content: url(lirc-resources/icons/{/literal}{$metadata['icons']}{literal}/admin.png)
 }
- .kiwi-nicklist-user--mode-o .kiwi-nicklist-user-prefix {
+.kiwi-nicklist-user--mode-o .kiwi-nicklist-user-prefix {
 	content: url(lirc-resources/icons/{/literal}{$metadata['icons']}{literal}/operator.png)
 }
- .kiwi-nicklist-user--mode-h .kiwi-nicklist-user-prefix {
+.kiwi-nicklist-user--mode-h .kiwi-nicklist-user-prefix {
 	content: url(lirc-resources/icons/{/literal}{$metadata['icons']}{literal}/halfop.png)
 }
- .kiwi-nicklist-user--mode-v .kiwi-nicklist-user-prefix {
+.kiwi-nicklist-user--mode-v .kiwi-nicklist-user-prefix {
 	content: url(lirc-resources/icons/{/literal}{$metadata['icons']}{literal}/voice.png)
 }
 {/literal}{if $metadata['prefixicons'] == "true"}{literal}
 .kiwi-messagelist-nick--mode-q .kiwi-messagelist-nick--prefix {
 	content: url(lirc-resources/icons/{/literal}{$metadata['icons']}{literal}/owner.png)
 }
- .kiwi-messagelist-nick--mode-a .kiwi-messagelist-nick--prefix {
+.kiwi-messagelist-nick--mode-a .kiwi-messagelist-nick--prefix {
 	content: url(lirc-resources/icons/{/literal}{$metadata['icons']}{literal}/admin.png)
 }
- .kiwi-messagelist-nick--mode-o .kiwi-messagelist-nick--prefix {
+.kiwi-messagelist-nick--mode-o .kiwi-messagelist-nick--prefix {
 	content: url(lirc-resources/icons/{/literal}{$metadata['icons']}{literal}/operator.png)
 }
- .kiwi-messagelist-nick--mode-h .kiwi-messagelist-nick--prefix {
+.kiwi-messagelist-nick--mode-h .kiwi-messagelist-nick--prefix {
 	content: url(lirc-resources/icons/{/literal}{$metadata['icons']}{literal}/halfop.png)
 }
- .kiwi-messagelist-nick--mode-v .kiwi-messagelist-nick--prefix {
+.kiwi-messagelist-nick--mode-v .kiwi-messagelist-nick--prefix {
 	content: url(lirc-resources/icons/{/literal}{$metadata['icons']}{literal}/voice.png)
 }
 {/literal}{/if}{literal}
@@ -169,9 +175,6 @@ position: absolute;
     background-image: linear-gradient(rgba(255,255,255, .50), rgba(255,255,255, .50)), url({/literal}{$metadata['bgurl']}{literal});background-size: 100% 100%; 
 } 
 	{/literal}{/if}{literal}
-	
-	
-	 
 .kiwi-statebrowser-channel[data-name="#{/literal}{$metadata['name']|lower}{literal}"]::before {
     content: "\f075";
     font-family: fontawesome;

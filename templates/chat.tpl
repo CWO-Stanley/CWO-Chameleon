@@ -136,6 +136,7 @@ position: absolute;
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
+#my_centered_buttons { display: flex; justify-content: center;}
 .lunaresponsive {/*Large Screen Height*/
 		height:80px;
 	}
@@ -290,7 +291,19 @@ $( document ).ready( function() {
 <br />
 
 <br>
-
+<center><!-- AddToAny BEGIN -->
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style" id="my_centered_buttons" style="bottom:0px;">
+<a class="a2a_button_facebook a2a_counter"></a>
+<a class="a2a_button_twitter a2a_counter"></a>
+<a class="a2a_button_whatsapp a2a_counter"></a>
+<a class="a2a_button_telegram a2a_counter"></a>
+</div>
+<script>
+var a2a_config = a2a_config || {};
+a2a_config.locale = "nl";
+</script>
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END --></center>
 </div>
 <div class="right"><span style="font-size:30px;cursor:pointer;color:#FFF;" onclick="openNav()">&#9776;</span></div>
  <div id="lightIRC" style="height:100%; text-align:center;">
@@ -306,7 +319,7 @@ $( document ).ready( function() {
                     <a href="#" class="btn-close" aria-hidden="true">×</a>
                 </div>
                 <div class="modal-body">
-                    <p>Adobe Flashplayer stopt de ondersteuning in december 2020! Example houd de flashchat online zolang de ondersteuning blijft.</p>
+                    <p><center><img src="https://scr.gezelligkletsen.nl/b5d7ba93-1cce-4733-9e6a-559bb7d24d0d.png" /> <br /><br />Adobe Flashplayer stopt de ondersteuning in december 2020! <br /><br />Chattersworld houd de deze flashchat online zolang de ondersteuning blijft.<br /><br />Inmiddels heeft Chattersworld reeds een geweldige HTML5 chat.<br /><br /><br /><br />Druk op OK! om naar deze flashchat te gaan!</center></p>
                 </div>
                 <div class="modal-footer">
 				<a href="{$fullurl}/html5.php?id={$smarty.get.id}" class="btn">Ga naar HTML5 chat</a>
