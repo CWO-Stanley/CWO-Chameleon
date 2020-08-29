@@ -204,15 +204,15 @@ body {
     --comp-bg-kiwi-workspace--disconnected-after-bg: var(--brand-error);
 
     /* Container Header */
-    --comp-header-bg: {/literal}{if $metadata['style'] == "black"}#000{else}var(--brand-default-bg){/if}{literal};
+    --comp-header-bg: {/literal}{if $metadata['style'] == "black"}#737373{else}var(--brand-default-bg){/if}{literal};
     --comp-header-name-fg: {/literal}{if $metadata['style'] == "black"}#FFF{else}var(--brand-default-fg){/if}{literal};
-    --comp-header-option-active-fg: {/literal}{if $metadata['style'] == "black"}#FFF{else}var(--brand-default-fg){/if}{literal};
-    --comp-header-option-active-bg: {/literal}{if $metadata['style'] == "black"}#000{else}var(--brand-primary){/if}{literal};
+    --comp-header-option-active-fg: {/literal}{if $metadata['style'] == "black"}#FFF{else}var(--brand-default-bg){/if}{literal};
+    --comp-header-option-active-bg: {/literal}{if $metadata['style'] == "black"}#000{else}var(--brand-default-bg){/if}{literal};
 
     /* StateBrowser */
     --comp-statebrowser-fg: #fff;
     --comp-statebrowser-bg: {/literal}{if $metadata['style'] != "transparent"}{$metadata['bgcolor']}{else}#001a33{/if}{literal};
-    --comp-statebrowser-bg-networkname: #687282;
+    --comp-statebrowser-bg-networkname: #006699;
     --comp-statebrowser-channel-active-bg: #ffffff0d;
     --comp-statebrowser-channel-active-fg: #fff;
     --comp-usermenu-open-bg: #161d25;
