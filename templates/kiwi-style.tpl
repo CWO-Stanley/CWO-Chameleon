@@ -102,7 +102,7 @@ position: absolute;
     left: 2px;
     bottom: 2px;
 }
-
+#my_centered_buttons { display: flex; justify-content: center;}
 @media screen and (max-height: 450px) {literal}{
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
@@ -162,7 +162,7 @@ position: absolute;
 .kiwi-messagelist {
 {/literal}{if $metadata['style'] != "transparent"}{literal}{/literal}
 {if $metadata['bgcolor'] == '#000000'}{literal}
-	background-color:rgba(0,0,0, .50);{/literal}{else}{literal}
+	background-color:rgba(0,0,0);{/literal}{else}{literal}
     background-image: linear-gradient(rgba(255,255,255, .50), rgba(255,255,255, .50)), url({/literal}cwobg.jpg{literal});background-size: 100% 100%;{/literal}{/if}{literal}	
 }
 {/literal}{else}{literal}
@@ -188,8 +188,8 @@ position: absolute;
     --brand-primary-hover: #990033;
     --brand-midtone: #f1f1f1;
     --brand-darktone: #969696;
-    --brand-default-bg: #fff;
-    --brand-default-fg: #22231f;
+    --brand-default-bg: {/literal}{if $metadata['style'] == "black"}#000{else}#fff{/if}{literal};
+    --brand-default-fg: {/literal}{if $metadata['style'] == "black"}#FFF{else}#22231f{/if}{literal};
 
     /* Warning colors */
     --brand-notice: #f6c358;
@@ -201,10 +201,10 @@ position: absolute;
     --comp-bg-kiwi-workspace--disconnected-after-bg: var(--brand-error);
 
     /* Container Header */
-    --comp-header-bg: var(--brand-default-bg);
-    --comp-header-name-fg: var(--brand-default-fg);
-    --comp-header-option-active-fg: var(--brand-default-bg);
-    --comp-header-option-active-bg: var(--brand-primary);
+    --comp-header-bg: {/literal}{if $metadata['style'] == "black"}#000{else}var(--brand-default-bg){/if}{literal};
+    --comp-header-name-fg: {/literal}{if $metadata['style'] == "black"}#FFF{else}var(--brand-default-fg){/if}{literal};
+    --comp-header-option-active-fg: {/literal}{if $metadata['style'] == "black"}#FFF{else}var(--brand-default-bg){/if}{literal};
+    --comp-header-option-active-bg: {/literal}{if $metadata['style'] == "black"}#000{else}var(--brand-default-bg){/if}{literal};
 
     /* StateBrowser */
     --comp-statebrowser-fg: #fff;
@@ -223,10 +223,14 @@ position: absolute;
     --comp-aboutbuffer-header-bg: var(--brand-primary);
 
     /* Misc */
-    --brand-link-normal: var(--brand-primary);
+    --brand-link-normal: {/literal}{if $metadata['style'] == "black"}#fff{else}var(--brand-primary){/if}{literal};
     --brand-link--hover: var(--brand-primary-hover);
     --brand-shadow: rgba(0, 0, 0, 0.1);
     --comp-border: #b2b2b2;
+}
+.kiwi-welcome-simple-form .u-submit {
+    background-color: {/literal}{if $metadata['style'] == "black"}#FFF{else}var(--brand-primary){/if}{literal};
+    color: {/literal}{if $metadata['style'] == "black"}#000{else}var(--brand-default-bg){/if}{literal};
 }
 </style>
 {/literal}

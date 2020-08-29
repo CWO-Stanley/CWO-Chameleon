@@ -10,7 +10,7 @@ window.kiwiConfig = function kiwiConfig() {
 		"theme": "CWO",
 		"disconnectOnSaslFail": false,
 		"themes": [
-				{ "name": "CWO", "url": "static/themes/cwo-chameleon-kiwi" },
+				{ "name": "CWO", "url": "static/themes/cwo-chameleon-kiwiirc3" },
 				{ "name": "Default", "url": "static/themes/default" },
 				{ "name": "Dark", "url": "static/themes/dark" },
 				{ "name": "Coffee", "url": "static/themes/coffee" },
