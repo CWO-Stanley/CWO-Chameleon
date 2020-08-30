@@ -207,7 +207,7 @@ body {
     --comp-header-bg: {/literal}{if $metadata['style'] == "black"}#737373{else}var(--brand-default-bg){/if}{literal};
     --comp-header-name-fg: {/literal}{if $metadata['style'] == "black"}#FFF{else}var(--brand-default-fg){/if}{literal};
     --comp-header-option-active-fg: {/literal}{if $metadata['style'] == "black"}#FFF{else}var(--brand-default-bg){/if}{literal};
-    --comp-header-option-active-bg: {/literal}{if $metadata['style'] == "black"}#000{else}var(--brand-default-bg){/if}{literal};
+    --comp-header-option-active-bg: {/literal}{if $metadata['style'] == "black"}#000{else}var(--brand-primary){/if}{literal};
 
     /* StateBrowser */
     --comp-statebrowser-fg: #fff;
