@@ -62,6 +62,7 @@ window.kiwiConfig = function kiwiConfig() {
 				{"name": "plugin-radio","url": "static/plugins/plugin-radio.html"},
 				{/literal}{/if}{literal}
 				{"name": "nickserv", "url": "static/plugins/plugin-nickserv.js"},
+				{ "name": "font", "url": "static/plugins/font-size.html" },
 				{"name": "gravatar", "url": "static/plugins/plugin-gravatar.js"},
 				{"name": "giphy", "url": "static/plugins/plugin-giphy.html"},
 				{"name": "imgurl", "url": "static/plugins/plugin-imgur.html"},
@@ -130,9 +131,9 @@ window.kiwiConfig = function kiwiConfig() {
 					"VERTICAL_FILMSTRIP": true,
 					"LANG_DETECTION": true,
 					"TOOLBAR_BUTTONS": [
-								"microphone", "camera", "fullscreen", "fodeviceselection", "hangup",
+								"camera", "fullscreen", "fodeviceselection", "hangup",
 								"settings", "videoquality", "filmstrip",
-								"stats", "shortcuts"
+								"stats", "shortcuts", "sharedvideo"
 					]
 				},
 				"configOverwrite": {
