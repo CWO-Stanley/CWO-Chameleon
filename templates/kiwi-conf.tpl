@@ -10,17 +10,8 @@ window.kiwiConfig = function kiwiConfig() {
 		"theme": "CWO",
 		"disconnectOnSaslFail": false,
 		"themes": [
-				{ "name": "CWO", "url": "static/themes/cwo-chameleon-kiwiirc3" },
-				{ "name": "Default", "url": "static/themes/default" },
-				{ "name": "Dark", "url": "static/themes/dark" },
-				{ "name": "Coffee", "url": "static/themes/coffee" },
-				{ "name": "GrayFox", "url": "static/themes/grayfox" },
-				{ "name": "Nightswatch", "url": "static/themes/nightswatch" },
-				{ "name": "Osprey", "url": "static/themes/osprey" },
-				{ "name": "Radioactive", "url": "static/themes/radioactive" },
-				{ "name": "Sky", "url": "static/themes/sky" },
-				{ "name": "Elite", "url": "static/themes/elite" }
-			],
+				{ "name": "CWO", "url": "static/themes/cwo-chameleon-kiwiirc3" }
+				],
 		"showColorPicker": true,
 		"startupOptions": { 
 				"server": "irc.chattersworld.nl", 
