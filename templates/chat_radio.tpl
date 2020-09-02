@@ -131,7 +131,7 @@
 
 {elseif $metadata['radio_player'] == "luna"}
 		<script src="radiolibs/luna/jquery-3.2.1.min.js"></script>
-		<script type="text/javascript" src="radiolibs/luna/lunaradio.min.js?v=5.20.07.02"></script>
+		<script type="text/javascript" src="radiolibs/luna/lunaradio.min.js?v=5.20.08.31"></script>
 		
 		<center>
 		<div id="lunaradio" style='width:50%;
@@ -185,6 +185,7 @@
 				volume: "50",
 				debug: "false",
 				usestreamcorsproxy: "false", 
+				autoplay: "true",
 				corsproxy: "{if $metadata['radio_type'] == "shoutcast"}{else}https://api.allorigins.win/raw?url={/if}",
 			});
 		</script>
@@ -286,7 +287,7 @@
         </center>
 	{elseif $metadata['radio_player'] == "internal"}
         <script src="radiolibs/luna/jquery-3.2.1.min.js"></script>
-        <script type="text/javascript" src="radiolibs/luna/lunaradio.min.js?v=5.20.07.02"></script>
+        <script type="text/javascript" src="radiolibs/luna/lunaradio.min.js?v=5.20.08.31"></script>
 
 		<center>
 		<div id="lunaradio" style='width:50%;
@@ -339,7 +340,8 @@
 			metadatainterval: "20000",
 			volume: "50",
 			debug: "false",
-			usestreamcorsproxy: "false", 
+			usestreamcorsproxy: "false",
+			autoplay: "true",
 			corsproxy: "{if $metadata['radio_type'] == "shoutcast"}{else}https://api.allorigins.win/raw?url={/if}",
 		});
 		</script>
