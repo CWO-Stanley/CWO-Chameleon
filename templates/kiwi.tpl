@@ -49,10 +49,10 @@
 <link rel="canonical" href="{$fullurl}/chat.php?id={$smarty.get.id}" />
 <link rel="stylesheet" href="dist/magnific-popup.css">
 <!-- Kiwi script reloaders -->
-<link href="static/css/app.d11ee53b.css" rel="preload" as="style">
-<link href="static/js/app.71bcf681.js" rel="preload" as="script">
-<link href="static/js/vendor.0d970857.js" rel="preload" as="script">
-<link href="static/css/app.d11ee53b.css" rel="stylesheet">
+<link href="static/css/app.4c15db6d.css" rel="preload" as="style">
+<link href="static/js/app.e10cf5f5.js" rel="preload" as="script">
+<link href="static/js/vendor.23cd2b70.js" rel="preload" as="script">
+<link href="static/css/app.4c15db6d.css" rel="stylesheet"></head>
 <!-- END -->
 <meta charset=utf-8><meta name=viewport content="user-scalable=no,width=device-width,initial-scale=1,maximum-scale=1">
 <title>..::Chattersworld Chameleon::.. #{$metadata['name']}</title>
@@ -103,8 +103,8 @@
 	</noscript>
 	<div id="app">
 	</div>
-	<script type="text/javascript" src="static/js/vendor.0d970857.js"></script>
-	<script type="text/javascript" src="static/js/app.71bcf681.js"></script>
+	<script type="text/javascript" src="static/js/vendor.23cd2b70.js"></script>
+	<script type="text/javascript" src="static/js/app.e10cf5f5.js"></script>
 		<script type="text/javascript">
 			function openNav() {
 				document.getElementById("mySidenav").style.width = "33%";

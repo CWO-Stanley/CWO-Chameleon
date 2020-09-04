@@ -18,7 +18,7 @@ window.kiwiConfig = function kiwiConfig() {
 				"infoBackground": "{/literal}{if $metadata['bgurl'] != ''}{$metadata['bgurl']}{else}cwobg.jpg{/if}{literal}", 
 				"infoContent": "<a class=\"netlogo\" href=\"https://chameleon.chattersworld.nl\"><span></span><img src=\"https://atsiofrjlo.cloudimg.io/v7/https://chattersworld.nl/wp-content/uploads/2018/10/cropped-c4all.png\"></a><div><a href=\"https://chameleon.chattersworld.nl/register.php\" target=\"_blank\" class=\"u-cpanel\"><i class=\"fa fa-lock\"></i> Registreer</a><a href=\"https://chameleon.chattersworld.nl/chat.php?id=1\" target=\"_blank\" class=\"u-cpanel\"><i class=\"fa fa-life-ring\"></i> Helpdesk</a><a href=\"https://wiki.chattersworld.nl/\" target=\"_blank\" class=\"u-cpanel\"><i class=\"fa fa-life-ring\"></i> CWO Wiki</a></div>",
 				"greetingText": "<div style='margin:0px 60px 0px 0px'><center><i class='fa fa-sign-in' style='margin-right:5px !important;'></i> Login op Chattersworld #{/literal}{$metadata['name']}{literal}!</center></div>",
-				"state_key": "CWO-Chameleon-31",
+				"state_key": "CWO-Chameleon-40",
 				"buttonText": "<center><i class='fa fa-sign-in' style='margin-right:5px !important;'></i> Chatten</center>",
 				"gecos": "..::Chattersworld Chameleon HTML5 Webchat::..",
 				"port": 6697, 
