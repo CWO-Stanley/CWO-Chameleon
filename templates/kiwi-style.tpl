@@ -164,6 +164,21 @@ body {
 .kiwi-messagelist-nick--mode-v .kiwi-messagelist-nick--prefix {
 	content: url(lirc-resources/icons/{/literal}{$metadata['icons']}{literal}/voice.png)
 }
+.kiwi-messagelist-nick--mode-q .kiwi-messagelist-nick-prefix {
+	content: url(lirc-resources/icons/{/literal}{$metadata['icons']}{literal}/owner.png)
+}
+.kiwi-messagelist-nick--mode-a .kiwi-messagelist-nick-prefix {
+	content: url(lirc-resources/icons/{/literal}{$metadata['icons']}{literal}/admin.png)
+}
+.kiwi-messagelist-nick--mode-o .kiwi-messagelist-nick-prefix {
+	content: url(lirc-resources/icons/{/literal}{$metadata['icons']}{literal}/operator.png)
+}
+.kiwi-messagelist-nick--mode-h .kiwi-messagelist-nick-prefix {
+	content: url(lirc-resources/icons/{/literal}{$metadata['icons']}{literal}/halfop.png)
+}
+.kiwi-messagelist-nick--mode-v .kiwi-messagelist-nick-prefix {
+	content: url(lirc-resources/icons/{/literal}{$metadata['icons']}{literal}/voice.png)
+}
 {/literal}{/if}{literal}
 .kiwi-messagelist {
 {/literal}{if $metadata['style'] != "transparent"}{literal}{/literal}
