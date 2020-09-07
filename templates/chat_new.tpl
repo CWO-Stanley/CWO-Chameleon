@@ -19,6 +19,7 @@
             <li class=""><a data-toggle="tab" href="#design">Stijl en design</a></li>
             <li class=""><a data-toggle="tab" href="#webcam">Webcam en microfoon</a></li>
             <li class=""><a data-toggle="tab" href="#geavanceerd">Geavanceerde instellingen</a></li>
+			<li class=""><a data-toggle="tab" href="#html5">HTML5 instellingen</a></li>
             <li class="dropdown">
                 <a data-toggle="dropdown" class="dropdown-toggle" id="myTabDrop1" href="#">Extra <b class="caret"></b></a>
                 <ul aria-labelledby="myTabDrop1" role="menu" class="dropdown-menu">
@@ -193,7 +194,47 @@
                         </div>
                     </div>
                 </div>
+				<!-- HTML5 INSTELLINGEN -->
+				
+                <div id="html5" class="tab-pane fade">
+                    <br />
+                    <div class="alert alert-info">
+                        De HTML5 webchat heeft meer optionele functie's, hier kunt u deze opties aan en uit zetten zoals u dat wenst.
+                    </div>
 
+                    <!-- avatars inschakelen -->
+                    <div class="form-group">
+                        <label for="textstyling" title="Laat een avatar zien voor de nickaan" class="control-label col-sm-3">Laat een avatar zien voor de nicknaam</label>
+                        <div class="col-sm-9">
+                            <input type="checkbox" name="kiwi_avatar" value="true" {if $kiwi_avatar!="false"}checked="checked"{/if}>
+                        </div>
+                    </div>
+					<br /><br /><br />
+					<!-- Uploaden toestaan -->
+                    <div class="form-group">
+                        <label for="textstyling" title="Sta toe dat mensen kunnen uploaden" class="control-label col-sm-3">Sta toe dat chatters bestanden kunnen uploaden en delen</label>
+                        <div class="col-sm-9">
+                            <input type="checkbox" name="kiwi_upload" value="true" {if $kiwi_upload!="false"}checked="checked"{/if}>
+                        </div>
+                    </div>
+					<br /><br /><br />
+					<!-- Giphy toestaan -->
+                    <div class="form-group">
+                        <label for="textstyling" title="Sta toe dat GIF's kunnen worden getoont" class="control-label col-sm-3">Sta toe dat GIF's kunnen worden getoont</label>
+                        <div class="col-sm-9">
+                            <input type="checkbox" name="kiwi_giphy" value="true" {if $kiwi_giphy!="false"}checked="checked"{/if}>
+                        </div>
+                    </div>
+					<br /><br /><br />
+					<!-- Imgur toestaan -->
+                    <div class="form-group">
+                        <label for="textstyling" title="Sta toe dat plaatjes kunnen worden getoont via Imgur" class="control-label col-sm-3">Sta toe dat plaatjes kunnen worden getoont via Imgur</label>
+                        <div class="col-sm-9">
+                            <input type="checkbox" name="kiwi_imgur" value="true" {if $kiwi_imgur!="false"}checked="checked"{/if}>
+                        </div>
+                    </div>
+					<br /><br />
+                </div>
                 <!-- EXTRA: RADIO -->
                 <div id="radio" class="tab-pane fade">
                     <br />

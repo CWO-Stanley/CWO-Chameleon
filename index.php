@@ -317,6 +317,34 @@ if ($id) {
                     } else {
                         $smarty->assign('ads_enabled', "false");
                     }
+					//Kiwi Avatar
+					$kiwi_avatar = $chat->getKiwiAvatar();
+                    if ($kiwi_avatar == "true") {
+                        $smarty->assign('kiwi_avatar', "true");
+                    } else {
+                        $smarty->assign('kiwi_avatar', "false");
+                    }
+					//Kiwi Upload
+					$kiwi_upload = $chat->getKiwiUpload();
+                    if ($kiwi_upload == "true") {
+                        $smarty->assign('kiwi_upload', "true");
+                    } else {
+                        $smarty->assign('kiwi_upload', "false");
+                    }
+					//Kiwi Giphy
+					$kiwi_giphy = $chat->getKiwiGiphy();
+                    if ($kiwi_giphy == "true") {
+                        $smarty->assign('kiwi_giphy', "true");
+                    } else {
+                        $smarty->assign('kiwi_giphy', "false");
+                    }
+					//Kiwi Imgur
+					$kiwi_imgur = $chat->getKiwiImgur();
+                    if ($kiwi_imgur == "true") {
+                        $smarty->assign('kiwi_imgur', "true");
+                    } else {
+                        $smarty->assign('kiwi_imgur', "false");
+                    }
                     $smarty->assign('page','edit');
                 }
                 else {
@@ -358,8 +386,12 @@ if ($id) {
             $smarty->assign('verboseinformation', "false");
             $smarty->assign('radio_enabled', "false");
             $smarty->assign('radio_type', "shoutcast");
-            $smarty->assign('radio_style', "cwflash");
+            $smarty->assign('radio_style', "luna");
             $smarty->assign('ads_enabled', "true");
+			$smarty->assign('kiwi_avatar', "true");
+			$smarty->assign('kiwi_upload', "true");
+			$smarty->assign('kiwi_giphy', "true");
+			$smarty->assign('kiwi_imgur', "true");
 	    $smarty->assign('page','new');
         }
     }

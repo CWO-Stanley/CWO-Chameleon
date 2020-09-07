@@ -191,7 +191,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         
         <div class="container">
                 
-								<div class="alert alert-success alert-dismissable"><strong>Let op!</strong> Om je kanaal te kunnen registeren, dien je in het kanaal aanwezig te zijn en operator status, heb je de chat reeds aangemaakt, klik dan op login hieronder!
+								<div class="alert alert-success alert-dismissable"><strong>Let op!</strong> Om je kanaal te kunnen registeren, dien je in het kanaal aanwezig te zijn en operator status hebben, heb je de chat reeds aangemaakt maar voldoe je niet aan de eisen, klik dan op login hieronder!
 								<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button></div>
 								
 								
@@ -236,10 +236,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <button class="btn btn-lg btn-primary btn-block" type="submit">Registreer</button>
 				<input type="hidden" name="recaptcha_response" id="recaptchaResponse">
             </form>
-			<form class="form-signin" role="form" method="" action="/chat.php?id=<?php if(!empty($_GET['id'])) : ?><?php echo htmlspecialchars($_GET['id']); ?><?php endif; ?>">
+			<div class="form-signin">
                 <h2 class="form-signin-heading">Of log in:</h2>
-				<button class="btn btn-lg btn-primary btn-block" type="submit">Log in</button>
-				</form>
+				<a href="chat.php?id=<?php if(!empty($_GET['id'])) : ?><?php echo htmlspecialchars($_GET['id']); ?><?php endif; ?>" target="_blank"><button class="btn btn-lg btn-primary btn-block" type="submit">Log in</button></a>
+			</div>	
 
         </div>
         <center>

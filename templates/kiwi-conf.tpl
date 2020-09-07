@@ -36,7 +36,8 @@ window.kiwiConfig = function kiwiConfig() {
 		"buffers": {
 				{/literal}{if $metadata['private'] == "true"}{literal}"block_pms": false, {/literal}{/if}{literal}
 				"coloured_nicklist": false,
-				"nicklist_avatars": true,
+				{/literal}{if $metadata['kiwi_avatar'] == "true"}{literal}"nicklist_avatars": true, {/literal}{else}{literal}"nicklist_avatars": false,{/literal}{/if}{literal}
+				{/literal}{if $metadata['hostnames'] == "true"}{literal}"show_hostnames": true, {/literal}{else}{literal}"show_hostnames": false,{/literal}{/if}{literal}
 				"colour_nicknames_in_messages": false,
 				"inline_link_auto_previews": false,
 				"inline_link_auto_preview_whitelist": ".*",
@@ -45,10 +46,12 @@ window.kiwiConfig = function kiwiConfig() {
 				"share_typing": true
 			},
 		"plugins": [
+			{/literal}{if $metadata['webcam'] == "true"}{literal}
 			{
 				"name": "conference",
 				"url": "static/plugins/conference/plugin-conference.min.js?v=1.2"
 			},
+			{/literal}{/if}{literal}
 				{"name": "emoji", "url": "static/plugins/plugin-emoji-prelim.min.js"},
 				{"name": "simosnapcss","url": "static/plugins/cwo-css3.html"},
 				
@@ -57,12 +60,20 @@ window.kiwiConfig = function kiwiConfig() {
 				{/literal}{/if}{literal}
 				{"name": "nickserv", "url": "static/plugins/plugin-nickserv.js"},
 				{ "name": "font", "url": "static/plugins/font-size.html" },
+				{/literal}{if $metadata['kiwi_avatar'] == "true"}{literal}
 				{"name": "gravatar", "url": "static/plugins/plugin-gravatar.js"},
+				{/literal}{/if}{literal}
+				{/literal}{if $metadata['kiwi_giphy'] == "true"}{literal}
 				{"name": "giphy", "url": "static/plugins/plugin-giphy.html"},
+				{/literal}{/if}{literal}
+				{/literal}{if $metadata['kiwi_imgur'] == "true"}{literal}
 				{"name": "imgurl", "url": "static/plugins/plugin-imgur.html"},
+				{/literal}{/if}{literal}
 				{"name": "ident", "url": "static/plugins/ident.js?v=1.2"},
-				{"name": "asl","url": "static/plugins/plugin-asl.js?cb=20"},
-				{"name": "fileuploader", "url": "static/plugins/plugin-fileuploader.js?v=1.1"}
+				{/literal}{if $metadata['kiwi_upload'] == "true"}{literal}
+				{"name": "fileuploader", "url": "static/plugins/plugin-fileuploader.js?v=1.1"},
+				{/literal}{/if}{literal}
+				{"name": "asl","url": "static/plugins/plugin-asl.js?cb=20"}
 		],
 		"plugin-asl" : {
 					"gecosType": 2,
@@ -96,12 +107,15 @@ window.kiwiConfig = function kiwiConfig() {
 					},
 					"localesPath": "static/plugins/plugin-asl/locales/"
 		},
+		{/literal}{if $metadata['kiwi_avatar'] == "true"}{literal}
 		"plugin-gravatar": {
 					"gatewayURL": "//gateway.chattersworld.nl:1085/",
 					"gravatarURL": "//www.gravatar.com/avatar/",
 					"gravatarRating": "g",
 					"gravatarFallback": "robohash"
 		},
+		{/literal}{/if}{literal}
+		{/literal}{if $metadata['webcam'] == "true"}{literal}
 		"conference":{ 
 				"server": "meet.chattersworld.nl",
 				"secure": false,
@@ -133,15 +147,17 @@ window.kiwiConfig = function kiwiConfig() {
 				"configOverwrite": {
 				}
 		},
+		{/literal}{/if}{literal}
 		"plugin-radio": {
 				"url": "stations.php?id={/literal}{$smarty.get.id}{literal}"
 		},
-	
+		{/literal}{if $metadata['kiwi_upload'] == "true"}{literal}
 		"fileuploader": {
 			"server": "https://files.chattersworld.nl/files/",
 			"maxFileSize": 10485760,
 			"note": "Let op, deze bestanden blijven maximaal 24 uur bestaan!"
 		},
+		{/literal}{/if}{literal}
 		"embedly": {
 			"key": "aae4890b796c49dbbc079001e2f9d8e5"
 			}
