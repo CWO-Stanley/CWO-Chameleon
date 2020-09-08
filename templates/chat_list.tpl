@@ -60,7 +60,7 @@
          
 			<tr>
                 <td style="vertical-align:middle"><span class="badge">{$ids[chat]}</span></td>
-				<td style="vertical-align:middle">{if $bgurl[chat] != ""}<img src="{$bgurl[chat]}" style="border-radius: 50% 50% 50% 50%;height:50px;width:50px;">{else}{$chatstyle[chat]}{/if}</td>
+				<td style="vertical-align:middle">{if $bgurl[chat] != ""}<img src="{$bgurl[chat]}" style="border-radius: 50% 50% 50% 50%;height:50px;width:50px;">{else}<center><div style="padding:10px 0;text-align:center;vertical-align:middle;background-color:{$bgcolor[chat]};color:#FFF;border-radius: 50% 50% 50% 50%;height:50px;width:50px;">{$chatstyle[chat]}</div></center>{/if}</td>
 				<td style="vertical-align:middle">{$names[chat]}</td>
 				{if isset($god)}
 				<td style="vertical-align:middle">{$owners[chat]}</td>

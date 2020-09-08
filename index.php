@@ -423,6 +423,7 @@ if ($id) {
         $lastcalleds = array();
         $names = array();
 		$bgurl = array();
+		$bgcolor = array();
 		$chatstyle = array();
 		$playerstyle = array();
         foreach ($chatboxes as $chatbox) {
@@ -433,6 +434,7 @@ if ($id) {
             array_push($calls, $chatbox->getCalls());
             array_push($lastcalleds, $chatbox->getLastCalled());
             array_push($names,$chatbox->getName());
+			array_push($bgcolor,$chatbox->getBgcolor());
 			array_push($bgurl,$chatbox->getBgurl());
 			array_push($chatstyle,$chatbox->getStyle());
 			array_push($playerstyle,$chatbox->Radio->getPlayer());
@@ -443,6 +445,7 @@ if ($id) {
         $smarty->assign('lastcalleds', $lastcalleds);
         $smarty->assign('names', $names);
 		$smarty->assign('bgurl', $bgurl);
+		$smarty->assign('bgcolor', $bgcolor);
 		$smarty->assign('chatstyle', $chatstyle);
 		$smarty->assign('playerstyle', $playerstyle);
     }
@@ -454,17 +457,20 @@ if ($id) {
         $names = array();
 		$bgurl = array();
 		$chatstyle = array();
+		$bgcolor = array();
 		$playerstyle = array();
         foreach ($chatboxes as $chatbox) {
             array_push($ids, $chatbox->getId());
             array_push($names, $chatbox->getName());
 			array_push($bgurl,$chatbox->getBgurl());
 			array_push($chatstyle,$chatbox->getStyle());
+			array_push($bgcolor,$chatbox->getBgcolor());
 			array_push($playerstyle,$chatbox->Radio->getPlayer());
         }
         $smarty->assign('ids', $ids);
         $smarty->assign('names', $names);
 		$smarty->assign('bgurl', $bgurl);
+		$smarty->assign('bgcolor', $bgcolor);
 		$smarty->assign('chatstyle', $chatstyle);
     }
 
