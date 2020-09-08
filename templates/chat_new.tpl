@@ -233,6 +233,14 @@
                             <input type="checkbox" name="kiwi_imgur" value="true" {if $kiwi_imgur!="false"}checked="checked"{/if}>
                         </div>
                     </div>
+					<br /><br /><br />
+					<!-- Imgur toestaan -->
+                    <div class="form-group">
+                        <label for="textstyling" title="Laat uw chatters leeftijd, geslacht en locatie meegeven op de chat" class="control-label col-sm-3">Laat uw chatters leeftijd, geslacht en locatie meegeven op de chat</label>
+                        <div class="col-sm-9">
+                            <input type="checkbox" name="kiwi_asl" value="true" {if $kiwi_asl!="false"}checked="checked"{/if}>
+                        </div>
+                    </div>
 					<br /><br />
                 </div>
                 <!-- EXTRA: RADIO -->
@@ -299,13 +307,13 @@
                         <label for="radio_style" title="Er zijn verschillende soorten radioplayers, het kan zijn dat sommigen niet werken met een bepaalde stream." class="control-label col-sm-3">Type radioplayer</label>
                         <div class="col-sm-9">
                             <select class="form-control" name="radio_style">
-                                <option value="muhstik" {if $radio_style=="muhstik"}selected="selected"{/if}>Lisa Ann</option>
-                                <option value="cwflash" {if $radio_style=="cwflash"}selected="selected"{/if}>Tori Black</option>
-                                <option value="muses" {if $radio_style=="muses"}selected="selected"{/if}>Madison Ivy</option>
-                                <option value="stenly" {if $radio_style=="stenly"}selected="selected"{/if}>Jenna Jameson</option>
-								<option value="hero" {if $radio_style=="hero"}selected="selected"{/if}>Sophie Dee</option>
-								<option value="luna" {if $radio_style=="luna"}selected="selected"{/if}>Luna Alora</option>
-								<option value="internal" {if $radio_style=="internal"}selected="selected"{/if}>Bailey Brooke</option>
+                                <option value="muhstik" {if $radio_style=="muhstik"}selected="selected"{/if}>Lisa Ann (Muhstik)</option>
+                                <option value="cwflash" {if $radio_style=="cwflash"}selected="selected"{/if}>Tori Black (Native Flash Radio v3)</option>
+                                <option value="muses" {if $radio_style=="muses"}selected="selected"{/if}>Madison Ivy (Muses)</option>
+                                <option value="stenly" {if $radio_style=="stenly"}selected="selected"{/if}>Jenna Jameson (Sticky)</option>
+								<option value="hero" {if $radio_style=="hero"}selected="selected"{/if}>Sophie Dee (Hero)</option>
+								<option value="luna" {if $radio_style=="luna"}selected="selected"{/if}>Luna Alora (Luna Radio (Native Radio v5))</option>
+								<option value="internal" {if $radio_style=="internal"}selected="selected"{/if}>Bailey Brooke (HTML5 internal (Luna flash fallback))</option>
                             </select>
                         </div>
                     </div><br /><br />

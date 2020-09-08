@@ -4,7 +4,7 @@
 window.kiwiConfig = function kiwiConfig() {
         console.log('off');
         return {
-		"startupScreen": "plugin-asl",
+		"startupScreen": "{/literal}{if $metadata['kiwi_asl'] == 'true'}plugin-asl{else}welcome{/if}{literal}",
 		"windowTitle": "..::Chattersworld - #{/literal}{$metadata['name']}{literal}::.. The web IRC client",
 		"kiwiServer": "https://gateway.chattersworld.nl:1085/webirc/kiwiirc/",
 		"theme": "CWO",
@@ -75,6 +75,7 @@ window.kiwiConfig = function kiwiConfig() {
 				{/literal}{/if}{literal}
 				{"name": "asl","url": "static/plugins/plugin-asl.js?cb=20"}
 		],
+		{/literal}{if $metadata['kiwi_asl'] == 'true'}{literal}
 		"plugin-asl" : {
 					"gecosType": 2,
 					"showRealname": false,
@@ -107,6 +108,7 @@ window.kiwiConfig = function kiwiConfig() {
 					},
 					"localesPath": "static/plugins/plugin-asl/locales/"
 		},
+		{/literal}{/if}{literal}
 		{/literal}{if $metadata['kiwi_avatar'] == "true"}{literal}
 		"plugin-gravatar": {
 					"gatewayURL": "//gateway.chattersworld.nl:1085/",
@@ -136,10 +138,10 @@ window.kiwiConfig = function kiwiConfig() {
 					"JITSI_WATERMARK_LINK": "https://chattersworld.nl",
 					"MOBILE_APP_PROMO": true,
 					"DEFAULT_REMOTE_DISPLAY_NAME": "",
-					"VERTICAL_FILMSTRIP": true,
+					"VERTICAL_FILMSTRIP": false,
 					"LANG_DETECTION": true,
 					"TOOLBAR_BUTTONS": [
-								"camera", "fullscreen", "fodeviceselection", "hangup",
+								"microphone", "camera", "fullscreen", "fodeviceselection", "hangup",
 								"settings", "videoquality", "filmstrip",
 								"stats", "shortcuts", "sharedvideo"
 					]

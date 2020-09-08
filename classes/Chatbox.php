@@ -54,6 +54,7 @@ class Chatbox {
 	private $_kiwiupload;
 	private $_kiwigiphy;
 	private $_kiwiimgur;
+	private $_kiwiasl;
 	
 
     public function __construct($db) {
@@ -146,6 +147,9 @@ class Chatbox {
 	public function getKiwiImgur() {
         return $this->_kiwiimgur;
     }
+	public function getKiwiASL() {
+        return $this->_kiwiasl;
+    }
 	public function setMountpoint($mountpoint) {
         $this->_mountpoint = $mountpoint;
     }
@@ -172,6 +176,9 @@ class Chatbox {
     }
 	public function setKiwiImgur($kiwiimgur) {
         $this->_kiwiimgur = $kiwiimgur;
+    }
+	public function setKiwiASL($kiwiasl) {
+        $this->_kiwiasl = $kiwiasl;
     }
     public function readForm($form) {
         //Chatnaam
@@ -352,12 +359,18 @@ class Chatbox {
         } else {
             $this->setKiwiImgur(false);
         }
+		// Kiwi ASL
+		if (isset($form['kiwi_asl'])) {
+            $this->setKiwiASL($form['kiwi_asl']);
+        } else {
+            $this->setKiwiASL(false);
+        }
     }
 
     public function save() {
         $this->LightIRC->save();
         $this->setLightIRCId($this->LightIRC->getId());
-        $qry = $this->_db->prepare("INSERT INTO ".$this->_table."(lirc_id,createdby,createrip,created,lastcalled,calls,name,height,bgcolor,bgurl,style,iconstyle,radio_enabled,radio_name,radio_streamtype,radio_link,verzoek_url,radio_type,mountpoint,playerkleur,tekstkleur,ads_enabled,kiwi_avatar,kiwi_upload,kiwi_giphy,kiwi_imgur) VALUES(:lirc_id,:createdby,:createrip,NOW(),NOW(),:calls,:name,:height,:bgcolor,:bgurl,:style,:iconstyle,:radio_enabled,:radio_name,:radio_streamtype,:radio_link,:verzoek_url,:radio_type,:mountpoint,:playerkleur,:tekstkleur,:ads_enabled,:kiwi_avatar,:kiwi_upload,:kiwi_giphy,:kiwi_imgur);");
+        $qry = $this->_db->prepare("INSERT INTO ".$this->_table."(lirc_id,createdby,createrip,created,lastcalled,calls,name,height,bgcolor,bgurl,style,iconstyle,radio_enabled,radio_name,radio_streamtype,radio_link,verzoek_url,radio_type,mountpoint,playerkleur,tekstkleur,ads_enabled,kiwi_avatar,kiwi_upload,kiwi_giphy,kiwi_imgur,kiwi_asl) VALUES(:lirc_id,:createdby,:createrip,NOW(),NOW(),:calls,:name,:height,:bgcolor,:bgurl,:style,:iconstyle,:radio_enabled,:radio_name,:radio_streamtype,:radio_link,:verzoek_url,:radio_type,:mountpoint,:playerkleur,:tekstkleur,:ads_enabled,:kiwi_avatar,:kiwi_upload,:kiwi_giphy,:kiwi_imgur,:kiwi_asl);");
         $data = array(
             ':lirc_id' => $this->getLightIRCId(),
             ':createdby' => $this->getOwner(),
@@ -382,7 +395,8 @@ class Chatbox {
 			':kiwi_avatar' => $this->getKiwiAvatar(),
 			':kiwi_upload' => $this->getKiwiUpload(),
 			':kiwi_giphy' => $this->getKiwiGiphy(),
-			':kiwi_imgur' => $this->getKiwiImgur()
+			':kiwi_imgur' => $this->getKiwiImgur(),
+			':kiwi_asl' => $this->getKiwiASL()
         );
 
         $qry->execute($data);
@@ -398,7 +412,7 @@ class Chatbox {
     public function update() {
         $this->LightIRC->update();
 
-        $qry = $this->_db->prepare("UPDATE ".$this->_table." SET lirc_id=:lirc_id,createdby=:createdby,createrip=:createrip,created=NOW(),lastcalled=NOW(),calls=:calls,name=:name,height=:height,bgcolor=:bgcolor,bgurl=:bgurl,style=:style,iconstyle=:iconstyle,radio_enabled=:radio_enabled,radio_name=:radio_name,radio_streamtype=:radio_streamtype,radio_link=:radio_link,verzoek_url=:verzoek_url,radio_type=:radio_type,mountpoint=:mountpoint,playerkleur=:playerkleur,tekstkleur=:tekstkleur,ads_enabled=:ads_enabled,kiwi_avatar=:kiwi_avatar,kiwi_upload=:kiwi_upload,kiwi_giphy=:kiwi_giphy,kiwi_imgur=:kiwi_imgur WHERE id=:id;");
+        $qry = $this->_db->prepare("UPDATE ".$this->_table." SET lirc_id=:lirc_id,createdby=:createdby,createrip=:createrip,created=NOW(),lastcalled=NOW(),calls=:calls,name=:name,height=:height,bgcolor=:bgcolor,bgurl=:bgurl,style=:style,iconstyle=:iconstyle,radio_enabled=:radio_enabled,radio_name=:radio_name,radio_streamtype=:radio_streamtype,radio_link=:radio_link,verzoek_url=:verzoek_url,radio_type=:radio_type,mountpoint=:mountpoint,playerkleur=:playerkleur,tekstkleur=:tekstkleur,ads_enabled=:ads_enabled,kiwi_avatar=:kiwi_avatar,kiwi_upload=:kiwi_upload,kiwi_giphy=:kiwi_giphy,kiwi_imgur=:kiwi_imgur,kiwi_asl=:kiwi_asl WHERE id=:id;");
         $data = array(
             ':lirc_id' => $this->getLightIRCId(),
             ':createdby' => $this->getOwner(),
@@ -424,7 +438,8 @@ class Chatbox {
 			':kiwi_avatar' => $this->getKiwiAvatar(),
 			':kiwi_upload' => $this->getKiwiUpload(),
 			':kiwi_giphy' => $this->getKiwiGiphy(),
-			':kiwi_imgur' => $this->getKiwiImgur()
+			':kiwi_imgur' => $this->getKiwiImgur(),
+			':kiwi_asl' => $this->getKiwiASL()
         );
 
         $qry->execute($data);
@@ -492,6 +507,7 @@ class Chatbox {
 			$this->setKiwiUpload($row['kiwi_upload']);
 			$this->setKiwiGiphy($row['kiwi_giphy']);
 			$this->setKiwiImgur($row['kiwi_imgur']);
+			$this->setKiwiASL($row['kiwi_asl']);
             return true;
         }
         else {
@@ -695,6 +711,7 @@ class Chatbox {
 		$data['kiwi_upload'] = $this->getKiwiUpload();
 		$data['kiwi_giphy'] = $this->getKiwiGiphy();
 		$data['kiwi_imgur'] = $this->getKiwiImgur();
+		$data['kiwi_asl'] = $this->getKiwiASL();
 		$data['webcam'] = $this->LightIRC->getWebcam();
         return $data;
     }

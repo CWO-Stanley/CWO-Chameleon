@@ -345,6 +345,13 @@ if ($id) {
                     } else {
                         $smarty->assign('kiwi_imgur', "false");
                     }
+					//Kiwi ASL
+					$kiwi_asl = $chat->getKiwiASL();
+                    if ($kiwi_asl == "true") {
+                        $smarty->assign('kiwi_asl', "true");
+                    } else {
+                        $smarty->assign('kiwi_asl', "false");
+                    }
                     $smarty->assign('page','edit');
                 }
                 else {
@@ -392,6 +399,7 @@ if ($id) {
 			$smarty->assign('kiwi_upload', "true");
 			$smarty->assign('kiwi_giphy', "true");
 			$smarty->assign('kiwi_imgur', "true");
+			$smarty->assign('kiwi_asl', "true");
 	    $smarty->assign('page','new');
         }
     }
