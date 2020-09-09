@@ -61,7 +61,7 @@
                 <div id="design" class="tab-pane fade">
 					<!-- Naam van de chatbox -->
                     <div class="form-group">
-                        <label for="chat_bgurl" class="control-label col-sm-3">Achtergrond Link<br /><small>Zet de style op "transparant"<br />Enkel HTTPS word geaccepteerd!</small></label>
+                        <label for="chat_bgurl" class="control-label col-sm-3">Achtergrond Link<br /><small>Enkel HTTPS word geaccepteerd!</small></label>
                         <div class="col-sm-9">
                             <input type="url" class="form-control" {literal}pattern="https:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,4}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)(.jpg|.png|.gif|.jpeg|.bmp)"{/literal} name="chat_bgurl" title="Deze achtergrond zal de chat hebben."  placeholder="Link naar de achtergrond" value="{if isset($chat_bgurl)}{$chat_bgurl}{/if}">
                         </div>
@@ -71,7 +71,7 @@
                         <label for="chat_style" title="Er zijn verschillende stijlen die je kan instellen voor je chatbox." class="control-label col-sm-3">Stijl</label>
                         <div class="col-sm-9">
                             <select class="form-control" name="chat_style">
-								<option value="transparent" {if $chat_style=="transparent"}selected="selected"{/if}>Transparant voor als je een achtergrond neemt</option>
+								<option value="transparent" {if $chat_style=="transparent"}selected="selected"{/if}>Transparant (Nodig bij flash voor achtergrond)</option>
                                 <option value="blue" {if $chat_style=="blue"}selected="selected"{/if}>Blauw</option>
                                 <option value="black" {if $chat_style=="black"}selected="selected"{/if}>Zwart</option>
                                 <option value="orange" {if $chat_style=="orange"}selected="selected"{/if}>Oranje</option>

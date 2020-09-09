@@ -182,8 +182,11 @@ body {
 {/literal}{/if}{literal}
 .kiwi-messagelist {
 {/literal}{if $metadata['style'] != "transparent"}{literal}{/literal}
-{if $metadata['bgcolor'] == '#000000'}{literal}
-	background-color:rgba(0,0,0);{/literal}{else}
+{if $metadata['bgcolor'] == '#000000'}
+	{if $metadata['bgurl'] == ""}{literal}
+	background-color:rgba(0,0,0);{/literal}{else}{literal}
+	background-image: linear-gradient(rgba(255,255,255, .05), rgba(255,255,255, .05)), url({/literal}{$metadata['bgurl']}{literal});background-size: 100% 100%;{/literal}{/if}
+	{else}
 		{if $metadata['bgurl'] == ""}{literal}
     background-image: linear-gradient(rgba(255,255,255, .50), rgba(255,255,255, .50)), url({/literal}cwobg.jpg{literal});background-size: 100% 100%;{/literal}{else}{literal}
 	background-image: linear-gradient(rgba(255,255,255, .50), rgba(255,255,255, .50)), url({/literal}{$metadata['bgurl']}{literal});background-size: 100% 100%;{/literal}{/if}{/if}{literal}
@@ -202,6 +205,7 @@ body {
     font-family: fontawesome;
     margin-right: 5px;
 }
+
 :root {
     /* Primary Variables */
     --brand-primary: {/literal}{if $metadata['style'] != "transparent"}{$metadata['bgcolor']}{else}#001a33{/if}{literal};
