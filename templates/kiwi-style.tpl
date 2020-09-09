@@ -183,8 +183,10 @@ body {
 .kiwi-messagelist {
 {/literal}{if $metadata['style'] != "transparent"}{literal}{/literal}
 {if $metadata['bgcolor'] == '#000000'}{literal}
-	background-color:rgba(0,0,0);{/literal}{else}{literal}
-    background-image: linear-gradient(rgba(255,255,255, .50), rgba(255,255,255, .50)), url({/literal}cwobg.jpg{literal});background-size: 100% 100%;{/literal}{/if}{literal}	
+	background-color:rgba(0,0,0);{/literal}{else}
+		{if $metadata['bgurl'] == ""}{literal}
+    background-image: linear-gradient(rgba(255,255,255, .50), rgba(255,255,255, .50)), url({/literal}cwobg.jpg{literal});background-size: 100% 100%;{/literal}{else}{literal}
+	background-image: linear-gradient(rgba(255,255,255, .50), rgba(255,255,255, .50)), url({/literal}{$metadata['bgurl']}{literal});background-size: 100% 100%;{/literal}{/if}{/if}{literal}
 }
 {/literal}{else}{literal}
     background-image: linear-gradient(rgba(255,255,255, .50), rgba(255,255,255, .50)), url({/literal}{$metadata['bgurl']}{literal});background-size: 100% 100%; 
@@ -235,8 +237,8 @@ body {
 
 
     /* Sidebars ( Right Side ) */
-    --comp-sidebar-bg: #c0c0c0;
-    --comp-sidebar-fg: #22231f;
+    --comp-sidebar-bg: {/literal}{if $metadata['style'] == "black"}#000{else}{$metadata['bgcolor']}{/if}{literal};
+    --comp-sidebar-fg: {/literal}{if $metadata['style'] == "black"}#FFF{else}#FFF{/if}{literal};
     --comp-aboutbuffer-bg: rgba(0, 0, 0, 0.03);
     --comp-aboutbuffer-header-bg: var(--brand-primary);
 
@@ -251,7 +253,7 @@ body {
     background-color: #5d919c;
 }
 .kiwi-statebrowser-appsettings, .kiwi-statebrowser-usermenu {
-    color: #22231f;
+    color: {/literal}{if $metadata['style'] == "black"}#fff{else}#22231f{/if}{literal};
 }
 ..kiwi-statebrowser-appsettings {
     font-size: 1.4em;
@@ -311,6 +313,16 @@ body {
 }
 .kiwi-statebrowser-channel .kiwi-statebrowser-channel-name {
     font-weight: 500;
+}
+.u-tabbed-content {
+    color: var(--brand-default-fg);
+	background-color: var(--brand-default-bg);
+}
+.u-link {
+    color: {/literal}{if $metadata['style'] == "black"}#fff{else}var(--brand-default-fg){/if}{literal};
+}
+.u-tabbed-view-tabs .u-tabbed-view-tab {
+    color: var(--brand-default-fg);	
 }
 .kiwi-welcome-simple-form .u-submit {
     background-color: {/literal}{if $metadata['style'] == "black"}#FFF{else}var(--brand-primary){/if}{literal};
