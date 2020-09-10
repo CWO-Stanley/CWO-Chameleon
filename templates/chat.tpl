@@ -330,7 +330,9 @@ a2a_config.locale = "nl";
             </div>
         </div>
  <script type="text/javascript">
+	params.host = "{$irc}";
 	swfobject.embedSWF("{$fullurl}/lightIRC2.swf", "lightIRC", "100%", "{$metadata['height']}%", "10.0.0", "{$fullurl}/expressInstall.swf", params, {literal}{wmode:'transparent'}{/literal});
+	
 	function openNav() {
     document.getElementById("mySidenav").style.width = "33%";
 }

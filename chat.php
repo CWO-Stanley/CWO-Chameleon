@@ -4,6 +4,8 @@ $database = new Database($config);
 $db = $database->getConnection();
 $smarty->assign('fullurl', $config->getFullUrl());
 $smarty->assign('logo', $config->getLogo());
+$smarty->assign('irc', $config->getIRC());
+$smarty->assign('sitename', $config->getSiteName());
  
 $mobile_browser = '0';
  

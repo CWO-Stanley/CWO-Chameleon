@@ -1,25 +1,25 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-	<title>Chattersworld Webplayer voor: #{$metadata['radio_name']}</title>
+	<title>{$sitename} Webplayer voor: #{$metadata['radio_name']}</title>
 		<meta charset="utf-8">
     		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     		<meta name="apple-mobile-web-app-capable" content="yes" />
     		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
    		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
  		<meta http-equiv="CACHE-CONTROL" CONTENT="NO-CACHE">
-		<meta name="keywords" content="chatten, gezellig kletsen, Chattersworld, Chattersworld Radio, Gezellig, Nonstop Request, 24/7 Verzoekjes, Live verzoek, Radio Chat, gezelligeblondecandy, webcam, webcamchat, triviant," />
+		<meta name="keywords" content="chatten, gezellig kletsen, {$sitename}, Gezellig, Nonstop Request, 24/7 Verzoekjes, Live verzoek, Radio Chat, gezelligeblondecandy, webcam, webcamchat, triviant," />
 		<meta name="google-site-verification" content="-hrJp-Kl7mtCVBOR5Dg45R52OfEAmnIceApYxPMluc4" />
 		<meta name="robots" content="index,follow,noodp,noydir" />
-		<meta name="description" content="Waar chatten, chatten is!"/><link rel="canonical" href="https://chattersworld.nl/" />
+		<meta name="description" content="Waar chatten, chatten is!"/><link rel="canonical" href="{$fullurl}" />
 		<meta property="og:locale" content="nl_NL" /><meta property="og:type" content="website" />
-		<meta property="og:title" content="GBC4Fun | Waar chatten, chatten is!" />
+		<meta property="og:title" content="{$sitename}!" />
 		<meta property="og:description" content="Chat voor Jong en Oud" />
-		<meta property="og:url" content="https://chattersworld.nl/" />
-		<meta property="og:site_name" content="Chattersworld Chat" />
+		<meta property="og:url" content="{$fullurl}" />
+		<meta property="og:site_name" content="{$sitename}" />
 		<meta property="og:type" content="article" />
-		<meta property="og:title" content="WebPlayer | Chattersworld" />
-		<meta property="og:site_name" content="WebPlayer | Chattersworld" />
+		<meta property="og:title" content="{$sitename}" />
+		<meta property="og:site_name" content="{$sitename}" />
 		<meta property="article:publisher" content="https://www.facebook.com/chattersworld/" />
 		<meta property="fb:app_id" content="699740480138507" />
 		<meta property="og:image" content="https://www.gbc-radio.nl/wp-content/uploads/2017/06/header.jpg" />
@@ -151,7 +151,7 @@ return true;
 								</a>
 							</li> 
 							<li class="">
-								<a href="https://chameleon.chattersworld.nl/webplayer.php?id={$smarty.get.id}">
+								<a href="{$fullurl}/webplayer.php?id={$smarty.get.id}">
 									Herstart Stream
 								</a>
 							</li>
@@ -236,7 +236,7 @@ $("#lunaradio").lunaradio({
 	fontratio: "0.4",
 	radioname: "{$metadata['radio_name']}",
 	scroll: "true",
-	coverimage: "https://horus.chattersworld.nl/dist/img/c4all.png",
+	coverimage: "{$fullurl}/dist/img/c4all.png",
 	coverstyle: "circle",
 	usevisualizer: "fake",
 	visualizertype: "",

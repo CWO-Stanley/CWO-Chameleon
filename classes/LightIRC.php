@@ -8,13 +8,13 @@
  * @author Kaj Van der Hallen
  * @edit Stanley Kulik (DjSxX)
  */
-
 class LightIRC {
     //put your code here
     public function __construct($db) {
         $this->_dBase = $db;
         $this->_db = $db['db'];
         $this->_table = $db['prefix']."lirc";
+		// $this->_irc = $db['irc'];
         $this->setHost("irc.chattersworld.nl");
         $this->setShowNickPrefixes("false");
         $this->setAccessKey("P0015-D03EB-OMQXF-E9072-54BC6");
@@ -62,6 +62,7 @@ class LightIRC {
     private $_db;
     private $_dBase;
     private $_table;
+	private $_irc;
 
     /**
      * Connection parameters
@@ -557,8 +558,10 @@ class LightIRC {
     public function getId() {
         return $this->_id;
     }
-
-    public function getAccessKey() {
+	public function getIRC() {
+        return $this->_irc;
+    }
+	public function getAccessKey() {
         return $this->_accessKey;
     }
     public function getHost() {
@@ -1176,13 +1179,14 @@ class LightIRC {
             echo 'params.'.$n.' = "'.$v.'";'.PHP_EOL;
         }
     }
+	
     public function printConfig() {
 		echo "<!DOCTYPE HTML>".PHP_EOL;
 		echo "<html>".PHP_EOL;
 		echo "<head>".PHP_EOL;
         echo "<script>".PHP_EOL;
         echo "var params = {};".PHP_EOL;
-        $this->_addParam('host', $this->getHost());
+        // $this->_addParam('host', $config->getIRC());
         $this->_addParam('accessKey', $this->getAccessKey());
         //$this->_addParam('port', $this->getPort());
         $this->_addParam('port', "6697");
