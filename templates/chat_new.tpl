@@ -242,6 +242,14 @@
                         </div>
                     </div>
 					<br /><br />
+					<!-- Redirecten naar HTML5 chat -->
+                    <div class="form-group">
+                        <label for="textstyling" title="Forceer uw chatters naar de HTML5 chat te gaan" class="control-label col-sm-3">Laat chatters naar de HTML5 chat gaan</label>
+                        <div class="col-sm-9">
+                            <input type="checkbox" name="html_redirect" value="true" {if $html_redirect!="false"}checked="checked"{/if}>
+                        </div>
+                    </div>
+					<br /><br />
                 </div>
                 <!-- EXTRA: RADIO -->
                 <div id="radio" class="tab-pane fade">

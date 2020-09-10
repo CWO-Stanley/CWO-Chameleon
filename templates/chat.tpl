@@ -29,7 +29,9 @@
  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
  <link rel="stylesheet" href="dist/magnific-popup.css">
   <script type="text/javascript" src="../analyticstracking.js"></script>
-  
+  {if $metadata['html_redirect'] == "true"}
+  <script>window.location="html5.php?id={$smarty.get.id}";</script>
+  {/if}
  <style type="text/css">
 	html { height: 100%; overflow: hidden; }
 	body { height:100%;

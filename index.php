@@ -352,6 +352,13 @@ if ($id) {
                     } else {
                         $smarty->assign('kiwi_asl', "false");
                     }
+					//Kiwi ASL
+					$html_redirect = $chat->getHTMLRedirect();
+                    if ($html_redirect == "true") {
+                        $smarty->assign('html_redirect', "true");
+                    } else {
+                        $smarty->assign('html_redirect', "false");
+                    }
                     $smarty->assign('page','edit');
                 }
                 else {
@@ -400,6 +407,7 @@ if ($id) {
 			$smarty->assign('kiwi_giphy', "true");
 			$smarty->assign('kiwi_imgur', "true");
 			$smarty->assign('kiwi_asl', "true");
+			$smarty->assign('html_redirect', "false");
 	    $smarty->assign('page','new');
         }
     }
