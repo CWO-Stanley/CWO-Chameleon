@@ -59,7 +59,7 @@
           <link href="{$fullurl}/css/custom_css/mainpanel.css" rel="stylesheet">
           
     
-    <title>{$sitename}</title>
+    <title>..::{$sitename}::..</title>
   </head>
 
   <body>

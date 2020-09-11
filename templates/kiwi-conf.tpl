@@ -49,7 +49,7 @@ window.kiwiConfig = function kiwiConfig() {
 			{/literal}{if $metadata['webcam'] == "true"}{literal}
 			{
 				"name": "conference",
-				"url": "static/plugins/conference/plugin-conference.min.js?v=1.2"
+				"url": "static/plugins/conference/plugin-conference.min.js?v=1.3"
 			},
 			{/literal}{/if}{literal}
 				{"name": "emoji", "url": "static/plugins/plugin-emoji-prelim.min.js"},
@@ -118,15 +118,19 @@ window.kiwiConfig = function kiwiConfig() {
 		},
 		{/literal}{/if}{literal}
 		{/literal}{if $metadata['webcam'] == "true"}{literal}
-		"conference":{ 
+		"plugin-conference":{ 
 				"server": "meet.chattersworld.nl",
 				"secure": false,
+				"queries": true,
+				"channels": true,
 				"enabledInChannels": [ "*" ],
-				"joinText": "heeft de mediaconferentie opgestart.",
+				"joinText": "heeft de mediaconferentie opgestart, klik op de link om te joinen!",
 				"inviteText": "is inviting you to a private call.",
 				"joinButtonText": "Join nu!",
 				"disabledText": "Sorry. The sysop has not enabled conferences in this channel.",
-				"showLink": false,
+				"showLink": true,
+				"useLinkShortener": true,
+				"linkShortenerURL": "https://x0.no/api/?{{ link }}",
 				"useBitlyLink": false,
 				"queries": false,
 				"bitlyAccessToken": "BITLY_API_KEY_HERE",
@@ -147,6 +151,8 @@ window.kiwiConfig = function kiwiConfig() {
 					]
 				},
 				"configOverwrite": {
+					"startWithVideoMuted": true,
+					"startWithAudioMuted": true
 				}
 		},
 		{/literal}{/if}{literal}
