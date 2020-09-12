@@ -6,6 +6,8 @@ $smarty->assign('fullurl', $config->getFullUrl());
 $smarty->assign('logo', $config->getLogo());
 $smarty->assign('irc', $config->getIRC());
 $smarty->assign('sitename', $config->getSiteName());
+$smarty->assign('gateway', $config->getGateway());
+$smarty->assign('file', $config->getFile());
  
 $mobile_browser = '0';
  
