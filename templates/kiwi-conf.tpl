@@ -131,9 +131,6 @@ window.kiwiConfig = function kiwiConfig() {
 				"showLink": true,
 				"useLinkShortener": true,
 				"linkShortenerURL": "https://x0.no/api/?{{ link }}",
-				"useBitlyLink": false,
-				"queries": false,
-				"bitlyAccessToken": "BITLY_API_KEY_HERE",
 				"interfaceConfigOverwrite": {
 					"SHOW_JITSI_WATERMARK": true,
 					"SHOW_WATERMARK_FOR_GUESTS": true,

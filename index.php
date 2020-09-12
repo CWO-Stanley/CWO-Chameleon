@@ -22,6 +22,11 @@ $aDb = $database->getConnection();
 $database = new Database($config);
 $db = $database->getConnection();
 $smarty->assign('fullurl', $config->getFullUrl());
+$smarty->assign('logo', $config->getLogo());
+$smarty->assign('irc', $config->getIRC());
+$smarty->assign('sitename', $config->getSiteName());
+$smarty->assign('gateway', $config->getGateway());
+$smarty->assign('file', $config->getFile());
 $login = new Login();
 $id = $login->getSession();
 $smarty->assign('page','list');//default
@@ -352,7 +357,7 @@ if ($id) {
                     } else {
                         $smarty->assign('kiwi_asl', "false");
                     }
-					//Kiwi ASL
+					//Chat Redirect
 					$html_redirect = $chat->getHTMLRedirect();
                     if ($html_redirect == "true") {
                         $smarty->assign('html_redirect', "true");
