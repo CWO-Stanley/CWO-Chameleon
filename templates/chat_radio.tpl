@@ -347,6 +347,60 @@
 		</script>
 				
 		</center>
+		{elseif $metadata['radio_player'] == "clever"}
+		<!-- must have -->
+		<link href="radiolibs/clever/audio11_html5.css" rel="stylesheet" type="text/css">
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.1/jquery.min.js" type="text/javascript"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+		<script src="radiolibs/clever/js/audio11_html5.js" type="text/javascript"></script>
+		<!-- must have -->
+		<script>
+			jQuery(function() {
+				setTimeout(function(){
+						jQuery("#lbg_audio11_html5_shoutcast_1").audio11_html5({
+								radio_stream:"{$metadata['radio_link']}{$metadata['mountpoint']};",
+								playerWidth:760,
+								width100Proc:true,
+								sticky:true,
+								centerPlayer:true,
+								grabArtistPhoto:true,
+								autoPlay:true,
+								borderWidth:0,
+								borderColor:"#bfbfbf",
+								bgColor:"{$metadata['playerkleur']}",
+								bgColorOpacity:1,
+								barsColor:"#FFFFFF",
+								playButtonColor:"{$metadata['tekstkleur']}",
+								playButtonHoverColor:"#d7d7d7",
+								numberOfElementsDisplayed:1,
+								historyLeftPadding:410,
+								historyRightPadding:410,
+								historyTopPadding:0,
+								historyBottomPadding:1,
+								historyRecordTitleLimit:24,
+								historyRecordAuthorLimit:34,
+								songAuthorLineSeparatorOffColor:"#bfbfbf",
+								historyRecordTimeOffColor:"{$metadata['playerkleur']}",
+								historyRecordSongOffColor:"{$metadata['tekstkleur']}",
+								historyRecordAuthorOffColor:"#575757",
+								songAuthorLineSeparatorOnColor:"transparent",
+								historyRecordTimeOnColor:"{$metadata['tekstkleur']}",
+								historyRecordSongOnColor:"{$metadata['tekstkleur']}",
+								historyRecordAuthorOnColor:"{$metadata['tekstkleur']}",
+								historyRecordBackgroundOnColor:"{$metadata['playerkleur']}",
+								pathToAjaxFiles:"",
+								nowPlayingInterval:35,
+								noImageAvailable:"https://horus.chattersworld.nl/dist/img/c4all.png"
+						});
+					}, 1000);
+				});
+		</script>
+		<div class="audio11_html5">
+							<audio id="lbg_audio11_html5_shoutcast_1" preload="metadata">
+								No HTML5 audio playback capabilities for this browser. Use <a href="https://www.google.com/intl/en/chrome/browser/">Chrome Browser!</a>
+							</audio>
+		</div>
     {else}
         <center>
             <!-- BEGINS: AUTO-GENERATED MUSES RADIO PLAYER CODE -->
