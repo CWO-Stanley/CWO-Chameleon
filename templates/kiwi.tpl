@@ -32,20 +32,19 @@
 <meta property="og:url" content="{$fullurl}/chat.php?id={$smarty.get.id}" />
 
 <meta property="og:type" content="article" />
-<meta property="og:title" content="..::Chattersworld Chameleon::.. #{$metadata['name']}" />
-<meta property="og:site_name" content="..::Chattersworld Chameleon::.." />
+<meta property="og:title" content="..::{$sitename}::.. #{$metadata['name']}" />
+<meta property="og:site_name" content="..::{$sitename}::.." />
 <meta property="article:publisher" content="https://www.facebook.com/chattersworld/" />
 <meta property="fb:app_id" content="699740480138507" />
 {if $metadata['style'] != "transparent"}
-<meta property="og:image" content="{$logo}" />
+<meta property="og:image" content="{if $metadata['bgurl'] == ""}{$logo}{else}{$metadata['bgurl']}{/if}" />
 <link rel="icon" href="{$logo}" sizes="32x32" />
 {else}
-<meta property="og:image" content="{if $metadata['bgurl'] == ""}cwobg.jpg{else}{$metadata['bgurl']}{/if}" />
 <link rel="icon" href="{if $metadata['bgurl'] == ""}{$logo}{else}{$metadata['bgurl']}{/if}" sizes="32x32" />
 {/if}
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:description" content="Waar chatten, chatten is!" />
-<meta name="twitter:title" content="..::Chattersworld Chameleon::.." />
+<meta name="twitter:title" content="..::{$sitename}::.." />
 <link rel="canonical" href="{$fullurl}/chat.php?id={$smarty.get.id}" />
 <link rel="stylesheet" href="dist/magnific-popup.css">
 <!-- Kiwi script reloaders -->
@@ -59,18 +58,18 @@
 <title>..::Chattersworld Chameleon::.. #{$metadata['name']}</title>
 <body>
 	<div class="left">
-		<a target="_blank" href="https://chattersworld.nl"><img src="{$logo}" style="z-index: 102;" height="50" alt="Chattersworld"></a>
+		<a target="_blank" href="{$fullurl}"><img src="{$logo}" style="z-index: 102;" height="50" alt="Chattersworld"></a>
 	</div>
 
 	<div id="mySidenav" class="sidenav">
 		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-		<center><a target="_blank" href="https://chattersworld.nl"><img src="{$logo}" height="100" alt="Chattersworld"></a></center>
+		<center><a target="_blank" href="{$fullurl}"><img src="{$logo}" height="100" alt="Chattersworld"></a></center>
 		<br>
 		{if $metadata['verzoek_url'] != "" && $metadata['radio'] == "true"}
 		<a href="{$metadata['verzoek_url']}" data-mfp-src="#test-popup" class="open-popup-link"><img src="{$fullurl}/radio/request1.png" width="25px" height="25px" alt="Verzoek Aanvragen">&nbsp;Verzoekje Doen</a>
 		<br />
 		{else}
-		<a target="_blank" href="https://chattersworld.nl"><img src="{$fullurl}/radio/request1.png" width="25px" height="25px" alt="Maak je eigen chatbox!">&nbsp;Maak je eigen chatbox!</a>
+		<a target="_blank" href="{$fullurl}"><img src="{$fullurl}/radio/request1.png" width="25px" height="25px" alt="Maak je eigen chatbox!">&nbsp;Maak je eigen chatbox!</a>
 		{/if}
 		<br />
 		{if $metadata['radio'] == "true"}
