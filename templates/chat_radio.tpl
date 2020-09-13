@@ -2,12 +2,12 @@
 {if $metadata['radio'] == "true"}
     {if $metadata['radio_player'] == "stenly"}
 		<!-- must have -->
-		<link href="radiolibs/sticky/audio8_html5.css" rel="stylesheet" type="text/css">
+		<link href="radiolibs/sticky/audio8_html5.css?v=2.0" rel="stylesheet" type="text/css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.1/jquery.min.js" type="text/javascript"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
 		<script src="radiolibs/sticky/js/jquery.mousewheel.min.js" type="text/javascript"></script>
 		<script src="radiolibs/sticky/js/jquery.touchSwipe.min.js" type="text/javascript"></script>
-		<script src="radiolibs/sticky/js/audio8_html5.js" type="text/javascript"></script>
+		<script src="radiolibs/sticky/js/audio8_html5.js?v=2.0" type="text/javascript"></script>
         <div class="audio8_html5_sticky">
 				<div class="audio8_html5">
 					<audio id="lbg_audio8_html5_shoutcast_2" preload="metadata">
@@ -192,14 +192,14 @@
          
         </center>
 {elseif $metadata['radio_player'] == "hero"}
-<link href="radiolibs/hero/audio6_html5.css" rel="stylesheet" type="text/css">
+<link href="radiolibs/hero/audio6_html5.css?v=2.0" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.1/jquery.min.js" type="text/javascript"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
 
 <script src="radiolibs/hero/js/jquery.mousewheel.min.js" type="text/javascript"></script>
 <script src="radiolibs/hero/js/jquery.touchSwipe.min.js" type="text/javascript"></script>
-<script src="radiolibs/hero/js/audio6_html5.js" type="text/javascript"></script>
+<script src="radiolibs/hero/js/audio6_html5.js?v=2.0" type="text/javascript"></script>
 		<script>
 			jQuery(function() {
 				setTimeout(function(){
