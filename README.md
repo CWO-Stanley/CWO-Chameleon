@@ -40,6 +40,7 @@ Requires;
 - Red5 RTPM server for webcam via LightIRC (License needed)
 
 Installation is quite straight forward;
+Most things can be done within classes/config.php
 - Setup a database account
 - import database.sql to that account
 - make sure that the webhost can connect to your anope datebase and put in the details in classes/Config.php
