@@ -205,7 +205,93 @@ body {
     font-family: fontawesome;
     margin-right: 5px;
 }
+.fa-paint-brush:before {
+    content: "\F1FC";
+    color: #ac23f7;
+}
 
+.fa-smile-o:before {
+    content: "\F118";
+    color: #3183c7;
+    font-size: 20px;
+    font-weight: 700;
+}
+.fa-picture-o:before {
+    content: "\F03E";
+    font-size: 19px;
+    color: #902b5f;
+}
+.fa-cog:before {
+    color:#d87906;
+    font-size: large;
+}
+.fa-close:before, .fa-times:before {
+    color:#c70101;
+}
+.fa-list:before {
+    color:#005a20;
+}
+.fa-comment:before {
+	content: "\f075";
+    color:#026302;
+}
+.fa-comment-o:before {
+	content: "\f075";
+    color:#ff8c00;
+}
+.fa-info:before {
+    color:#a500ff;
+    font-size: large;
+}
+.fa-chevron-right:before{
+    margin: inherit;
+	cursor:pointer;
+    font-size: 27px;
+    font-weight: 100;
+    content: "\f01d";
+    color: red;
+    height: -webkit-fill-available;
+}
+.fa-users:before {
+    color:#005093;
+}
+.fa-coffee:before {
+    color: #743a00;
+    font-size: large;
+}
+.fa-camera:before {
+    content: "\F030";
+    font-size: 19px;
+    color: #0957b9eb;
+}
+.fa-adjust:before {
+    content: "\f1fc";
+    color: #00f;
+
+}
+.fa-registered:before {
+    content: "\F25D";
+    color: #0404bf;
+    font-size: 18px;
+}
+
+.fa-lock:before {
+    content: "\F023";
+    font-size: 16px;
+    margin: 0.1em;
+    color: #484848;
+}
+.fa-navicon:before, .fa-reorder:before, .fa-bars:before {
+    content: "\f138 ";
+    font-size: 19px;
+    color: #bf1f24;
+}
+
+.fa-send:before, .fa-paper-plane:before {
+    content: "\F1D8";
+    font-size: 17px;
+    color: #00632c;
+}
 :root {
     /* Primary Variables */
     --brand-primary: {/literal}{if $metadata['style'] != "transparent"}{$metadata['bgcolor']}{else}#001a33{/if}{literal};
