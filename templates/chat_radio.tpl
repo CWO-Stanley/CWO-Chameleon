@@ -359,7 +359,7 @@
 			jQuery(function() {
 				setTimeout(function(){
 						jQuery("#lbg_audio11_html5_shoutcast_1").audio11_html5({
-								radio_stream:"{$metadata['radio_link']}{$metadata['mountpoint']};",
+								radio_stream:"{$metadata['radio_link']}{$metadata['mountpoint']}",
 								playerWidth:760,
 								width100Proc:true,
 								sticky:true,
