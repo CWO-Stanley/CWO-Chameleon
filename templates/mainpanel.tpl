@@ -1,117 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+<head>
+
         <meta charset="utf-8">
-          <meta http-equic="X-UA-Compatible" content="IE=edge">
-          <meta name="viewport" content="width=device-width, initial-scale=1">
-          <!-- jQuery -->
-          <!-- <script src="{$fullurl}/js/jquery-1.11.0.min.js"></script> -->
-		      <!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+		<link rel="shortcut icon" href="{$logo}" />
+        <title>..::{$sitename}::..</title>
 
-    <link href="//cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.min.css" rel="stylesheet">
-    <link href="https://www.jquery-az.com/boots/css/bootstrap-colorpicker/bootstrap-colorpicker.css" rel="stylesheet">
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-	<link href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap.min.css" rel="stylesheet">
-    <!-- <link href="https://www.jquery-az.com/boots/css/bootstrap-colorpicker/main.css" rel="stylesheet"> -->
+        <!-- Vendor styles -->
+       <link rel="stylesheet" href="{$fullurl}/vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css">
+	   <link rel="stylesheet" href="{$fullurl}/resources/vendors/zwicon/zwicon.min.css">
+        <link rel="stylesheet" href="{$fullurl}/vendors/bower_components/animate.css/animate.min.css">
+        <link rel="stylesheet" href="{$fullurl}/vendors/bower_components/jquery.scrollbar/jquery.scrollbar.css">
+		{if isset($page)}
+            {if $page=='new' || $page=='edit'}
+        <link rel="stylesheet" href="{$fullurl}/vendors/bower_components/select2/dist/css/select2.min.css"> 
+        <link rel="stylesheet" href="{$fullurl}/vendors/bower_components/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.css">
+			{/if}
+		{/if}
+        <!--  -->
 
-    <script src="//code.jquery.com/jquery-2.2.2.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="{$fullurl}/js/bootstrap-colorpicker.js"></script>
-	<script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
-	<script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap.min.js"></script>
-          <!-- Bootstrap -->
-          <link rel="stylesheet" href="{$fullurl}/css/bootstrap.min.css">
-          <link rel="stylesheet" href="{$fullurl}/css/bootstrap-theme.min.css">
-          <link rel="stylesheet" href="{$fullurl}/css/bootstrap-switch.css">
-          <!-- <script src="{$fullurl}/js/bootstrap.min.js"></script> -->
-          <script src="{$fullurl}/js/bootstrap-switch.js"></script>
-          <!--[if lt IE 9]>
-            <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-          <![endif]-->
-	<script type="text/javascript" src="../analyticstracking.js"></script>
-          <!-- SEO -->
-		  <meta name="language" content="Dutch" />
-<meta name="keywords" content="chatten, gezellig kletsen, Chattersworld, Chameleon, Radio chat, Gezellig, Chatten zonder registratie, 24/7 Verzoekjes, Live verzoek, Radio Chat, webcam, webcamchat, triviant," />
-<meta name="description"  content="{$sitename} De enige Chatserver waar je gratis kan chatten, chatten zonder registratie, chatten met webcams en dat allemaal gratis, Chattersworld Ares Verzoekserver, maak hem nu gratis aan!" />
-<meta name="google-site-verification" content="-hrJp-Kl7mtCVBOR5Dg45R52OfEAmnIceApYxPMluc4" />
-<meta name="robots" content="index,follow,noodp,noydir" />
-<meta name="description" content="Waar chatten, chatten is!"/>
-<meta property="og:locale" content="nl_NL" />
-<meta property="og:type" content="website" />
-<meta property="og:title" content="{$sitename} | Waar chatten, chatten is!" />
-<meta property="og:description" content="Chameleon" />
-<meta property="og:url" content="{$fullurl}" />
+        <!-- App styles -->
+        <link rel="stylesheet" href="{$fullurl}/css/app.min.css">
+		<!-- <script src="{$fullurl}/js/bootstrap-switch.js"></script> -->
+		     </head>
 
-<meta property="og:type" content="article" />
-<meta property="og:title" content="..::{$sitename}::.." />
-<meta property="og:site_name" content="..::{$sitename}::.." />
-<meta property="article:publisher" content="https://www.facebook.com/chattersworld/" />
-<meta property="fb:app_id" content="699740480138507" />
 
-<meta property="og:image" content="{$fullurl}/webchat/img/cwobg.jpg" />
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:description" content="Waar chatten, chatten is!" />
-<meta name="twitter:title" content="..::{$sitename}::.." />
-<link rel="canonical" href="{$fullurl}" />
-<link rel="shortcut icon" href="{$fullurl}/dist/img/c4all-horus.png" sizes="32x32" />
-          <!-- Custom CSS -->
-          <link href="{$fullurl}/css/custom_css/mainpanel.css" rel="stylesheet">
-          
-    
-    <title>..::{$sitename}::..</title>
-  </head>
+  <body data-sa-theme="4">
+        <main class="main">
+            <!-- <div class="page-loader">
+                <div class="page-loader__spinner">
+                    <svg viewBox="25 25 50 50">
+                        <circle cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+                    </svg>
+                </div>
+            </div> -->
 
-  <body>
+            <header class="header">
+             <div class="navigation-trigger" data-sa-action="aside-open" data-sa-target=".sidebar">
+                    <i class="zwicon-hamburger-menu"></i>
+                </div>
 
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="{$fullurl}/list">{$sitename}</a>
-            </div>
-            <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li {if $page == "list" || $page == "edit"}class="active"{/if}><a href="{$fullurl}/list">Je Chatboxen</a></li>
+                <div class="logo hidden-sm-down">
+                    <h1><a href="{$fullurl}/list">..::{$sitename}::..</a></h1>
+                </div>
+                 
+				 <ul class="top-nav">
+			<li {if $page == "list" || $page == "edit"}class="active"{/if}><a href="{$fullurl}/list">Je Chatboxen</a></li>
                     <li {if $page == "new"}class="active"{/if}><a href="{$fullurl}/new">Nieuwe Chatbox</a></li>
                     <li {if $page == "settings"}class="active"{/if}><a href="{$fullurl}/settings">Instellingen</a></li>
                     <li {if $page == "help"}class="active"{/if}><a href="{$fullurl}/help">Help</a></li>
-                </ul>
-                <p class="navbar-text navbar-right">
+					</ul>
+					
+                <ul class="top-nav">
                     <span class="text-muted">
                         {if isset($login)}
                             <strong>Ingelogd als: </strong>{if isset($god)}<img src='{$fullurl}/admin.png' alt='admin' /><font color='deeppink'><b>{/if} {$login} {if isset($god)}</b></font><img src='{$fullurl}/admin.png' alt='admin' />{/if} (<a href="{$fullurl}/logout">Log uit</a>)
                         {/if}
                     </span>
-                </p>
-            </div>
-        </div>
-    </div>
+       
+					
+                </ul>
+                <div class="clock hidden-md-down">
+                    <div class="time">
+                        <span class="hours"></span>
+                        <span class="min"></span>
+                        <span class="sec"></span>
+                    </div>
+                </div>
+            </header>
+			<aside class="sidebar sidebar--hidden">
+                <div class="scrollbar-inner">
 
-    <div class="container"><br />
+                    <div class="user">
+                        <div class="user__info" data-toggle="dropdown">
+                            <img class="user__img" src="{if isset($god)}{$fullurl}/admin.png{else}{$fullurl}/demo/img/profile-pics/8.jpg{/if}" alt="">
+                            <div>
+                                <div class="user__name">{$login}</div>
+                                <div class="user__email">{if isset($god)}Administrator{/if}</div>
+                            </div>
+                        </div>
+
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="{$fullurl}/logout">Logout</a>
+                        </div>
+                    </div>
+
+                    <ul class="navigation">
+                        <li {if $page == "list" || $page == "edit"}class="navigation__active"{else}class="@@indexactive"{/if}><a href="{$fullurl}/list"><i class="zwicon-home"></i> Home</a></li>
+
+                        <li {if $page == "new"}class="navigation__active"{else}class="@@typeactive"{/if}><a href="{$fullurl}/new"><i class="zwicon-chat"></i> Nieuwe chatbox</a></li>
+
+                        <li {if $page == "settings"}class="navigation__active"{else}class="@@widgetactive"{/if}><a href="{$fullurl}/settings"><i class="zwicon-cog"></i> Instellingen</a></li>
+
+                        
+
+                        <li {if $page == "help"}class="navigation__active"{else}class="@@calendaractive"{/if}><a href="{$fullurl}/help"><i class="zmdi zmdi-help"></i> Help</a></li>
+
+                                                
+                    </ul>
+                </div>
+            </aside>
+			
+		<section class="content content--full">
+		 <br />
         {if isset($info)}
             <div class="alert alert-info alert-dismissable">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                 <strong>Ziezo!</strong> {$info}
             </div>
         {/if}
-        {if isset($error)}
-            <div class="alert alert-danger alert-dismissable">
-                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                <strong>Oeps!</strong> {$error}
-            </div>
-        {/if}
-        {if isset($success)}
-            <div class="alert alert-success alert-dismissable">
-                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                <strong>Ziezo!</strong> {$success}
-            </div>
-        {/if}
+        
         {if isset($page)}
             {if $page=='new' || $page=='edit'}
                 {include file='chat_new.tpl'}
@@ -129,17 +128,18 @@
         
         {else}
             <div class="datacontainer">
-                <h1>ChattersWorld Chat Creator</h1>
+                <h1>Chattersworld Chat Creator</h1>
                 <p class="lead">Welkom! Hier kan je je eigen chatbox aanmaken en volledig naar je wensen aanpassen!</p>
             </div>
         {/if}
       
         
 
-    </div>
+    
+		</section>
 	<center>
 	<footer class="footer hidden-xs-down">
-                    <p>© {$sitename} All rights reserved. v5.0</p>
+                    <p>© {$sitename} All rights reserved. v6.0</p>
 
                     <ul class="nav footer__nav">
                         <a class="nav-link" href="https://chattersworld.nl">Homepage</a>
@@ -148,6 +148,187 @@
 
                       
                     </ul>
-                </footer></center>
+                </footer></center></main>
+				         <!-- Javascript -->
+		
+        <!-- Vendors -->
+        <script src="{$fullurl}/vendors/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="{$fullurl}/vendors/bower_components/popper.js/dist/umd/popper.min.js"></script>
+        <script src="{$fullurl}/vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="{$fullurl}/vendors/bower_components/jquery.scrollbar/jquery.scrollbar.min.js"></script>
+        <script src="{$fullurl}/vendors/bower_components/jquery-scrollLock/jquery-scrollLock.min.js"></script>
+		{if isset($page)}
+            {if $page=='new' || $page=='edit'}
+		<script src="{$fullurl}/vendors/bower_components/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
+        <script src="{$fullurl}/vendors/bower_components/select2/dist/js/select2.full.min.js"></script>
+        <script src="{$fullurl}/vendors/bower_components/moment/min/moment.min.js"></script>
+        <script src="{$fullurl}/vendors/bower_components/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
+			{else}
+        <!-- Vendors: Data tables -->
+        <script src="{$fullurl}/vendors/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+        <script src="{$fullurl}/vendors/bower_components/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+        <script src="{$fullurl}/vendors/bower_components/datatables.net-buttons/js/buttons.print.min.js"></script>
+        <script src="{$fullurl}/vendors/bower_components/jszip/dist/jszip.min.js"></script>
+        <script src="{$fullurl}/vendors/bower_components/datatables.net-buttons/js/buttons.html5.min.js"></script>
+			{/if}
+		{/if}
+		{if isset($god)}
+{literal}
+<script>
+$(document).ready(function() {
+    $('#data-table2').DataTable( {
+        "language": {
+            "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Dutch.json"
+        },
+		"pageLength" : 25,
+		"lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "Alles"]],
+		"order": [[ 7, "desc" ]]
+    } );
+	
+} );
+</script>
+{/literal}
+{else}
+{literal}
+<script>
+		$(document).ready(function() {
+				$('#data-table2').DataTable( {
+					"language": {
+						"url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Dutch.json"
+					},
+					"pageLength" : 25,
+					"lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "Alles"]],
+					
+				} );
+	
+		} );
+		</script>
+{/literal}
+{/if}					
+
+        <script src="{$fullurl}/vendors/bower_components/remarkable-bootstrap-notify/dist/bootstrap-notify.min.js"></script>
+
+        <!-- App functions and actions -->
+        <script src="{$fullurl}/js/app.min.js"></script>
+		{if isset($success)}
+		<script type="text/javascript">
+
+            /*--------------------------------------
+                Bootstrap Notify Notifications
+            ---------------------------------------*/
+            function notify(from, align, icon, type, animIn, animOut){
+                $.notify({
+                    icon: icon,
+                    title: 'Bootstrap Notify',
+                    message: 'Turning standard Bootstrap alerts into awesome notifications',
+                    url: ''
+                },{
+                    element: 'body',
+                    type: type,
+                    allow_dismiss: true,
+                    placement: {
+                        from: from,
+                        align: align
+                    },
+                    offset: {
+                        x: 20,
+                        y: 20
+                    },
+                    spacing: 10,
+                    z_index: 1031,
+                    delay: 2500,
+                    timer: 1000,
+                    url_target: '_blank',
+                    mouse_over: false,
+                    animate: {
+                        enter: animIn,
+                        exit: animOut
+                    },
+                    template:   '<div data-notify="container" class="alert alert-dismissible alert-success alert--notify" role="alert">' +
+                                    '<span data-notify="icon"></span> ' +
+                                    '<span data-notify="title">Ziezo!</span> ' +
+                                    '<span data-notify="message">{$success}</span>' +
+                                    '<div class="progress" data-notify="progressbar">' +
+                                        '<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>' +
+                                    '</div>' +
+                                    '<a href="{3}" target="{4}" data-notify="url"></a>' +
+                                    '<button type="button" aria-hidden="true" data-notify="dismiss" class="close"><span>×</span></button>' +
+                                '</div>'
+                });
+            }
+
+            $('.notifications-demo > .btn').ready(function(){
+                // e.preventDefault();
+                var nFrom = $(this).attr('data-from');
+                var nAlign = $(this).attr('data-align');
+                var nIcons = $(this).attr('data-icon');
+                var nType = $(this).attr('data-type');
+                var nAnimIn = $(this).attr('data-animation-in');
+                var nAnimOut = $(this).attr('data-animation-out');
+
+                notify(nFrom, nAlign, nIcons, nType, nAnimIn, nAnimOut);
+            });
+			</script>
+			{/if}
+			{if isset($error)}
+			<script type="text/javascript">
+
+            /*--------------------------------------
+                Bootstrap Notify Notifications
+            ---------------------------------------*/
+            function notify(from, align, icon, type, animIn, animOut){
+                $.notify({
+                    icon: icon,
+                    title: 'Bootstrap Notify',
+                    message: 'Turning standard Bootstrap alerts into awesome notifications',
+                    url: ''
+                },{
+                    element: 'body',
+                    type: type,
+                    allow_dismiss: true,
+                    placement: {
+                        from: from,
+                        align: align
+                    },
+                    offset: {
+                        x: 20,
+                        y: 20
+                    },
+                    spacing: 10,
+                    z_index: 1031,
+                    delay: 2500,
+                    timer: 1000,
+                    url_target: '_blank',
+                    mouse_over: false,
+                    animate: {
+                        enter: animIn,
+                        exit: animOut
+                    },
+                    template:   '<div data-notify="container" class="alert alert-dismissible alert-danger alert--notify" role="alert">' +
+                                    '<span data-notify="icon"></span> ' +
+                                    '<span data-notify="title">Oeps!</span> ' +
+                                    '<span data-notify="message">{$error}</span>' +
+                                    '<div class="progress" data-notify="progressbar">' +
+                                        '<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>' +
+                                    '</div>' +
+                                    '<a href="{3}" target="{4}" data-notify="url"></a>' +
+                                    '<button type="button" aria-hidden="true" data-notify="dismiss" class="close"><span>×</span></button>' +
+                                '</div>'
+                });
+            }
+
+            $('.notifications-demo > .btn').ready(function(){
+                // e.preventDefault();
+                var nFrom = $(this).attr('data-from');
+                var nAlign = $(this).attr('data-align');
+                var nIcons = $(this).attr('data-icon');
+                var nType = $(this).attr('data-type');
+                var nAnimIn = $(this).attr('data-animation-in');
+                var nAnimOut = $(this).attr('data-animation-out');
+
+                notify(nFrom, nAlign, nIcons, nType, nAnimIn, nAnimOut);
+            });
+			</script>
+			{/if}
   </body>
 </html>

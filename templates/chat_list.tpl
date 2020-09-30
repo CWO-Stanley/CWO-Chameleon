@@ -1,58 +1,18 @@
-{literal}
-<script>
-    $(document).ready(function() {
-        $('input[type="checkbox"]').bootstrapSwitch();
-        $('input').tooltip({placement:'auto',animation:true});
-        $('label').tooltip({placement:'auto',animation:true});
-        $("#myTab a").click(function (e) {
-            e.preventDefault()
-            $(this).tab('show')
-        });
-    });
+<header class="content__title">
+                    <h1>CHATBOXEN</h1>
 
-
-
-</script>
-{/literal}
-{if isset($god)}
-{literal}
-<script>
-		$(document).ready(function() {
-				$('#data-table3').DataTable( {
-					"language": {
-						"url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Dutch.json"
-					},
-					"pageLength" : 25,
-					"lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "Alles"]],
-					"order": [[ 7, "desc" ]]
-				} );
-	
-		} );
-		</script>
-{/literal}
-{else}
-{literal}
-<script>
-		$(document).ready(function() {
-				$('#data-table3').DataTable( {
-					"language": {
-						"url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Dutch.json"
-					},
-					"pageLength" : 25,
-					"lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "Alles"]],
-					
-				} );
-	
-		} );
-		</script>
-{/literal}
-{/if}
-<div class="datacontainer" id="data">
+                    
+                </header>
+<div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title"></h4>
+                        <h6 class="card-subtitle">Hier vind je al jouw gemaakte chatboxen terug, die je kan bewerken verwijderen en nog veel meer.</h6>
+						<div class="table-responsive data-table">
     {if {$ids|@count} > 0}
-    <table id="data-table3" class="table table-hover">
+    <table id="data-table2" class="table">
 	<thead>
         <tr>
-            <td><strong>ID</strong></td><td><strong>Achtergrond</strong></td><td><strong>Style</strong></td><td><strong>Naam</strong></td>{if isset($god)}<td><strong>Eigenaar</strong></td><td><strong>Speler</strong></td><td><strong>Aantal keer bezocht</strong></td><td><strong>Laatst bezocht</strong></td>{/if}<td><strong>Acties</strong></td>
+            <td><strong>ID</strong></td><td><strong>Achtergrond</strong></td><td><strong>Style</strong></td><td><strong>Naam</strong></td>{if isset($god)}<td><strong>Eigenaar</strong></td><td><strong>Speler</strong></td><td><strong>Aantal keer bezocht</strong></td><td><strong>Laatst bezocht</strong></td>{/if}<td><strong>Chat/HTML5</strong></td><td><strong>Chat Opties</strong></td>
         </tr>
 	</thead><tbody>
 
@@ -60,7 +20,7 @@
          
 			<tr>
                 <td style="vertical-align:middle"><span class="badge">{$ids[chat]}</span></td>
-				<td style="vertical-align:middle">{if $bgurl[chat] != ""}<img src="{$bgurl[chat]}" style="border-radius: 50% 50% 50% 50%;height:50px;width:50px;">{else}<center><div style="padding:10px 0;text-align:center;vertical-align:middle;background-color:{$bgcolor[chat]};color:#FFF;border-radius: 50% 50% 50% 50%;height:50px;width:50px;">{$chatstyle[chat]}</div></center>{/if}</td>
+				<td style="vertical-align:middle">{if $bgurl[chat] != ""}<center><img src="{$bgurl[chat]}" style="border-radius: 50% 50% 50% 50%;height:50px;width:50px;"></center>{else}<center><div style="padding:10px 0;text-align:center;vertical-align:middle;background-color:{$bgcolor[chat]};color:#FFF;border-radius: 50% 50% 50% 50%;height:50px;width:50px;">{$chatstyle[chat]}</div></center>{/if}</td>
 				<td style="vertical-align:middle"><center><div style="padding:10px 0;text-align:center;vertical-align:middle;background-color:{$bgcolor[chat]};color:#FFF;border-radius: 50% 50% 50% 50%;height:50px;width:50px;">{$chatstyle[chat]}</div></center></td>
 				<td style="vertical-align:middle">{$names[chat]}</td>
 				{if isset($god)}
@@ -70,13 +30,18 @@
 				<td style="vertical-align:middle" data-order="{$lastcalleds[chat]}">{$lastcalleds[chat]|date_format:"%A, %e %B, %Y %H:%M:%S"}</td>
 				{/if}
                 <td style="vertical-align:middle">
-                    <a href="{$fullurl}/chat.php?id={$ids[chat]}" target='_blank' title="Preview Webchat"class="btn btn-success btn-xs"><span class="glyphicon glyphicon-eye-open"></span></a>
-                    <a href="{$fullurl}/edit/{$ids[chat]}" title="Bewerk Webchat" class="btn btn-warning btn-xs"><span class="glyphicon glyphicon-cog"></span></a>
-                    <a href="{$fullurl}/transfer/{$ids[chat]}" title="Transfer Webchat" class="btn btn-info btn-xs"><span class="glyphicon glyphicon-transfer"></span></a>
-					<a href="{$fullurl}/html5.php?id={$ids[chat]}" target="_blank" title="Preview HTML5" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-phone"></span></a>
-                    <a href="#" title="HTML codes Webchat" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#apiToolkit{$ids[chat]}"><span class="glyphicon glyphicon-briefcase"></span></a>
-					<a href="{$fullurl}/chanregister.php?id={$ids[chat]}&login={$login}&channel={$names[chat]}" title="Registreer {$names[chat]}" class="btn btn-warning btn-xs"><span class="glyphicon glyphicon-edit"></span></a>
-                    <a href="{$fullurl}/del/{$ids[chat]}" title="Verwijder Webchat" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-trash"></span></a>
+                    <a href="{$fullurl}/chat.php?id={$ids[chat]}" target='_blank' title="Preview Webchat" class="btn btn-light btn--icon"><i class="zwicon-eye"></i></a>
+                    <a href="{$fullurl}/html5.php?id={$ids[chat]}" target="_blank" title="Preview HTML5" class="btn btn-light btn--icon"><i class="zmdi zmdi-language-html5"></i></a>
+                    
+                </td>
+				<td style="vertical-align:middle">
+                    
+                    <a href="{$fullurl}/edit/{$ids[chat]}" title="Bewerk Webchat" class="btn btn-light btn--icon"><i class="zwicon-cog"></i></a>
+                    <a href="{$fullurl}/transfer/{$ids[chat]}" title="Transfer Webchat" class="btn btn-light btn--icon"><i class="zwicon-loop"></i></a>
+					
+                    <a href="#" title="HTML codes Webchat" class="btn btn-light btn--icon" data-toggle="modal" data-target="#apiToolkit{$ids[chat]}"><i class="zwicon-script"></i></a>
+					<a href="{$fullurl}/chanregister.php?id={$ids[chat]}&login={$login}&channel={$names[chat]}" title="Registreer {$names[chat]}" class="btn btn-light btn--icon"><i class="zmdi zmdi-playlist-plus"></i></a>
+                    <a href="{$fullurl}/del/{$ids[chat]}" title="Verwijder Webchat" class="btn btn-danger btn--icon"><i class="zwicon-trash"></i></a>
                 </td>
             </tr>
 
@@ -125,4 +90,4 @@
         <a href="{$fullurl}/new" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-plus"></span> Nieuwe chatbox aanmaken</a>
     {/if}
 
-</div>
+</div></div></div>

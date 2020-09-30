@@ -128,15 +128,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html>
     <head>
         <meta charset="utf-8">
-        <meta http-equic="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- jQuery -->
-        <script src="js/jquery-1.11.0.min.js"></script>
-        
-        <!-- Bootstrap -->
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-        <script src="js/bootstrap.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="shortcut icon" href="img/cwo-chameleon2.png" />
+
+        <!-- Vendor styles -->
+        <link rel="stylesheet" href="vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css">
+        <link rel="stylesheet" href="vendors/bower_components/animate.css/animate.min.css">
+
+        <!-- App styles -->
+        <link rel="stylesheet" href="css/app.min.css">
         <!--[if lt IE 9]>
           <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
           <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -166,7 +166,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <meta name="twitter:description" content="Waar chatten, chatten is!" />
 <meta name="twitter:title" content="..::Chattersworld Chameleon::.." />
 <link rel="canonical" href="https://chameleon.chattersworld.nl" />
-<link rel="icon" href="https://horus.chattersworld.nl/dist/img/c4all-horus.png" sizes="32x32" />
+<link rel="icon" href="img/cwo-chameleon.png2" sizes="32x32" />
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -187,7 +187,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <link href="css/custom_css/login.css" rel="stylesheet">
 		<title>..::ChattersWorld Chameleon::.. register</title>
     </head>
-    <body>
+    <body data-sa-theme="4">
+	<div class="login">
+
+ <!-- Login -->
+			<div class="login__block active" id="l-login">
+                <div class="login__block__header">
+                    <img src="img/cwo-chameleon2.png">
+					Hallo daar! Registreer hier uw kanaal.
+					</div>
         
         <div class="container">
                 
@@ -246,13 +254,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
             <!-- Chatbottom -->
             <ins class="adsbygoogle"
-                 style="display:inline-block;width:728px;height:90px"
+                 style="display:inline-block;height:90px"
                  data-ad-client="ca-pub-9106844814451489"
                  data-ad-slot="2999842055"></ins>
             <script>
             (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
         </center>
+		</div></div>
+		<!-- Javascript -->
+        <!-- Vendors -->
+        <script src="vendors/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="vendors/bower_components/popper.js/dist/umd/popper.min.js"></script>
+        <script src="vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <!-- App functions and actions -->
+        <script src="js/app.min.js"></script>
     </body>
 
 </html>

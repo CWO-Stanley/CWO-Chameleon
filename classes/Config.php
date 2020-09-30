@@ -43,8 +43,8 @@ class Config {
          */
         $this->_errorMode = "prd";
         $this->_rootDirectory = "";
-        $this->_fullUrl = "https://chameleon.chattersworld.nl"; //zonder / achter de link
-		$this->_logo = "https://chameleon.chattersworld.nl/dist/img/c4all-horus.png"; //zonder / achter de link
+        $this->_fullUrl = "https://dev.chameleon.chattersworld.nl"; //zonder / achter de link
+		$this->_logo = "https://dev.chameleon.chattersworld.nl/img/cwo-chameleon2.png"; //zonder / achter de link
 		$this->_irc = "irc.chattersworld.nl"; //IRC url without port
 		$this->_sitename = "Chattersworld Chameleon"; //Naam van de website
 		/**

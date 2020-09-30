@@ -47,6 +47,7 @@
 <meta name="twitter:title" content="..::{$sitename}::.." />
 <link rel="canonical" href="{$fullurl}/chat.php?id={$smarty.get.id}" />
 <link rel="stylesheet" href="dist/magnific-popup.css">
+<link rel="stylesheet" href="{$fullurl}/vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css">
 <!-- Kiwi script reloaders -->
 <link href="static/css/app.b4765c18.css" rel="preload" as="style">
 <link href="static/js/app.60a20f43.js" rel="preload" as="script">
@@ -66,14 +67,14 @@
 		<center><a target="_blank" href="{$fullurl}"><img src="{$logo}" height="100" alt="Chattersworld"></a></center>
 		<br>
 		{if $metadata['verzoek_url'] != "" && $metadata['radio'] == "true"}
-		<a href="{$metadata['verzoek_url']}" data-mfp-src="#test-popup" class="open-popup-link"><img src="{$fullurl}/radio/request1.png" width="25px" height="25px" alt="Verzoek Aanvragen">&nbsp;Verzoekje Doen</a>
+		<a href="{$metadata['verzoek_url']}" data-mfp-src="#test-popup" class="open-popup-link"><i class="zmdi zmdi-playlist-audio"></i>&nbsp;Verzoekje Doen</a>
 		<br />
 		{else}
-		<a target="_blank" href="{$fullurl}"><img src="{$fullurl}/radio/request1.png" width="25px" height="25px" alt="Maak je eigen chatbox!">&nbsp;Maak je eigen chatbox!</a>
+		<a target="_blank" href="{$fullurl}"><i class="zmdi zmdi-language-html5"></i>&nbsp;Maak je eigen chatbox!</a>
 		{/if}
 		<br />
 		{if $metadata['radio'] == "true"}
-		<a href="{$fullurl}/webplayer.php?id={$smarty.get.id}" target="_new" onclick="window.open('{$fullurl}/webplayer.php?id={$smarty.get.id}','Chameleon Webplayer','width=1024,height=780,scrollbars=yes,toolbar=no,menubar=no,location=no,resizable=yes'); return false"><img src="{$fullurl}/radio/regels1.png" width="25px" height="25px" alt="Chameleon Webplayer">&nbsp;Webplayer</a>
+		<a href="{$fullurl}/webplayer.php?id={$smarty.get.id}" target="_new" onclick="window.open('{$fullurl}/webplayer.php?id={$smarty.get.id}','Chameleon Webplayer','width=1024,height=780,scrollbars=yes,toolbar=no,menubar=no,location=no,resizable=yes'); return false"><i class="zmdi zmdi-hearing"></i>&nbsp;Webplayer</a>
 		{/if}
 		<br />
 		<br />

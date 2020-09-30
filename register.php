@@ -93,7 +93,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['recaptcha_response'])
 
     // Build POST request:
     $recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
-    $recaptcha_secret = '6Ld6Y4AUAAAAAFi3mHJoDQ2Pg2Mb8MduZ5GNwaH_';
+    $recaptcha_secret = '6Ld_oMwZAAAAAKC8SWtyPmnRDFiJHi1gKlDwqQSY';
     $recaptcha_response = $_POST['recaptcha_response'];
 
     // Make and decode POST request:
@@ -131,45 +131,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html>
     <head>
         <meta charset="utf-8">
-        <meta http-equic="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- jQuery -->
-        <script src="js/jquery-1.11.0.min.js"></script>
-        
-        <!-- Bootstrap -->
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-        <script src="js/bootstrap.min.js"></script>
-        <!--[if lt IE 9]>
-          <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-          <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
-	<script type="text/javascript" src="analyticstracking.js"></script>        
-        <!-- SEO -->
-		<meta name="language" content="Dutch" />
-<meta name="keywords" content="chatten, gezellig kletsen, Chattersworld, Radio chat, Chameleon, Gezellig, Chatten zonder registratie, 24/7 Verzoekjes, Live verzoek, Radio Chat, webcam, webcamchat, triviant," />
-<meta name="description"  content="Chattersworld De enige Chatserver waar je gratis kan chatten, chatten zonder registratie, chatten met webcams en dat allemaal gratis, Chattersworld Ares Verzoekserver, maak hem nu gratis aan!" />
-<meta name="google-site-verification" content="-hrJp-Kl7mtCVBOR5Dg45R52OfEAmnIceApYxPMluc4" />
-<meta name="robots" content="index,follow,noodp,noydir" />
-<meta name="description" content="Waar chatten, chatten is!"/>
-<meta property="og:locale" content="nl_NL" />
-<meta property="og:type" content="website" />
-<meta property="og:title" content="Chameleon | Chattersworld | Waar chatten, chatten is!" />
-<meta property="og:description" content="Chameleon, de chat creator die iedereen kent, maak nu je gratis chatbox aan op chattersworld." />
-<meta property="og:url" content="https://chameleon.chattersworld.nl" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="shortcut icon" href="img/cwo-chameleon2.png" />
 
-<meta property="og:type" content="article" />
-<meta property="og:title" content="..::Chattersworld Chameleon::.." />
-<meta property="og:site_name" content="..::Chattersworld Chameleon::.." />
-<meta property="article:publisher" content="https://www.facebook.com/chattersworld/" />
-<meta property="fb:app_id" content="699740480138507" />
+        <!-- Vendor styles -->
+        <link rel="stylesheet" href="vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css">
+        <link rel="stylesheet" href="vendors/bower_components/animate.css/animate.min.css">
 
-<meta property="og:image" content="https://horus.chattersworld.nl/webchat/img/cwobg.jpg" />
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:description" content="Waar chatten, chatten is!" />
-<meta name="twitter:title" content="..::Chattersworld Chameleon::.." />
-<link rel="canonical" href="https://chameleon.chattersworld.nl" />
-<link rel="icon" href="https://horus.chattersworld.nl/dist/img/c4all-horus.png" sizes="32x32" />
+        <!-- App styles -->
+        <link rel="stylesheet" href="css/app.min.css">
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -177,25 +147,31 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
   gtag('config', 'UA-73408859-2', { 'anonymize_ip': true });
 </script>
-<script src="https://www.google.com/recaptcha/api.js?render=6Ld6Y4AUAAAAAH6uCWtHPw9psZxn8qZ7Rqy2ysWL"></script>
+<script src="https://www.google.com/recaptcha/api.js?render=6Ld_oMwZAAAAAGXMqYZmWxtfWAllrYYdSKtUn8SL"></script>
     <script>
         grecaptcha.ready(function () {
-            grecaptcha.execute('6Ld6Y4AUAAAAAH6uCWtHPw9psZxn8qZ7Rqy2ysWL', { action: 'contact' }).then(function (token) {
+            grecaptcha.execute('6Ld_oMwZAAAAAGXMqYZmWxtfWAllrYYdSKtUn8SL', { action: 'contact' }).then(function (token) {
                 var recaptchaResponse = document.getElementById('recaptchaResponse');
                 recaptchaResponse.value = token;
             });
         });
     </script>        
         <!-- Custom CSS -->
-        <link href="css/custom_css/login.css" rel="stylesheet">
-		<title>..::ChattersWorld Chameleon::.. register</title>
+		<title>..::Chattersworld Chameleon::.. Register</title>
     </head>
-    <body>
-        
+    <body data-sa-theme="4">
+       <div class="login">
+
+ <!-- Login -->
+			<div class="login__block active" id="l-login">
+                <div class="login__block__header">
+                    <img src="img/cwo-chameleon2.png">
+                    Hallo daar! U kunt zich hier registreren.	 
+</div>					
         <div class="container">
                 
 								<div class="alert alert-success alert-dismissable"><strong>Let op!</strong> Registeren geldt gelijk voor het netwerk, na registratie keer je gelijk terug naar het inlogscherm, je ontvangt geen bevestiging!
-								<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button></div>
+								</div>
 								
 								
                             
@@ -220,8 +196,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             
             
             <form class="form-signin" role="form" method="POST" action="">
-                <h2 class="form-signin-heading">Registreer voor Chattersworld:</h2>
-				<script type="text/javascript">
+               				<script type="text/javascript">
 
 				function CheckSpace(event)
 				{
@@ -240,23 +215,36 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <button class="btn btn-lg btn-primary btn-block" type="submit">Registreer</button>
 				<input type="hidden" name="recaptcha_response" id="recaptchaResponse">
             </form>
+			<br>
+			<br>
 			<form class="form-signin" role="form" method="" action="/">
                 <h2 class="form-signin-heading">Of log in:</h2>
 				<button class="btn btn-lg btn-primary btn-block" type="submit">Log in</button>
 				</form>
 
         </div>
+		<br />
         <center>
             <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
             <!-- Chatbottom -->
             <ins class="adsbygoogle"
-                 style="display:inline-block;width:728px;height:90px"
+                 style="display:inline-block;height:90px"
                  data-ad-client="ca-pub-9106844814451489"
                  data-ad-slot="2999842055"></ins>
             <script>
             (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
         </center>
+		</div>
+		</div>
+		<!-- Javascript -->
+        <!-- Vendors -->
+        <script src="vendors/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="vendors/bower_components/popper.js/dist/umd/popper.min.js"></script>
+        <script src="vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <!-- App functions and actions -->
+        <script src="js/app.min.js"></script>
     </body>
 
 </html>

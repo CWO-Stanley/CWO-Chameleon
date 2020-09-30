@@ -11,6 +11,9 @@ protected $metadata = array();
 public function __construct($location){
     $errno = $errstr = '';
     $t = parse_url($location);
+    if (!array_key_exists('scheme', $t)) {
+        $t['scheme']='http';
+    }
     if (!array_key_exists('port', $t)) {
         $t['port']=80;
     }
