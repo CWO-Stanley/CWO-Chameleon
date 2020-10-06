@@ -46,13 +46,13 @@
 <meta name="twitter:description" content="Waar chatten, chatten is!" />
 <meta name="twitter:title" content="..::{$sitename}::.." />
 <link rel="canonical" href="{$fullurl}/chat.php?id={$smarty.get.id}" />
-<link rel="stylesheet" href="dist/magnific-popup.css">
-<link rel="stylesheet" href="{$fullurl}/vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css">
+<link rel="stylesheet" href="{$fullurl}/dist/magnific-popup.css">
+<link rel="stylesheet" href="{$fullurl}/app-assets/css/material-design-iconic-font/dist/css/material-design-iconic-font.min.css">
 <!-- Kiwi script reloaders -->
-<link href="static/css/app.b4765c18.css" rel="preload" as="style">
-<link href="static/js/app.60a20f43.js" rel="preload" as="script">
-<link href="static/js/vendor.23cd2b70.js" rel="preload" as="script">
-<link href="static/css/app.b4765c18.css" rel="stylesheet">
+<link href="{$fullurl}/static/css/app.b4765c18.css" rel="preload" as="style">
+<link href="{$fullurl}/static/js/app.60a20f43.js" rel="preload" as="script">
+<link href="{$fullurl}/static/js/vendor.23cd2b70.js" rel="preload" as="script">
+<link href="{$fullurl}/static/css/app.b4765c18.css" rel="stylesheet">
 <!-- END -->
 </head>
 <meta charset=utf-8><meta name=viewport content="user-scalable=no,width=device-width,initial-scale=1,maximum-scale=1">

@@ -27,7 +27,6 @@
 <link rel="canonical" href="{$fullurl}/chat.php?id={$smarty.get.id}" />
  <title>..::Chattersworld::.. #{$metadata['name']}</title>
  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
- <link rel="stylesheet" href="{$fullurl}/vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css">
  <link rel="stylesheet" href="dist/magnific-popup.css">
   <script type="text/javascript" src="../analyticstracking.js"></script>
   {if $metadata['html_redirect'] == "true"}
@@ -261,6 +260,8 @@ position: absolute;
             }
 	{/literal}
  </style>
+ <link rel="stylesheet" href="{$fullurl}/dist/magnific-popup.css">
+<link rel="stylesheet" href="{$fullurl}/app-assets/css/material-design-iconic-font/dist/css/material-design-iconic-font.min.css">
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
  <script>
 $( document ).ready( function() {

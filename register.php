@@ -93,7 +93,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['recaptcha_response'])
 
     // Build POST request:
     $recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
-    $recaptcha_secret = '6Ld_oMwZAAAAAKC8SWtyPmnRDFiJHi1gKlDwqQSY';
+    $recaptcha_secret = '6Ld6Y4AUAAAAAFi3mHJoDQ2Pg2Mb8MduZ5GNwaH_';
     $recaptcha_response = $_POST['recaptcha_response'];
 
     // Make and decode POST request:
@@ -130,16 +130,31 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
 		<link rel="shortcut icon" href="img/cwo-chameleon2.png" />
 
-        <!-- Vendor styles -->
-        <link rel="stylesheet" href="vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css">
-        <link rel="stylesheet" href="vendors/bower_components/animate.css/animate.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,600,600i,700,700i%7CComfortaa:300,400,700" rel="stylesheet">
 
-        <!-- App styles -->
-        <link rel="stylesheet" href="css/app.min.css">
+    <!-- BEGIN: Vendor CSS-->
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/vendors.min.css">
+    <!-- END: Vendor CSS-->
+
+    <!-- BEGIN: Theme CSS-->
+    <link rel="stylesheet" type="text/css" href="app-assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/bootstrap-extended.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/colors.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/components.css">
+    <!-- END: Theme CSS-->
+
+    <!-- BEGIN: Page CSS-->
+    <link rel="stylesheet" type="text/css" href="app-assets/css/core/menu/menu-types/vertical-menu-modern.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/core/colors/palette-gradient.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/pages/login-register.css">
+    <!-- END: Page CSS-->
+
+    <!-- BEGIN: Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -147,37 +162,42 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
   gtag('config', 'UA-73408859-2', { 'anonymize_ip': true });
 </script>
-<script src="https://www.google.com/recaptcha/api.js?render=6Ld_oMwZAAAAAGXMqYZmWxtfWAllrYYdSKtUn8SL"></script>
+<script src="https://www.google.com/recaptcha/api.js?render=6Ld6Y4AUAAAAAH6uCWtHPw9psZxn8qZ7Rqy2ysWL"></script>
     <script>
         grecaptcha.ready(function () {
-            grecaptcha.execute('6Ld_oMwZAAAAAGXMqYZmWxtfWAllrYYdSKtUn8SL', { action: 'contact' }).then(function (token) {
+            grecaptcha.execute('6Ld6Y4AUAAAAAH6uCWtHPw9psZxn8qZ7Rqy2ysWL', { action: 'contact' }).then(function (token) {
                 var recaptchaResponse = document.getElementById('recaptchaResponse');
                 recaptchaResponse.value = token;
             });
         });
-    </script>        
+    </script>  
         <!-- Custom CSS -->
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+		<script src='https://www.google.com/recaptcha/api.js' async defer></script>
 		<title>..::Chattersworld Chameleon::.. Register</title>
     </head>
-    <body data-sa-theme="4">
-       <div class="login">
-
- <!-- Login -->
-			<div class="login__block active" id="l-login">
-                <div class="login__block__header">
-                    <img src="img/cwo-chameleon2.png">
-                    Hallo daar! U kunt zich hier registreren.	 
-</div>					
-        <div class="container">
-                
-								<div class="alert alert-success alert-dismissable"><strong>Let op!</strong> Registeren geldt gelijk voor het netwerk, na registratie keer je gelijk terug naar het inlogscherm, je ontvangt geen bevestiging!
-								</div>
-								
-								
-                            
-                
-                
-				<?php
+    <body class="vertical-layout vertical-menu-modern 1-column  bg-full-screen-image blank-page blank-page" data-open="click" data-menu="vertical-menu-modern" data-color="bg-gradient-x-purple-red" data-col="1-column">
+       	
+		<div class="app-content content">
+        <div class="content-wrapper">
+            <div class="content-wrapper-before"></div>
+            <div class="content-header row">
+            </div>
+            <div class="content-body">
+                <section class="flexbox-container">
+                    <div class="col-12 d-flex align-items-center justify-content-center">
+                        <div class="col-lg-4 col-md-6 col-10 box-shadow-2 p-0">
+                            <div class="card border-grey border-lighten-3 px-1 py-1 m-0">
+                                <div class="card-header border-0">
+                                    <div class="text-center mb-1">
+                                        <img src="img/cwo-chameleon2.png" height="50px" alt="branding logo">
+                                    </div>
+                                    <div class="font-large-1  text-center">
+                                        Registeer nu!
+                                    </div>
+                                </div>
+                                <div class="card-content">
+									<?php
                         if(isset($_POST['login'])) {
                             if(isset($errors)) {
                                 echo '<div class="alert alert-danger alert-dismissable"><strong>' . htmlentities($errors) . '</strong>';
@@ -193,10 +213,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                            
                         } ?>
-            
-            
-            <form class="form-signin" role="form" method="POST" action="">
-               				<script type="text/javascript">
+                                    <div class="card-body">
+									<div class="alert alert-success alert-dismissable"><strong>Let op!</strong> Registeren geldt gelijk voor het netwerk, na registratie keer je gelijk terug naar het inlogscherm, je ontvangt geen bevestiging!
+								</div>
+                                        <form class="form-horizontal" method="POST" action="">
+											<fieldset class="form-group position-relative has-icon-left">
+                                                <input type="email" name="email" class="form-control round" id="user-name" placeholder="E-Mail" required>
+                                                <div class="form-control-position">
+                                                    <i class="ft-at-sign"></i>
+                                                </div>
+                                            </fieldset>
+                                            <fieldset class="form-group position-relative has-icon-left">
+											<script type="text/javascript">
 
 				function CheckSpace(event)
 				{
@@ -207,23 +235,53 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 					}
 				}
 				</script>
-				<input type="email" class="form-control" name="email" placeholder="E-mail adres" required autofocus><br />
-                <input type="text" class="form-control" name="login" placeholder="Nicknaam" onkeypress="CheckSpace(event)" required><br />
-				<input type="password" class="form-control" name="pass" placeholder="Wachtwoord" required><br />
-				<input type="password" class="form-control" name="pass2" placeholder="Herhaal Wachtwoord" required>
-				
-                <button class="btn btn-lg btn-primary btn-block" type="submit">Registreer</button>
-				<input type="hidden" name="recaptcha_response" id="recaptchaResponse">
-            </form>
-			<br>
-			<br>
-			<form class="form-signin" role="form" method="" action="/">
-                <h2 class="form-signin-heading">Of log in:</h2>
-				<button class="btn btn-lg btn-primary btn-block" type="submit">Log in</button>
-				</form>
+                                                <input type="text" name="login" class="form-control round" id="user-name" onkeypress="CheckSpace(event)" placeholder="Nicknaam" required>
+                                                <div class="form-control-position">
+                                                    <i class="ft-user"></i>
+                                                </div>
+                                            </fieldset>
+                                            <fieldset class="form-group position-relative has-icon-left">
+                                                <input type="password" class="form-control round" name="pass" id="user-password" placeholder="Wachtwoord" required>
+                                                <div class="form-control-position">
+                                                    <i class="ft-lock"></i>
+                                                </div>
+                                            </fieldset>
+											<fieldset class="form-group position-relative has-icon-left">
+                                                <input type="password" class="form-control round" name="pass2" id="user-password" placeholder="Wachtwoord" required>
+                                                <div class="form-control-position">
+                                                    <i class="ft-lock"></i>
+                                                </div>
+                                            </fieldset>
+                                            <div class="form-group row">
+                                                <div class="col-md-6 col-12 text-center text-sm-left">
 
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="form-group text-center">
+												<!-- <center><div class="g-recaptcha" data-sitekey="6LdZ_nIUAAAAANK_JiB2qsRbSPnldqaYTjFwNj8G"></div></center><br /> -->
+                                                <button type="submit" class="btn round btn-block btn-glow btn-bg-gradient-x-purple-blue col-12 mr-1 mb-1">Registreer</button>
+												<input type="hidden" name="recaptcha_response" id="recaptchaResponse">
+                                            </div>
+
+                                        </form>
+                                    </div>
+                                    
+
+                                    <p class="card-subtitle text-muted text-right font-small-3 mx-2 my-1"><span>Heb je al een account? <a href="/login" class="card-link">Log dan in!</a></span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
         </div>
-		<br />
+    </div>
+	
+	<!-- End new style -->
+	   
+	   
         <center>
             <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
             <!-- Chatbottom -->
@@ -237,14 +295,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </center>
 		</div>
 		</div>
-		<!-- Javascript -->
-        <!-- Vendors -->
-        <script src="vendors/bower_components/jquery/dist/jquery.min.js"></script>
-        <script src="vendors/bower_components/popper.js/dist/umd/popper.min.js"></script>
-        <script src="vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<!-- BEGIN: Vendor JS-->
+    <script src="app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
+    <!-- BEGIN Vendor JS-->
 
-        <!-- App functions and actions -->
-        <script src="js/app.min.js"></script>
+    <!-- BEGIN: Page Vendor JS-->
+    <script src="app-assets/vendors/js/forms/validation/jqBootstrapValidation.js" type="text/javascript"></script>
+    <!-- END: Page Vendor JS-->
+
+    <!-- BEGIN: Theme JS-->
+    <script src="app-assets/js/core/app-menu.js" type="text/javascript"></script>
+    <script src="app-assets/js/core/app.js" type="text/javascript"></script>
+    <!-- END: Theme JS-->
+
+    <!-- BEGIN: Page JS-->
+    <script src="app-assets/js/scripts/forms/form-login-register.js" type="text/javascript"></script>
+    
     </body>
 
 </html>
