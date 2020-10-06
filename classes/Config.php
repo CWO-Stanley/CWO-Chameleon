@@ -44,7 +44,7 @@ class Config {
         $this->_errorMode = "prd";
         $this->_rootDirectory = "";
         $this->_fullUrl = "https://chameleon.chattersworld.nl"; //zonder / achter de link
-		$this->_logo = "https://chameleon.chattersworld.nl/dist/img/c4all-horus.png"; //zonder / achter de link
+		$this->_logo = "https://chameleon.chattersworld.nl/img/cwo-chameleon2.png"; //zonder / achter de link
 		$this->_irc = "irc.chattersworld.nl"; //IRC url without port
 		$this->_sitename = "Chattersworld Chameleon"; //Naam van de website
 		/**
@@ -57,19 +57,19 @@ class Config {
          */
         $this->_mysqlHost = "127.0.0.1";
         $this->_mysqlUser = "chatters_chameleon";
-        $this->_mysqlPass = "Q7srAfsW";
+        $this->_mysqlPass = "";
         $this->_mysqlDbName = "chatters_chameleon";
         $this->_mysqlPrefix = "chameleon_";
 
         $this->_mysqlHostDev = "127.0.0.1";
         $this->_mysqlUserDev = "chatters_chameleon";
-        $this->_mysqlPassDev = "Q7srAfsW";
+        $this->_mysqlPassDev = "";
         $this->_mysqlDbNameDev = "chatters_chameleon";
         $this->_mysqlPrefixDev = "chameleon_";
 
         $this->_mysqlAnopeHost = "127.0.0.1";
         $this->_mysqlAnopeUser = "da_admin";
-        $this->_mysqlAnopePass = "GytvVp5Z";
+        $this->_mysqlAnopePass = "";
         $this->_mysqlAnopeDbName = "anope";
     }
 

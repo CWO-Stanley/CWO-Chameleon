@@ -226,7 +226,7 @@ return true;
 
 <script>
 $("#lunaradio").lunaradio({
-	token: "VVpTZmZXZGVpYWReViBgXg==",
+	token: "VVpTZmZXZGViXlNsUyBgXg==",
 	userinterface: "big",
 	backgroundcolor: "{$metadata['playerkleur']}",
 	fontcolor: "{$metadata['tekstkleur']}",
