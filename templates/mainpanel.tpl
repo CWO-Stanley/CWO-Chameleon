@@ -104,12 +104,7 @@
                 <div class="content-header-left col-md-8 col-12 mb-2 breadcrumb-new">
                     
 		 <br />
-        {if isset($info)}
-            <div class="alert alert-info alert-dismissable">
-                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                <strong>Ziezo!</strong> {$info}
-            </div>
-        {/if}
+        
         
         {if isset($page)}
             {if $page=='new' || $page=='edit'}
@@ -165,7 +160,7 @@
 	{literal}
 	<script>
 	$(document).ready(function(){
-		toastr.success('Je chatbox is opgeslagen!', 'Geslaagd!', {positionClass: 'toast-top-right', containerId: 'toast-top-right', "progressBar": true});
+		toastr.success('{/literal}{$success}{literal}', 'Geslaagd!', {positionClass: 'toast-top-right', containerId: 'toast-top-right', "progressBar": true});
     });
 	</script>
 	{/literal}
@@ -174,11 +169,21 @@
 	{literal}
 	<script>
 	$(document).ready(function(){
-		toastr.error('Je chatbox is niet opgeslagen!', 'Helaas!', {positionClass: 'toast-top-right', containerId: 'toast-top-right', "progressBar": true});
+		toastr.error('{/literal}{$error}{literal}', 'Helaas!', {positionClass: 'toast-top-right', containerId: 'toast-top-right', "progressBar": true});
     });
 	</script>
 	{/literal}
 	{/if}
+	{if isset($info)}
+	{literal}
+	<script>
+	$(document).ready(function(){
+		toastr.info('{/literal}{$info}{literal}', 'Gelukt!', {positionClass: 'toast-top-right', containerId: 'toast-top-right', "progressBar": true});
+    });
+	</script>
+	{/literal}
+	{/if}
+	
 		{if isset($god)}
 {literal}
 <script>
