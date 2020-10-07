@@ -31,7 +31,6 @@ The player will play audio without a licensekey, but other functions will not wo
 # Installation
 
 Requires;
-
 - Anope Services running on MySQL and Encryption has to be MD5
 - Anope XMLRPC module has to be enabled and working!
 - Make sure that your anope instance has m_xmlrpc enabled
@@ -41,7 +40,6 @@ Requires;
 - Red5 RTPM server for webcam via LightIRC (License needed)
 
 Installation is quite straight forward;
-Most things can be done within classes/config.php;
 - Setup a database account
 - import database.sql to that account
 - make sure that the webhost can connect to your anope datebase and put in the details in classes/Config.php
