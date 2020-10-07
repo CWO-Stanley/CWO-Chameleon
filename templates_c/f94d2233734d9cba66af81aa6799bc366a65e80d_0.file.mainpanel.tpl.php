@@ -1,18 +1,30 @@
 <?php
+<<<<<<< HEAD
 /* Smarty version 3.1.34-dev-7, created on 2020-10-07 21:19:25
+=======
+/* Smarty version 3.1.34-dev-7, created on 2020-10-06 23:41:26
+>>>>>>> a6ac73aa2d637b034ed8f549d05ad692dbb34fbb
   from '/home/chatters/domains/chattersworld.nl/public_html/chameleon/templates/mainpanel.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
+<<<<<<< HEAD
   'unifunc' => 'content_5f7e14bd6c39e5_46505590',
+=======
+  'unifunc' => 'content_5f7ce4863d3261_68610487',
+>>>>>>> a6ac73aa2d637b034ed8f549d05ad692dbb34fbb
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f94d2233734d9cba66af81aa6799bc366a65e80d' => 
     array (
       0 => '/home/chatters/domains/chattersworld.nl/public_html/chameleon/templates/mainpanel.tpl',
+<<<<<<< HEAD
       1 => 1602098363,
+=======
+      1 => 1601971299,
+>>>>>>> a6ac73aa2d637b034ed8f549d05ad692dbb34fbb
       2 => 'file',
     ),
   ),
@@ -26,7 +38,11 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:chat_list.tpl' => 1,
   ),
 ),false)) {
+<<<<<<< HEAD
 function content_5f7e14bd6c39e5_46505590 (Smarty_Internal_Template $_smarty_tpl) {
+=======
+function content_5f7ce4863d3261_68610487 (Smarty_Internal_Template $_smarty_tpl) {
+>>>>>>> a6ac73aa2d637b034ed8f549d05ad692dbb34fbb
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -72,8 +88,11 @@ function content_5f7e14bd6c39e5_46505590 (Smarty_Internal_Template $_smarty_tpl)
 	<link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['fullurl']->value;?>
 /app-assets/vendors/js/extensions/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo $_smarty_tpl->tpl_vars['fullurl']->value;?>
+<<<<<<< HEAD
 /app-assets/vendors/css/extensions/toastr.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo $_smarty_tpl->tpl_vars['fullurl']->value;?>
+=======
+>>>>>>> a6ac73aa2d637b034ed8f549d05ad692dbb34fbb
 /app-assets/vendors/css/tables/datatable/datatables.min.css">
 
     
@@ -106,6 +125,7 @@ function content_5f7e14bd6c39e5_46505590 (Smarty_Internal_Template $_smarty_tpl)
                          
                         
                         <?php if ((isset($_smarty_tpl->tpl_vars['login']->value))) {?>
+<<<<<<< HEAD
 						<li class="dropdown dropdown-user nav-item"><a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown"> <span class="avatar avatar-online"><?php if ((isset($_smarty_tpl->tpl_vars['god']->value))) {?><img src="<?php echo $_smarty_tpl->tpl_vars['logo']->value;?>
 " alt="avatar"><?php } else { ?><img src="<?php echo $_smarty_tpl->tpl_vars['fullurl']->value;?>
 /app-assets/images/portrait/small/avatar-s-11.png" alt="avatar"><?php }?><i></i></span></a>
@@ -121,6 +141,14 @@ function content_5f7e14bd6c39e5_46505590 (Smarty_Internal_Template $_smarty_tpl)
                             </div>
                         </li>
 						<?php }?>
+=======
+                            <strong>Ingelogd als: </strong><?php if ((isset($_smarty_tpl->tpl_vars['god']->value))) {?><img src='<?php echo $_smarty_tpl->tpl_vars['fullurl']->value;?>
+/admin.png' alt='admin' /><font color='deeppink'><b><?php }?> <?php echo $_smarty_tpl->tpl_vars['login']->value;?>
+ <?php if ((isset($_smarty_tpl->tpl_vars['god']->value))) {?></b></font><img src='<?php echo $_smarty_tpl->tpl_vars['fullurl']->value;?>
+/admin.png' alt='admin' /><?php }?> (<a href="<?php echo $_smarty_tpl->tpl_vars['fullurl']->value;?>
+/logout">Log uit</a>)
+                        <?php }?>
+>>>>>>> a6ac73aa2d637b034ed8f549d05ad692dbb34fbb
                     </ul>
                 </div>
             </div>
@@ -263,6 +291,7 @@ function content_5f7e14bd6c39e5_46505590 (Smarty_Internal_Template $_smarty_tpl)
  src="<?php echo $_smarty_tpl->tpl_vars['fullurl']->value;?>
 /app-assets/js/core/app.js" type="text/javascript"><?php echo '</script'; ?>
 >
+<<<<<<< HEAD
 	<?php echo '<script'; ?>
  src="<?php echo $_smarty_tpl->tpl_vars['fullurl']->value;?>
 /app-assets/vendors/js/extensions/toastr.min.js" type="text/javascript"><?php echo '</script'; ?>
@@ -289,6 +318,9 @@ function content_5f7e14bd6c39e5_46505590 (Smarty_Internal_Template $_smarty_tpl)
 >
 	
 	<?php }?>
+=======
+
+>>>>>>> a6ac73aa2d637b034ed8f549d05ad692dbb34fbb
 		<?php if ((isset($_smarty_tpl->tpl_vars['god']->value))) {?>
 
 <?php echo '<script'; ?>
@@ -326,6 +358,147 @@ $(document).ready(function() {
 >
 
 <?php }?>					
+<<<<<<< HEAD
+=======
+
+        <?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['fullurl']->value;?>
+/app-assets/vendors/js/extensions/remarkable-bootstrap-notify/dist/bootstrap-notify.min.js"><?php echo '</script'; ?>
+>
+
+        <!-- App functions and actions -->
+        
+		<?php if ((isset($_smarty_tpl->tpl_vars['success']->value))) {?>
+		<?php echo '<script'; ?>
+ type="text/javascript">
+
+            /*--------------------------------------
+                Bootstrap Notify Notifications
+            ---------------------------------------*/
+            function notify(from, align, icon, type, animIn, animOut){
+                $.notify({
+                    icon: icon,
+                    title: 'Bootstrap Notify',
+                    message: 'Turning standard Bootstrap alerts into awesome notifications',
+                    url: ''
+                },{
+                    element: 'body',
+                    type: type,
+                    allow_dismiss: true,
+                    placement: {
+                        from: from,
+                        align: align
+                    },
+                    offset: {
+                        x: 20,
+                        y: 20
+                    },
+                    spacing: 10,
+                    z_index: 1031,
+                    delay: 2500,
+                    timer: 1000,
+                    url_target: '_blank',
+                    mouse_over: false,
+                    animate: {
+                        enter: animIn,
+                        exit: animOut
+                    },
+                    template:   '<div data-notify="container" class="alert alert-dismissible alert-success alert--notify" role="alert">' +
+                                    '<span data-notify="icon"></span> ' +
+                                    '<span data-notify="title">Ziezo!</span> ' +
+                                    '<span data-notify="message"><?php echo $_smarty_tpl->tpl_vars['success']->value;?>
+</span>' +
+                                    '<div class="progress" data-notify="progressbar">' +
+                                        '<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>' +
+                                    '</div>' +
+                                    '<a href="<?php echo 3;?>
+" target="<?php echo 4;?>
+" data-notify="url"></a>' +
+                                    '<button type="button" aria-hidden="true" data-notify="dismiss" class="close"><span>×</span></button>' +
+                                '</div>'
+                });
+            }
+
+            $('.notifications-demo > .btn').ready(function(){
+                // e.preventDefault();
+                var nFrom = $(this).attr('data-from');
+                var nAlign = $(this).attr('data-align');
+                var nIcons = $(this).attr('data-icon');
+                var nType = $(this).attr('data-type');
+                var nAnimIn = $(this).attr('data-animation-in');
+                var nAnimOut = $(this).attr('data-animation-out');
+
+                notify(nFrom, nAlign, nIcons, nType, nAnimIn, nAnimOut);
+            });
+			<?php echo '</script'; ?>
+>
+			<?php }?>
+			<?php if ((isset($_smarty_tpl->tpl_vars['error']->value))) {?>
+			<?php echo '<script'; ?>
+ type="text/javascript">
+
+            /*--------------------------------------
+                Bootstrap Notify Notifications
+            ---------------------------------------*/
+            function notify(from, align, icon, type, animIn, animOut){
+                $.notify({
+                    icon: icon,
+                    title: 'Bootstrap Notify',
+                    message: 'Turning standard Bootstrap alerts into awesome notifications',
+                    url: ''
+                },{
+                    element: 'body',
+                    type: type,
+                    allow_dismiss: true,
+                    placement: {
+                        from: from,
+                        align: align
+                    },
+                    offset: {
+                        x: 20,
+                        y: 20
+                    },
+                    spacing: 10,
+                    z_index: 1031,
+                    delay: 2500,
+                    timer: 1000,
+                    url_target: '_blank',
+                    mouse_over: false,
+                    animate: {
+                        enter: animIn,
+                        exit: animOut
+                    },
+                    template:   '<div data-notify="container" class="alert alert-dismissible alert-danger alert--notify" role="alert">' +
+                                    '<span data-notify="icon"></span> ' +
+                                    '<span data-notify="title">Oeps!</span> ' +
+                                    '<span data-notify="message"><?php echo $_smarty_tpl->tpl_vars['error']->value;?>
+</span>' +
+                                    '<div class="progress" data-notify="progressbar">' +
+                                        '<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>' +
+                                    '</div>' +
+                                    '<a href="<?php echo 3;?>
+" target="<?php echo 4;?>
+" data-notify="url"></a>' +
+                                    '<button type="button" aria-hidden="true" data-notify="dismiss" class="close"><span>×</span></button>' +
+                                '</div>'
+                });
+            }
+
+            $('.notifications-demo > .btn').ready(function(){
+                // e.preventDefault();
+                var nFrom = $(this).attr('data-from');
+                var nAlign = $(this).attr('data-align');
+                var nIcons = $(this).attr('data-icon');
+                var nType = $(this).attr('data-type');
+                var nAnimIn = $(this).attr('data-animation-in');
+                var nAnimOut = $(this).attr('data-animation-out');
+
+                notify(nFrom, nAlign, nIcons, nType, nAnimIn, nAnimOut);
+            });
+			<?php echo '</script'; ?>
+>
+			<?php }?>
+>>>>>>> a6ac73aa2d637b034ed8f549d05ad692dbb34fbb
   </body>
 </html>
 <?php }
