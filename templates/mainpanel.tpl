@@ -194,6 +194,7 @@ $(document).ready(function() {
         },
 		"pageLength" : 25,
 		"lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "Alles"]],
+		"responsive": true,
 		"order": [[ 7, "desc" ]]
     } );
 	
@@ -210,7 +211,7 @@ $(document).ready(function() {
 					},
 					"pageLength" : 25,
 					"lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "Alles"]],
-					
+					"responsive": true
 				} );
 	
 		} );
