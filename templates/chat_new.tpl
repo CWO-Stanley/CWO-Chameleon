@@ -56,6 +56,10 @@
             <div class="tab-content">
                 <!-- ALGEMENE INSTELLINGEN -->
                 <div class="tab-pane active fade show" id="algemeen" role="tabpanel" aria-expanded="true" aria-labelledby="base-tab1">
+				<br />
+                    <div class="alert alert-info">
+                        Let op!! Heb je reeds een kanaalnaam geregistreerd, neem dan die naam! Verander je van kanaalnaam, dien je deze opnieuw te registeren.
+                    </div>
                     <!-- Naam van de chatbox -->
                     <div class="form-group">
 					<script type="text/javascript">
@@ -85,7 +89,10 @@
 
                 <!-- STIJL EN DESIGN -->
                 <div id="design" class="tab-pane fade" aria-labelledby="base-tab2">
-					<!-- Naam van de chatbox -->
+					<br />
+                    <div class="alert alert-info">
+                        Deze instellingen hebben betrekking tot het uiterlijk van uw webchat.
+                    </div>
                     
 					<div class="row">
                         <label for="chat_bgurl" class="control-label col-sm-2 white">Achtergrond Link<br /><small>Enkel HTTPS word geaccepteerd!</small></label>
@@ -95,7 +102,7 @@
 							<i class="form-group__bar"></i>
 						</div>
                     </div>
-					</div><br /><br /><br /><br />
+					</div><br /><br />
                     <!-- Chat stijl -->
                     <div class="form-group">
 					<div class="row">
@@ -117,7 +124,7 @@
                         </div>
                     </div>
 					</div>
-					<br /><br /><br />
+					<br /><br />
 
                     <!-- Icoon style -->
                     <div class="form-group">
@@ -182,7 +189,7 @@
 						</div>
                     </div>
 					</div>
-                    <br /><br /><br />
+                    <br /><br />
                     <!-- Webcam audio inschakelen -->
                     <div class="form-group">
 					<div class="row">
@@ -208,7 +215,10 @@
 
                 <!-- GEAVANCEERDE INSTELLINGEN -->
                 <div id="geavanceerd" class="tab-pane fade" aria-labelledby="base-tab4">
-                    <!-- Privegesprekken inschakelen -->
+                    <br />
+                    <div class="alert alert-info">
+                        Geavanceerde instellingen schakelen functies in of uit.
+                    </div>
                     <div class="form-group">
 					<div class="row">
                         <label for="chat_prive" title="Hiermee kan je instellen dat gebruikers privegesprekken met elkaar kunnen voeren." class="control-label col-sm-2 white">Privegesprekken inschakelen</label>
@@ -218,7 +228,7 @@
 						</div>
                     </div>
 					</div>
-                    <br /><br /><br />
+                    <br /><br />
                     <!-- Serverwindow -->
                     <div class="form-group">
 					<div class="row">
@@ -250,6 +260,7 @@
                         <i class="toggle-switch__helper"></i>
 						</div>
                     </div>
+					</div>
                     <br /><br />
                     <!-- Join,Part,Quit hostmask laten zien -->
                     <div class="form-group">
@@ -261,7 +272,7 @@
 						</div>
                     </div>
 					</div>
-                </div>
+                
 				</div>
 				<!-- HTML5 INSTELLINGEN -->
 				
@@ -281,18 +292,18 @@
 						</div>
                     </div>
 					</div>
-					<br /><br /><br />
+					<br /><br />
 					<!-- Uploaden toestaan -->
                     <div class="form-group">
 					<div class="row">
-                        <label for="textstyling" title="Sta toe dat mensen kunnen uploaden" class="control-label col-sm-2 white">Sta toe dat chatters bestanden kunnen uploaden en delen</label>
+                        <label for="textstyling" title="Sta toe dat mensen kunnen uploaden" class="control-label col-sm-2 white">Bestanden delen toestaan</label>
                         <div class="toggle-switch toggle-switch--green">
                             <input type="checkbox" class="switchery" name="kiwi_upload" value="true" {if $kiwi_upload!="false"}checked="checked"{/if}>
                         <i class="toggle-switch__helper"></i>
 						</div>
                     </div>
 					</div>
-					<br /><br /><br />
+					<br /><br />
 					<!-- Giphy toestaan -->
                     <div class="form-group">
 					<div class="row">
@@ -303,7 +314,7 @@
 						</div>
                     </div>
 					</div>
-					<br /><br /><br />
+					<br /><br />
 					<!-- Imgur toestaan -->
                     <div class="form-group">
 					<div class="row">
@@ -314,7 +325,7 @@
 						</div>
                     </div>
 					</div>
-					<br /><br /><br />
+					<br /><br />
 					<!-- Imgur toestaan -->
                     <div class="form-group">
 					<div class="row">
@@ -368,7 +379,7 @@
 						</div>
                     </div>
 					</div>
-                    <br /><br /><br />
+                    <br /><br />
                     <!-- Type van de stream -->
                     
 					<div class="row">
