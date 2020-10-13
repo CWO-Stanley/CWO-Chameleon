@@ -35,6 +35,9 @@ if ($id) {
     $isGodUser = $member->isGodUser();
     if ($isGodUser) {
         $smarty->assign('god', "true");
+		$smarty->assign('registeredname', $results['registeredname']);
+		$smarty->assign('nextduedate', $results['nextduedate']);
+		$smarty->assign('productname', $results['productname']);
     }
 
     $smarty->assign('login',$member->getUsername());
