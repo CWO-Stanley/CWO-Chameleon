@@ -5,9 +5,9 @@
 		<link href="radiolibs/sticky/audio8_html5.css?v=2.0" rel="stylesheet" type="text/css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.1/jquery.min.js" type="text/javascript"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
-		<script src="radiolibs/sticky/js/jquery.mousewheel.min.js" type="text/javascript"></script>
-		<script src="radiolibs/sticky/js/jquery.touchSwipe.min.js" type="text/javascript"></script>
-		<script src="radiolibs/sticky/js/audio8_html5.js?v=2.0" type="text/javascript"></script>
+		<script src="{$fullurl}/radiolibs/sticky/js/jquery.mousewheel.min.js" type="text/javascript"></script>
+		<script src="{$fullurl}/radiolibs/sticky/js/jquery.touchSwipe.min.js" type="text/javascript"></script>
+		<script src="{$fullurl}/radiolibs/sticky/js/audio8_html5.js?v=2.0" type="text/javascript"></script>
         <div class="audio8_html5_sticky">
 				<div class="audio8_html5">
 					<audio id="lbg_audio8_html5_shoutcast_2" preload="metadata">
@@ -105,7 +105,7 @@
 
     {elseif $metadata['radio_player'] == "cwflash"}
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script type="text/javascript" src="radiolibs/cwflash/nativeflashradiov3.js"></script>
+        <script type="text/javascript" src="{$fullurl}/radiolibs/cwflash/nativeflashradiov3.js"></script>
 
 	<center>
         <div id="flashradio" class="socialfooter" style="height:50px; width:50%;-webkit-border-radius: 0px;-moz-border-radius: 0px; border-radius: 0px; border: 0px #81BEF7 none; -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(250, 250, 250, 0.1)));">
@@ -130,8 +130,8 @@
 
 
 {elseif $metadata['radio_player'] == "luna"}
-		<script src="radiolibs/luna/jquery-3.2.1.min.js"></script>
-		<script type="text/javascript" src="radiolibs/luna/lunaradio.min.js?v=5.20.08.31"></script>
+		<script src="{$fullurl}/radiolibs/luna/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="{$fullurl}/radiolibs/luna/lunaradio.min.js?v=5.20.09.08"></script>
 		
 		<center>
 		<div id="lunaradio" style='width:50%;
@@ -158,16 +158,18 @@
 				userinterface: "small",
 				backgroundcolor: "{$metadata['playerkleur']}",
 				fontcolor: "{$metadata['tekstkleur']}",
-				hightlightcolor: "#13c4eb",
-				fontname: "Ubuntu",
-				googlefont: "Ubuntu:300",
+				hightlightcolor: "#a7d3ab",
+				fontname: "",
+				googlefont: "",
 				fontratio: "0.4",
 				radioname: "{$metadata['radio_name']}",
 				scroll: "true",
 				coverimage: "https://horus.chattersworld.nl/dist/img/c4all.png",
 				coverstyle: "circle",
-				usevisualizer: "fake",
-				visualizertype: "4",
+				usevisualizer: "real",
+				visualizertype: "8",
+				multicolorvisualizer: "true",
+				visualizeropacity: "1.0",
 				itunestoken: "1000lIPN",
 				metadatatechnic: "{if $metadata['radio_type'] == "shoutcast"}stream-icy-meta{else}corsproxy{/if}",
 				ownmetadataurl: "",
@@ -197,9 +199,9 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.1/jquery.min.js" type="text/javascript"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
 
-<script src="radiolibs/hero/js/jquery.mousewheel.min.js" type="text/javascript"></script>
-<script src="radiolibs/hero/js/jquery.touchSwipe.min.js" type="text/javascript"></script>
-<script src="radiolibs/hero/js/audio6_html5.js?v=2.0" type="text/javascript"></script>
+<script src="{$fullurl}/radiolibs/hero/js/jquery.mousewheel.min.js" type="text/javascript"></script>
+<script src="{$fullurl}/radiolibs/hero/js/jquery.touchSwipe.min.js" type="text/javascript"></script>
+<script src="{$fullurl}/radiolibs/hero/js/audio6_html5.js?v=2.0" type="text/javascript"></script>
 		<script>
 			jQuery(function() {
 				setTimeout(function(){
@@ -286,8 +288,8 @@
             <!-- ENDS: AUTO-GENERATED MUSES RADIO PLAYER CODE -->
         </center>
 	{elseif $metadata['radio_player'] == "internal"}
-        <script src="radiolibs/luna/jquery-3.2.1.min.js"></script>
-        <script type="text/javascript" src="radiolibs/luna/lunaradio.min.js?v=5.20.08.31"></script>
+        <script src="{$fullurl}/radiolibs/luna/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="{$fullurl}/radiolibs/luna/lunaradio.min.js?v=5.20.09.08"></script>
 
 		<center>
 		<div id="lunaradio" style='width:50%;
@@ -314,16 +316,18 @@
 			userinterface: "small",
 			backgroundcolor: "{$metadata['playerkleur']}",
 			fontcolor: "{$metadata['tekstkleur']}",
-			hightlightcolor: "#13c4eb",
-			fontname: "Ubuntu",
-			googlefont: "Ubuntu:300",
+			hightlightcolor: "#a7d3ab",
+			fontname: "",
+			googlefont: "",
 			fontratio: "0.4",
 			radioname: "{$metadata['radio_name']}",
 			scroll: "true",
 			coverimage: "https://horus.chattersworld.nl/dist/img/c4all.png",
 			coverstyle: "circle",
-			usevisualizer: "fake",
-			visualizertype: "4",
+			usevisualizer: "real",
+			visualizertype: "8",
+			multicolorvisualizer: "true",
+			visualizeropacity: "1.0",
 			itunestoken: "1000lIPN",
 			metadatatechnic: "{if $metadata['radio_type'] == "shoutcast"}stream-icy-meta{else}corsproxy{/if}",
 			ownmetadataurl: "",
@@ -353,7 +357,7 @@
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.1/jquery.min.js" type="text/javascript"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
-		<script src="radiolibs/clever/js/audio11_html5.js" type="text/javascript"></script>
+		<script src="{$fullurl}/radiolibs/clever/js/audio11_html5.js" type="text/javascript"></script>
 		<!-- must have -->
 		<script>
 			jQuery(function() {

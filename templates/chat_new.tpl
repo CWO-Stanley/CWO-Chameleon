@@ -477,7 +477,7 @@
 						<!-- <span class="input-group-addon"><i class="zwicon-brush"></i></span> -->
                         <div class="form-group color-picker">
 						<div class="position-relative has-icon-left">
-                                            <input type="text" id="simple-color-picker" style="background-color: {if isset($tekstkleur)}{$tekstkleur}{/if};" name="tekstkleur" class="form-control color-picker__value" placeholder="tekstkleur" value="{if isset($tekstkleur)}{$tekstkleur}{/if}" title="Deze kleur zal de text zijn van de radioplayer" data-toggle="tooltip" data-placement="top">
+                                            <input type="text" id="simple-color-picker2" style="background-color: {if isset($tekstkleur)}{$tekstkleur}{/if};" name="tekstkleur" class="form-control color-picker__value" placeholder="tekstkleur" value="{if isset($tekstkleur)}{$tekstkleur}{/if}" title="Deze kleur zal de text zijn van de radioplayer" data-toggle="tooltip" data-placement="top">
                                             <div class="form-control-position">
                                                 <i class="la la-adjust black" style="background-color: {if isset($tekstkleur)}{$tekstkleur}{/if};"></i>
                                             </div>

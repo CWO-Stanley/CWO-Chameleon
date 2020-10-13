@@ -69,7 +69,7 @@
         </div>
     </nav>
 	
-	<div class="main-menu menu-fixed menu-dark menu-accordion menu-shadow" data-scroll-to-active="true" data-img="{$fullurl}/app-assets/images/backgrounds/04.jpg">
+	<div class="main-menu menu-fixed menu-dark menu-accordion menu-shadow" data-scroll-to-active="true" data-img="{$fullurl}/app-assets/images/backgrounds/08.jpg">
         <div class="navbar-header">
             <ul class="nav navbar-nav flex-row position-relative">
                 <li class="nav-item mr-auto"><a class="navbar-brand" href="{$fullurl}/list"><img class="brand-logo" alt="Chameleon admin logo" src="{$logo}" />
@@ -135,7 +135,7 @@
 			</div>
 		</div>
 	</div>
-	<footer class="footer footer-static footer-light navbar-border navbar-shadow">
+	<footer class="footer footer-static footer-dark navbar-border navbar-shadow">
         <div class="clearfix blue-grey lighten-2 text-sm-center mb-0 px-2"><span class="float-md-left d-block d-md-inline-block">© {$sitename} All rights reserved. v6.0</span>
             <ul class="list-inline float-md-right d-block d-md-inline-blockd-none d-lg-block mb-0">
                 <li class="list-inline-item"><a class="my-1" href="https://chattersworld.nl" target="_blank"> Homepage</a></li>
@@ -183,8 +183,17 @@
 	</script>
 	{/literal}
 	{/if}
+	{if isset($loggedin)}
+	{literal}
+	<script>
+	$(document).ready(function(){
+		toastr.success('{/literal}{$login}{literal}', 'Gelukt!', {positionClass: 'toast-top-right', containerId: 'toast-top-right', "progressBar": true});
+    });
+	</script>
+	{/literal}
+	{/if}
 	
-		{if isset($god)}
+{if isset($god)}
 {literal}
 <script>
 $(document).ready(function() {
@@ -195,6 +204,15 @@ $(document).ready(function() {
 		"pageLength" : 25,
 		"lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "Alles"]],
 		"responsive": true,
+		"scrollY":        false,
+			"scrollX":        false,
+			"scrollCollapse": false,
+			"paging":         true,
+			"fixedColumns":   true,
+		"fixedHeader": {
+				"header": false,
+				"headerOffset": $('#header').height()
+			},
 		"order": [[ 7, "desc" ]]
     } );
 	
@@ -211,12 +229,27 @@ $(document).ready(function() {
 					},
 					"pageLength" : 25,
 					"lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "Alles"]],
-					"responsive": true
+					"responsive": true,
+					"scrollY":        true,
+					"scrollX":        false,
+					"scrollCollapse": false,
+					"paging":         true,
+					"fixedColumns":   true,
+					"fixedHeader": {
+						"header": false,
+						"headerOffset": $('#header').height()
+					},
 				} );
 	
 		} );
 		</script>
 {/literal}
-{/if}					
+{/if}	
+<script>
+	$(function () {
+		$('#simple-color-picker').colorpicker();
+		$('#simple-color-picker2').colorpicker();
+	});
+</script>				
   </body>
 </html>

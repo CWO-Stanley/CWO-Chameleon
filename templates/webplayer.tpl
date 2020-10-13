@@ -41,7 +41,7 @@
 		<link href="webplayer/css/ytplayer.min.css?v=1.18.03.18" rel="stylesheet" type="text/css" media="all" />
 		<link href="webplayer/css/theme-nativehtml5radio.min.css?v=1.20.07.02" rel="stylesheet" type="text/css" media="all" />
     			<script src="radiolibs/luna/jquery-3.2.1.min.js"></script>
-				<script type="text/javascript" src="radiolibs/luna/lunaradio.min.js?v=5.20.08.31"></script>
+				<script type="text/javascript" src="radiolibs/luna/lunaradio.min.js?v=5.20.09.08"></script>
 			<script>{literal}
   				(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -203,7 +203,7 @@ return true;
 				
 			</div>
 			<div class="col-lg-4">
-			{literal}<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> <script> (adsbygoogle = window.adsbygoogle || []).push({ google_ad_client: "ca-pub-9106844814451489", enable_page_level_ads: true }); </script>{/literal}
+			
 				
 			</div>
 			<div class="col-lg-4">
@@ -226,7 +226,7 @@ return true;
 
 <script>
 $("#lunaradio").lunaradio({
-	token: "VVpTZmZXZGViXlNsUyBgXg==",
+	token: "VVpTZmZXZGVpYWReViBgXg==",
 	userinterface: "big",
 	backgroundcolor: "{$metadata['playerkleur']}",
 	fontcolor: "{$metadata['tekstkleur']}",
@@ -238,8 +238,10 @@ $("#lunaradio").lunaradio({
 	scroll: "true",
 	coverimage: "{$fullurl}/dist/img/c4all.png",
 	coverstyle: "circle",
-	usevisualizer: "fake",
+	usevisualizer: "real",
 	visualizertype: "",
+	multicolorvisualizer: "true",
+	visualizeropacity: "1.0",
 	itunestoken: "1000lIPN",
 	metadatatechnic: "{if $metadata['radio_type'] == "shoutcast"}stream-icy-meta{else}corsproxy{/if}",
 	ownmetadataurl: "",

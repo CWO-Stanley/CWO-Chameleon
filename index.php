@@ -38,6 +38,7 @@ if ($id) {
     }
 
     $smarty->assign('login',$member->getUsername());
+	// $smarty->assign('loggedin', "true");
 
     $page = 'list';
     if (isset($_GET['page'])) {
@@ -386,7 +387,7 @@ if ($id) {
             $smarty->assign('chat_style',"blue");
 			$smarty->assign('chat_bgurl',"");
 			$smarty->assign('verzoek_url',"");
-			$smarty->assign('tekstkleur', "#FFF");
+			$smarty->assign('tekstkleur', "#FFFFFF");
 			$smarty->assign('playerkleur', "#800000");
 			$smarty->assign('mountpoint', "/stream");
             $smarty->assign('icon_style',"bolletje");
