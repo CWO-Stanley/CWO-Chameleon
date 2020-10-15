@@ -160,7 +160,7 @@
 	<script src="{$fullurl}/app-assets/js/core/app-menu.js" type="text/javascript"></script>
     <script src="{$fullurl}/app-assets/js/core/app.js" type="text/javascript"></script>
 	<script src="{$fullurl}/app-assets/vendors/js/extensions/toastr.min.js" type="text/javascript"></script>
-	<script src="{$fullurl}/app-assets/js/scripts/forms/wizard-steps.js?v=1.5" type="text/javascript"></script>
+	<script src="{$fullurl}/app-assets/js/scripts/forms/wizard-steps.js?v=1.6" type="text/javascript"></script>
 	{if isset($success)}
 	{literal}
 	<script>
@@ -254,6 +254,10 @@ $(document).ready(function() {
 	$(function () {
 		$('#simple-color-picker').colorpicker();
 		$('#simple-color-picker2').colorpicker();
+		$(".color-picker__value").colorpicker(),
+                $("body").on("change", ".color-picker__value", function () {
+                    $(this).closest(".color-picker").find(".color-picker__preview").css("backgroundColor", $(this).val());
+                });
 	});
 </script>				
   </body>
