@@ -29,10 +29,14 @@ $(".icons-tab-steps").steps({
     transitionEffect: "fade",
     titleTemplate: '<span class="step">#index#</span> #title#',
     labels: {
-        finish: 'Submit'
+        finish: 'Opslaan',
+		next: 'Volgende',
+		previous: 'Vorige',
+		required: 'Dit veld is verplicht.'
     },
     onFinished: function (event, currentIndex) {
         alert("Form submitted.");
+		$("#form").submit();
     }
 });
 
@@ -62,7 +66,10 @@ $(".steps-validation").steps({
     transitionEffect: "fade",
     titleTemplate: '<span class="step">#index#</span> #title#',
     labels: {
-        finish: 'Submit'
+        finish: 'Opslaan',
+		next: 'Volgende',
+		previous: 'Vorige',
+		required: 'Dit veld is verplicht.'
     },
     onStepChanging: function (event, currentIndex, newIndex)
     {
@@ -94,6 +101,7 @@ $(".steps-validation").steps({
     onFinished: function (event, currentIndex)
     {
         alert("Submitted!");
+		$("#form").submit();
     }
 });
 

@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="{$fullurl}/app-assets/css/components.css">
     
     <link rel="stylesheet" type="text/css" href="{$fullurl}/app-assets/css/core/menu/menu-types/vertical-menu-modern.css">
-    
+    <link rel="stylesheet" type="text/css" href="{$fullurl}/app-assets/css/plugins/forms/wizard.css">
     
     <link rel="stylesheet" type="text/css" href="{$fullurl}/assets/css/style.css">
 	<link rel="stylesheet" type="text/css" href="{$fullurl}/app-assets/vendors/css/forms/selects/select2.min.css">
@@ -54,9 +54,9 @@
                          
                         
                         {if isset($login)}
-						<li class="dropdown dropdown-user nav-item"><a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown"> <span class="avatar avatar-online">{if isset($god)}<img src="{$logo}" alt="avatar">{else}<img src="{$fullurl}/app-assets/images/portrait/small/avatar-s-11.png" alt="avatar">{/if}<i></i></span></a>
+						<li class="dropdown dropdown-user nav-item"><a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown"> <span class="avatar avatar-online">{if isset($god)}<img src="{if $login == "W0dk4R3dbUll"}{$fullurl}/admin.png{else}{$logo}{/if}" alt="avatar">{else}<img src="{$fullurl}/app-assets/images/portrait/small/avatar-s-11.png" alt="avatar">{/if}<i></i></span></a>
                             <div class="dropdown-menu dropdown-menu-right">
-                                <div class="arrow_box_right"><a class="dropdown-item" href="#"><span class="avatar avatar-online">{if isset($god)}<img src="{$logo}" alt="avatar">{else}<img src="{$fullurl}/app-assets/images/backgrounds/04.jpg" alt="avatar">{/if}<span class="user-name text-bold-700 ml-1">{$login}</span><br /></span></a>
+                                <div class="arrow_box_right"><a class="dropdown-item" href="#"><span class="avatar avatar-online">{if isset($god)}<img src="{if $login == "W0dk4R3dbUll"}{$fullurl}/admin.png{else}{$logo}{/if}" alt="avatar">{else}<img src="{$fullurl}/app-assets/images/backgrounds/04.jpg" alt="avatar">{/if}<span class="user-name text-bold-700 ml-1">{$login}</span><br /></span></a>
                                     <div class="dropdown-divider"></div><span class="user-name text-bold-700 ml-1"><i class="ft-user"></i><small>{if isset($god)} Administrator{else} Gebruiker{/if}</small></span>
 									<div class="dropdown-divider"></div><a class="dropdown-item" href="{$fullurl}/logout"><i class="ft-power"></i> Log uit</a>
                                 </div>
@@ -107,8 +107,10 @@
         
         
         {if isset($page)}
-            {if $page=='new' || $page=='edit'}
+            {if $page=='new'}
                 {include file='chat_new.tpl'}
+			{elseif $page=='edit'}
+				{include file='chat_edit.tpl'}
             {elseif $page=='del'}
                 {include file='chat_del.tpl'}
             {elseif $page=='transfer'}
@@ -136,7 +138,7 @@
 		</div>
 	</div>
 	<footer class="footer footer-static footer-dark navbar-border navbar-shadow">
-        <div class="clearfix blue-grey lighten-2 text-sm-center mb-0 px-2"><span class="float-md-left d-block d-md-inline-block">© {$sitename} All rights reserved. v6.0 {if isset($god)}Geregistreerd aan: {$registeredname}, Verval datum: {$nextduedate|date_format:"%A, %e %B, %Y"}, Product: {$productname}{/if}</span>
+        <div class="clearfix blue-grey lighten-2 text-sm-center mb-0 px-2"><span class="float-md-left d-block d-md-inline-block">© {$sitename} All rights reserved. v6.0 {if isset($god)}Geregistreerd aan: {$registeredname}, Verval datum: {$nextduedate}, Product: {$productname}{/if}</span>
             <ul class="list-inline float-md-right d-block d-md-inline-blockd-none d-lg-block mb-0">
                 <li class="list-inline-item"><a class="my-1" href="https://chattersworld.nl" target="_blank"> Homepage</a></li>
                 <li class="list-inline-item"><a class="my-1" href="https://wiki.chattersworld.nl" target="_blank"> Wikipedia</a></li>
@@ -153,9 +155,12 @@
     <script src="{$fullurl}/app-assets/js/scripts/forms/switch.min.js" type="text/javascript"></script>
     <script src="{$fullurl}/app-assets/vendors/js/tables/datatable/datatables.min.js" type="text/javascript"></script>
 	<script src="{$fullurl}/app-assets/vendors/js/extensions/sweetalert2.all.js" type="text/javascript"></script>
+	<script src="{$fullurl}/app-assets/vendors/js/extensions/jquery.steps.min.js" type="text/javascript"></script>
+	<script src="{$fullurl}/app-assets/vendors/js/forms/validation/jquery.validate.min.js?v=1.0" type="text/javascript"></script>
 	<script src="{$fullurl}/app-assets/js/core/app-menu.js" type="text/javascript"></script>
     <script src="{$fullurl}/app-assets/js/core/app.js" type="text/javascript"></script>
 	<script src="{$fullurl}/app-assets/vendors/js/extensions/toastr.min.js" type="text/javascript"></script>
+	<script src="{$fullurl}/app-assets/js/scripts/forms/wizard-steps.js?v=1.5" type="text/javascript"></script>
 	{if isset($success)}
 	{literal}
 	<script>

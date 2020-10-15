@@ -25,14 +25,38 @@
                                         <p class="card-text">{if isset($page)}{if $page=='new'}Maak{else}Bewerk{/if}{/if} hier je chatbox door onderstaand formulier in te vullen.</p>
 <!-- end new -->
 
-    
-        <!-- Form wizard with step validation section start -->
-                                <form id="form" method="post" action="{$fullurl}{if isset($chat_id)}/edit{else}/new{/if}" class="steps-validation">
-
-                                            <!-- Step 1 -->
-                                            <h6>Kanaalnaam instellen</h6>
-                                            <fieldset>
-                                                <br />
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" id="base-tab1" aria-expanded="true" aria-controls="algemeen" data-toggle="tab" href="#algemeen" role="tab">Algemene instellingen</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="base-tab2" aria-expanded="false" aria-controls="design" data-toggle="tab" href="#design" role="tab">Stijl en design</a>
+        </li>
+		<li class="nav-item">
+            <a class="nav-link" id="base-tab3" aria-expanded="false" aria-controls="webcam" data-toggle="tab" href="#webcam" role="tab">Webcam en microfoon</a>
+        </li>
+		<li class="nav-item">
+            <a class="nav-link" id="base-tab4" aria-expanded="false" aria-controls="geavanceerd" data-toggle="tab" href="#geavanceerd" role="tab">Geavanceerde instellingen</a>
+        </li>
+		<li class="nav-item">
+            <a class="nav-link" id="base-tab5" aria-expanded="false" aria-controls="html5" data-toggle="tab" href="#html5" role="tab">HTML5 instellingen</a>
+        </li>
+		<div class="dropdown">
+            <button class="btn btn-light" aria-expanded="false" data-toggle="dropdown">Extra's</button>
+                <div class="dropdown-menu dropdown-menu--icon">
+                    <a href="#radio" id="base-tab6" aria-expanded="false" aria-controls="radio" data-toggle="tab" class="dropdown-item">Radio</a>
+                    <a href="#ads" id="base-tab7" aria-expanded="false" aria-controls="ads" data-toggle="tab" class="dropdown-item">Advertenties</a>
+                </div>
+        </div>
+	</ul>
+        <form role="form" method="post" action="{$fullurl}{if isset($chat_id)}/edit{else}/new{/if}">
+            {if isset($chat_id)}
+                <input type="hidden" name="chat_id" value="{$chat_id}" />
+            {/if}
+            <div class="tab-content">
+                <!-- ALGEMENE INSTELLINGEN -->
+                <div class="tab-pane active fade show" id="algemeen" role="tabpanel" aria-expanded="true" aria-labelledby="base-tab1">
+				<br />
                     <div class="alert alert-info">
                         Let op!! Heb je reeds een kanaalnaam geregistreerd, neem dan die naam! Verander je van kanaalnaam, dien je deze opnieuw te registeren.
                     </div>
@@ -53,7 +77,7 @@
                       <label class="col-sm-2 col-form-label white" for="firstname">Kanaalnaam:</label>
 						<div class="col-sm-4">
 							<div class="form-group">
-                            <input type="text" class="form-control required" name="chat_name" title="Dit is de naam die je chatbox zal krijgen." {literal}pattern="^[a-zA-Z0-9][a-zA-Z0-9-_\.]{1,}$"{/literal} placeholder="Naam Chatbox" value="{if isset($chat_name)}{$chat_name}{/if}" onkeypress="CheckSpace(event)" data-toggle="tooltip" data-placement="top" required>
+                            <input type="text" class="form-control" name="chat_name" title="Dit is de naam die je chatbox zal krijgen." {literal}pattern="^[a-zA-Z0-9][a-zA-Z0-9-_\.]{1,}$"{/literal} placeholder="Naam Chatbox" value="{if isset($chat_name)}{$chat_name}{/if}" onkeypress="CheckSpace(event)" data-toggle="tooltip" data-placement="top" required>
 							<i class="form-group__bar"></i>
 						</div>
                     </div>
@@ -61,12 +85,11 @@
 					
 
                 </div>
-                                            </fieldset>
+			</div>
 
-                                            <!-- Step 2 -->
-                                            <h6>Design</h6>
-                                            <fieldset>
-                                                <br />
+                <!-- STIJL EN DESIGN -->
+                <div id="design" class="tab-pane fade" aria-labelledby="base-tab2">
+					<br />
                     <div class="alert alert-info">
                         Deze instellingen hebben betrekking tot het uiterlijk van uw webchat.
                     </div>
@@ -148,12 +171,11 @@
 					</div>
 					                    
                 </div>
-                                            </fieldset>
+				</div>
 
-                                            <!-- Step 3 -->
-                                            <h6>Webcam</h6>
-                                            <fieldset>
-                                                <br />
+                <!-- WEBCAM EN GELUID -->
+                <div id="webcam" class="tab-pane fade" aria-labelledby="base-tab3">
+                    <br />
                     <div class="alert alert-info">
                         Met onze webchat is het mogelijk om je webcam en microfoon te gebruiken tijdens het chatten.
                     </div>
@@ -189,12 +211,11 @@
 						</div>
                     </div>
 					</div>
-                                            </fieldset>
+                </div>
 
-                                            <!-- Step 4 -->
-                                            <h6>Geavanceerde instellingen</h6>
-                                            <fieldset>
-                                                <br />
+                <!-- GEAVANCEERDE INSTELLINGEN -->
+                <div id="geavanceerd" class="tab-pane fade" aria-labelledby="base-tab4">
+                    <br />
                     <div class="alert alert-info">
                         Geavanceerde instellingen schakelen functies in of uit.
                     </div>
@@ -251,11 +272,12 @@
 						</div>
                     </div>
 					</div>
-                                            </fieldset>
-											<!-- Step 5 -->
-                                            <h6>HTML5</h6>
-                                            <fieldset>
-											<br />
+                
+				</div>
+				<!-- HTML5 INSTELLINGEN -->
+				
+                <div id="html5" class="tab-pane fade" aria-labelledby="base-tab5">
+                    <br />
                     <div class="alert alert-info">
                         De HTML5 webchat heeft meer optionele functie's, hier kunt u deze opties aan en uit zetten zoals u dat wenst.
                     </div>
@@ -325,11 +347,11 @@
 						</div>
                     </div>
 					</div>
-											</fieldset>
-											<!-- Step 6 -->
-                                            <h6>Radio</h6>
-                                            <fieldset>
-											<br />
+					<br /><br />
+                </div>
+                <!-- EXTRA: RADIO -->
+                <div id="radio" class="tab-pane fade" aria-labelledby="base-tab6">
+                    <br />
                     <div class="alert alert-info">
                         Het is mogelijk om onder je chat een radioplayer toe te voegen om muziek af te spelen.
                     </div>
@@ -466,11 +488,11 @@
                 </div>
 				</div>
 				</div>
-											</fieldset>
-											<!-- Step 6 -->
-                                            <h6>Advertentie</h6>
-                                            <fieldset>
-											<br />
+				</div>
+
+                <!-- EXTRA: ADS -->
+                <div id="ads" class="tab-pane fade" aria-labelledby="base-tab7">
+                    <br />
                     <div class="alert alert-info">
                         Dankzij advertenties kunnen wij steeds de beste service blijven leveren. Maar omdat wij begrijpen dat veel chatters dit als storend kunnen ervaren voorzien wij de hier de mogelijkheid deze uit te schakelen.
                     </div>
@@ -486,14 +508,17 @@
 						</div>
 						</div>
                     </div>
-											</fieldset>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                </div>
+
+
+            </div>
+			<br /><br />
+			<div class="form-group">
+                      <label class="col-md-4 control-label" for=""></label>
+                      <div class="col-md-4">
+            <button class="btn btn-primary" type="submit">{if isset($chat_id)}Chat opslaan{else}Chat aanmaken{/if}</button>
+			</div>
                     </div>
-                </section>
-                <!-- Form wizard with step validation section end -->
+        </form>
     </div>
 </div>
