@@ -206,6 +206,7 @@ $(document).ready(function() {
         "language": {
             "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Dutch.json"
         },
+		
 		"pageLength" : 25,
 		"lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "Alles"]],
 		"responsive": true,
@@ -218,7 +219,7 @@ $(document).ready(function() {
 				"header": false,
 				"headerOffset": $('#header').height()
 			},
-		"order": [[ 7, "desc" ]]
+		"order": [[ 7, "desc" ]],
     } );
 	
 } );
@@ -232,6 +233,7 @@ $(document).ready(function() {
 					"language": {
 						"url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Dutch.json"
 					},
+					
 					"pageLength" : 25,
 					"lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "Alles"]],
 					"responsive": true,
