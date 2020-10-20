@@ -142,13 +142,13 @@ window.kiwiConfig = function kiwiConfig() {
 					"VERTICAL_FILMSTRIP": false,
 					"LANG_DETECTION": true,
 					"TOOLBAR_BUTTONS": [
-								"microphone", "camera", "fullscreen", "fodeviceselection", "hangup",
+								{/literal}{if $metadata['mic'] == "true"}{else}"microphone",{/if}{literal} "camera", "fullscreen", "fodeviceselection", "hangup",
 								"settings", "videoquality", "filmstrip",
-								"stats", "shortcuts", "sharedvideo"
+								"stats", "tileview", "shortcuts", "sharedvideo"
 					]
 				},
 				"configOverwrite": {
-					"startWithVideoMuted": true,
+					"startWithVideoMuted": false,
 					"startWithAudioMuted": true
 				}
 		},

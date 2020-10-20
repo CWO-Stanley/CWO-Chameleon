@@ -247,7 +247,7 @@ $("#lunaradio").lunaradio({
 	ownmetadataurl: "",
 	streamurl: "{$metadata['radio_link']}",
 	streamtype: "{$metadata['radio_type']}",
-	icecastmountpoint: "{if $metadata['radio_type'] == "icecast"}{$metadata['mountpoint']}{/if}",
+	icecastmountpoint: "{if $metadata['radio_type'] == "icecast2"}{$metadata['mountpoint']}{/if}",
 	radionomyid: "",
 	radionomyapikey: "",
 	radiojarid: "",

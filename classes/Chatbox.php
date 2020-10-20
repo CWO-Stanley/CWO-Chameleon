@@ -729,6 +729,7 @@ class Chatbox {
 		$data['kiwi_imgur'] = $this->getKiwiImgur();
 		$data['kiwi_asl'] = $this->getKiwiASL();
 		$data['webcam'] = $this->LightIRC->getWebcam();
+		$data['mic'] = $this->LightIRC->getWebcamVideoOnly();
 		$data['html_redirect'] = $this->getHTMLRedirect();
         return $data;
     }
