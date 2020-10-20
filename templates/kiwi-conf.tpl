@@ -41,7 +41,7 @@ window.kiwiConfig = function kiwiConfig() {
 				"colour_nicknames_in_messages": false,
 				"inline_link_auto_previews": false,
 				"inline_link_auto_preview_whitelist": ".*",
-				"messageLayout": "modern",
+				"messageLayout": "{/literal}{if $metadata['kiwi_avatar'] == "true"}modern{else}inline{/if}{literal}",
 				"default_kick_reason": "Gedraag je!",
 				"share_typing": true
 			},
