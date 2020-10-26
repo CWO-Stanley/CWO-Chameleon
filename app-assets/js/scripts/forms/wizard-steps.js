@@ -100,7 +100,7 @@ $(".steps-validation").steps({
     },
     onFinished: function (event, currentIndex)
     {
-        alert("Submitted!");
+        // alert("Submitted!");
 		$("#form").submit();
     }
 });
@@ -131,10 +131,3 @@ $(".steps-validation").validate({
 // ------------------------------
 
 // Date & Time Range
-$('.datetime').daterangepicker({
-    timePicker: true,
-    timePickerIncrement: 30,
-    locale: {
-        format: 'MM/DD/YYYY h:mm A'
-    }
-});
