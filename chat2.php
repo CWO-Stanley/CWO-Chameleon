@@ -101,8 +101,13 @@ else {
             $metadata['height'] = "90";
 
         $smarty->assign('metadata',$metadata);
-        $smarty->display('chat.tpl');
-
+		if (($metadata['html_redirect'] == "true")) {
+			$smarty->display('kiwi-conf.tpl');
+			$smarty->display('kiwi-style.tpl');
+			$smarty->display('kiwi.tpl');
+		}else{
+			$smarty->display('chat.tpl');
+		}
         if ($metadata['radio'] == "true") {
             $smarty->display('chat_radio.tpl');
         } elseif ($metadata['ads_enabled'] == "true") {

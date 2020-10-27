@@ -93,8 +93,13 @@ else {
             header('Location: https://chameleon.chattersworld.nl/chat2.php?'.$_SERVER['QUERY_STRING']);
 
         $smarty->assign('metadata',$metadata);
+		if (($metadata['html_redirect'] == "true")) {
+			$smarty->display('kiwi-conf.tpl');
+			$smarty->display('kiwi-style.tpl');
+			$smarty->display('kiwi.tpl');
+		}else{
         $smarty->display('chat.tpl');
-
+		}
         if ($metadata['radio'] == "true") {
             $smarty->display('chat_radio.tpl');
         }
