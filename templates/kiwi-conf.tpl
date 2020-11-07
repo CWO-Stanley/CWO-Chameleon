@@ -34,7 +34,7 @@ window.kiwiConfig = function kiwiConfig() {
 			},
 		"sidebarDefault": "nicklist",
 		"buffers": {
-				{/literal}{if $metadata['private'] == "true"}{literal}"block_pms": false, {/literal}{/if}{literal}
+				{/literal}{if $metadata['private'] == "false"}{literal}"block_pms": true, {/literal}{/if}{literal}
 				"coloured_nicklist": false,
 				{/literal}{if $metadata['kiwi_avatar'] == "true"}{literal}"nicklist_avatars": true, {/literal}{else}{literal}"nicklist_avatars": false,{/literal}{/if}{literal}
 				{/literal}{if $metadata['hostnames'] == "true"}{literal}"show_hostnames": true, {/literal}{else}{literal}"show_hostnames": false,{/literal}{/if}{literal}
@@ -53,6 +53,9 @@ window.kiwiConfig = function kiwiConfig() {
 			},
 			{/literal}{/if}{literal}
 				{"name": "emoji", "url": "static/plugins/plugin-emoji-prelim.min.js"},
+				{/literal}{if $metadata['private'] == "true"}{literal}
+				{"name": "simosnapcss","url": "static/plugins/block-queries.html"},
+				{/literal}{/if}{literal}
 				{"name": "simosnapcss","url": "static/plugins/cwo-css3.html"},
 				
 				{/literal}{if $metadata['radio'] == "true" && $metadata['radio_player'] == "internal"}{literal}

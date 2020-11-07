@@ -709,7 +709,7 @@ class Chatbox {
         $data['bgcolor'] = $this->getBgcolor();
 		$data['style'] = $this->getStyle();
 		$data['bgurl'] = $this->getBgurl();
-		$data['private'] = $this->enableQueries();
+		$data['private'] = $this->LightIRC->getEnableQueries();
 		$data['icons'] = $this->getIconStyle();
 		$data['prefixicons'] = $this->LightIRC->getShowNickprefixIcons();
 		$data['hostnames'] = $this->LightIRC->getShowVerboseUserInformation();
