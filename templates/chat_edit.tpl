@@ -120,6 +120,7 @@
                                 <option value="yellow" {if $chat_style=="yellow"}selected="selected"{/if}>Geel</option>
                                 <option value="pink" {if $chat_style=="pink"}selected="selected"{/if}>Roze</option>
                                 <option value="darkred" {if $chat_style=="darkred"}selected="selected"{/if}>Donkerrood</option>
+								<option value="nightswatch" {if $chat_style=="nightswatch"}selected="selected"{/if}>NightSwatch (Alleen HTML5)</option>
                             </select>
                         </div>
                     </div>

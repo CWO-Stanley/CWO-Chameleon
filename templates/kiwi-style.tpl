@@ -14,7 +14,7 @@ body {
 {if $metadata['bgurl'] != ""}
 	background-image:url("{$metadata['bgurl']}");
 {else}
-	background-image:url("cwobg.jpg");
+	background-image:url("https://chattersworld.nl/wp-content/uploads/2019/12/CWO-Webbanner.jpg");
 {/if}
 	background-repeat: no-repeat;
 	background-size: 100% 100%; 
@@ -188,7 +188,7 @@ body {
 	background-image: linear-gradient(rgba(255,255,255, .05), rgba(255,255,255, .05)), url({/literal}{$metadata['bgurl']}{literal});background-size: 100% 100%;{/literal}{/if}
 	{else}
 		{if $metadata['bgurl'] == ""}{literal}
-    background-image: linear-gradient(rgba(255,255,255, .50), rgba(255,255,255, .50)), url({/literal}cwobg.jpg{literal});background-size: 100% 100%;{/literal}{else}{literal}
+    background-image: linear-gradient(rgba(255,255,255, .50), rgba(255,255,255, .50)), url({/literal}https://chattersworld.nl/wp-content/uploads/2019/12/CWO-Webbanner.jpg{literal});background-size: 100% 100%;{/literal}{else}{literal}
 	background-image: linear-gradient(rgba(255,255,255, .50), rgba(255,255,255, .50)), url({/literal}{$metadata['bgurl']}{literal});background-size: 100% 100%;{/literal}{/if}{/if}{literal}
 }
 {/literal}{else}{literal}
@@ -292,6 +292,9 @@ body {
     font-size: 17px;
     color: #00632c;
 }
+{/literal}
+{if $metadata['style'] != "nightswatch"}
+{literal}
 :root {
     /* Primary Variables */
     --brand-primary: {/literal}{if $metadata['style'] != "transparent"}{$metadata['bgcolor']}{else}#001a33{/if}{literal};
@@ -338,6 +341,9 @@ body {
     --brand-shadow: rgba(0, 0, 0, 0.1);
     --comp-border: #b2b2b2;
 }
+{/literal}
+{/if}
+{literal}
 /* StateBrowser */
 .kiwi-statebrowser-usermenu--open {
     background-color: #5d919c;

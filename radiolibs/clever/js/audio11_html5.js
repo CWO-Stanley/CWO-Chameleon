@@ -1,5 +1,5 @@
 /*
- * CLEVER - HTML5 Radio Player With History - Shoutcast and Icecast - v1.6.1
+ * CLEVER - HTML5 Radio Player With History - Shoutcast and Icecast - v1.6.1.0
  * Copyright 2019-2020, LambertGroup
  *
  */

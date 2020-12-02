@@ -43,7 +43,7 @@
 			   {if $metadata['bgurl'] != ""}
 			   background-image:url("{$metadata['bgurl']}");
 			   {else}
-			   background-image:url("cwobg.jpg");
+			   background-image:url("https://chattersworld.nl/wp-content/uploads/2019/12/CWO-Webbanner.jpg");
 			   {/if}
 			   background-repeat: no-repeat;
 			      background-size: 100% 100%; }

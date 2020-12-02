@@ -108,7 +108,7 @@
         
         {if isset($page)}
             {if $page=='new'}
-                {include file='chat_new.tpl'}
+                {include file='chat_edit.tpl'}
 			{elseif $page=='edit'}
 				{include file='chat_edit.tpl'}
             {elseif $page=='del'}

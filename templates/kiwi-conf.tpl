@@ -10,7 +10,12 @@ window.kiwiConfig = function kiwiConfig() {
 		"theme": "CWO",
 		"disconnectOnSaslFail": false,
 		"themes": [
+				{/literal}
+					{if $metadata['style'] == "nightswatch"}{literal}
+				{ "name": "CWO", "url": "static/themes/nightswatch3" }
+				{/literal}{else}{literal}
 				{ "name": "CWO", "url": "static/themes/cwo-chameleon-kiwiirc4" }
+				{/literal}{/if}{literal}
 				],
 		"showColorPicker": true,
 		"startupOptions": { 
@@ -29,7 +34,7 @@ window.kiwiConfig = function kiwiConfig() {
 				"age": "",
 				"sex": "",
 				"location": "",
-				"remember_buffers": true, 
+				"remember_buffers": false, 
 				"nick": "" 
 			},
 		"sidebarDefault": "nicklist",
