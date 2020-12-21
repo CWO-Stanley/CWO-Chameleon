@@ -12,7 +12,7 @@ window.kiwiConfig = function kiwiConfig() {
 		"themes": [
 				{/literal}
 					{if $metadata['style'] == "nightswatch"}{literal}
-				{ "name": "CWO", "url": "static/themes/nightswatch3" }
+				{ "name": "CWO", "url": "static/themes/dark-fluid" }
 				{/literal}{else}{literal}
 				{ "name": "CWO", "url": "static/themes/cwo-chameleon-kiwiirc4" }
 				{/literal}{/if}{literal}
@@ -20,15 +20,16 @@ window.kiwiConfig = function kiwiConfig() {
 		"showColorPicker": true,
 		"startupOptions": { 
 				"server": "{/literal}{$irc}{literal}", 
-				"infoBackground": "{/literal}{if $metadata['bgurl'] != ''}{$metadata['bgurl']}{else}cwobg.jpg{/if}{literal}", 
+				"infoBackground": "{/literal}{if $metadata['bgurl'] != ''}{$metadata['bgurl']}{else}https://chattersworld.nl/wp-content/uploads/2019/12/CWO-Webbanner.jpg{/if}{literal}", 
 				"infoContent": "<a class=\"netlogo\" href=\"{/literal}{$fullurl}{literal}\"><span></span><img src=\"{/literal}{$logo}{literal}\"></a><div><a href=\"{/literal}{$fullurl}{literal}/register.php\" target=\"_blank\" class=\"u-cpanel\"><i class=\"fa fa-lock\"></i> Registreer</a><a href=\"{/literal}{$fullurl}{literal}/chat.php?id=1\" target=\"_blank\" class=\"u-cpanel\"><i class=\"fa fa-life-ring\"></i> Helpdesk</a><a href=\"https://wiki.chattersworld.nl/\" target=\"_blank\" class=\"u-cpanel\"><i class=\"fa fa-life-ring\"></i> CWO Wiki</a></div>",
 				"greetingText": "<div style='margin:0px 0px 0px 0px'><center><a class=\"netlogo\" href=\"{/literal}{$fullurl}{literal}\"><span></span><img src=\"{/literal}{$logo}{literal}\" height='60px'></a></center></div>",
-				"state_key": "CWO-Chameleon-43",
+				"state_key": "CWO-Chameleon-65",
 				"buttonText": "<center><i class='fa fa-sign-in' style='margin-right:5px !important;'></i> Chatten</center>",
 				"gecos": "..::{/literal}{$sitename}{literal} HTML5 Webchat::..",
 				"port": 6697, 
 				"tls": true, 
 				"direct": false, 
+				"showChannel": false,
 				"recaptchaSiteId": "6LdZ_nIUAAAAANK_JiB2qsRbSPnldqaYTjFwNj8G",
 				"channel": "#{/literal}{$metadata['name']}{literal}",
 				"age": "",
@@ -55,8 +56,10 @@ window.kiwiConfig = function kiwiConfig() {
 			{
 				"name": "conference",
 				"url": "static/plugins/conference/plugin-conference.min.js?v=1.3"
-			},
-			{/literal}{/if}{literal}
+			},{/literal}{/if}{literal}
+				{/literal}{if $metadata['style'] == "nightswatch"}{literal}
+				{"name": "theme-dark-fluid", "url": "static/plugins/theme-dark-fluid.js"},
+				{/literal}{/if}{literal}
 				{"name": "emoji", "url": "static/plugins/plugin-emoji-prelim.min.js"},
 				{/literal}{if $metadata['private'] == "true"}{literal}
 				{"name": "simosnapcss","url": "static/plugins/block-queries.html"},

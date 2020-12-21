@@ -509,6 +509,16 @@
 						</div>
 						</div>
                     </div>
+					<div class="form-group">
+					<div class="row">
+                        <label for="textstyling" title="Laat de statistieken link zien op mijn chat" class="control-label col-sm-2 white">Laat de statistieken link zien op mijn chat</label>
+                        <div class="toggle-switch toggle-switch--green">
+                            <input type="checkbox" class="switchery" name="showstats" value="true" {if $showstats!="false"}checked="checked"{/if}>
+                        
+						<i class="toggle-switch__helper"></i>
+						</div>
+						</div>
+                    </div>
                 </div>
 
 

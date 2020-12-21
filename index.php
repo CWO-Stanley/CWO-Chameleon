@@ -280,6 +280,14 @@ if ($id) {
                     else {
                         $smarty->assign('radio_enabled', "false");
                     }
+					//stats
+                    $show_stats = $chat->getShowStats();
+                    if ($show_stats == "true") {
+                        $smarty->assign('showstats', "true");
+                    }
+                    else {
+                        $smarty->assign('showstats', "false");
+                    }
                     //Radio name
                     $radio_name = $chat->Radio->getName();
                     if ($radio_name) {
@@ -414,6 +422,7 @@ if ($id) {
 			$smarty->assign('kiwi_imgur', "true");
 			$smarty->assign('kiwi_asl', "true");
 			$smarty->assign('html_redirect', "false");
+			$smarty->assign('showstats', "false");
 	    $smarty->assign('page','new');
         }
     }

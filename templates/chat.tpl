@@ -293,6 +293,10 @@ $( document ).ready( function() {
 <a href="{$fullurl}/webplayer.php?id={$smarty.get.id}" target="_new" onclick="window.open('{$fullurl}/webplayer.php?id={$smarty.get.id}','Chameleon Webplayer','width=1024,height=780,scrollbars=yes,toolbar=no,menubar=no,location=no,resizable=yes'); return false"><i class="zmdi zmdi-hearing"></i>&nbsp;Webplayer</a>
 {/if}
 <br />
+{if $metadata['showstats'] == "true"}
+<a href="https://stats.chattersworld.nl/statistieken/{$metadata['name']}.html" data-mfp-src="#test-popup2" class="open-popup-link"><i class="zmdi zmdi-trending-up"></i>&nbsp;Statistieken</a>
+{/if}
+<br />
 
 <br>
 <center><!-- AddToAny BEGIN -->
@@ -313,9 +317,16 @@ a2a_config.locale = "nl";
  <div id="lightIRC" style="height:100%; text-align:center;">
   <p><a href="//www.adobe.com/go/getflashplayer"><img src="//www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" /></a></p>
  </div>
+ {if $metadata['verzoek_url'] != "" && $metadata['radio'] == "true"}
 <div id="test-popup" class="white-popup mfp-hide">
   <iframe src="{$metadata['verzoek_url']}" name="iReQuest_ReQuestForm" scrolling="auto" frameborder="no" align="center" height = "650px" width = "100%"></iframe>
 </div>
+{/if}
+{if $metadata['showstats'] == "true"}
+<div id="test-popup2" class="white-popup mfp-hide">
+  <iframe src="https://stats.chattersworld.nl/statistieken/{$metadata['name']}.html" name="iReQuest_ReQuestForm" scrolling="auto" frameborder="no" align="center" height = "650px" width = "100%"></iframe>
+</div>
+{/if}
 <div class="modal" id="modal-one" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-header">

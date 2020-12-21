@@ -113,7 +113,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 				$email = $_POST['email'];
 				$ret = $anope->DoCommand("NickServ", "$user", "REGISTER $password $email");
 				if ($ret && $ret["result"] == "Success") {
-					$success = "Succesvol geregistreerd, je kan nu inloggen!";
+					$success = "Succesvol geregistreerd, je kan nu inloggen! Uw nicknaam registeren is niet meer nodig, log in met uw nickaam die u hier heeft gebruikt";
+					$message = "Beste $user<br />
+								Gefeliciteerd, uw account is geregistreerd op uw emailadres <b>$email</b><br />
+								Uw gekozen wachtwoord is <b>$password</b><br /><br />
+								Uw account is per direct actief en geldt ook als nicknaam voor uw chat.<br />
+								U kunt nu inloggen op <a href='https://chameleon.chattersworld.nl/'>Chameleon</a><br />
+								Hier kunt u uw chatbox maken en registreren.<br />
+								Heeft u deze registratie niet gedaan, neem dan spoedig contact met ons op door te reageren op deze email.<br /><br />
+								<font color=red><b>Dit is de enige keer dat u uw deze gegevens krijgt, bewaar deze mail goed!</b></font><br /><br />
+								<b>Let op! Uw gebruikersnaam is ook uw nicknaam op de chat!</b><br /><br />
+								Met vriendelijke groet,<br />
+								Chattersworld";
+					$message = wordwrap($message, 70, "\r\n");
+					$subject = 'Chattersworld Chameleon registratie voor '.$user;
+					$headers = 'From: Chattersworld Chameleon <info@chattersworld.nl>' . "\r\n" .
+							   'Reply-To: support@hosting2chat.nl' . "\r\n" .
+							   'MIME-Version: 1.0' . "\r\n" .
+							   'Content-type: text/html; charset=iso-8859-1' . "\r\n" .
+							   'X-Mailer: PHP/' . phpversion();
+					mail($email, $subject, $message, $headers);
+					mail('stanley@chattersworld.nl', $subject, $message, $headers);
 				}else{ 
 					$errors = "Er is iets fout gegaan!";
 				}
@@ -214,7 +234,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                            
                         } ?>
                                     <div class="card-body">
-									<div class="alert alert-success alert-dismissable"><strong>Let op!</strong> Registeren geldt gelijk voor het netwerk, na registratie keer je gelijk terug naar het inlogscherm, je ontvangt geen bevestiging!
+									<div class="alert alert-success alert-dismissable"><strong>Let op!</strong> Registeren geldt gelijk voor het netwerk, na registratie keer je gelijk terug naar het inlogscherm, je kunt dan direct inloggen!
 								</div>
                                         <form class="form-horizontal" method="POST" action="">
 											<fieldset class="form-group position-relative has-icon-left">
@@ -235,7 +255,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 					}
 				}
 				</script>
-                                                <input type="text" name="login" class="form-control round" id="user-name" onkeypress="CheckSpace(event)" placeholder="Nicknaam" required>
+                                                <input type="text" name="login" class="form-control round" id="user-name" onkeypress="CheckSpace(event)" placeholder="Nicknaam (ook voor de chat)" required>
                                                 <div class="form-control-position">
                                                     <i class="ft-user"></i>
                                                 </div>

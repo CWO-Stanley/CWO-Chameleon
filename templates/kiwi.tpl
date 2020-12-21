@@ -1,23 +1,5 @@
-<!-- Facebook Pixel Code -->
-{literal}
-<script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '311596215978856');
-  fbq('track', 'MobileCWO');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=311596215978856&ev=MobileCWO&noscript=1"
-/></noscript>
-<!-- End Facebook Pixel Code -->
 <script type="text/javascript" src="../analyticstracking.js"></script>
-{/literal}
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf8" />
 <meta name="language" content="Dutch" />
 <meta name="keywords" content="chatten, gezellig kletsen, Chattersworld, Radio chat, Chameleon, Gezellig, Chatten zonder registratie, 24/7 Verzoekjes, Live verzoek, Radio Chat, webcam, webcamchat, triviant," />
@@ -77,6 +59,10 @@
 		<a href="{$fullurl}/webplayer.php?id={$smarty.get.id}" target="_new" onclick="window.open('{$fullurl}/webplayer.php?id={$smarty.get.id}','Chameleon Webplayer','width=1024,height=780,scrollbars=yes,toolbar=no,menubar=no,location=no,resizable=yes'); return false"><i class="zmdi zmdi-hearing"></i>&nbsp;Webplayer</a>
 		{/if}
 		<br />
+		{if $metadata['showstats'] == "true"}
+		<a href="https://stats.chattersworld.nl/statistieken/{$metadata['name']}.html" data-mfp-src="#test-popup2" class="open-popup-link"><i class="zmdi zmdi-trending-up"></i>&nbsp;Statistieken</a>
+		{/if}
+		<br />
 		<br />
 		<center><!-- AddToAny BEGIN -->
 		<div class="a2a_kit a2a_kit_size_32 a2a_default_style" id="my_centered_buttons" style="bottom:0px;">
@@ -114,7 +100,14 @@
 				document.getElementById("mySidenav").style.width = "0";
 			}
 		</script>
+		{if $metadata['verzoek_url'] != "" && $metadata['radio'] == "true"}
 	<div id="test-popup" class="white-popup mfp-hide">
 		<iframe src="{$metadata['verzoek_url']}" name="iReQuest_ReQuestForm" scrolling="auto" frameborder="no" align="center" height = "650px" width = "100%"></iframe>
 	</div>
+	{/if}
+	{if $metadata['showstats'] == "true"}
+	<div id="test-popup2" class="white-popup mfp-hide">
+		<iframe src="https://stats.chattersworld.nl/statistieken/{$metadata['name']}.html" name="iReQuest_ReQuestForm" scrolling="auto" frameborder="no" align="center" height = "650px" width = "100%"></iframe>
+	</div>
+	{/if}
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
