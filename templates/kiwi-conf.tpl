@@ -8,11 +8,12 @@ window.kiwiConfig = function kiwiConfig() {
 		"windowTitle": "..::Chattersworld - #{/literal}{$metadata['name']}{literal}::.. The web IRC client",
 		"kiwiServer": "https://{/literal}{$gateway}{literal}/webirc/kiwiirc/",
 		"theme": "CWO",
+		"hide_advanced": true,
 		"disconnectOnSaslFail": false,
 		"themes": [
 				{/literal}
 					{if $metadata['style'] == "nightswatch"}{literal}
-				{ "name": "CWO", "url": "static/themes/dark-fluid" }
+				{ "name": "CWO", "url": "static/themes/theme-dark-fluid" }
 				{/literal}{else}{literal}
 				{ "name": "CWO", "url": "static/themes/cwo-chameleon-kiwiirc4" }
 				{/literal}{/if}{literal}
@@ -70,6 +71,7 @@ window.kiwiConfig = function kiwiConfig() {
 				{"name": "plugin-radio","url": "static/plugins/plugin-radio.html"},
 				{/literal}{/if}{literal}
 				{"name": "nickserv", "url": "static/plugins/plugin-nickserv.js"},
+				{"name": "custom-selfuser", "url": "static/plugins/plugin-custom-selfuser.js"},
 				{ "name": "font", "url": "static/plugins/font-size.html" },
 				{/literal}{if $metadata['kiwi_avatar'] == "true"}{literal}
 				{"name": "gravatar", "url": "static/plugins/plugin-gravatar.js"},

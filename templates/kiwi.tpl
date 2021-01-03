@@ -31,10 +31,10 @@
 <link rel="stylesheet" href="{$fullurl}/dist/magnific-popup.css">
 <link rel="stylesheet" href="{$fullurl}/app-assets/css/material-design-iconic-font/dist/css/material-design-iconic-font.min.css">
 <!-- Kiwi script reloaders -->
-<link href="{$fullurl}/static/css/app.b4765c18.css" rel="preload" as="style">
-<link href="{$fullurl}/static/js/app.60a20f43.js" rel="preload" as="script">
-<link href="{$fullurl}/static/js/vendor.23cd2b70.js" rel="preload" as="script">
-<link href="{$fullurl}/static/css/app.b4765c18.css" rel="stylesheet">
+<link href="{$fullurl}/static/css/app.c2a6c72d.css" rel="preload" as="style">
+<link href="{$fullurl}/static/js/app.5dddf7bb.js" rel="preload" as="script">
+<link href="{$fullurl}/static/js/vendor.cd02f594.js" rel="preload" as="script">
+<link href="{$fullurl}/static/css/app.c2a6c72d.css" rel="stylesheet">
 <!-- END -->
 </head>
 <meta charset=utf-8><meta name=viewport content="user-scalable=no,width=device-width,initial-scale=1,maximum-scale=1">
@@ -81,7 +81,7 @@
 
 	</div>
 	<div class="right">
-		<span style="font-size:30px;cursor:pointer;color:#FFF;" onclick="openNav()">&#9776;</span>
+		<span style="font-size:30px;cursor:pointer;color:#FFF;" onclick="openNav()">MENU&#9776;</span>
 	</div>
 	<noscript>
 		<div class="kiwi-noscript-warn">Please enable JavaScript and refresh the page to use this website.
@@ -89,8 +89,8 @@
 	</noscript>
 	<div id="app">
 	</div>
-	<script type="text/javascript" src="static/js/vendor.23cd2b70.js"></script>
-	<script type="text/javascript" src="static/js/app.60a20f43.js"></script>
+	<script type="text/javascript" src="static/js/vendor.cd02f594.js"></script>
+	<script type="text/javascript" src="static/js/app.5dddf7bb.js"></script>
 		<script type="text/javascript">
 			function openNav() {
 				document.getElementById("mySidenav").style.width = "33%";
@@ -110,4 +110,5 @@
 		<iframe src="https://stats.chattersworld.nl/statistieken/{$metadata['name']}.html" name="iReQuest_ReQuestForm" scrolling="auto" frameborder="no" align="center" height = "650px" width = "100%"></iframe>
 	</div>
 	{/if}
+	<div class="footer">
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>

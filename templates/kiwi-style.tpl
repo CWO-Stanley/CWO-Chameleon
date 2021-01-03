@@ -24,6 +24,7 @@ body {
     font-family: "Lato", sans-serif;
 }
 			   {literal}
+.footer { position: absolute; bottom: 0; width: 99%; margin: auto;}
 #BbfWjPzRoMSm {
 	display: none;
 	margin-bottom: 0;
@@ -71,14 +72,18 @@ body {
 
 .sidenav .closebtn {
     position: absolute;
-    bottom: 50px;
-	{/literal}{if $metadata['radio_player'] != "hero"}
-    right: 15px;
+    top: 5px;
+	{/literal}
+	{if $metadata['radio_player'] == "hero"}
+    right: 356px;
+	{else if $metadata['radio_player'] == "stenly"}
+	right: 110px;
 	{else}
-	right: 356px;
+	right: 15px;
 	{/if}
     font-size: 36px;
     margin-left: 50px;
+	z-index: 99999999;
 }
 .white-popup {
 	position: relative;
@@ -90,16 +95,20 @@ body {
 }
 
 .right { 
-{if $metadata['radio_player'] != "hero"}
+{if $metadata['radio_player'] == "hero"}
 	float:right; 
-	right: 5px;
+	right: 356px;
+{else if $metadata['radio_player'] == "stenly"}
+	float:right;
+	right: 110px;
 {else}
 	float:right;
-	right: 356px;
+	right: 5px;
 {/if}
 	display: block; 
 	position: absolute;
 	bottom: 2px;
+	z-index: 9999999;
 }
 .left { 
 	float:left; 
@@ -107,6 +116,7 @@ body {
 	position: absolute;
     left: 2px;
     bottom: 2px;
+	z-index: 9999999;
 }
 #my_centered_buttons { display: flex; justify-content: center;}
 @media screen and (max-height: 450px) {literal}{
@@ -179,7 +189,8 @@ body {
 .kiwi-messagelist-nick--mode-v .kiwi-messagelist-nick-prefix {
 	content: url(lirc-resources/icons/{/literal}{$metadata['icons']}{literal}/voice.png)
 }
-{/literal}{/if}{literal}
+{/literal}{/if}{literal}{/literal}
+{if $metadata['style'] != "nightswatch"}{literal}
 .kiwi-messagelist {
 {/literal}{if $metadata['style'] != "transparent"}{literal}{/literal}
 {if $metadata['bgcolor'] == '#000000'}
@@ -194,6 +205,7 @@ body {
 {/literal}{else}{literal}
     background-image: linear-gradient(rgba(255,255,255, .50), rgba(255,255,255, .50)), url({/literal}{$metadata['bgurl']}{literal});background-size: 100% 100%; 
 } 
+{/literal}{/if}{literal}
 	{/literal}{/if}{literal}
 .kiwi-statebrowser-channel[data-name="#{/literal}{$metadata['name']|lower}{literal}"]::before {
     content: "\f075";
@@ -341,9 +353,7 @@ body {
     --brand-shadow: rgba(0, 0, 0, 0.1);
     --comp-border: #b2b2b2;
 }
-{/literal}
-{/if}
-{literal}
+
 /* StateBrowser */
 .kiwi-statebrowser-usermenu--open {
     background-color: #5d919c;
@@ -436,5 +446,8 @@ body {
 .kiwi-welcome-asl-have-password {
 	color: {/literal}{if $metadata['style'] == "black"}#000{else}var(--brand-default-fg){/if}{literal};
 }
+{/literal}
+{/if}
+{literal}
 </style>
 {/literal}

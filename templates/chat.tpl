@@ -29,6 +29,25 @@
  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
  <link rel="stylesheet" href="dist/magnific-popup.css">
   <script type="text/javascript" src="../analyticstracking.js"></script>
+  {literal}
+  <script>
+
+if(!isFlashEnabled()) 
+{ 
+alert('Uw flashplayer is uitgeschakelt, geen nood, u word omgeleid naar HTML5, of schakel uw flashplayer in!');
+window.location = 'html5.php?id={/literal}{$smarty.get.id}{literal}'; 
+}
+
+function isFlashEnabled() 
+{
+    var flash = navigator.plugins.namedItem('Shockwave Flash');
+    if(navigator.userAgent.indexOf("Chrome") != -1 ) { return 1; }
+	else if (!flash) { return 0; } 
+    else { return 1; }
+}
+
+</script>
+{/literal}
   {if $metadata['html_redirect'] == "true"}
   <script>window.location="html5.php?id={$smarty.get.id}";</script>
   {/if}
@@ -313,7 +332,7 @@ a2a_config.locale = "nl";
 <script async src="https://static.addtoany.com/menu/page.js"></script>
 <!-- AddToAny END --></center>
 </div>
-<div class="right"><span style="font-size:30px;cursor:pointer;color:#FFF;" onclick="openNav()">&#9776;</span></div>
+<div class="right"><span style="font-size:30px;cursor:pointer;color:#FFF;" onclick="openNav()">MENU&#9776;</span></div>
  <div id="lightIRC" style="height:100%; text-align:center;">
   <p><a href="//www.adobe.com/go/getflashplayer"><img src="//www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" /></a></p>
  </div>
