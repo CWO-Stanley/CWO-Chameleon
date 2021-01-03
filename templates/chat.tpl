@@ -115,7 +115,7 @@ overflow: hidden;
 
 .sidenav .closebtn {
     position: absolute;
-    bottom: 50px;
+    top: 5px;
 	{if $metadata['radio_player'] != "hero"}
     right: 15px;
 	{else}
@@ -136,6 +136,7 @@ right: 356px;
 display: block; 
 position: absolute;
 bottom: 2px;
+z-index: 9999999;
 }
 .left { 
 float:left; 
@@ -143,6 +144,7 @@ display: block;
 position: absolute;
     left: 2px;
     bottom: 2px;
+	z-index: 9999999;
 }
 .white-popup {
   position: relative;
