@@ -55,6 +55,7 @@ Installation is quite straight forward;
 - import database.sql to that account
 - make sure that the webhost can connect to your anope datebase and put in the details in classes/Config.php
 - edit classes/Config.php with your database details created above
+- edit classes/Members.php to add your anope XMLRPC url so login and registering will work
 - edit classes/LightIRC.php with your IRC credentials (replace irc.example.nl with your IRC server)
 - edit classes/LightIRC.php with your lightIRC license (LightIRC requires a license for webcams to work)
 - edit templates/kiwi-conf.tpl with your IRC credentials, webircgateway and jitsi-meet server
