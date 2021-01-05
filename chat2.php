@@ -113,7 +113,9 @@ else {
         } elseif ($metadata['ads_enabled'] == "true") {
             $smarty->display('chat_ads.tpl');
         }
-
+		if (($metadata['html_redirect'] == "true")) {
+			echo '</div>';
+		}
         $smarty->display('chat_end.tpl');
     }
     else {

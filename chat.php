@@ -1,4 +1,9 @@
 <?php
+header("Access-Control-Allow-Headers: Authorization, Content-Type");
+header("Access-Control-Allow-Origin: *");
+// header('content-type: application/json; charset=utf-8');
+?>
+<?php
 require("includes.php");
 $database = new Database($config);
 $db = $database->getConnection();
@@ -68,7 +73,7 @@ if ($mobile_browser > 0) {
 				$smarty->display('chat_radio.tpl'); 
 			}
         }
-
+		echo '</div>';
         $smarty->display('chat_end.tpl');
     }
     else {
@@ -103,7 +108,9 @@ else {
         if ($metadata['radio'] == "true") {
             $smarty->display('chat_radio.tpl');
         }
-
+		if (($metadata['html_redirect'] == "true")) {
+		echo '</div>';
+		}
         $smarty->display('chat_end.tpl');
     }
     else {

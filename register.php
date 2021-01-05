@@ -255,7 +255,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 					}
 				}
 				</script>
-                                                <input type="text" name="login" class="form-control round" id="user-name" onkeypress="CheckSpace(event)" placeholder="Nicknaam (ook voor de chat)" required>
+                                                <input type="text" name="login" class="form-control round" id="user-name" pattern="^[a-zA-Z0-9][a-zA-Z0-9-_]{2,}$" onkeypress="CheckSpace(event)" placeholder="Nicknaam (ook voor de chat)" required>
                                                 <div class="form-control-position">
                                                     <i class="ft-user"></i>
                                                 </div>

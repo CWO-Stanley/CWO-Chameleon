@@ -24,7 +24,7 @@ body {
     font-family: "Lato", sans-serif;
 }
 			   {literal}
-.footer { position: absolute; bottom: 0; width: 99%; margin: auto;}
+.footer { position: absolute; bottom: 0; height: 120px; width: 100%; margin: auto; background-color:{/literal}{$metadata['bgcolor']}{literal};}
 #BbfWjPzRoMSm {
 	display: none;
 	margin-bottom: 0;

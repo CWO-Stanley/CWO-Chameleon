@@ -42,7 +42,7 @@ The player will play audio without a licensekey, but other functions will not wo
 # Installation
 
 Requires;
-- Anope Services running on MySQL and Encryption has to be MD5
+- Anope Services running on MySQL and at least 1 encryption module has to be enabled
 - Anope XMLRPC module has to be enabled and working!
 - Make sure that your anope instance has m_xmlrpc enabled
 - lightIRC webcam module license
