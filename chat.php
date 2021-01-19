@@ -68,7 +68,7 @@ if ($mobile_browser > 0) {
 
         if ($metadata['radio'] == "true") {
 			if ($metadata['radio_player'] == "internal") {
-				$smarty->display('chat_radio.tpl');
+				$smarty->display('chat_ads.tpl');
 			}else{ 
 				$smarty->display('chat_radio.tpl'); 
 			}
@@ -106,7 +106,11 @@ else {
         $smarty->display('chat.tpl');
 		}
         if ($metadata['radio'] == "true") {
-            $smarty->display('chat_radio.tpl');
+			if ($metadata['radio_player'] == "internal") {
+				$smarty->display('chat_ads.tpl');
+			}else{ 
+				$smarty->display('chat_radio.tpl'); 
+			}
         }
 		if (($metadata['html_redirect'] == "true")) {
 		echo '</div>';

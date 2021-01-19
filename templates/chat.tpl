@@ -41,8 +41,8 @@ window.location = 'html5.php?id={/literal}{$smarty.get.id}{literal}';
 function isFlashEnabled() 
 {
     var flash = navigator.plugins.namedItem('Shockwave Flash');
-    if(navigator.userAgent.indexOf("Chrome") != -1 ) { return 1; }
-	else if (!flash) { return 0; } 
+    // if(navigator.userAgent.indexOf("Chrome") != -1 ) { return 1; }
+	if (!flash) { return 0; } 
     else { return 1; }
 }
 
@@ -355,7 +355,7 @@ a2a_config.locale = "nl";
                     <a href="#" class="btn-close" aria-hidden="true">×</a>
                 </div>
                 <div class="modal-body">
-                    <p><center><img src="https://scr.gezelligkletsen.nl/b5d7ba93-1cce-4733-9e6a-559bb7d24d0d.png" /> <br /><br />Adobe Flashplayer stopt de ondersteuning in december 2020! <br /><br />Chattersworld houd de deze flashchat online zolang de ondersteuning blijft.<br /><br />Inmiddels heeft Chattersworld reeds een geweldige HTML5 chat.<br /><br /><br /><br />Druk op OK! om naar deze flashchat te gaan!</center></p>
+                    <p><center><img src="https://scr.gezelligkletsen.nl/1b0f9d36-e1c4-45db-a865-8692ab1158dc.png" style="width: 450px;" /> <br /><br />Adobe Flashplayer heeft de ondersteuning in december 2020 gestopt! <br /><br />Chattersworld houd de deze flashchat online zolang de browsers deze nog niet blokkeren.<br /><br />Inmiddels heeft Chattersworld reeds een geweldige HTML5 chat.<br /><br /><br /><br />Druk op OK! om naar deze flashchat te gaan!</center></p>
                 </div>
                 <div class="modal-footer">
 				<a href="{$fullurl}/html5.php?id={$smarty.get.id}" class="btn">Ga naar HTML5 chat</a>

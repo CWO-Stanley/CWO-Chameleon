@@ -54,11 +54,15 @@ CREATE TABLE `chameleon_chat` (
   `kiwi_imgur` varchar(10) NOT NULL DEFAULT 'true',
   `kiwi_asl` varchar(10) NOT NULL DEFAULT 'true',
   `html_redirect` varchar(10) NOT NULL DEFAULT 'false',
+  `showstats` varchar(15) DEFAULT NULL,
+  `omswitch` varchar(255) DEFAULT NULL,
+  `transparantie` varchar(255) DEFAULT NULL,
+  `html5color` varchar(255) DEFAULT NULL,
   `obsolete` tinyint(4) DEFAULT 0,
   PRIMARY KEY (`id`),
   KEY `FK_chameleon_chat_chameleon_lirc` (`lirc_id`),
   CONSTRAINT `FK_chameleon_chat_chameleon_lirc` FOREIGN KEY (`lirc_id`) REFERENCES `chameleon_lirc` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2539 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 --
 -- Table structure for table `chameleon_dev_chat`

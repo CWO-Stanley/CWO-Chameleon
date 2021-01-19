@@ -41,13 +41,19 @@
 		<li class="nav-item">
             <a class="nav-link" id="base-tab5" aria-expanded="false" aria-controls="html5" data-toggle="tab" href="#html5" role="tab">HTML5 instellingen</a>
         </li>
-		<div class="dropdown">
+		<li class="nav-item">
+            <a class="nav-link" href="#radio" id="base-tab6" aria-expanded="false" aria-controls="radio" data-toggle="tab">Radio instellingen</a>
+        </li>
+		<li class="nav-item">
+            <a class="nav-link" href="#ads" id="base-tab7" aria-expanded="false" aria-controls="ads" data-toggle="tab">Advertentie / Statistieken</a>
+        </li>
+		<!-- <div class="dropdown">
             <button class="btn btn-light" aria-expanded="false" data-toggle="dropdown">Extra's</button>
                 <div class="dropdown-menu dropdown-menu--icon">
                     <a href="#radio" id="base-tab6" aria-expanded="false" aria-controls="radio" data-toggle="tab" class="dropdown-item">Radio</a>
                     <a href="#ads" id="base-tab7" aria-expanded="false" aria-controls="ads" data-toggle="tab" class="dropdown-item">Advertenties</a>
                 </div>
-        </div>
+        </div> -->
 	</ul>
         <form role="form" method="post" action="{$fullurl}{if isset($chat_id)}/edit{else}/new{/if}">
             {if isset($chat_id)}
@@ -103,13 +109,31 @@
 						</div>
                     </div>
 					</div><br /><br />
+					<div class="row">
+                        <label for="transparantie" class="control-label col-sm-2 white">Achtergrond Link Overlay transparantie<br /><small>Hiermee pas je de overlay waas van de achtergrond aan!<br />Style Transparant heeft geen overlay!</small></label>
+                        <div class="col-sm-4">
+						<div class="form-group">
+						<script>
+						function updateTextInput(val) {
+          document.getElementById('textInput').value=val; 
+        }
+		</script>
+		
+							<input data-idx='2' id="r" type="range" class="form-control" name="rangeInput" min="01" max="99" value="{if isset($transparantie)}{$transparantie}{/if}" onchange="updateTextInput(this.value);"><div class='glow' aria-hidden='true'></div><br />
+							
+							
+                            <input id="textInput" type="text" class="form-control" name="transparantie" title="Doorzichtigheid van de overlay (Transparant heeft geen overlay)."  placeholder="Overlay transparantie" value="{if isset($transparantie)}{$transparantie}{/if}" data-toggle="tooltip" data-placement="top">
+							<i class="form-group__bar"></i>
+						</div>
+                    </div>
+					</div><br /><br />
                     <!-- Chat stijl -->
                     <div class="form-group">
 					<div class="row">
 					<label for="chat_style" title="Er zijn verschillende stijlen die je kan instellen voor je chatbox." class="col-sm-2 col-form-label white">Style:<br><small><font color="white">Zet op transparent als u een achtergrond gebruikt!!</font></small></label>
                         <div class="col-sm-4">
                             <select name="chat_style" class="select2 form-control" id="default-select4" data-placeholder="Maak een keuze">
-								<option value="transparent" {if $chat_style=="transparent"}selected="selected"{/if}>Transparant (Nodig bij flash voor achtergrond)</option>
+								<option value="transparent" {if $chat_style=="transparent"}selected="selected"{/if}>Transparant (Het mooiste met een achtergrond)</option>
                                 <option value="blue" {if $chat_style=="blue"}selected="selected"{/if}>Blauw</option>
                                 <option value="black" {if $chat_style=="black"}selected="selected"{/if}>Zwart</option>
                                 <option value="orange" {if $chat_style=="orange"}selected="selected"{/if}>Oranje</option>
@@ -121,25 +145,57 @@
                                 <option value="pink" {if $chat_style=="pink"}selected="selected"{/if}>Roze</option>
                                 <option value="darkred" {if $chat_style=="darkred"}selected="selected"{/if}>Donkerrood</option>
 								<option value="nightswatch" {if $chat_style=="nightswatch"}selected="selected"{/if}>NightSwatch (Alleen HTML5)</option>
+								<option value="html5color" {if $chat_style=="html5color"}selected="selected"{/if}>Eigen kleur (Alleen HTML5)</option>
                             </select>
                         </div>
                     </div>
 					</div>
 					<br /><br />
-
+					<!-- HTML5 kleur als thema -->
+					<div class="row">
+                        <label for="html5color" class="control-label col-sm-2 white">HTML5 Thema kleur<br /><small>Kies je eigen themakleur!<br />Zet hiervoor de style op "Eigen Kleur of Transparant"!</small></label>
+						<div class="col-sm-4">
+                                        <div class="form-group">
+										<div class="input-group">
+						<!-- <span class="input-group-addon"><i class="zwicon-brush"></i></span> -->
+						<div class="form-group color-picker">
+						<div class="position-relative has-icon-left">
+                                             <input type="text" id="simple-color-picker3" style="background-color: {if isset($html5color)}{$html5color}{/if};" name="html5color" class="form-control color-picker__value color-picker__preview" placeholder="html5color" value="{if isset($html5color)}{$html5color}{/if}" title="Deze kleur zal je HTML5 chat gaan hebben als hoofdthema" data-toggle="tooltip" data-placement="top">
+                                            <div class="form-control-position">
+                                                <i class="la la-adjust black color-picker__preview" style="background-color: {if isset($html5color)}{$html5color}{/if};"></i>
+                                            </div>
+                                        </div>
+										</div>
+                        
+                    </div>
+					</div>
+					</div>
+					</div>
+                    <br /><br />
+					<div class="row">
+					        <label for="omswitch" title="Textkleuren omdraaien, handig bij donkere achtergronden." class="control-label col-sm-2 white">Textkleuren omdraaien<br /><small>Bij donkere achtergronden</small></label>
+                                <div class="col-sm-4"><div class="form-group">
+								<div class="toggle-switch toggle-switch--green">
+                                    <input type="checkbox" name="omswitch" class="switchery" value="true" {if $omswitch=="true"}checked="checked"{/if}>
+                                       <i class="toggle-switch__helper"></i>
+                                </div>
+                        </div>
+					</div>
+					</div>
+                    <br /><br />
                     <!-- Icoon style -->
                     <div class="form-group">
 					<div class="row">
 					 <label for="icon_style" title="Er zijn verschillende icoontjes die je kan instellen voor de gebruikerslijst van je chatbox." class="col-sm-2 col-form-label white">Icoontjes:</label>
                         <div class="col-sm-4">
-                            <select class="select2 form-control" id="default-select3" name="icon_style">
+                            <select class="select2-templating-icons form-control" id="select2-templating" name="icon_style">
                                 <option value="bolletje" {if $icon_style=="bolletje"}selected="selected"{/if}>Bolletjes</option>
                                 <option value="ster" {if $icon_style=="ster"}selected="selected"{/if}>Ster</option>
                                 <option value="kroon" {if $icon_style=="kroon"}selected="selected"{/if}>Kroon</option>
                                 <option value="dj" {if $icon_style=="dj"}selected="selected"{/if}>DJ</option>
 								<option value="pins" {if $icon_style=="pins"}selected="selected"{/if}>Punaises</option>
 								<option value="whatsapp" {if $icon_style=="whatsapp"}selected="selected"{/if}>WhatsApp</option>
-                                <option value="none" {if $icon_style=="none"}selected="selected"{/if}>Standaard (~&@%+)</option>
+                                <option value="" {if $icon_style==""}selected="selected"{/if}>Standaard (~&@%+)</option>
                             </select>
                         </div>
                     </div><br /><br />
