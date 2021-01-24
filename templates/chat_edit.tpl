@@ -109,7 +109,7 @@
 						</div>
                     </div>
 					</div><br /><br />
-					<div class="row">
+					<div id="transparantie" class="row">
                         <label for="transparantie" class="control-label col-sm-2 white">Achtergrond Link Overlay transparantie<br /><small>Hiermee pas je de overlay waas van de achtergrond aan!<br />Style Transparant heeft geen overlay!</small></label>
                         <div class="col-sm-4">
 						<div class="form-group">
@@ -119,10 +119,10 @@
         }
 		</script>
 		
-							<input data-idx='2' id="r" type="range" class="form-control" name="rangeInput" min="01" max="99" value="{if isset($transparantie)}{$transparantie}{/if}" onchange="updateTextInput(this.value);"><div class='glow' aria-hidden='true'></div><br />
+							<input data-idx='2' id="r" type="range" class="form-control" name="rangeInput" min="0" max="1" step="0.01" value="{if isset($transparantie)}{$transparantie}{/if}" onchange="updateTextInput(this.value);"><div class='glow' aria-hidden='true'></div><br />
 							
 							
-                            <input id="textInput" type="text" class="form-control" name="transparantie" title="Doorzichtigheid van de overlay (Transparant heeft geen overlay)."  placeholder="Overlay transparantie" value="{if isset($transparantie)}{$transparantie}{/if}" data-toggle="tooltip" data-placement="top">
+                            <input id="textInput" type="text" class="form-control" name="transparantie" title="Doorzichtigheid van de overlay (Transparant heeft geen overlay)."  placeholder="Overlay transparantie" value="{if isset($transparantie)}{$transparantie}{/if}" data-toggle="tooltip" data-placement="top"  readonly="readonly">
 							<i class="form-group__bar"></i>
 						</div>
                     </div>
@@ -132,19 +132,19 @@
 					<div class="row">
 					<label for="chat_style" title="Er zijn verschillende stijlen die je kan instellen voor je chatbox." class="col-sm-2 col-form-label white">Style:<br><small><font color="white">Zet op transparent als u een achtergrond gebruikt!!</font></small></label>
                         <div class="col-sm-4">
-                            <select name="chat_style" class="select2 form-control" id="default-select4" data-placeholder="Maak een keuze">
-								<option value="transparent" {if $chat_style=="transparent"}selected="selected"{/if}>Transparant (Het mooiste met een achtergrond)</option>
-                                <option value="blue" {if $chat_style=="blue"}selected="selected"{/if}>Blauw</option>
-                                <option value="black" {if $chat_style=="black"}selected="selected"{/if}>Zwart</option>
-                                <option value="orange" {if $chat_style=="orange"}selected="selected"{/if}>Oranje</option>
-                                <option value="darkorange" {if $chat_style=="darkorange"}selected="selected"{/if}>Donkeroranje</option>
-                                <option value="green" {if $chat_style=="green"}selected="selected"{/if}>Groen</option>
-                                <option value="lightblue" {if $chat_style=="lightblue"}selected="selected"{/if}>Lichtblauw</option>
-                                <option value="skyblue" {if $chat_style=="skyblue"}selected="selected"{/if}>Hemelsblauw</option>
-                                <option value="yellow" {if $chat_style=="yellow"}selected="selected"{/if}>Geel</option>
-                                <option value="pink" {if $chat_style=="pink"}selected="selected"{/if}>Roze</option>
-                                <option value="darkred" {if $chat_style=="darkred"}selected="selected"{/if}>Donkerrood</option>
-								<option value="nightswatch" {if $chat_style=="nightswatch"}selected="selected"{/if}>NightSwatch (Alleen HTML5)</option>
+                            <select id="graph_select" name="chat_style" class="select2 form-control" id="default-select4" data-placeholder="Maak een keuze">
+								<option id="transparent" value="transparent" {if $chat_style=="transparent"}selected="selected"{/if}>Transparant (Het mooiste met een achtergrond)</option>
+                                <option id="blue" value="blue" {if $chat_style=="blue"}selected="selected"{/if}>Blauw</option>
+                                <option id="black" value="black" {if $chat_style=="black"}selected="selected"{/if}>Zwart</option>
+                                <option id="orange" value="orange" {if $chat_style=="orange"}selected="selected"{/if}>Oranje</option>
+                                <option id="darkorange" value="darkorange" {if $chat_style=="darkorange"}selected="selected"{/if}>Donkeroranje</option>
+                                <option id="green" value="green" {if $chat_style=="green"}selected="selected"{/if}>Groen</option>
+                                <option id="lightblue" value="lightblue" {if $chat_style=="lightblue"}selected="selected"{/if}>Lichtblauw</option>
+                                <option id="skyblue" value="skyblue" {if $chat_style=="skyblue"}selected="selected"{/if}>Hemelsblauw</option>
+                                <option id="yellow" value="yellow" {if $chat_style=="yellow"}selected="selected"{/if}>Geel</option>
+                                <option id="pink" value="pink" {if $chat_style=="pink"}selected="selected"{/if}>Roze</option>
+                                <option id="darkred" value="darkred" {if $chat_style=="darkred"}selected="selected"{/if}>Donkerrood</option>
+								<option id="nightswatch" value="nightswatch" {if $chat_style=="nightswatch"}selected="selected"{/if}>NightSwatch (Alleen HTML5)</option>
 								<option value="html5color" {if $chat_style=="html5color"}selected="selected"{/if}>Eigen kleur (Alleen HTML5)</option>
                             </select>
                         </div>
@@ -152,7 +152,7 @@
 					</div>
 					<br /><br />
 					<!-- HTML5 kleur als thema -->
-					<div class="row">
+					<div id="html5color" class="row">
                         <label for="html5color" class="control-label col-sm-2 white">HTML5 Thema kleur<br /><small>Kies je eigen themakleur!<br />Zet hiervoor de style op "Eigen Kleur of Transparant"!</small></label>
 						<div class="col-sm-4">
                                         <div class="form-group">
@@ -172,7 +172,7 @@
 					</div>
 					</div>
                     <br /><br />
-					<div class="row">
+					<div id="omswitch" class="row">
 					        <label for="omswitch" title="Textkleuren omdraaien, handig bij donkere achtergronden." class="control-label col-sm-2 white">Textkleuren omdraaien<br /><small>Bij donkere achtergronden</small></label>
                                 <div class="col-sm-4"><div class="form-group">
 								<div class="toggle-switch toggle-switch--green">
@@ -416,10 +416,10 @@
                     <!-- Radio inschakelen -->
                     
 					<div class="row">
-                        <label for="textstyling" title="Hiermee stel je in dat de radioplayer getoond zal worden onder de chat" class="control-label col-sm-2 white">Radioplayer inschakelen</label>
+                        <label for="textstyling" title="Hiermee stel je in dat de radioplayer getoond zal worden onder de chat" class="control-label col-sm-2 white switch">Radioplayer inschakelen</label>
 						<div class="col-sm-4"><div class="form-group">
                         <div class="toggle-switch toggle-switch--green">
-                            <input type="checkbox" class="switchery" name="radio_enabled" value="true" {if $radio_enabled=="true"}checked="checked"{/if}>
+                            <input id="radio_enabled" type="checkbox" class="switchery" name="radio_enabled" value="true" {if $radio_enabled=="true"}checked="checked"{/if}>
                         <i class="toggle-switch__helper"></i>
 						</div>
                     </div>
@@ -427,7 +427,7 @@
 					</div>
                     <br /><br />
                     <!-- Naam van de radio -->
-                    
+                    <div id="checked" class="hideme" {if $radio_enabled!="true"}style="display: none; width: 100%;"{/if}>
 					<div class="row">
                         <label for="radio_name" class="control-label col-sm-2 white">Radio naam</label>
                         <div class="col-sm-4"><div class="form-group">
@@ -442,10 +442,10 @@
 					<div class="row">
                         <label for="radio_type" title="Kies hier het type stream dat je gebruikt." class="control-label col-sm-2 white">Type stream</label>
                         <div class="col-sm-4"><div class="form-group">
-                            <select class="select2 form-control" id="default-select2" name="radio_type">
-                                <option value="shoutcast" {if $radio_type=="shoutcast"}selected="selected"{/if}>Shoutcast</option>
-								<option value="shoutcast2" {if $radio_type=="shoutcast2"}selected="selected"{/if}>Shoutcast v2</option>
-                                <option value="icecast2" {if $radio_type=="icecast2"}selected="selected"{/if}>Icecast 2</option>
+                            <select id="stream_select" class="select2 form-control" id="default-select2" name="radio_type">
+                                <option id="shoutcast" value="shoutcast" {if $radio_type=="shoutcast"}selected="selected"{/if}>Shoutcast</option>
+								<option id="shoutcast2" value="shoutcast2" {if $radio_type=="shoutcast2"}selected="selected"{/if}>Shoutcast v2</option>
+                                <option id="icecast2" value="icecast2" {if $radio_type=="icecast2"}selected="selected"{/if}>Icecast 2</option>
                             </select>
                         </div>
                     </div>
@@ -464,7 +464,7 @@
                     <br /><br />
 					<!-- URL van de radio -->
                     
-					<div class="row">
+					<div id="mountpoint" class="row">
                         <label for="mountpoint" class="control-label col-sm-2 white">Stream mountpoint</label>
                         <div class="col-sm-4"><div class="form-group">
                             <input type="text" class="form-control" name="mountpoint" title="Geef hier de stream mountpoint aan (enkel bij shoutcast v2 en icecast)." placeholder="Radio URL" value="{if isset($mountpoint)}{$mountpoint}{/if}" data-toggle="tooltip" data-placement="top">
@@ -544,7 +544,7 @@
                     
                 </div>
 				</div>
-				</div>
+				</div></div>
 				</div>
 
                 <!-- EXTRA: ADS -->

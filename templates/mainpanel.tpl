@@ -335,7 +335,8 @@ $(document).ready(function() {
 		} );
 		</script>
 {/literal}
-{/if}	
+{/if}
+{if $page=='new'}	
 <script>
 	$(function () {
 		$('#simple-color-picker').colorpicker();
@@ -398,6 +399,296 @@ r.addEventListener('input', function () {
 }, false);
 //# sourceURL=pen.js
 {/literal}
-    </script>							
+    </script>
+<script>
+$(function() {
+  $("#graph_select").change(function() {
+    if ($("#transparent").is(":selected")) {
+      // $("#pilot_graph_form").show();
+      $("#transparantie").fadeOut(1000);
+	  $("#omswitch").fadeIn(1000);
+    } else {
+      // $("#pilot_graph_form").hide();
+      $("#transparantie").fadeIn(1000);
+    }
+	if ($("#blue").is(":selected")) {
+      // $("#pilot_graph_form").show();
+      $("#html5color").fadeOut(1000);
+	  $("#omswitch").fadeOut(1000);
+    } 
+	else if ($("#black").is(":selected")) {
+      // $("#pilot_graph_form").show();
+      $("#html5color").fadeOut(1000);
+	  $("#omswitch").fadeOut(1000);
+    } 
+	else if ($("#orange").is(":selected")) {
+      // $("#pilot_graph_form").show();
+      $("#html5color").fadeOut(1000);
+	  $("#omswitch").fadeOut(1000);
+    }
+	else if ($("#darkorange").is(":selected")) {
+      // $("#pilot_graph_form").show();
+      $("#html5color").fadeOut(1000);
+    }
+	else if ($("#green").is(":selected")) {
+      // $("#pilot_graph_form").show();
+      $("#html5color").fadeOut(1000);
+	  $("#omswitch").fadeOut(1000);
+    }
+	else if ($("#lightblue").is(":selected")) {
+      // $("#pilot_graph_form").show();
+      $("#html5color").fadeOut(1000);
+	  $("#omswitch").fadeOut(1000);
+    }
+	else if ($("#skyblue").is(":selected")) {
+      // $("#pilot_graph_form").show();
+      $("#html5color").fadeOut(1000);
+	  $("#omswitch").fadeOut(1000);
+    }
+	else if ($("#yellow").is(":selected")) {
+      // $("#pilot_graph_form").show();
+      $("#html5color").fadeOut(1000);
+	  $("#omswitch").fadeOut(1000);
+    }
+	else if ($("#pink").is(":selected")) {
+      // $("#pilot_graph_form").show();
+      $("#html5color").fadeOut(1000);
+	  $("#omswitch").fadeOut(1000);
+    }
+	else if ($("#darkred").is(":selected")) {
+      // $("#pilot_graph_form").show();
+      $("#html5color").fadeOut(1000);
+	  $("#omswitch").fadeOut(1000);
+    } 
+	else if ($("#nightswatch").is(":selected")) {
+      // $("#pilot_graph_form").show();
+      $("#html5color").fadeOut(1000);
+	  $("#transparantie").fadeOut(1000);
+	  $("#omswitch").fadeOut(1000);
+    } else {
+      // $("#pilot_graph_form").hide();
+      $("#html5color").fadeIn(1000);
+	  $("#omswitch").fadeIn(1000);
+    }
+  }).trigger('change');
+});
+</script>	
+<script>
+$(function() {
+  $("#stream_select").change(function() {
+    if ($("#shoutcast").is(":selected")) {
+      // $("#pilot_graph_form").show();
+      $("#mountpoint").fadeOut(1000);
+    } else {
+      // $("#pilot_graph_form").hide();
+      $("#mountpoint").fadeIn(1000);
+    }
+	}).trigger('change');
+});
+</script>
+{if $radio_enabled!="true"}
+{literal}
+<script>
+let getSwitch = document.querySelector('#radio_enabled') //get switch
+
+let getCheckboxes = document.querySelectorAll('.hideme') //get checkboxes UL
+
+getSwitch.addEventListener('change', function(e) {
+  getCheckboxes.forEach(function(o) {
+    if (e.target.checked) {
+      o.style.display = 'inline-block'
+    } else {
+      o.style.display = 'none'
+    }
+  })
+})
+</script>
+{/literal}
+{/if}
+{if $radio_enabled=="true"}
+<script>
+$("input[name='radio_enabled']").on("change",function(){
+        $("#checked").toggle();
+});
+</script>
+{/if}
+{/if}
+{if $page=='edit'}	
+<script>
+	$(function () {
+		$('#simple-color-picker').colorpicker();
+		$('#simple-color-picker2').colorpicker();
+		$('#simple-color-picker3').colorpicker();
+		$(".color-picker__value").colorpicker(),
+                $("body").on("change", ".color-picker__value", function () {
+                    $(this).closest(".color-picker").find(".color-picker__preview").css("backgroundColor", $(this).val());
+                });
+	});
+</script>	
+<script>
+							function formatState (state) {
+								if (!state.id) { return state.text; }
+									else{
+										var $state = $(
+											'<span><img src="{$fullurl}/lirc-resources/icons/' + state.element.value.toLowerCase() + '/owner.png" class="img-flag" /> ' + state.text + '</span>'
+											);
+											return $state;
+										}
+								}
+								
+								$(".select2-templating-icons").select2({
+									templateResult: formatState,
+									templateSelection: formatState
+								});
+							</script>	
+<script src="{$fullurl}/js/script.js"></script>
+
+  
+      <script id="rendered-js" >{literal}
+var s = document.createElement('style'),
+r = document.querySelector('input[type=range]'),
+prefs = ['webkit-slider-runnable', 'moz-range'];
+
+document.body.appendChild(s);
+
+var getTrackStyleStr = function (el, val) {
+  var str = '',len = prefs.length;
+
+  for (var i = 0; i < len; i++) {if (window.CP.shouldStopExecution(0)) break;
+    str += '.js input[type=range]::-' + prefs[i] +
+    '-track{background-size:' + val + '}';
+  }window.CP.exitedLoop(0);
+
+  return str;
+};
+
+var getValStr = function (el, p) {
+  var min = el.min || 0,
+  p = p || el.value,
+  perc = el.max ? ~~(100 * (p - min) / (el.max - min)) : p,
+  val = perc + '% 100%, 100% 100%';
+
+  return val;
+};
+
+r.addEventListener('input', function () {
+  s.textContent = getTrackStyleStr(this, getValStr(this));
+}, false);
+//# sourceURL=pen.js
+{/literal}
+    </script>
+<script>
+$(function() {
+  $("#graph_select").change(function() {
+    if ($("#transparent").is(":selected")) {
+      // $("#pilot_graph_form").show();
+      $("#transparantie").fadeOut(1000);
+	  $("#omswitch").fadeIn(1000);
+    } else {
+      // $("#pilot_graph_form").hide();
+      $("#transparantie").fadeIn(1000);
+    }
+	if ($("#blue").is(":selected")) {
+      // $("#pilot_graph_form").show();
+      $("#html5color").fadeOut(1000);
+	  $("#omswitch").fadeOut(1000);
+    } 
+	else if ($("#black").is(":selected")) {
+      // $("#pilot_graph_form").show();
+      $("#html5color").fadeOut(1000);
+	  $("#omswitch").fadeOut(1000);
+    } 
+	else if ($("#orange").is(":selected")) {
+      // $("#pilot_graph_form").show();
+      $("#html5color").fadeOut(1000);
+	  $("#omswitch").fadeOut(1000);
+    }
+	else if ($("#darkorange").is(":selected")) {
+      // $("#pilot_graph_form").show();
+      $("#html5color").fadeOut(1000);
+    }
+	else if ($("#green").is(":selected")) {
+      // $("#pilot_graph_form").show();
+      $("#html5color").fadeOut(1000);
+	  $("#omswitch").fadeOut(1000);
+    }
+	else if ($("#lightblue").is(":selected")) {
+      // $("#pilot_graph_form").show();
+      $("#html5color").fadeOut(1000);
+	  $("#omswitch").fadeOut(1000);
+    }
+	else if ($("#skyblue").is(":selected")) {
+      // $("#pilot_graph_form").show();
+      $("#html5color").fadeOut(1000);
+	  $("#omswitch").fadeOut(1000);
+    }
+	else if ($("#yellow").is(":selected")) {
+      // $("#pilot_graph_form").show();
+      $("#html5color").fadeOut(1000);
+	  $("#omswitch").fadeOut(1000);
+    }
+	else if ($("#pink").is(":selected")) {
+      // $("#pilot_graph_form").show();
+      $("#html5color").fadeOut(1000);
+	  $("#omswitch").fadeOut(1000);
+    }
+	else if ($("#darkred").is(":selected")) {
+      // $("#pilot_graph_form").show();
+      $("#html5color").fadeOut(1000);
+	  $("#omswitch").fadeOut(1000);
+    } 
+	else if ($("#nightswatch").is(":selected")) {
+      // $("#pilot_graph_form").show();
+      $("#html5color").fadeOut(1000);
+	  $("#transparantie").fadeOut(1000);
+	  $("#omswitch").fadeOut(1000);
+    } else {
+      // $("#pilot_graph_form").hide();
+      $("#html5color").fadeIn(1000);
+	  $("#omswitch").fadeIn(1000);
+    }
+  }).trigger('change');
+});
+</script>	
+<script>
+$(function() {
+  $("#stream_select").change(function() {
+    if ($("#shoutcast").is(":selected")) {
+      // $("#pilot_graph_form").show();
+      $("#mountpoint").fadeOut(1000);
+    } else {
+      // $("#pilot_graph_form").hide();
+      $("#mountpoint").fadeIn(1000);
+    }
+	}).trigger('change');
+});
+</script>
+{if $radio_enabled!="true"}
+{literal}
+<script>
+let getSwitch = document.querySelector('#radio_enabled') //get switch
+
+let getCheckboxes = document.querySelectorAll('.hideme') //get checkboxes UL
+
+getSwitch.addEventListener('change', function(e) {
+  getCheckboxes.forEach(function(o) {
+    if (e.target.checked) {
+      o.style.display = 'inline-block'
+    } else {
+      o.style.display = 'none'
+    }
+  })
+})
+</script>
+{/literal}
+{/if}
+{if $radio_enabled=="true"}
+<script>
+$("input[name='radio_enabled']").on("change",function(){
+        $("#checked").toggle();
+});
+</script>
+{/if}
+{/if}
   </body>
 </html>

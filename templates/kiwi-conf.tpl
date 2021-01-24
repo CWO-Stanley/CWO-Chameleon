@@ -90,7 +90,7 @@ window.kiwiConfig = function kiwiConfig() {
 				{/literal}{/if}{literal}
 				{"name": "ident", "url": "static/plugins/ident.js?v=1.2"},
 				{/literal}{if $metadata['kiwi_upload'] == "true"}{literal}
-				{"name": "fileuploader", "url": "static/plugins/plugin-fileuploader.js?v=1.1"},
+				{"name": "fileuploader", "url": "static/plugins/plugin-fileuploader.js?v=1.2"},
 				{/literal}{/if}{literal}
 				{"name": "asl","url": "static/plugins/plugin-asl.js?cb=22"}
 		],
@@ -139,7 +139,7 @@ window.kiwiConfig = function kiwiConfig() {
 		{/literal}{if $metadata['webcam'] == "true"}{literal}
 		"plugin-conference":{ 
 				"server": "meet.chattersworld.nl",
-				"secure": false,
+				"secure": true,
 				"queries": true,
 				"channels": true,
 				"enabledInChannels": [ "*" ],
@@ -148,7 +148,7 @@ window.kiwiConfig = function kiwiConfig() {
 				"joinButtonText": "Join nu!",
 				"disabledText": "Sorry. The sysop has not enabled conferences in this channel.",
 				"showLink": true,
-				"useLinkShortener": true,
+				"useLinkShortener": false,
 				"linkShortenerURL": "https://x0.no/api/?{{ link }}",
 				"interfaceConfigOverwrite": {
 					"SHOW_JITSI_WATERMARK": true,
@@ -183,7 +183,7 @@ window.kiwiConfig = function kiwiConfig() {
 		},
 		{/literal}{/if}{literal}
 		"embedly": {
-			"key": "aae4890b796c49dbbc079001e2f9d8e5"
+			"key": ""
 			}
 	}
 }

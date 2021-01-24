@@ -179,6 +179,24 @@ if ($id) {
                     if($chat_name) {
                         $smarty->assign('chat_name',$chat_name);
                     }
+					// html5 kleur
+					$html5color = $chat->getHTML5color();
+                    if($html5color) {
+                        $smarty->assign('html5color',$html5color);
+                    }
+					// html5 bg transparantie
+					$transparantie = $chat->getTransparantie();
+                    if($transparantie) {
+                        $smarty->assign('transparantie',$transparantie);
+                    }
+					// html5 bg transparantie
+					$omswitch = $chat->getOmswitch();
+                    if ($omswitch == "true") {
+                        $smarty->assign('omswitch', "true");
+                    }
+                    else {
+                        $smarty->assign('omswitch', "false");
+                    }
                     //Chatstyle
                     $chat_style = $chat->getStyle();
                     if ($chat_style) {
@@ -421,8 +439,11 @@ if ($id) {
 			$smarty->assign('kiwi_giphy', "true");
 			$smarty->assign('kiwi_imgur', "true");
 			$smarty->assign('kiwi_asl', "true");
-			$smarty->assign('html_redirect', "false");
+			$smarty->assign('html_redirect', "true");
 			$smarty->assign('showstats', "false");
+			$smarty->assign('html5color', "#800000");
+			$smarty->assign('transparantie', "25");
+			$smarty->assign('omswitch', "false");
 	    $smarty->assign('page','new');
         }
     }
@@ -449,6 +470,9 @@ if ($id) {
 		$bgcolor = array();
 		$chatstyle = array();
 		$playerstyle = array();
+		$html5_color = array();
+		$trans_parantie = array();
+		$om_swtich = array();
         foreach ($chatboxes as $chatbox) {
             $owner = new Member($aDb);
             $owner->getById($chatbox->getOwner());
@@ -459,6 +483,9 @@ if ($id) {
             array_push($names,$chatbox->getName());
 			array_push($bgcolor,$chatbox->getBgcolor());
 			array_push($bgurl,$chatbox->getBgurl());
+			array_push($html5_color,$chatbox->getHTML5color());
+			array_push($trans_parantie,$chatbox->getTransparantie());
+			array_push($om_swtich,$chatbox->getOmswitch());
 			array_push($chatstyle,$chatbox->getStyle());
 			array_push($playerstyle,$chatbox->Radio->getPlayer());
         }
@@ -471,6 +498,9 @@ if ($id) {
 		$smarty->assign('bgcolor', $bgcolor);
 		$smarty->assign('chatstyle', $chatstyle);
 		$smarty->assign('playerstyle', $playerstyle);
+		$smarty->assign('html5_color', $html5_color);
+		$smarty->assign('trans_parantie', $trans_parantie);
+		$smarty->assign('om_swtich', $om_swtich);
     }
     else {
         $member = new Member($db);
@@ -482,12 +512,18 @@ if ($id) {
 		$chatstyle = array();
 		$bgcolor = array();
 		$playerstyle = array();
+		$html5_color = array();
+		$trans_parantie = array();
+		$om_swtich = array();
         foreach ($chatboxes as $chatbox) {
             array_push($ids, $chatbox->getId());
             array_push($names, $chatbox->getName());
 			array_push($bgurl,$chatbox->getBgurl());
 			array_push($chatstyle,$chatbox->getStyle());
 			array_push($bgcolor,$chatbox->getBgcolor());
+			array_push($html5_color,$chatbox->getHTML5color());
+			array_push($trans_parantie,$chatbox->getTransparantie());
+			array_push($om_swtich,$chatbox->getOmswitch());
 			array_push($playerstyle,$chatbox->Radio->getPlayer());
         }
         $smarty->assign('ids', $ids);
@@ -495,6 +531,9 @@ if ($id) {
 		$smarty->assign('bgurl', $bgurl);
 		$smarty->assign('bgcolor', $bgcolor);
 		$smarty->assign('chatstyle', $chatstyle);
+		$smarty->assign('html5_color', $html5_color);
+		$smarty->assign('trans_parantie', $trans_parantie);
+		$smarty->assign('om_swtich', $om_swtich);
     }
 
     $smarty->display('mainpanel.tpl');

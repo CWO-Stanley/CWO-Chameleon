@@ -90,10 +90,12 @@ else {
     $chat = new Chatbox($db);
     if ($chat->getById($id)) {
         $chat->setCall();
-        $chat->printConfig();
+		
 
         $metadata = $chat->getMetaData();
-
+		if (($metadata['html_redirect'] != "true")) {
+			$chat->printConfig();
+		}
         if (($metadata['radio'] != "true") && ($metadata['ads_enabled'] == "true"))
             header('Location: https://chameleon.chattersworld.nl/chat2.php?'.$_SERVER['QUERY_STRING']);
 

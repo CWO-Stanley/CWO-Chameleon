@@ -36,9 +36,10 @@
 <link href="{$fullurl}/static/js/vendor.cd02f594.js" rel="preload" as="script">
 <link href="{$fullurl}/static/css/app.c2a6c72d.css" rel="stylesheet">
 <!-- END -->
-</head>
 <meta charset=utf-8><meta name=viewport content="user-scalable=no,width=device-width,initial-scale=1,maximum-scale=1">
 <title>..::Chattersworld Chameleon::.. #{$metadata['name']}</title>
+</head>
+
 <body>
 	<div class="left">
 		<a target="_blank" href="{$fullurl}"><img src="{$logo}" style="z-index: 102;" height="50" alt="Chattersworld"></a>
