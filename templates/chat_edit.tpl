@@ -361,6 +361,28 @@
                     </div>
 					</div>
 					<br /><br />
+					<!-- Link previews toestaan -->
+					<div class="form-group">
+					<div class="row">
+                        <label for="embedly" title="Link previews in de chat laten zien" class="control-label col-sm-2 white">Laat link voorbeelden zien in de chat (Embedly)</label>
+                        <div class="toggle-switch toggle-switch--green">
+                            <input type="checkbox" class="switchery" name="embedly" value="true" {if $embedly!="false"}checked="checked"{/if}>
+                        <i class="toggle-switch__helper"></i>
+						</div>
+                    </div>
+					</div>
+					<br /><br />
+					<!-- Conference link laten zien -->
+					<div class="form-group">
+					<div class="row">
+                        <label for="conflink" title="Laat een link zien zodra iemand zijn webcam aanzet" class="control-label col-sm-2 white">Laat een link zien zodra iemand zijn webcam aanzet</label>
+                        <div class="toggle-switch toggle-switch--green">
+                            <input type="checkbox" class="switchery" name="conflink" value="true" {if $conflink!="false"}checked="checked"{/if}>
+                        <i class="toggle-switch__helper"></i>
+						</div>
+                    </div>
+					</div>
+					<br /><br />
 					<!-- Giphy toestaan -->
                     <div class="form-group">
 					<div class="row">
@@ -489,15 +511,15 @@
 					<div class="row">
                         <label for="radio_style" title="Er zijn verschillende soorten radioplayers, het kan zijn dat sommigen niet werken met een bepaalde stream." class="control-label col-sm-2 white">Type radioplayer</label>
                         <div class="col-sm-4"><div class="form-group">
-                            <select class="select2 form-control" id="default-select" name="radio_style">
-                                <option value="muhstik" {if $radio_style=="muhstik"}selected="selected"{/if}>Lisa Ann (Muhstik)</option>
-                                <option value="cwflash" {if $radio_style=="cwflash"}selected="selected"{/if}>Tori Black (Native Flash Radio v3)</option>
-                                <option value="muses" {if $radio_style=="muses"}selected="selected"{/if}>Madison Ivy (Muses)</option>
-                                <option value="stenly" {if $radio_style=="stenly"}selected="selected"{/if}>Jenna Jameson (Sticky)</option>
-								<option value="hero" {if $radio_style=="hero"}selected="selected"{/if}>Sophie Dee (Hero)</option>
-								<option value="luna" {if $radio_style=="luna"}selected="selected"{/if}>Luna Alora (Luna Radio (Native Radio v5))</option>
-								<option value="internal" {if $radio_style=="internal"}selected="selected"{/if}>Bailey Brooke (HTML5 internal (Luna flash fallback))</option>
-								<option value="clever" {if $radio_style=="clever"}selected="selected"{/if}>Megan Fox (Clever)</option>
+                            <select id="player_select" class="select2 form-control" id="default-select" name="radio_style">
+                                <option id="muhstik" value="muhstik" {if $radio_style=="muhstik"}selected="selected"{/if}>Lisa Ann (Muhstik)</option>
+                                <option id="cwflash" value="cwflash" {if $radio_style=="cwflash"}selected="selected"{/if}>Tori Black (Native Flash Radio v3)</option>
+                                <option id="muses" value="muses" {if $radio_style=="muses"}selected="selected"{/if}>Madison Ivy (Muses)</option>
+                                <option id="stenly" value="stenly" {if $radio_style=="stenly"}selected="selected"{/if}>Jenna Jameson (Sticky)</option>
+								<option id="hero" value="hero" {if $radio_style=="hero"}selected="selected"{/if}>Sophie Dee (Hero)</option>
+								<option id="luna" value="luna" {if $radio_style=="luna"}selected="selected"{/if}>Luna Alora (Luna Radio (Native Radio v5))</option>
+								<option id="internal" value="internal" {if $radio_style=="internal"}selected="selected"{/if}>Bailey Brooke (HTML5 internal (Luna flash fallback))</option>
+								<option id="clever" value="clever" {if $radio_style=="clever"}selected="selected"{/if}>Megan Fox (Clever)</option>
                             </select>
                         </div>
                     </div>
@@ -544,7 +566,31 @@
                     
                 </div>
 				</div>
-				</div></div>
+				</div>
+				<br /><br />
+				<!-- Kleur van de player -->
+                    
+					<div id="volslide" class="row">
+                        <label for="tekstkleur" class="control-label col-sm-2 white">Volume Slider kleur</label>
+						<div class="col-sm-4">
+                                        <div class="form-group">
+										<div class="input-group">
+						<!-- <span class="input-group-addon"><i class="zwicon-brush"></i></span> -->
+                        <div class="form-group color-picker">
+						<div class="position-relative has-icon-left">
+                                            <input type="text" id="simple-color-picker4" style="background-color: {if isset($volslide)}{$volslide}{/if};" name="volslide" class="form-control color-picker__value color-picker__preview" placeholder="volslide" value="{if isset($volslide)}{$volslide}{/if}" title="Deze kleur zal de text zijn van de volume slider" data-toggle="tooltip" data-placement="top">
+                                            <div class="form-control-position">
+                                                <i class="la la-adjust black color-picker__preview" style="background-color: {if isset($volslide)}{$volslide}{/if};"></i>
+                                            </div>
+                                        </div>
+                    </div>
+					</div>
+                    
+                </div>
+				</div>
+				</div>
+				
+				</div>
 				</div>
 
                 <!-- EXTRA: ADS -->

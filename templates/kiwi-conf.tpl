@@ -27,7 +27,7 @@ window.kiwiConfig = function kiwiConfig() {
 				"infoBackground": "{/literal}{if $metadata['bgurl'] != ''}{$metadata['bgurl']}{else}https://chattersworld.nl/wp-content/uploads/2019/12/CWO-Webbanner.jpg{/if}{literal}", 
 				"infoContent": "<a class=\"netlogo\" href=\"{/literal}{$fullurl}{literal}\"><span></span><img src=\"{/literal}{$logo}{literal}\"></a><div><a href=\"{/literal}{$fullurl}{literal}/register.php\" target=\"_blank\" class=\"u-cpanel\"><i class=\"fa fa-lock\"></i> Registreer</a><a href=\"{/literal}{$fullurl}{literal}/chat.php?id=1\" target=\"_blank\" class=\"u-cpanel\"><i class=\"fa fa-life-ring\"></i> Helpdesk</a><a href=\"https://wiki.chattersworld.nl/\" target=\"_blank\" class=\"u-cpanel\"><i class=\"fa fa-life-ring\"></i> CWO Wiki</a></div>",
 				"greetingText": "<div style='margin:0px 0px 0px 0px'><center><a class=\"netlogo\" href=\"{/literal}{$fullurl}{literal}\"><span></span><img src=\"{/literal}{$logo}{literal}\" height='60px'></a></center></div>",
-				"state_key": "CWO-Chameleon-80",
+				"state_key": "CWO-Chameleon-85",
 				"buttonText": "<center><i class='fa fa-sign-in' style='margin-right:5px !important;'></i> Chatten</center>",
 				"gecos": "..::{/literal}{$sitename}{literal} HTML5 Webchat::..",
 				"port": 6697, 
@@ -51,7 +51,7 @@ window.kiwiConfig = function kiwiConfig() {
 				{/literal}{if $metadata['kiwi_avatar'] == "true"}{literal}"nicklist_avatars": true, {/literal}{else}{literal}"nicklist_avatars": false,{/literal}{/if}{literal}
 				{/literal}{if $metadata['hostnames'] == "true"}{literal}"show_hostnames": true, {/literal}{else}{literal}"show_hostnames": false,{/literal}{/if}{literal}
 				"colour_nicknames_in_messages": false,
-				"inline_link_auto_previews": false,
+				"inline_link_auto_previews": {/literal}{if $metadata['embedly'] == "true"}true{else}false{/if}{literal},
 				"inline_link_auto_preview_whitelist": ".*",
 				"messageLayout": "{/literal}{if $metadata['kiwi_avatar'] == "true"}modern{else}inline{/if}{literal}",
 				"default_kick_reason": "Gedraag je!",
@@ -139,7 +139,7 @@ window.kiwiConfig = function kiwiConfig() {
 		{/literal}{if $metadata['webcam'] == "true"}{literal}
 		"plugin-conference":{ 
 				"server": "meet.chattersworld.nl",
-				"secure": true,
+				"secure": false,
 				"queries": true,
 				"channels": true,
 				"enabledInChannels": [ "*" ],
@@ -147,9 +147,10 @@ window.kiwiConfig = function kiwiConfig() {
 				"inviteText": "is inviting you to a private call.",
 				"joinButtonText": "Join nu!",
 				"disabledText": "Sorry. The sysop has not enabled conferences in this channel.",
-				"showLink": true,
+				"linkShortenerAPIToken":"",
+				"showLink": {/literal}{if $metadata['conflink'] == "true"}true{else}false{/if}{literal},
 				"useLinkShortener": false,
-				"linkShortenerURL": "https://x0.no/api/?{{ link }}",
+				"linkShortenerURL": "",
 				"interfaceConfigOverwrite": {
 					"SHOW_JITSI_WATERMARK": true,
 					"SHOW_WATERMARK_FOR_GUESTS": true,

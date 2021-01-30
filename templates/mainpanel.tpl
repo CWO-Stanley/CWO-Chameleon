@@ -221,7 +221,7 @@ input[type='range']:focus {
 		</div>
 	</div>
 	<footer class="footer footer-static footer-dark navbar-border navbar-shadow">
-        <div class="clearfix blue-grey lighten-2 text-sm-center mb-0 px-2"><span class="float-md-left d-block d-md-inline-block">© {$sitename} All rights reserved. v6.5 {if isset($god)}Geregistreerd aan: {$registeredname}, Verval datum: {$nextduedate}, Product: {$productname}{/if}</span>
+        <div class="clearfix blue-grey lighten-2 text-sm-center mb-0 px-2"><span class="float-md-left d-block d-md-inline-block">© {$sitename} All rights reserved. v7.5 {if isset($god)}Geregistreerd aan: {$registeredname}, Verval datum: {$nextduedate}, Product: {$productname}{/if}</span>
             <ul class="list-inline float-md-right d-block d-md-inline-blockd-none d-lg-block mb-0">
                 <li class="list-inline-item"><a class="my-1" href="https://chattersworld.nl" target="_blank"> Homepage</a></li>
                 <li class="list-inline-item"><a class="my-1" href="https://wiki.chattersworld.nl" target="_blank"> Wikipedia</a></li>
@@ -472,6 +472,20 @@ $(function() {
     }
   }).trigger('change');
 });
+</script>
+<script>
+$(function() {
+  $("#player_select").change(function() {
+    if ($("#luna").is(":selected")) {
+      // $("#pilot_graph_form").show();
+      $("#volslide").fadeIn(1000);
+	  //$("#omswitch").fadeIn(1000);
+    } else {
+      // $("#pilot_graph_form").hide();
+      $("#volslide").fadeOut(1000);
+    }
+  }).trigger('change');
+});
 </script>	
 <script>
 $(function() {
@@ -519,6 +533,7 @@ $("input[name='radio_enabled']").on("change",function(){
 		$('#simple-color-picker').colorpicker();
 		$('#simple-color-picker2').colorpicker();
 		$('#simple-color-picker3').colorpicker();
+		$('#simple-color-picker4').colorpicker();
 		$(".color-picker__value").colorpicker(),
                 $("body").on("change", ".color-picker__value", function () {
                     $(this).closest(".color-picker").find(".color-picker__preview").css("backgroundColor", $(this).val());
@@ -646,6 +661,20 @@ $(function() {
       // $("#pilot_graph_form").hide();
       $("#html5color").fadeIn(1000);
 	  $("#omswitch").fadeIn(1000);
+    }
+  }).trigger('change');
+});
+</script>
+<script>
+$(function() {
+  $("#player_select").change(function() {
+    if ($("#luna").is(":selected")) {
+      // $("#pilot_graph_form").show();
+      $("#volslide").fadeIn(1000);
+	  //$("#omswitch").fadeIn(1000);
+    } else {
+      // $("#pilot_graph_form").hide();
+      $("#volslide").fadeOut(1000);
     }
   }).trigger('change');
 });

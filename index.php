@@ -184,6 +184,11 @@ if ($id) {
                     if($html5color) {
                         $smarty->assign('html5color',$html5color);
                     }
+					// volume slider
+					$volslide = $chat->getVolslide();
+                    if($volslide) {
+                        $smarty->assign('volslide',$volslide);
+                    }
 					// html5 bg transparantie
 					$transparantie = $chat->getTransparantie();
                     if($transparantie) {
@@ -196,6 +201,22 @@ if ($id) {
                     }
                     else {
                         $smarty->assign('omswitch', "false");
+                    }
+					// html5 bg transparantie
+					$conflink = $chat->getConflink();
+                    if ($conflink == "true") {
+                        $smarty->assign('conflink', "true");
+                    }
+                    else {
+                        $smarty->assign('conflink', "false");
+                    }
+					// Embedly
+					$embedly = $chat->getEmbedly();
+                    if ($embedly == "true") {
+                        $smarty->assign('embedly', "true");
+                    }
+                    else {
+                        $smarty->assign('embedly', "false");
                     }
                     //Chatstyle
                     $chat_style = $chat->getStyle();
@@ -444,6 +465,9 @@ if ($id) {
 			$smarty->assign('html5color', "#800000");
 			$smarty->assign('transparantie', "25");
 			$smarty->assign('omswitch', "false");
+			$smarty->assign('embedly', "false");
+			$smarty->assign('volslide', "#a7d3ab");
+			$smarty->assign('conflink', "false");
 	    $smarty->assign('page','new');
         }
     }
@@ -473,6 +497,7 @@ if ($id) {
 		$html5_color = array();
 		$trans_parantie = array();
 		$om_swtich = array();
+		$em_bedly = array();
         foreach ($chatboxes as $chatbox) {
             $owner = new Member($aDb);
             $owner->getById($chatbox->getOwner());
@@ -486,6 +511,7 @@ if ($id) {
 			array_push($html5_color,$chatbox->getHTML5color());
 			array_push($trans_parantie,$chatbox->getTransparantie());
 			array_push($om_swtich,$chatbox->getOmswitch());
+			array_push($em_bedly,$chatbox->getEmbedly());
 			array_push($chatstyle,$chatbox->getStyle());
 			array_push($playerstyle,$chatbox->Radio->getPlayer());
         }
@@ -501,6 +527,7 @@ if ($id) {
 		$smarty->assign('html5_color', $html5_color);
 		$smarty->assign('trans_parantie', $trans_parantie);
 		$smarty->assign('om_swtich', $om_swtich);
+		$smarty->assign('em_bedly', $em_bedly);
     }
     else {
         $member = new Member($db);
@@ -515,6 +542,7 @@ if ($id) {
 		$html5_color = array();
 		$trans_parantie = array();
 		$om_swtich = array();
+		$em_bedly = array();
         foreach ($chatboxes as $chatbox) {
             array_push($ids, $chatbox->getId());
             array_push($names, $chatbox->getName());
@@ -524,6 +552,7 @@ if ($id) {
 			array_push($html5_color,$chatbox->getHTML5color());
 			array_push($trans_parantie,$chatbox->getTransparantie());
 			array_push($om_swtich,$chatbox->getOmswitch());
+			array_push($em_bedly,$chatbox->getEmbedly());
 			array_push($playerstyle,$chatbox->Radio->getPlayer());
         }
         $smarty->assign('ids', $ids);
@@ -534,6 +563,7 @@ if ($id) {
 		$smarty->assign('html5_color', $html5_color);
 		$smarty->assign('trans_parantie', $trans_parantie);
 		$smarty->assign('om_swtich', $om_swtich);
+		$smarty->assign('em_bedly', $em_bedly);
     }
 
     $smarty->display('mainpanel.tpl');
