@@ -27,7 +27,7 @@ window.kiwiConfig = function kiwiConfig() {
 				"infoBackground": "{/literal}{if $metadata['bgurl'] != ''}{$metadata['bgurl']}{else}https://chattersworld.nl/wp-content/uploads/2019/12/CWO-Webbanner.jpg{/if}{literal}", 
 				"infoContent": "<a class=\"netlogo\" href=\"{/literal}{$fullurl}{literal}\"><span></span><img src=\"{/literal}{$logo}{literal}\"></a><div><a href=\"{/literal}{$fullurl}{literal}/register.php\" target=\"_blank\" class=\"u-cpanel\"><i class=\"fa fa-lock\"></i> Registreer</a><a href=\"{/literal}{$fullurl}{literal}/chat.php?id=1\" target=\"_blank\" class=\"u-cpanel\"><i class=\"fa fa-life-ring\"></i> Helpdesk</a><a href=\"https://wiki.chattersworld.nl/\" target=\"_blank\" class=\"u-cpanel\"><i class=\"fa fa-life-ring\"></i> CWO Wiki</a></div>",
 				"greetingText": "<div style='margin:0px 0px 0px 0px'><center><a class=\"netlogo\" href=\"{/literal}{$fullurl}{literal}\"><span></span><img src=\"{/literal}{$logo}{literal}\" height='60px'></a></center></div>",
-				"state_key": "CWO-Chameleon-85",
+				"state_key": "CWO-Chameleon-95",
 				"buttonText": "<center><i class='fa fa-sign-in' style='margin-right:5px !important;'></i> Chatten</center>",
 				"gecos": "..::{/literal}{$sitename}{literal} HTML5 Webchat::..",
 				"port": 6697, 
@@ -62,7 +62,7 @@ window.kiwiConfig = function kiwiConfig() {
 			{/literal}{if $metadata['webcam'] == "true"}{literal}
 			{
 				"name": "conference",
-				"url": "static/plugins/conference/plugin-conference.min.js?v=1.3"
+				"url": "static/plugins/conference/plugin-conference.min.js?v=1.4"
 			},{/literal}{/if}{literal}
 				{/literal}{if $metadata['style'] == "nightswatch"}{literal}
 				{"name": "theme-dark-fluid", "url": "static/plugins/theme-dark-fluid.js"},
@@ -90,9 +90,11 @@ window.kiwiConfig = function kiwiConfig() {
 				{/literal}{/if}{literal}
 				{"name": "ident", "url": "static/plugins/ident.js?v=1.2"},
 				{/literal}{if $metadata['kiwi_upload'] == "true"}{literal}
-				{"name": "fileuploader", "url": "static/plugins/plugin-fileuploader.js?v=1.2"},
+				{"name": "fileuploader", "url": "static/plugins/plugin-fileuploader.js?v=2.0"}{/literal}{if $metadata['kiwi_asl'] == 'true'},{/if}{literal}
 				{/literal}{/if}{literal}
+				{/literal}{if $metadata['kiwi_asl'] == 'true'}{literal}
 				{"name": "asl","url": "static/plugins/plugin-asl.js?cb=22"}
+				{/literal}{/if}{literal}
 		],
 		{/literal}{if $metadata['kiwi_asl'] == 'true'}{literal}
 		"plugin-asl" : {
@@ -117,7 +119,7 @@ window.kiwiConfig = function kiwiConfig() {
 					"sexes": {
 						"_male": { "chars": "M", "colour": "#00F" },
 						"_female": { "chars": "F", "colour": "#F0F" },
-						"_other": { "chars": "O", "colour": "#0F0" }
+						"_other": { "chars": "O", "colour": "#bdbdbd" }
 					},
 					"queryKeys": {
 						"age": "age",
@@ -142,6 +144,7 @@ window.kiwiConfig = function kiwiConfig() {
 				"secure": false,
 				"queries": true,
 				"channels": true,
+				"viewHeight": "{/literal}{$metadata['viewheight']}{literal}",
 				"enabledInChannels": [ "*" ],
 				"joinText": "heeft de mediaconferentie opgestart, klik op de link om te joinen!",
 				"inviteText": "is inviting you to a private call.",
@@ -150,7 +153,7 @@ window.kiwiConfig = function kiwiConfig() {
 				"linkShortenerAPIToken":"",
 				"showLink": {/literal}{if $metadata['conflink'] == "true"}true{else}false{/if}{literal},
 				"useLinkShortener": false,
-				"linkShortenerURL": "",
+				"linkShortenerURL": "https://tinyurl.com/api-create.php?url=",
 				"interfaceConfigOverwrite": {
 					"SHOW_JITSI_WATERMARK": true,
 					"SHOW_WATERMARK_FOR_GUESTS": true,
@@ -180,10 +183,133 @@ window.kiwiConfig = function kiwiConfig() {
 		"fileuploader": {
 			"server": "{/literal}{$file}{literal}",
 			"maxFileSize": 10485760,
-			"note": "Let op, deze bestanden blijven maximaal 24 uur bestaan!"
+			"note": "Let op, deze bestanden blijven maximaal 24 uur bestaan!",
+			"webpreview": {
+				"enable": false,
+				"url": "https://files.chattersworld.nl/embed?url={url}&center={center}&width={width}&height={height}"
+			}
 		},
+		emojis: {
+            '-___-': '1f611',
+            ':\'-)': '1f602',
+            '\':-)': '1f605',
+            '\':-D': '1f605',
+            '>:-)': '1f606',
+            '\':-(': '1f613',
+            '>:-(': '1f620',
+            ':\'-(': '1f622',
+            'O:-)': '1f607',
+            '0:-3': '1f607',
+            '0:-)': '1f607',
+            '0;^)': '1f607',
+            'O;-)': '1f607',
+            '0;-)': '1f607',
+            'O:-3': '1f607',
+            '-__-': '1f611',
+            ':-Þ': '1f61b',
+            '<3': '2764',
+            '</3': '1f494',
+            ':\')': '1f602',
+            ':-D': '1f603',
+            '\':)': '1f605',
+            '\'=)': '1f605',
+            '\':D': '1f605',
+            '\'=D': '1f605',
+            '>:)': '1f606',
+            '>;)': '1f606',
+            '>=)': '1f606',
+            'XD': '1f606',
+            ';-)': '1f609',
+            '*-)': '1f609',
+            ';-]': '1f609',
+            ';^)': '1f609',
+            '\':(': '1f613',
+            '\'=(': '1f613',
+            ':-*': '1f618',
+            ':^*': '1f618',
+            '>:P': '1f61c',
+            'X-P': '1f61c',
+            '>:[': '1f61e',
+            ':-(': '1f61e',
+            ':-[': '1f61e',
+            '>:(': '1f620',
+            ':\'(': '1f622',
+            ';-(': '1f622',
+            '>.<': '1f623',
+            '#-)': '1f635',
+            '%-)': '1f635',
+            'X-)': '1f635',
+            '\\0/': '1f646',
+            '\\O/': '1f646',
+            '0:3': '1f607',
+            '0:)': '1f607',
+            'O:)': '1f607',
+            'O=)': '1f607',
+            'O:3': '1f607',
+            'B-)': '1f60e',
+            '8-)': '1f60e',
+            'B-D': '1f60e',
+            '8-D': '1f60e',
+            '-_-': '1f611',
+            '>:\\': '1f615',
+            '>:/': '1f615',
+            ':-/': '1f615',
+            ':-.': '1f615',
+            ':-P': '1f61b',
+            ':Þ': '1f61b',
+            ':-b': '1f61b',
+            ':-O': '1f62e',
+            'O_O': '1f62e',
+            '>:O': '1f62e',
+            ':-X': '1f636',
+            ':-#': '1f636',
+            ':-)': '1f642',
+            '(y)': '1f44d',
+            ':D': '1f603',
+            '=D': '1f603',
+            ';)': '1f609',
+            '*)': '1f609',
+            ';]': '1f609',
+            ';D': '1f609',
+            ':*': '1f618',
+            '=*': '1f618',
+            ':(': '1f61e',
+            ':[': '1f61e',
+            '=(': '1f61e',
+            ':@': '1f620',
+            ';(': '1f622',
+            'D:': '1f628',
+            ':$': '1f633',
+            '=$': '1f633',
+            '#)': '1f635',
+            '%)': '1f635',
+            'X)': '1f635',
+            'B)': '1f60e',
+            '8)': '1f60e',
+            ':/': '1f615',
+            ':\\': '1f615',
+            '=/': '1f615',
+            '=\\': '1f615',
+            ':L': '1f615',
+            '=L': '1f615',
+            ':P': '1f61b',
+            ':p': '1f61b',
+            '=P': '1f61b',
+            ':b': '1f61b',
+            ':O': '1f62e',
+            ':X': '1f636',
+            ':#': '1f636',
+            '=X': '1f636',
+            '=#': '1f636',
+            ':)': '1f642',
+            '=]': '1f642',
+            '=)': '1f642',
+            ':]': '1f642',
+        },
+		emojiLocation: 'https://kiwiirc.com/shared/emoji/',
 		{/literal}{/if}{literal}
 		"embedly": {
+			"enable": {/literal}{if $metadata['embedly'] == "true"}true{else}false{/if}{literal},
 			"key": ""
 			}
 	}

@@ -399,7 +399,40 @@ r.addEventListener('input', function () {
 }, false);
 //# sourceURL=pen.js
 {/literal}
-    </script>
+ </script>
+<script>{literal}
+var s = document.createElement('style'),
+r = document.querySelector('input[id=t]'),
+prefs = ['webkit-slider-runnable', 'moz-range'];
+
+document.body.appendChild(s);
+
+var getTrackStyleStr = function (el, val) {
+  var str = '',len = prefs.length;
+
+  for (var i = 0; i < len; i++) {if (window.CP.shouldStopExecution(0)) break;
+    str += '.js input[type=range]::-' + prefs[i] +
+    '-track{background-size:' + val + '}';
+  }window.CP.exitedLoop(0);
+
+  return str;
+};
+
+var getValStr = function (el, p) {
+  var min = el.min || 0,
+  p = p || el.value,
+  perc = el.max ? ~~(100 * (p - min) / (el.max - min)) : p,
+  val = perc + '% 100%, 100% 100%';
+
+  return val;
+};
+
+r.addEventListener('input', function () {
+  s.textContent = getTrackStyleStr(this, getValStr(this));
+}, false);
+//# sourceURL=pen.js
+{/literal}
+    </script> 
 <script>
 $(function() {
   $("#graph_select").change(function() {
@@ -523,6 +556,32 @@ getSwitch.addEventListener('change', function(e) {
 <script>
 $("input[name='radio_enabled']").on("change",function(){
         $("#checked").toggle();
+});
+</script>
+{/if}
+{if $webcam_video!="true"}
+{literal}
+<script>
+let getSwitch = document.querySelector('#webcam_video') //get switch
+
+let getCheckboxes = document.querySelectorAll('.hideme') //get checkboxes UL
+
+getSwitch.addEventListener('change', function(e) {
+  getCheckboxes.forEach(function(o) {
+    if (e.target.checked) {
+      o.style.display = 'inline-block'
+    } else {
+      o.style.display = 'none'
+    }
+  })
+})
+</script>
+{/literal}
+{/if}
+{if $webcam_video=="true"}
+<script>
+$("input[name='webcam_video']").on("change",function(){
+        $("#viewheight").toggle();
 });
 </script>
 {/if}
@@ -591,7 +650,40 @@ r.addEventListener('input', function () {
 }, false);
 //# sourceURL=pen.js
 {/literal}
-    </script>
+</script>
+<script>{literal}
+var s = document.createElement('style'),
+r = document.querySelector('input[id=t]'),
+prefs = ['webkit-slider-runnable', 'moz-range'];
+
+document.body.appendChild(s);
+
+var getTrackStyleStr = function (el, val) {
+  var str = '',len = prefs.length;
+
+  for (var i = 0; i < len; i++) {if (window.CP.shouldStopExecution(0)) break;
+    str += '.js input[id=t]::-' + prefs[i] +
+    '-track{background-size:' + val + '}';
+  }window.CP.exitedLoop(0);
+
+  return str;
+};
+
+var getValStr = function (el, p) {
+  var min = el.min || 0,
+  p = p || el.value,
+  perc = el.max ? ~~(100 * (p - min) / (el.max - min)) : p,
+  val = perc + '% 100%, 100% 100%';
+
+  return val;
+};
+
+r.addEventListener('input', function () {
+  s.textContent = getTrackStyleStr(this, getValStr(this));
+}, false);
+//# sourceURL=pen.js
+{/literal}
+</script>
 <script>
 $(function() {
   $("#graph_select").change(function() {
@@ -715,6 +807,33 @@ getSwitch.addEventListener('change', function(e) {
 <script>
 $("input[name='radio_enabled']").on("change",function(){
         $("#checked").toggle();
+});
+</script>
+{/if}
+
+{if $webcam_video=="true"}
+{literal}
+<script>
+let getSwitch = document.querySelector('#webcam_video') //get switch
+
+let getCheckboxes = document.querySelectorAll('.hideme2') //get checkboxes UL
+
+getSwitch.addEventListener('change', function(e) {
+  getCheckboxes.forEach(function(o) {
+    if (e.target.checked) {
+      o.style.display = 'inline-block'
+    } else {
+      o.style.display = 'none'
+    }
+  })
+})
+</script>
+{/literal}
+{/if}
+{if $webcam_video!="true"}
+<script>
+$("input[name='webcam_video']").on("change",function(){
+        $("#viewheight").toggle();
 });
 </script>
 {/if}

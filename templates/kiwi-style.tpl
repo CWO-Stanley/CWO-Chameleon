@@ -137,7 +137,11 @@ body {
 	position: absolute;
     left: 2px;
     bottom: 2px;
+{if $metadata['radio_player'] == "stenly"}
+	z-index: 99999;
+{else}
 	z-index: 9999999;
+{/if}
 }
 #my_centered_buttons { display: flex; justify-content: center;}
 @media screen and (max-height: 450px) {literal}{

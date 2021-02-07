@@ -189,6 +189,11 @@ if ($id) {
                     if($volslide) {
                         $smarty->assign('volslide',$volslide);
                     }
+					// View Height
+					$viewheight = $chat->getViewheight();
+                    if($viewheight) {
+                        $smarty->assign('viewheight',$viewheight);
+                    }
 					// html5 bg transparantie
 					$transparantie = $chat->getTransparantie();
                     if($transparantie) {
@@ -468,6 +473,7 @@ if ($id) {
 			$smarty->assign('embedly', "false");
 			$smarty->assign('volslide', "#a7d3ab");
 			$smarty->assign('conflink', "false");
+			$smarty->assign('viewheight', "40%");
 	    $smarty->assign('page','new');
         }
     }

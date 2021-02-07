@@ -241,7 +241,7 @@
 					<div class="row">
                         <label for="webcam_video" title="Hiermee kunnen gebruikers hun webcam inschakelen tijdens het chatten." class="control-label col-sm-2 white">Webcam inschakelen</label>
                         <div class="toggle-switch toggle-switch--green">
-                            <input type="checkbox" class="switchery" name="webcam_video" value="true" {if $webcam_video!="false"}checked="checked"{/if}>
+                            <input id="webcam_video" type="checkbox" class="switchery" name="webcam_video" value="true" {if $webcam_video!="false"}checked="checked"{/if}>
                         <i class="toggle-switch__helper"></i>
 						</div>
                     </div>
@@ -416,6 +416,24 @@
                     </div>
 					</div>
 					<br /><br />
+					<div id="viewheight" class="row hideme2" {if $webcam_video!="true"}style="display: none; width: 100%;"{/if}>
+                        <label for="viewheight" class="control-label col-sm-2 white">Hoogte van het webcam beeld in de chat<br /><small>De html5 chat heeft een inline venster voor webcams!<br />Hier stelt u deze hoogte in!</small></label>
+                        <div class="col-sm-4">
+						<div class="form-group">
+						<script>
+						function updateTextInput2(val) {
+          document.getElementById('textInput2').value=val + '%'; 
+        }
+		</script>
+		
+							<input data-idx='2' id="t" type="range" class="form-control" name="rangeInput2" min="20" max="80" step="5" value="{if isset($viewheight)}{$viewheight|replace:'%':''}{/if}" onchange="updateTextInput2(this.value);"><div class='glow' aria-hidden='true'></div><br />
+							
+							
+                            <input id="textInput2" type="text" class="form-control" name="viewheight" title="Hoogte van het webcam beeld in de chat"  placeholder="Hoogte van het webcam beeld in de chat" value="{if isset($viewheight)}{$viewheight}{/if}" data-toggle="tooltip" data-placement="top"  readonly="readonly">
+							<i class="form-group__bar"></i>
+						</div>
+                    </div>
+					</div><br /><br />
 					<!-- Redirecten naar HTML5 chat -->
                     <div class="form-group">
 					<div class="row">
