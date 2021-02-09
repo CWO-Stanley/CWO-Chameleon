@@ -651,5 +651,42 @@
 			</div>
                     </div>
         </form>
+		<div class="card-header">
+                                    <h4 class="card-title white">Voorbeeld</h4>
+									<p class="card-text"><center>De getoonde voorbeeld is een fractie voor hoe de chat daadwerkelijk is! <br />
+Niet mogelijk om in te loggen!</center></p>
+                                    <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                                    <div class="heading-elements">
+                                        
+                                    </div>
+                                </div>
+		{literal}
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+		<script>
+$(document).ready(function() {
+	$('input[name=chat_name],input[name=chat_bgurl],select[name=cam],select[name=chat_style],select[name=mic],select[name=query],input[name=kiwi_asl],input[name=html5color]').on('change keyup', function() {
+		var channel = $('input[name=chat_name]').val();
+		var bg = $('input[name=chat_bgurl]').val();
+		var html5color = $('input[name=html5color]').val();
+		var style = $('select[name=chat_style]').val();
+		var asl = $('input[name=kiwi_asl]').is(':checked');
+		
+		
+		var url = '../../preview/chat.php?chan=' + channel + '&style=' + style + '&bg=' + bg + '&html5color=' + html5color.replace("#", "%23") + '&asl=' + asl;
+		// var frame = '<iframe id="iframe" src="https://www.chattersworld.nl/preview/chat.php?chan=' + channel + '&mic=' + mic + '&cam=' + cam + '&icons=' + icons + '&style=transparent&query=' + query + '&bg=' + bg +'&asl=' + asl + '" style="width:600px; height:500px;"></iframe>';
+		var mob = 'https://mobilechat.chattersworld.nl/?channel=#' + channel;
+      
+		// $('#url').val(frame);
+		$('#iframe').attr('src', url);
+		$('#href').html('<a href="' + url + '" target="_blank">' + url +'</a>');
+        $('#mobhref').html('<a href="' + mob + '" target="_blank">' + mob +'</a>');
+
+		
+	});
+});
+</script>
+{/literal}
+<iframe id="iframe" src="../../preview/chat.php?chan=default" style="width:100%; height:700px; border:0;"></iframe>
+<p class="card-text"><small><center>Het voorbeeld betreft een nietwerkbaar exemplaar;<br />Het voorbeeld word ook bij elke aanpassing ververst;<br />Gebruik de daadwerkelijke URL om in te loggen;<br />Aan dit voorbeeld kunnen geen rechten worden ontleend.</center></small></p>
     </div>
 </div>
