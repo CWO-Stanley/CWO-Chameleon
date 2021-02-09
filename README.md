@@ -43,20 +43,22 @@ The player will play audio without a licensekey, but other functions will not wo
 
 Requires;
 - Anope Services running on MySQL and at least 1 encryption module has to be enabled
-- Anope XMLRPC module has to be enabled and working!
-- Make sure that your anope instance has m_xmlrpc enabled
+- Anope XMLRPC module and XMLRPC-main has to be enabled and working!
 - lightIRC webcam module license
 - Self hosted Jitsi-Meet for KiwiIRC conference
 - Some license's for web radioplayers
 - Red5 RTPM server for webcam via LightIRC (License needed)
+- Gravatar plugin/server wich is connected to Anope Services
+- ReCaptcha v3 Secret and Public Key for your domain
 
 Installation is quite straight forward;
 - Setup a database account
-- import database.sql to that account
+- import chameleon.sql to that account
 - make sure that the webhost can connect to your anope datebase and put in the details in classes/Config.php
 - edit classes/Config.php with your database details created above
 - edit classes/Members.php to add your anope XMLRPC url so login and registering will work
 - edit classes/LightIRC.php with your IRC credentials (replace irc.example.nl with your IRC server)
 - edit classes/LightIRC.php with your lightIRC license (LightIRC requires a license for webcams to work)
-- edit templates/kiwi-conf.tpl with your IRC credentials, webircgateway and jitsi-meet server
+- edit classes/Config.php with your IRC credentials, webircgateway and jitsi-meet server
 - edit register.php with the anope xmlrpc URL for registration to work properly (same with chanregister.php)
+- Look for recaptcha in register.php and fill in the needs
