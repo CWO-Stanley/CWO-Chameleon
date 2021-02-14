@@ -112,6 +112,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 				$password = $_POST['pass'];
 				$email = $_POST['email'];
 				$ret = $anope->DoCommand("NickServ", "$user", "REGISTER $password $email");
+				$searchword = 'al geregistreerd';
+				$matches = array();
+					foreach($ret as $k=>$v) {
+						if( preg_match("/\b$searchword\b/i", $v) === 1 ) {
+							$matches[$k] = $v;
+						}
+					}
+				if ($matches && $matches["return"] != "") { $errors = $matches["return"]; }else{
 				if ($ret && $ret["result"] == "Success") {
 					$success = "Succesvol geregistreerd, je kan nu inloggen! Uw nicknaam registeren is niet meer nodig, log in met uw nickaam die u hier heeft gebruikt";
 					$message = "Beste $user<br />
@@ -136,6 +144,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 					mail('stanley@chattersworld.nl', $subject, $message, $headers);
 				}else{ 
 					$errors = "Er is iets fout gegaan!";
+				}
 				}
 }
 		}

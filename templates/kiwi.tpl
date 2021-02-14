@@ -2,8 +2,8 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf8" />
 <meta name="language" content="Dutch" />
-<meta name="keywords" content="chatten, gezellig kletsen, Chattersworld, Radio chat, Chameleon, Gezellig, Chatten zonder registratie, 24/7 Verzoekjes, Live verzoek, Radio Chat, webcam, webcamchat, triviant," />
-<meta name="description"  content="Chattersworld De enige Chatserver waar je gratis kan chatten, chatten zonder registratie, chatten met webcams en dat allemaal gratis, Chattersworld Ares Verzoekserver, maak hem nu gratis aan!" />
+<meta name="keywords" content="chatten, gezellig kletsen, Chattersworld, Radio chat, Chameleon, Gezellig, Chatten zonder registratie, 24/7 Verzoekjes, Live verzoek, Radio Chat, webcam, webcamchat,HTML5 Chat, triviant," />
+<meta name="description"  content="Chattersworld De enige Chatserver waar je gratis kan chatten, chatten zonder registratie, chatten met webcams en dat allemaal gratis, Chattersworld Chameleon, maak hem nu gratis aan!" />
 <meta name="google-site-verification" content="-hrJp-Kl7mtCVBOR5Dg45R52OfEAmnIceApYxPMluc4" />
 <meta name="robots" content="index,follow,noodp,noydir" />
 <meta name="description" content="Waar chatten, chatten is!"/>
@@ -31,10 +31,10 @@
 <link rel="stylesheet" href="{$fullurl}/dist/magnific-popup.css">
 <link rel="stylesheet" href="{$fullurl}/app-assets/css/material-design-iconic-font/dist/css/material-design-iconic-font.min.css">
 <!-- Kiwi script reloaders -->
-<link href="{$fullurl}/static/css/app.d6fdef1f.css" rel="preload" as="style">
-<link href="{$fullurl}/static/js/app.0b226a50.js" rel="preload" as="script">
-<link href="{$fullurl}/static/js/vendor.cd02f594.js" rel="preload" as="script">
-<link href="{$fullurl}/static/css/app.d6fdef1f.css" rel="stylesheet">
+<link href="{$fullurl}/static/css/app.9dd3c324.css" rel="preload" as="style">
+  <link href="{$fullurl}/static/js/app.8ff2f265.js" rel="preload" as="script">
+  <link href="{$fullurl}/static/js/vendor.cd02f594.js" rel="preload" as="script">
+  <link href="{$fullurl}/static/css/app.9dd3c324.css" rel="stylesheet">
 <!-- END -->
 <meta charset=utf-8><meta name=viewport content="user-scalable=no,width=device-width,initial-scale=1,maximum-scale=1">
 <title>..::Chattersworld Chameleon::.. #{$metadata['name']}</title>
@@ -92,7 +92,7 @@
 	</div>
 	
   <script type="text/javascript" src="{$fullurl}/static/js/vendor.cd02f594.js"></script>
-  <script type="text/javascript" src="{$fullurl}/static/js/app.0b226a50.js"></script>
+  <script type="text/javascript" src="{$fullurl}/static/js/app.8ff2f265.js"></script>
 		<script type="text/javascript">
 			function openNav() {
 				document.getElementById("mySidenav").style.width = "33%";
