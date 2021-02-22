@@ -168,6 +168,7 @@ body {
 .card .hdr {
      display:none;
 }
+{/literal}{if $metadata['icons'] != ""}{literal}
 .kiwi-nicklist-user--mode-q .kiwi-nicklist-user-prefix {
 	content: url(lirc-resources/icons/{/literal}{$metadata['icons']}{literal}/owner.png)
 }
@@ -214,7 +215,7 @@ body {
 .kiwi-messagelist-nick--mode-v .kiwi-messagelist-nick-prefix {
 	content: url(lirc-resources/icons/{/literal}{$metadata['icons']}{literal}/voice.png)
 }
-{/literal}{/if}{literal}{/literal}
+{/literal}{/if}{/if}{literal}{/literal}
 {if $metadata['style'] != "nightswatch"}{literal}
 .kiwi-messagelist {
 {/literal}{if $metadata['style'] != "transparent"}{literal}{/literal}

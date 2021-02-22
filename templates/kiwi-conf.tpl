@@ -10,6 +10,7 @@ window.kiwiConfig = function kiwiConfig() {
 		"theme": "CWO",
 		"hide_advanced": true,
 		"disconnectOnSaslFail": false,
+		"hideSettings": false,
 		"nicklistGroupAway": true,
 		"themes": [
 				{/literal}
@@ -57,6 +58,7 @@ window.kiwiConfig = function kiwiConfig() {
 				"default_kick_reason": "Gedraag je!",
 				"default_ban_mask": "*!*@%h",
 				"show_presence_changes": true,
+				"show_timestamps": {/literal}{if $metadata['time'] == "true"}true{else}false{/if}{literal},
 				"share_typing": true
 			},
 		"plugins": [
@@ -73,7 +75,9 @@ window.kiwiConfig = function kiwiConfig() {
 				{"name": "simosnapcss","url": "static/plugins/block-queries.html"},
 				{/literal}{/if}{literal}
 				{"name": "simosnapcss","url": "static/plugins/cwo-css3.html"},
-				
+				{/literal}{if $metadata['private'] == "false"}{literal}
+				{"name": "perform","url": "static/plugins/perform.js?v=9"},
+				{/literal}{/if}{literal}
 				{/literal}{if $metadata['radio'] == "true" && $metadata['radio_player'] == "internal"}{literal}
 				{"name": "plugin-radio","url": "static/plugins/plugin-radio.html"},
 				{/literal}{/if}{literal}
@@ -147,14 +151,14 @@ window.kiwiConfig = function kiwiConfig() {
 				"channels": true,
 				"viewHeight": "{/literal}{$metadata['viewheight']}{literal}",
 				"enabledInChannels": [ "*" ],
-				"joinText": "heeft de mediaconferentie opgestart, klik op de link om te joinen!",
+				"joinText": "{{ nick }} heeft de mediaconferentie opgestart!",
 				"inviteText": "is inviting you to a private call.",
 				"joinButtonText": "Join nu!",
 				"disabledText": "Sorry. The sysop has not enabled conferences in this channel.",
 				"linkShortenerAPIToken":"",
 				"showLink": {/literal}{if $metadata['conflink'] == "true"}true{else}false{/if}{literal},
 				"useLinkShortener": false,
-				"linkShortenerURL": "https://tinyurl.com/api-create.php?url=",
+				"linkShortenerURL": "https://x0.no/api/?{{ link }}",
 				"interfaceConfigOverwrite": {
 					"SHOW_JITSI_WATERMARK": true,
 					"SHOW_WATERMARK_FOR_GUESTS": true,
@@ -220,6 +224,7 @@ window.kiwiConfig = function kiwiConfig() {
             '>;)': '1f606',
             '>=)': '1f606',
             'XD': '1f606',
+			'xD': '1f606',
             ';-)': '1f609',
             '*-)': '1f609',
             ';-]': '1f609',
