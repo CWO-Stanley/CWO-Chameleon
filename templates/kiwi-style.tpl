@@ -244,6 +244,7 @@ body {
     font-family: fontawesome;
     margin-right: 5px;
 }
+
 .fa-paint-brush:before {
     content: "\F1FC";
     color: #ac23f7;
@@ -2167,3 +2168,4 @@ kiwi-welcome-simple-sex {
 </style>
 {/literal}
 {/if}
+

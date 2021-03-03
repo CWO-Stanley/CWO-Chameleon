@@ -194,6 +194,11 @@ if ($id) {
                     if($viewheight) {
                         $smarty->assign('viewheight',$viewheight);
                     }
+					// tags
+					$tags = $chat->getTags();
+                    if($tags) {
+                        $smarty->assign('tags',$tags);
+                    }
 					// html5 bg transparantie
 					$transparantie = $chat->getTransparantie();
                     if($transparantie) {
@@ -474,6 +479,7 @@ if ($id) {
 			$smarty->assign('volslide', "#a7d3ab");
 			$smarty->assign('conflink', "false");
 			$smarty->assign('viewheight', "40%");
+			$smarty->assign('tags', "true");
 	    $smarty->assign('page','new');
         }
     }

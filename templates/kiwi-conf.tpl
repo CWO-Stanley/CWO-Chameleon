@@ -28,7 +28,7 @@ window.kiwiConfig = function kiwiConfig() {
 				"infoBackground": "{/literal}{if $metadata['bgurl'] != ''}{$metadata['bgurl']}{else}https://chattersworld.nl/wp-content/uploads/2019/12/CWO-Webbanner.jpg{/if}{literal}", 
 				"infoContent": "<a class=\"netlogo\" href=\"{/literal}{$fullurl}{literal}\"><span></span><img src=\"{/literal}{$logo}{literal}\"></a><div><a href=\"{/literal}{$fullurl}{literal}/register.php\" target=\"_blank\" class=\"u-cpanel\"><i class=\"fa fa-lock\"></i> Registreer</a><a href=\"{/literal}{$fullurl}{literal}/chat.php?id=1\" target=\"_blank\" class=\"u-cpanel\"><i class=\"fa fa-life-ring\"></i> Helpdesk</a><a href=\"https://wiki.chattersworld.nl/\" target=\"_blank\" class=\"u-cpanel\"><i class=\"fa fa-life-ring\"></i> CWO Wiki</a></div>",
 				"greetingText": "<div style='margin:0px 0px 0px 0px'><center><a class=\"netlogo\" href=\"{/literal}{$fullurl}{literal}\"><span></span><img src=\"{/literal}{$logo}{literal}\" height='60px'></a></center></div>",
-				"state_key": "CWO-Chameleon-130",
+				"state_key": "CWO-Chameleon-140",
 				"buttonText": "<center><i class='fa fa-sign-in' style='margin-right:5px !important;'></i> Chatten</center>",
 				"gecos": "..::{/literal}{$sitename}{literal} HTML5 Webchat::..",
 				"port": 6697, 
@@ -83,9 +83,13 @@ window.kiwiConfig = function kiwiConfig() {
 				{/literal}{/if}{literal}
 				{"name": "nickserv", "url": "static/plugins/plugin-nickserv.js"},
 				{"name": "custom-selfuser", "url": "static/plugins/plugin-custom-selfuser.js"},
+				{/literal}{if $metadata['tags'] == "true"}{literal}
+				{ "name": "services", "url": "static/plugins/services.html?v=1.2" },
+				{/literal}{/if}{literal}
 				{ "name": "font", "url": "static/plugins/font-size.html" },
 				{/literal}{if $metadata['kiwi_avatar'] == "true"}{literal}
 				{"name": "gravatar", "url": "static/plugins/plugin-gravatar.js"},
+				{ "name": "irccloud", "url": "static/plugins/irccloud.html" },
 				{/literal}{/if}{literal}
 				{/literal}{if $metadata['kiwi_giphy'] == "true"}{literal}
 				{"name": "giphy", "url": "static/plugins/plugin-giphy.html"},
@@ -106,8 +110,8 @@ window.kiwiConfig = function kiwiConfig() {
 					"gecosType": 2,
 					"showRealname": false,
 					"showUserBrowser": true,
-					"userBrowserIcon": "fa-heart",
-					"fallbackColour": "",
+					"userBrowserIcon": "fa-list",
+					"fallbackColour": "default",
 					"singleLineUserbox": false,
 					"singleLineString": {
 						"age": "%a jaar oud",
@@ -140,13 +144,13 @@ window.kiwiConfig = function kiwiConfig() {
 					"gatewayURL": "//{/literal}{$gateway}{literal}/",
 					"gravatarURL": "//www.gravatar.com/avatar/",
 					"gravatarRating": "g",
-					"gravatarFallback": "robohash"
+					"gravatarFallback": "wavatar"
 		},
 		{/literal}{/if}{literal}
 		{/literal}{if $metadata['webcam'] == "true"}{literal}
 		"plugin-conference":{ 
 				"server": "meet.chattersworld.nl",
-				"secure": false,
+				"secure": true,
 				"queries": true,
 				"channels": true,
 				"viewHeight": "{/literal}{$metadata['viewheight']}{literal}",

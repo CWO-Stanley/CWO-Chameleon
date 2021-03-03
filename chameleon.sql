@@ -60,11 +60,12 @@ CREATE TABLE `chameleon_chat` (
   `volslide` varchar(256) DEFAULT NULL,
   `conflink` varchar(256) DEFAULT NULL,
   `viewheight` varchar(100) DEFAULT NULL,
+  `tags` varchar(15) DEFAULT NULL,
   `obsolete` tinyint(4) DEFAULT 0,
   PRIMARY KEY (`id`),
   KEY `FK_chameleon_chat_chameleon_lirc` (`lirc_id`),
   CONSTRAINT `FK_chameleon_chat_chameleon_lirc` FOREIGN KEY (`lirc_id`) REFERENCES `chameleon_lirc` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3247 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 /*Data for the table `chameleon_chat` */
 
@@ -306,7 +307,7 @@ CREATE TABLE `chameleon_lirc` (
   `contextMenuExternalEvent` varchar(128) DEFAULT '0',
   `obsolete` tinyint(4) DEFAULT 0,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3314 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 /*Data for the table `chameleon_lirc` */
 

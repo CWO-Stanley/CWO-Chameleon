@@ -213,7 +213,17 @@
 					</div>
 					</div>
 					<br /><br />
-
+					<div class="row">
+					        <label for="tags" title="Laat tags zien achter de namen" class="control-label col-sm-2 white">Tags achter de namen laten zien<br /><small>Zoals "beheerder", "Administrator" en meer</small></label>
+                                <div class="col-sm-4"><div class="form-group">
+								<div class="toggle-switch toggle-switch--green">
+                                    <input type="checkbox" name="tags" class="switchery" value="true" {if $tags=="true"}checked="checked"{/if}>
+                                       <i class="toggle-switch__helper"></i>
+                                </div>
+                        </div>
+					</div>
+					</div>
+                    <br /><br />
                     <!-- Timestamp -->
 					
 					    <div class="row">
@@ -672,7 +682,7 @@ $(document).ready(function() {
 		var asl = $('input[name=kiwi_asl]').is(':checked');
 		
 		
-		var url = '../../preview/chat.php?chan=' + channel + '&style=' + style + '&bg=' + bg + '&html5color=' + html5color.replace("#", "%23") + '&asl=' + asl;
+		var url = 'https://www.chattersworld.nl/preview/chat.php?chan=' + channel + '&style=' + style + '&bg=' + bg + '&html5color=' + html5color.replace("#", "%23") + '&asl=' + asl;
 		// var frame = '<iframe id="iframe" src="https://www.chattersworld.nl/preview/chat.php?chan=' + channel + '&mic=' + mic + '&cam=' + cam + '&icons=' + icons + '&style=transparent&query=' + query + '&bg=' + bg +'&asl=' + asl + '" style="width:600px; height:500px;"></iframe>';
 		var mob = 'https://mobilechat.chattersworld.nl/?channel=#' + channel;
       
@@ -686,7 +696,7 @@ $(document).ready(function() {
 });
 </script>
 {/literal}
-<iframe id="iframe" src="../../preview/chat.php?chan=default" style="width:100%; height:700px; border:0;"></iframe>
+<iframe id="iframe" src="https://www.chattersworld.nl/preview/chat.php?chan=default" style="width:100%; height:700px; border:0;"></iframe>
 <p class="card-text"><small><center>Het voorbeeld betreft een nietwerkbaar exemplaar;<br />Het voorbeeld word ook bij elke aanpassing ververst;<br />Gebruik de daadwerkelijke URL om in te loggen;<br />Aan dit voorbeeld kunnen geen rechten worden ontleend.</center></small></p>
     </div>
 </div>
