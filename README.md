@@ -4,15 +4,21 @@ Since I'm not working on this project anymore for a while now, I decided to open
 
 Yes, I also know that there are some passwords hidden in the code ;) They don't work anymore so what's the point in replacing them by placeholders anyway ¯\\_(ツ)_/¯
 
+# Latest Update
+
+05-03-2021
+
 # Features
 - LightIRC chat generator
 - Fallback to HTML5 on mobile devices
 - Forced redirect to HTML5
 - Gravatar Support
+- IRCcloud avatars
 - imgur support for image uploads
 - Anope Cpanel intergration
 - Register with your chat nickname
 - Channel register
+- recaptcha
 - Easy to maintain
 
 # KiwiIRC added and support for Gravatar
@@ -34,6 +40,14 @@ All others will work out of the box.
 LightIRC has some licensekey's needed, for webcam support and a Red5 webcam server.
 Our licensekey's are not included cause they will not work on your domain.
 
+# Jitsi-Meet
+
+Chameleon makes the use of jitsi-meet for cam support inside KiwiIRC.
+KiwiIRC can make the use of jitsi-meet's public servers, downside is that the access model won't be used inside the conference.
+Hosting your own jitsi-meet server with the patches kiwiIRC provides, the access model will be transfered to the conference
+Here's a how to:  https://github.com/jitsi/jitsi-meet/blob/master/doc/quick-install.md
+The patches: https://github.com/kiwiirc/jitsimeet-patches
+
 # Radioplayers
 
 Luna radioplayer also needs a licensekey bought on codecanyon.
@@ -45,7 +59,7 @@ Requires;
 - Anope Services running on MySQL and at least 1 encryption module has to be enabled
 - Anope XMLRPC module and XMLRPC-main has to be enabled and working!
 - lightIRC webcam module license
-- Self hosted Jitsi-Meet for KiwiIRC conference
+- Self hosted Jitsi-Meet for KiwiIRC conference or use jitsi-meet's public server
 - Some license's for web radioplayers
 - Red5 RTPM server for webcam via LightIRC (License needed)
 - Gravatar plugin/server wich is connected to Anope Services
