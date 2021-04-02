@@ -1,6 +1,6 @@
 {
     "windowTitle": "Kiwi IRC - The web IRC client",
-    "startupScreen": "plugin-asl",
+    "startupScreen": "welcome",
     "kiwiServer": "https://localdev.clients.kiwiirc.com/webirc/kiwiirc/",
     "restricted": false,
     "theme": "Default",
