@@ -2,7 +2,6 @@
 {literal}
 <script name="kiwiconfig">
 window.kiwiConfig = function kiwiConfig() {
-        console.log('off');
         return {
 		"startupScreen": "{/literal}{if $metadata['kiwi_asl'] == 'true'}plugin-asl{else}welcome{/if}{literal}",
 		"windowTitle": "..::Chattersworld - #{/literal}{$metadata['name']}{literal}::.. The web IRC client",
@@ -103,19 +102,19 @@ window.kiwiConfig = function kiwiConfig() {
 				{"name": "fileuploader", "url": "static/plugins/plugin-fileuploader.js?v=2.1"}{/literal}{if $metadata['kiwi_asl'] == 'true'},{/if}{literal}
 				{/literal}{/if}{literal}
 				{/literal}{if $metadata['kiwi_asl'] == 'true'}{literal}
-				{"name": "asl","url": "static/plugins/plugin-asl.js?cb=55"}
+				{"name": "asl","url": "static/plugins/plugin-asl.js?cb=66"}
 				{/literal}{/if}{literal}
 		],
 		{/literal}{if $metadata['kiwi_asl'] == 'true'}{literal}
 		"plugin-asl" : {
-					"gecosType": 2,
+					"gecosType": 1,
 					"showRealname": false,
 					"showUserBrowser": true,
 					"userBrowserIcon": "fa-list",
 					"fallbackColour": "default",
 					"singleLineUserbox": false,
 					"singleLineString": {
-						"age": "%a jaar oud",
+						"age": "%a",
 						"sex": "%s",
 						"location": "%l",
 						"separator": " "
@@ -137,7 +136,9 @@ window.kiwiConfig = function kiwiConfig() {
 						"location": "location",
 						"realname": "realname"
 					},
-					"localesPath": "static/plugins/plugin-asl/locales/"
+					"localesPath": "static/plugins/plugin-asl/locales",
+					"reportChannel": "#abuse",
+					"browseAllUsers": true
 		},
 		{/literal}{/if}{literal}
 		{/literal}{if $metadata['kiwi_avatar'] == "true"}{literal}
@@ -177,7 +178,7 @@ window.kiwiConfig = function kiwiConfig() {
 					"TOOLBAR_BUTTONS": [
 								{/literal}{if $metadata['mic'] == "true"}{else}"microphone",{/if}{literal} "camera", "fullscreen", "fodeviceselection", "hangup",
 								"settings", "videoquality", "filmstrip",
-								"stats", "tileview", "shortcuts", "sharedvideo"
+								"stats", "tileview", "shortcuts", "mute-everyone"
 					]
 				},
 				"configOverwrite": {

@@ -77,7 +77,10 @@
 		a2a_config.locale = "nl";
 		</script>
 		<script async src="https://static.addtoany.com/menu/page.js"></script>
-		<!-- AddToAny END --></center>
+		<!-- AddToAny END -->
+		<br /><br />
+		<a href="https://www.newsxs.nl/?source=chattersworld"><img style="border: 1px solid black;" src="https://www.newsxs.nl/images/banner/nl/groot_rechthoek_banner_newsXS.jpg" /></a>
+		</center>
 
 
 	</div>
