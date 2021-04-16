@@ -228,6 +228,14 @@ if ($id) {
                     else {
                         $smarty->assign('embedly', "false");
                     }
+					// Warnonexit
+					$warn_exit = $chat->getWarnonexit();
+                    if ($warn_exit == "true") {
+                        $smarty->assign('warnonexit', "true");
+                    }
+                    else {
+                        $smarty->assign('warnonexit', "false");
+                    }
                     //Chatstyle
                     $chat_style = $chat->getStyle();
                     if ($chat_style) {
@@ -480,6 +488,7 @@ if ($id) {
 			$smarty->assign('conflink', "false");
 			$smarty->assign('viewheight', "40%");
 			$smarty->assign('tags', "true");
+			$smarty->assign('warnonexit', "true");
 	    $smarty->assign('page','new');
         }
     }
