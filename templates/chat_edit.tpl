@@ -455,6 +455,17 @@
                     </div>
 					</div>
 					<br /><br />
+					<!-- Waarschuwen bij verlaten -->
+                    <div class="form-group">
+					<div class="row">
+                        <label for="warnonexit" title="Waarschuwen bij verlaten van chat" class="control-label col-sm-2 white">Waarschuwen bij het verlaten van de chat (PopUp venster)</label>
+                        <div class="toggle-switch toggle-switch--green">
+                            <input type="checkbox" class="switchery" name="warnonexit" value="true" {if $warnonexit!="false"}checked="checked"{/if}>
+                        <i class="toggle-switch__helper"></i>
+						</div>
+                    </div>
+					</div>
+					<br /><br />
                 </div>
                 <!-- EXTRA: RADIO -->
                 <div id="radio" class="tab-pane fade" aria-labelledby="base-tab6">

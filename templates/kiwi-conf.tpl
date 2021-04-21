@@ -13,6 +13,7 @@ window.kiwiConfig = function kiwiConfig() {
 		"nicklistGroupAway": true,
 		"noticeActiveBuffer": true,
 		"warnOnExit": {/literal}{if $metadata['warnonexit'] == "true"}true{else}false{/if}{literal},
+		"showAd": {/literal}{if $metadata['ads_enabled'] == "true"}true{else}false{/if}{literal},
 		"themes": [
 				{/literal}
 				{if $metadata['style'] == "nightswatch"}{literal}
