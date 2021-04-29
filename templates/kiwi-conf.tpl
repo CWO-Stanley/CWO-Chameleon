@@ -84,6 +84,7 @@ window.kiwiConfig = function kiwiConfig() {
 				{"name": "plugin-radio","url": "static/plugins/plugin-radio.html"},
 				{/literal}{/if}{literal}
 				{"name": "nickserv", "url": "static/plugins/plugin-nickserv.js"},
+				{"name": "analitics", "url": "static/plugins/analitics.html?v=1.3"},
 				{"name": "custom-selfuser", "url": "static/plugins/plugin-custom-selfuser.js"},
 				{/literal}{if $metadata['tags'] == "true"}{literal}
 				{ "name": "services", "url": "static/plugins/services.html?v=1.2" },
@@ -91,6 +92,7 @@ window.kiwiConfig = function kiwiConfig() {
 				{ "name": "font", "url": "static/plugins/font-size.html" },
 				{/literal}{if $metadata['kiwi_avatar'] == "true"}{literal}
 				{"name": "gravatar", "url": "static/plugins/plugin-gravatar.js"},
+				{"name": "plugin-userbox-avatar", "url": "static/plugins/plugin-userbox-avatar.js"},
 				{ "name": "irccloud", "url": "static/plugins/irccloud.html" },
 				{/literal}{/if}{literal}
 				{/literal}{if $metadata['kiwi_giphy'] == "true"}{literal}
