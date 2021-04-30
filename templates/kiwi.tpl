@@ -1,5 +1,3 @@
-<script type="text/javascript" src="../analyticstracking.js"></script>
-
 <meta http-equiv="Content-Type" content="text/html; charset=utf8" />
 <meta name="language" content="Dutch" />
 <meta name="keywords" content="chatten, gezellig kletsen, Chattersworld, Radio chat, Chameleon, Gezellig, Chatten zonder registratie, 24/7 Verzoekjes, Live verzoek, Radio Chat, webcam, webcamchat,HTML5 Chat, triviant," />
@@ -31,10 +29,10 @@
 <link rel="stylesheet" href="{$fullurl}/dist/magnific-popup.css">
 <link rel="stylesheet" href="{$fullurl}/app-assets/css/material-design-iconic-font/dist/css/material-design-iconic-font.min.css">
 <!-- Kiwi script reloaders -->
-<link href="{$fullurl}/static/css/app.3ef5c9b3.css" rel="preload" as="style">
-  <link href="{$fullurl}/static/js/app.6f32cd96.js" rel="preload" as="script">
-  <link href="{$fullurl}/static/js/vendor.5535f0b6.js" rel="preload" as="script">
-  <link href="{$fullurl}/static/css/app.3ef5c9b3.css" rel="stylesheet">
+<link href="static/css/app.3ef5c9b3.css" rel="preload" as="style">
+  <link href="static/js/app.3aa1192f.js" rel="preload" as="script">
+  <link href="static/js/vendor.5535f0b6.js" rel="preload" as="script">
+  <link href="static/css/app.3ef5c9b3.css" rel="stylesheet">
 <!-- END -->
 <meta charset=utf-8><meta name=viewport content="user-scalable=no,width=device-width,initial-scale=1,maximum-scale=1">
 <title>..::Chattersworld Chameleon::.. #{$metadata['name']}</title>
@@ -65,19 +63,7 @@
 		{/if}
 		<br />
 		<br />
-		<center><!-- AddToAny BEGIN -->
-		<div class="a2a_kit a2a_kit_size_32 a2a_default_style" id="my_centered_buttons" style="bottom:0px;">
-			<a class="a2a_button_facebook a2a_counter"></a>
-			<a class="a2a_button_twitter a2a_counter"></a>
-			<a class="a2a_button_whatsapp a2a_counter"></a>
-			<a class="a2a_button_telegram a2a_counter"></a>
-		</div>
-		<script>
-		var a2a_config = a2a_config || {};
-		a2a_config.locale = "nl";
-		</script>
-		<script async src="https://static.addtoany.com/menu/page.js"></script>
-		<!-- AddToAny END -->
+		<center>
 		<br /><br />
 		<a href="https://www.newsxs.nl/?source=chattersworld"><img style="border: 1px solid black;" src="https://www.newsxs.nl/images/banner/nl/groot_rechthoek_banner_newsXS.jpg" /></a>
 		</center>
@@ -94,8 +80,8 @@
 	<div id="app">
 	</div>
 	
-  <script type="text/javascript" src="{$fullurl}/static/js/vendor.5535f0b6.js"></script>
-  <script type="text/javascript" src="{$fullurl}/static/js/app.6f32cd96.js"></script>
+  <script type="text/javascript" src="static/js/vendor.5535f0b6.js"></script>
+  <script type="text/javascript" src="static/js/app.3aa1192f.js"></script>
 		<script type="text/javascript">
 			function openNav() {
 				document.getElementById("mySidenav").style.width = "33%";
