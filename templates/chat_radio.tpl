@@ -171,7 +171,7 @@
 				multicolorvisualizer: "true",
 				visualizeropacity: "1.0",
 				itunestoken: "1000lIPN",
-				metadatatechnic: "stream-icy-meta",
+				metadatatechnic: "fallback",
 				ownmetadataurl: "",
 				streamurl: "{$metadata['radio_link']}",
 				streamtype: "{$metadata['radio_type']}",
@@ -183,12 +183,12 @@
 				shoutcastpath: "{if $metadata['radio_type'] == "shoutcast2"}{$metadata['mountpoint']}{/if}",
 				shoutcastid: "1",
 				streamsuffix: "",
-				metadatainterval: "20000",
+				metadatainterval: "180000",
 				volume: "50",
 				debug: "false",
 				usestreamcorsproxy: "false", 
 				autoplay: "true",
-				corsproxy: "{if $metadata['radio_type'] == "shoutcast"}{else}https://api.allorigins.win/raw?url={/if}",
+				corsproxy: "{if $metadata['radio_type'] == "shoutcast"}{else}https://www.my-webalbum.com/simple-cors/?q={/if}",
 			});
 		</script>
          
@@ -329,7 +329,7 @@
 			multicolorvisualizer: "true",
 			visualizeropacity: "1.0",
 			itunestoken: "1000lIPN",
-			metadatatechnic: "stream-icy-meta",
+			metadatatechnic: "fallback",
 			ownmetadataurl: "",
 			streamurl: "{$metadata['radio_link']}",
 			streamtype: "{$metadata['radio_type']}",
@@ -341,12 +341,12 @@
 			shoutcastpath: "{if $metadata['radio_type'] == "shoutcast2"}{$metadata['mountpoint']}{/if}",
 			shoutcastid: "1",
 			streamsuffix: "",
-			metadatainterval: "20000",
+			metadatainterval: "180000",
 			volume: "50",
 			debug: "false",
 			usestreamcorsproxy: "false",
 			autoplay: "true",
-			corsproxy: "{if $metadata['radio_type'] == "shoutcast"}{else}https://api.allorigins.win/raw?url={/if}",
+			corsproxy: "{if $metadata['radio_type'] == "shoutcast"}{else}https://www.my-webalbum.com/simple-cors/?q={/if}",
 		});
 		</script>
 				
