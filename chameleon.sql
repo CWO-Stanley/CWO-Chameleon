@@ -62,6 +62,7 @@ CREATE TABLE `chameleon_chat` (
   `viewheight` varchar(100) DEFAULT NULL,
   `tags` varchar(15) DEFAULT NULL,
   `warnonexit` varchar(15) DEFAULT NULL,
+  `titledata` varchar(25) DEFAULT NULL,
   `obsolete` tinyint(4) DEFAULT 0,
   PRIMARY KEY (`id`),
   KEY `FK_chameleon_chat_chameleon_lirc` (`lirc_id`),
