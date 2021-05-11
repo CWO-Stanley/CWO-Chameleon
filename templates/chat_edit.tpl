@@ -562,7 +562,21 @@
                             </select>
                         </div>
                     </div>
-					</div><br /><br />
+					</div>
+					<br /><br />
+					<div id="titledata" class="row">
+                        <label for="titledata" title="Kies hier het type stream dat je gebruikt." class="control-label col-sm-2 white">Manier van songtext ophalen<br /><small>Er zijn diverse manieren van titles ophalen, deze kunt u hier kiezen.<br />Als de ene niet werkt, kies dan de andere.</small></label>
+                        <div class="col-sm-4"><div class="form-group">
+                            <select id="titledata" class="select2 form-control" id="default-select2" name="titledata">
+                                
+								<option id="fallback" value="fallback" {if $titledata=="fallback"}selected="selected"{/if}>PHP (kijkt via de streamsource)</option>
+                                <option id="stream-icy-meta" value="stream-icy-meta" {if $titledata=="stream-icy-meta"}selected="selected"{/if}>Direct (luisterd mee op de stream)</option>
+                            </select>
+                        </div>
+                    </div>
+					</div>
+				
+					<br /><br />
 				<!-- Kleur van de player -->
                     
 					<div class="row">
@@ -607,6 +621,7 @@
 				</div>
 				</div>
 				<br /><br />
+				
 				<!-- Kleur van de player -->
                     
 					<div id="volslide" class="row">
