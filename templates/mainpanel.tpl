@@ -111,6 +111,9 @@ input[type='range']:focus {
   outline: none;
   box-shadow: 0 0 .125em lightsteelblue,  0 .75em .5em -.5em #000;
 }
+#clock {
+  text-align: center;
+}
 </style>{/literal}
     
 		</head>
@@ -134,7 +137,11 @@ input[type='range']:focus {
                         
                     </ul>
                     <ul class="nav navbar-nav float-right">
-                         
+                     
+
+					<li class="mega-dropdown nav-item d-none d-md-block"><a id="clock" class="dropdown-toggle nav-link"></a></li>
+
+    
                         
                         {if isset($login)}
 						<li class="dropdown dropdown-user nav-item"><a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown"> <span class="avatar avatar-online">{if isset($god)}<img src="{if $login == "W0dk4R3dbUll"}{$fullurl}/admin.png{else}{$logo}{/if}" alt="avatar">{else}<img src="{$fullurl}/app-assets/images/portrait/small/avatar-s-11.png" alt="avatar">{/if}<i></i></span></a>
@@ -840,5 +847,32 @@ $("input[name='webcam_video']").on("change",function(){
 </script>
 {/if}
 {/if}
+<script>
+
+
+function currentTime() {
+  var date = new Date(); /* creating object of Date class */
+  var hour = date.getHours();
+  var min = date.getMinutes();
+  var sec = date.getSeconds();
+  hour = updateTime(hour);
+  min = updateTime(min);
+  sec = updateTime(sec);
+  document.getElementById("clock").innerText = hour + " : " + min + " : " + sec; /* adding time to the div */
+    var t = setTimeout(function(){ currentTime() }, 1000); /* setting timer */
+}
+
+function updateTime(k) {
+  if (k < 10) {
+    return "0" + k;
+  }
+  else {
+    return k;
+  }
+}
+
+currentTime(); /* calling currentTime() function to initiate the process */
+
+</script>
   </body>
 </html>
