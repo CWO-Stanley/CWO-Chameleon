@@ -17,11 +17,11 @@ window.kiwiConfig = function kiwiConfig() {
 		"themes": [
 				{/literal}
 				{if $metadata['style'] == "nightswatch"}{literal}
-				{ "name": "CWO", "url": "static/themes/theme-dark-fluid" }
+				{ "name": "CWO", "url": "{/literal}{$fullurl}{literal}/static/themes/theme-dark-fluid" }
 				{/literal}{elseif $metadata['style'] == "transparent"}{literal}
-				{ "name": "CWO", "url": "static/themes/transparent2" }
+				{ "name": "CWO", "url": "{/literal}{$fullurl}{literal}/static/themes/transparent2" }
 				{/literal}{else}{literal}
-				{ "name": "CWO", "url": "static/themes/cwo-chameleon-kiwiirc4" }
+				{ "name": "CWO", "url": "{/literal}{$fullurl}{literal}/static/themes/cwo-chameleon-kiwiirc4" }
 				{/literal}{/if}{literal}
 				],
 		"showColorPicker": true,
@@ -68,46 +68,46 @@ window.kiwiConfig = function kiwiConfig() {
 			{/literal}{if $metadata['webcam'] == "true"}{literal}
 			{
 				"name": "conference",
-				"url": "static/plugins/conference/plugin-conference.min.js?v=1.4"
+				"url": "{/literal}{$fullurl}{literal}/static/plugins/conference/plugin-conference.min.js?v=1.4"
 			},{/literal}{/if}{literal}
 				{/literal}{if $metadata['style'] == "nightswatch"}{literal}
-				{"name": "theme-dark-fluid", "url": "static/plugins/theme-dark-fluid.js"},
+				{"name": "theme-dark-fluid", "url": "{/literal}{$fullurl}{literal}/static/plugins/theme-dark-fluid.js"},
 				{/literal}{/if}{literal}
-				{"name": "emoji", "url": "static/plugins/plugin-emoji-prelim.min.js"},
+				{"name": "emoji", "url": "{/literal}{$fullurl}{literal}/static/plugins/plugin-emoji-prelim.min.js"},
 				{/literal}{if $metadata['private'] == "true"}{literal}
-				{"name": "simosnapcss","url": "static/plugins/block-queries.html"},
+				{"name": "simosnapcss","url": "{/literal}{$fullurl}{literal}/static/plugins/block-queries.html"},
 				{/literal}{/if}{literal}
-				{"name": "simosnapcss","url": "static/plugins/cwo-css3.html"},
+				{"name": "simosnapcss","url": "{/literal}{$fullurl}{literal}/static/plugins/cwo-css3.html"},
 				{/literal}{if $metadata['private'] == "false"}{literal}
-				{"name": "perform","url": "static/plugins/perform.js?v=9"},
+				{"name": "perform","url": "{/literal}{$fullurl}{literal}/static/plugins/perform.js?v=9"},
 				{/literal}{/if}{literal}
 				{/literal}{if $metadata['radio'] == "true" && $metadata['radio_player'] == "internal"}{literal}
-				{"name": "plugin-radio","url": "static/plugins/plugin-radio.html"},
+				{"name": "plugin-radio","url": "{/literal}{$fullurl}{literal}/static/plugins/plugin-radio.html"},
 				{/literal}{/if}{literal}
-				{"name": "nickserv", "url": "static/plugins/plugin-nickserv.js"},
-				{"name": "analitics", "url": "static/plugins/analitics.html?v=1.3"},
-				{"name": "custom-selfuser", "url": "static/plugins/plugin-custom-selfuser.js"},
+				{"name": "nickserv", "url": "{/literal}{$fullurl}{literal}/static/plugins/plugin-nickserv.js"},
+				{"name": "analitics", "url": "{/literal}{$fullurl}{literal}/static/plugins/analitics.html?v=1.3"},
+				{"name": "custom-selfuser", "url": "{/literal}{$fullurl}{literal}/static/plugins/plugin-custom-selfuser.js"},
 				{/literal}{if $metadata['tags'] == "true"}{literal}
-				{ "name": "services", "url": "static/plugins/services.html?v=1.2" },
+				{ "name": "services", "url": "{/literal}{$fullurl}{literal}/static/plugins/services.html?v=1.2" },
 				{/literal}{/if}{literal}
-				{ "name": "font", "url": "static/plugins/font-size.html" },
+				{ "name": "font", "url": "{/literal}{$fullurl}{literal}/static/plugins/font-size.html" },
 				{/literal}{if $metadata['kiwi_avatar'] == "true"}{literal}
 				{"name": "gravatar", "url": "static/plugins/plugin-gravatar.js"},
-				{"name": "plugin-userbox-avatar", "url": "static/plugins/plugin-userbox-avatar.js"},
-				{ "name": "irccloud", "url": "static/plugins/irccloud.html" },
+				{"name": "plugin-userbox-avatar", "url": "{/literal}{$fullurl}{literal}/static/plugins/plugin-userbox-avatar.js"},
+				{ "name": "irccloud", "url": "{/literal}{$fullurl}{literal}/static/plugins/irccloud.html" },
 				{/literal}{/if}{literal}
 				{/literal}{if $metadata['kiwi_giphy'] == "true"}{literal}
-				{"name": "giphy", "url": "static/plugins/plugin-giphy.html"},
+				{"name": "giphy", "url": "{/literal}{$fullurl}{literal}/static/plugins/plugin-giphy.html"},
 				{/literal}{/if}{literal}
 				{/literal}{if $metadata['kiwi_imgur'] == "true"}{literal}
-				{"name": "imgurl", "url": "static/plugins/plugin-imgur.html"},
+				{"name": "imgurl", "url": "{/literal}{$fullurl}{literal}/static/plugins/plugin-imgur.html"},
 				{/literal}{/if}{literal}
-				{"name": "ident", "url": "static/plugins/ident.js?v=1.5"},
+				{"name": "ident", "url": "{/literal}{$fullurl}{literal}/static/plugins/ident.js?v=1.5"},
 				{/literal}{if $metadata['kiwi_upload'] == "true"}{literal}
-				{"name": "fileuploader", "url": "static/plugins/plugin-fileuploader.js?v=2.1"}{/literal}{if $metadata['kiwi_asl'] == 'true'},{/if}{literal}
+				{"name": "fileuploader", "url": "{/literal}{$fullurl}{literal}/static/plugins/plugin-fileuploader.js?v=2.1"}{/literal}{if $metadata['kiwi_asl'] == 'true'},{/if}{literal}
 				{/literal}{/if}{literal}
 				{/literal}{if $metadata['kiwi_asl'] == 'true'}{literal}
-				{"name": "asl","url": "static/plugins/plugin-asl.js?cb=66"}
+				{"name": "asl","url": "{/literal}{$fullurl}{literal}/static/plugins/plugin-asl.js?cb=66"}
 				{/literal}{/if}{literal}
 		],
 		{/literal}{if $metadata['kiwi_asl'] == 'true'}{literal}
@@ -141,7 +141,7 @@ window.kiwiConfig = function kiwiConfig() {
 						"location": "location",
 						"realname": "realname"
 					},
-					"localesPath": "static/plugins/plugin-asl/locales",
+					"localesPath": "{/literal}{$fullurl}{literal}/static/plugins/plugin-asl/locales",
 					"reportChannel": "#abuse",
 					"browseAllUsers": true
 		},
@@ -193,7 +193,7 @@ window.kiwiConfig = function kiwiConfig() {
 		},
 		{/literal}{/if}{literal}
 		"plugin-radio": {
-				"url": "stations.php?id={/literal}{$smarty.get.id}{literal}"
+				"url": "{/literal}{$fullurl}{literal}/stations.php?id={/literal}{$smarty.get.id}{literal}"
 		},
 		{/literal}{if $metadata['kiwi_upload'] == "true"}{literal}
 		"fileuploader": {

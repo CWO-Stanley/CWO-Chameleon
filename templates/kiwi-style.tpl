@@ -170,50 +170,50 @@ body {
 }
 {/literal}{if $metadata['icons'] != ""}{literal}
 .kiwi-nicklist-user--mode-q .kiwi-nicklist-user-prefix {
-	content: url(lirc-resources/icons/{/literal}{$metadata['icons']}{literal}/owner.png)
+	content: url({/literal}{$fullurl}{literal}/lirc-resources/icons/{/literal}{$metadata['icons']}{literal}/owner.png)
 }
 .kiwi-nicklist-user--mode-a .kiwi-nicklist-user-prefix {
-	content: url(lirc-resources/icons/{/literal}{$metadata['icons']}{literal}/admin.png)
+	content: url({/literal}{$fullurl}{literal}/lirc-resources/icons/{/literal}{$metadata['icons']}{literal}/admin.png)
 }
 .kiwi-nicklist-user--mode-o .kiwi-nicklist-user-prefix {
-	content: url(lirc-resources/icons/{/literal}{$metadata['icons']}{literal}/operator.png)
+	content: url({/literal}{$fullurl}{literal}/lirc-resources/icons/{/literal}{$metadata['icons']}{literal}/operator.png)
 }
 .kiwi-nicklist-user--mode-h .kiwi-nicklist-user-prefix {
-	content: url(lirc-resources/icons/{/literal}{$metadata['icons']}{literal}/halfop.png)
+	content: url({/literal}{$fullurl}{literal}/lirc-resources/icons/{/literal}{$metadata['icons']}{literal}/halfop.png)
 }
 .kiwi-nicklist-user--mode-v .kiwi-nicklist-user-prefix {
-	content: url(lirc-resources/icons/{/literal}{$metadata['icons']}{literal}/voice.png)
+	content: url({/literal}{$fullurl}{literal}/lirc-resources/icons/{/literal}{$metadata['icons']}{literal}/voice.png)
 }
 {/literal}{if $metadata['prefixicons'] == "true"}{literal}
 .kiwi-messagelist-nick--mode-q .kiwi-messagelist-nick--prefix {
-	content: url(lirc-resources/icons/{/literal}{$metadata['icons']}{literal}/owner.png)
+	content: url({/literal}{$fullurl}{literal}/lirc-resources/icons/{/literal}{$metadata['icons']}{literal}/owner.png)
 }
 .kiwi-messagelist-nick--mode-a .kiwi-messagelist-nick--prefix {
-	content: url(lirc-resources/icons/{/literal}{$metadata['icons']}{literal}/admin.png)
+	content: url({/literal}{$fullurl}{literal}/lirc-resources/icons/{/literal}{$metadata['icons']}{literal}/admin.png)
 }
 .kiwi-messagelist-nick--mode-o .kiwi-messagelist-nick--prefix {
-	content: url(lirc-resources/icons/{/literal}{$metadata['icons']}{literal}/operator.png)
+	content: url({/literal}{$fullurl}{literal}/lirc-resources/icons/{/literal}{$metadata['icons']}{literal}/operator.png)
 }
 .kiwi-messagelist-nick--mode-h .kiwi-messagelist-nick--prefix {
-	content: url(lirc-resources/icons/{/literal}{$metadata['icons']}{literal}/halfop.png)
+	content: url({/literal}{$fullurl}{literal}/lirc-resources/icons/{/literal}{$metadata['icons']}{literal}/halfop.png)
 }
 .kiwi-messagelist-nick--mode-v .kiwi-messagelist-nick--prefix {
-	content: url(lirc-resources/icons/{/literal}{$metadata['icons']}{literal}/voice.png)
+	content: url({/literal}{$fullurl}{literal}/lirc-resources/icons/{/literal}{$metadata['icons']}{literal}/voice.png)
 }
 .kiwi-messagelist-nick--mode-q .kiwi-messagelist-nick-prefix {
-	content: url(lirc-resources/icons/{/literal}{$metadata['icons']}{literal}/owner.png)
+	content: url({/literal}{$fullurl}{literal}/lirc-resources/icons/{/literal}{$metadata['icons']}{literal}/owner.png)
 }
 .kiwi-messagelist-nick--mode-a .kiwi-messagelist-nick-prefix {
-	content: url(lirc-resources/icons/{/literal}{$metadata['icons']}{literal}/admin.png)
+	content: url({/literal}{$fullurl}{literal}/lirc-resources/icons/{/literal}{$metadata['icons']}{literal}/admin.png)
 }
 .kiwi-messagelist-nick--mode-o .kiwi-messagelist-nick-prefix {
-	content: url(lirc-resources/icons/{/literal}{$metadata['icons']}{literal}/operator.png)
+	content: url({/literal}{$fullurl}{literal}/lirc-resources/icons/{/literal}{$metadata['icons']}{literal}/operator.png)
 }
 .kiwi-messagelist-nick--mode-h .kiwi-messagelist-nick-prefix {
-	content: url(lirc-resources/icons/{/literal}{$metadata['icons']}{literal}/halfop.png)
+	content: url({/literal}{$fullurl}{literal}/lirc-resources/icons/{/literal}{$metadata['icons']}{literal}/halfop.png)
 }
 .kiwi-messagelist-nick--mode-v .kiwi-messagelist-nick-prefix {
-	content: url(lirc-resources/icons/{/literal}{$metadata['icons']}{literal}/voice.png)
+	content: url({/literal}{$fullurl}{literal}/lirc-resources/icons/{/literal}{$metadata['icons']}{literal}/voice.png)
 }
 {/literal}{/if}{/if}{literal}{/literal}
 {if $metadata['style'] != "nightswatch"}{literal}

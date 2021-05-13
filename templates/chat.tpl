@@ -35,7 +35,7 @@
 if(!isFlashEnabled()) 
 { 
 alert('Uw flashplayer is uitgeschakelt, geen nood, u word omgeleid naar HTML5, of schakel uw flashplayer in!');
-window.location = 'html5.php?id={/literal}{$smarty.get.id}{literal}'; 
+window.location = 'html5/{/literal}{$smarty.get.id}{literal}'; 
 }
 
 function isFlashEnabled() 

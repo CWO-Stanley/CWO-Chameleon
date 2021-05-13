@@ -1,3 +1,9 @@
+<IfModule mod_headers.c>
+Header add Access-Control-Allow-Origin "*"
+Header add Access-Control-Allow-Methods "GET, POST, OPTIONS"
+Header add Access-Control-Allow-Headers "origin, content-type, x-requested-with"
+</IfModule>
+
 RewriteEngine On
 RewriteRule	^login/?$				login.php				[NC,L]
 RewriteRule ^logout/?$				logout.php				[NC,L]
@@ -16,7 +22,10 @@ RewriteRule	^del/?$					?page=del				[NC,L]
 RewriteRule	^del/([0-9]+)/?$		?page=del&id=$1			[NC,L]
 
 RewriteRule ^chat/([0-9]+)/?$		chat.php?id=$1			[NC,L]
+RewriteRule ^html5/([0-9]+)/?$		html5.php?id=$1			[NC,L]
 
+RewriteRule ^chat2/([0-9]+)/?$		chat2.php?id=$1			[NC,L]
+RewriteRule ^html52/([0-9]+)/?$		html52.php?id=$1			[NC,L]
 
 RewriteCond %{HTTP_USER_AGENT} ^.*UBrowser.*$ [OR]
 RewriteCond %{HTTP_USER_AGENT} ^.*UCBrowser.*$ [OR]

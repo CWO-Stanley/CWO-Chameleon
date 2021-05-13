@@ -1,7 +1,12 @@
 <?php
-header("Access-Control-Allow-Headers: Authorization, Content-Type");
-header("Access-Control-Allow-Origin: *");
-// header('content-type: application/json; charset=utf-8');
+
+// header('Content-Type: application/json');
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Methods: GET, POST, OPTIONS');
+// header('Access-Control-Max-Age: 1000');
+header('Access-Control-Allow-Headers: *');
+
+
 ?>
 <?php
 require("includes.php");
@@ -59,7 +64,7 @@ if ($mobile_browser > 0) {
         $metadata = $chat->getMetaData();
 
         if (($metadata['radio'] != "true") && ($metadata['ads_enabled'] == "true"))
-            header('Location: https://chameleon.chattersworld.nl/chat2.php?'.$_SERVER['QUERY_STRING']);
+            header('Location: https://chameleon.chattersworld.nl/chat2/'.$_GET['id']);
 
         $smarty->assign('metadata',$metadata);
 		$smarty->display('kiwi-conf.tpl');
@@ -77,11 +82,11 @@ if ($mobile_browser > 0) {
         $smarty->display('chat_end.tpl');
     }
     else {
-        header('Location: https://chattersworld.nl/html5.php?'.$_SERVER['QUERY_STRING']);
+        header('Location: https://chattersworld.nl/html5/'.$_GET['id']);
     }
 }
 else {
-    header('Location: https://chattersworld.nl/html5.php?'.$_SERVER['QUERY_STRING']);
+    header('Location: https://chattersworld.nl/html5/'.$_GET['id']);
 }
 }
 else {
@@ -97,7 +102,7 @@ else {
 			$chat->printConfig();
 		}
         if (($metadata['radio'] != "true") && ($metadata['ads_enabled'] == "true"))
-            header('Location: https://chameleon.chattersworld.nl/chat2.php?'.$_SERVER['QUERY_STRING']);
+            header('Location: https://chameleon.chattersworld.nl/chat2/'.$_GET['id']);
 
         $smarty->assign('metadata',$metadata);
 		if (($metadata['html_redirect'] == "true")) {
@@ -120,11 +125,11 @@ else {
         $smarty->display('chat_end.tpl');
     }
     else {
-        header('Location: https://chattersworld.nl/html5.php?'.$_SERVER['QUERY_STRING']);
+        header('Location: https://chattersworld.nl/html5/'.$_GET['id']);
     }
 }
 else {
-    header('Location: https://chattersworld.nl/html5.php?'.$_SERVER['QUERY_STRING']);
+    header('Location: https://chattersworld.nl/html5/'.$_GET['id']);
 }
 }   
    

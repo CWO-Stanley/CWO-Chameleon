@@ -1,4 +1,4 @@
- <script src="dist/jquery.magnific-popup.js"></script>
+ <script src="{$fullurl}/dist/jquery.magnific-popup.js"></script>
  <script>
 	$(document).ready(function() {
 		$('.open-popup-link').magnificPopup({

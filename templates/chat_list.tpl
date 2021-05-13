@@ -48,7 +48,7 @@
 													{/if}
 													<td style="vertical-align:middle"><center>
 													<div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
-														<a href="{$fullurl}/chat.php?id={$ids[chat]}" target='_blank' title="Preview Webchat" class="btn btn-outline-info"><span class="ft-share"></span></a>
+														<a href="{$fullurl}/chat/{$ids[chat]}" target='_blank' title="Preview Webchat" class="btn btn-outline-info"><span class="ft-share"></span></a>
 														<a href="{$fullurl}/html5.php?id={$ids[chat]}" target="_blank" title="Preview HTML5" class="btn btn-outline-info"><span class="ft-chrome"></span></a>
 													</div></center>
 														
@@ -77,10 +77,10 @@
 															<div class="modal-body">
 																<h5 class="white">Je chatbox op je website plaatsen</h5>
 																Als je je chatbox op je website wil plaatsen, kan je dit doen met het volgende stukje HTML code:
-																<blockquote><pre class="text-left bg-blue-grey bg-darken-4">&lt;iframe src='{$fullurl}/chat.php?id={$ids[chat]}' allow="camera;microphone" width='710' height='500' framespacing='0' frameborder='no' scrolling='no' &gt;&lt;/iframe&gt;</pre></blockquote>
+																<blockquote><pre class="text-left bg-blue-grey bg-darken-4">&lt;iframe src='{$fullurl}/chat/{$ids[chat]}' allow="camera;microphone" width='710' height='500' framespacing='0' frameborder='no' scrolling='no' &gt;&lt;/iframe&gt;</pre></blockquote>
 																	<h5 class="white">Je HTML5 chatbox op je website plaatsen</h5>
 																Als je je HTML5 chatbox op je website wil plaatsen, kan je dit doen met het volgende stukje HTML code:
-																<blockquote><pre class="text-left bg-blue-grey bg-darken-4">&lt;iframe src='{$fullurl}/html5.php?id={$ids[chat]}' allow="camera;microphone" width='710' height='500' framespacing='0' frameborder='no' scrolling='no' &gt;&lt;/iframe&gt;</pre></blockquote>
+																<blockquote><pre class="text-left bg-blue-grey bg-darken-4">&lt;iframe src='{$fullurl}/html5/{$ids[chat]}' allow="camera;microphone" width='710' height='500' framespacing='0' frameborder='no' scrolling='no' &gt;&lt;/iframe&gt;</pre></blockquote>
 										
 																<h5 class="white">Het aantal chatters op je website laten zien</h5>
 																Om het aantal chatters dat zich in je chatbox bevindt op je site weer te geven, plaats je het volgende stukje javascript code tussen de <code>&lt;HEAD&gt;</code> tags van je webpagina.

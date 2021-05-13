@@ -54,7 +54,7 @@ if ($mobile_browser > 0) {
         $metadata = $chat->getMetaData();
 
         if (($metadata['radio'] == "true") || ($metadata['ads_enabled'] != "true"))
-            header('Location: https://chameleon.chattersworld.nl/chat.php?'.$_SERVER['QUERY_STRING']);
+            header('Location: https://chameleon.chattersworld.nl/chat/'.$_GET['id']);
 
         if ($metadata['ads_enabled'] == "true")
             $metadata['height'] = "90";
@@ -97,7 +97,7 @@ else {
 			$chat->printConfig();
 		}
         if (($metadata['radio'] == "true") || ($metadata['ads_enabled'] != "true"))
-            header('Location: https://chameleon.chattersworld.nl/chat.php?'.$_SERVER['QUERY_STRING']);
+            header('Location: https://chameleon.chattersworld.nl/chat/'.$_GET['id']);
 
         if ($metadata['ads_enabled'] == "true")
             $metadata['height'] = "90";

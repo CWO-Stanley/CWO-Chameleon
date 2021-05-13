@@ -39,7 +39,7 @@ if (isset($_GET['id'])) {
         $metadata = $chat->getMetaData();
 
         if (($metadata['radio'] != "true") && ($metadata['ads_enabled'] == "true"))
-            header('Location: https://chameleon.chattersworld.nl/html52.php?'.$_SERVER['QUERY_STRING']);
+            header('Location: https://chameleon.chattersworld.nl/html52/'.$_GET['id']);
 
         $smarty->assign('metadata',$metadata);
 		$smarty->display('kiwi-conf.tpl');
@@ -57,10 +57,10 @@ if (isset($_GET['id'])) {
         $smarty->display('chat_end.tpl');
     }
     else {
-        header('Location: https://chattersworld.nl/html5.php?'.$_SERVER['QUERY_STRING']);
+        header('Location: https://chameleon.chattersworld.nl/html5/'.$_GET['id']);
     }
 }
 else {
-    header('Location: https://chattersworld.nl/html5.php?'.$_SERVER['QUERY_STRING']);
+    header('Location: https://chameleon.chattersworld.nl/html5/'.$_GET['id']);
 }
 ?>
