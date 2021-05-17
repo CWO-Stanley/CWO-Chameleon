@@ -4,7 +4,7 @@
 window.kiwiConfig = function kiwiConfig() {
         return {
 		"startupScreen": "{/literal}{if $metadata['kiwi_asl'] == 'true'}plugin-asl{else}welcome{/if}{literal}",
-		"windowTitle": "..::Chattersworld - #{/literal}{$metadata['name']}{literal}::.. The web IRC client",
+		"windowTitle": ".::. Chattersworld Chameleon .::. #{/literal}{$metadata['name']}{literal}",
 		"kiwiServer": "https://{/literal}{$gateway}{literal}/webirc/kiwiirc/",
 		"theme": "CWO",
 		"hide_advanced": true,

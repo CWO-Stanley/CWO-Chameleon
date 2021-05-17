@@ -35,7 +35,7 @@
 if(!isFlashEnabled()) 
 { 
 alert('Uw flashplayer is uitgeschakelt, geen nood, u word omgeleid naar HTML5, of schakel uw flashplayer in!');
-window.location = 'html5/{/literal}{$smarty.get.id}{literal}'; 
+window.location = '{/literal}{$fullurl}{literal}/html5/{/literal}{$smarty.get.id}{literal}'; 
 }
 
 function isFlashEnabled() 
@@ -49,7 +49,7 @@ function isFlashEnabled()
 </script>
 {/literal}
   {if $metadata['html_redirect'] == "true"}
-  <script>window.location="html5.php?id={$smarty.get.id}";</script>
+  <script>window.location="{$fullurl}/html5/{$smarty.get.id}";</script>
   {/if}
  <style type="text/css">
 	html { height: 100%; overflow: hidden; }
