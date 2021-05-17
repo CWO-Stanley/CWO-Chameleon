@@ -322,8 +322,9 @@ window.kiwiConfig = function kiwiConfig() {
             '=]': '1f642',
             '=)': '1f642',
             ':]': '1f642',
+			'(chameleon)': 'cwo-chameleon2',
         },
-		emojiLocation: 'https://kiwiirc.com/shared/emoji/',
+		emojiLocation: '{/literal}{$fullurl}{literal}/emoticons/kiwi/',
 		{/literal}{/if}{literal}
 		"embedly": {
 			"enable": {/literal}{if $metadata['embedly'] == "true"}true{else}false{/if}{literal},
