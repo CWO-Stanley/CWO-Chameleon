@@ -93,7 +93,7 @@ window.kiwiConfig = function kiwiConfig() {
 				{ "name": "font", "url": "{/literal}{$fullurl}{literal}/static/plugins/font-size.html" },
 				{/literal}{if $metadata['kiwi_avatar'] == "true"}{literal}
 				{"name": "gravatar", "url": "static/plugins/plugin-gravatar.js"},
-				{"name": "plugin-userbox-avatar", "url": "{/literal}{$fullurl}{literal}/static/plugins/plugin-userbox-avatar.js"},
+				
 				{ "name": "irccloud", "url": "{/literal}{$fullurl}{literal}/static/plugins/irccloud.html" },
 				{/literal}{/if}{literal}
 				{/literal}{if $metadata['kiwi_giphy'] == "true"}{literal}
