@@ -10,10 +10,12 @@
     color: #dedede;
 }
 
-.kiwi-statebrowser-usermenu-avatar {
-    background-color: #000;
-    color: var(--brand-default-fg);
+.kiwi-statebrowser-usermenu-avatar:hover .kiwi-avatar-inner,
+.kiwi-statebrowser-usermenu--open .kiwi-avatar-inner {
+    background-color: var(--brand-primary) !important;
+    color: var(--brand-default-bg) !important;
 }
+
 .u-tabbed-view-tabs {
     background: #2f2f2f;
     border-bottom-color: #ffffff1a;
@@ -80,9 +82,13 @@ button.u-button.u-button-primary.u-submit.kiwi-welcome-znc-start {
     color: #fff;
 }
 
-.kiwi-avatar > span {
-    background-color: var(--brand-default-bg);
-    color: var(--brand-default-fg);
+.kiwi-avatar-inner {
+    color: var(--brand-default-bg);
+    border-color: var(--brand-primary);
+}
+
+.kiwi-avatar--default {
+    background-color: var(--brand-default-fg);
 }
 
 .kiwi-messagelist-seperator {
@@ -745,18 +751,12 @@ button.u-button.u-button-primary.u-submit.kiwi-welcome-znc-start {
     color: var(--brand-default-fg);
 }
 
-.kiwi-statebrowser-usermenu-avatar:hover {
-    background-color: var(--brand-primary);
-    color: var(--brand-default-fg);
+.kiwi-statebrowser-usermenu-avatar--connected .kiwi-avatar-inner {
+    border-color: #42b992;
 }
 
-.kiwi-statebrowser-usermenu-avatar--disconnected {
+.kiwi-statebrowser-usermenu-avatar--disconnected .kiwi-avatar-inner {
     border-color: var(--brand-error);
-}
-
-.kiwi-statebrowser-usermenu--open .kiwi-statebrowser-usermenu-avatar {
-    background-color: var(--brand-primary);
-    color: var(--brand-default-fg);
 }
 
 .kiwi-statebrowser-usermenu .kiwi-awaystatusindicator {
@@ -1040,10 +1040,14 @@ button.u-button.u-button-primary.u-submit.kiwi-welcome-znc-start {
 }
 
 /* ---- Modern Layout Styling ---- */
-.kiwi-avatar > span {
-    color: var(--brand-default-fg);
+.kiwi-avatar-inner {
+    color: var(--brand-default-bg);
     border-color: var(--brand-primary);
 }
+
+.kiwi-avatar--default {
+    background-color: var(--brand-default-fg);
+} 
 
 .kiwi-messagelist .kiwi-messagelist-body a,
 .kiwi-channellist-table-topic a,

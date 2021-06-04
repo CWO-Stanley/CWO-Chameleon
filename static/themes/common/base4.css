@@ -8,6 +8,11 @@
     border: 1px dashed var(--brand-error);
 }
 
+.kiwi-welcome-simple-form .u-submit {
+    background-color: var(--brand-primary);
+    color: var(--brand-default-bg);
+}
+
 .kiwi-welcome-simple .help,
 .kiwi-welcome-simple .help a {
     color: var(--brand-default-fg);
@@ -15,6 +20,10 @@
 
 .kiwi-welcome-simple .help a:hover {
     color: var(--brand-primary-hover);
+}
+
+.kiwi-welcome-invalid-nick.u-input-text input.u-input {
+    border-color: var(--brand-error);
 }
 
 /* ---- Gloabl Styling ---- */
@@ -116,7 +125,9 @@
 }
 
 /* ---- Global : Links / anchors etc ---- */
-
+.u-link {
+    color: var(--brand-primary);
+}
 
 /* ---- Container Header ( containerHeader ) ---- */
 .kiwi-header {
@@ -550,28 +561,23 @@
     background: var(--brand-primary);
     color: var(--brand-default-bg);
 }
+
 .kiwi-statebrowser-channel-label--highlight {
     background: var(--brand-error);
 }
 
-.kiwi-statebrowser-usermenu-avatar {
-    border-color: var(--brand-primary);
-    background-color: var(--brand-default-fg);
-    color: var(--brand-default-bg);
+.kiwi-statebrowser-usermenu-avatar:hover .kiwi-avatar-inner,
+.kiwi-statebrowser-usermenu--open .kiwi-avatar-inner {
+    background-color: var(--brand-primary) !important;
+    color: var(--brand-default-bg) !important;
 }
 
-.kiwi-statebrowser-usermenu-avatar:hover {
-    background-color: var(--brand-primary);
-    color: var(--brand-default-bg);
+.kiwi-statebrowser-usermenu-avatar--connected .kiwi-avatar-inner {
+    border-color: #42b992;
 }
 
-.kiwi-statebrowser-usermenu-avatar--disconnected {
+.kiwi-statebrowser-usermenu-avatar--disconnected .kiwi-avatar-inner {
     border-color: var(--brand-error);
-}
-
-.kiwi-statebrowser-usermenu--open .kiwi-statebrowser-usermenu-avatar {
-    background-color: var(--brand-primary);
-    color: var(--brand-default-bg);
 }
 
 .kiwi-statebrowser-usermenu .kiwi-awaystatusindicator {
@@ -779,7 +785,9 @@
 }
 
 .kiwi-messagelist-seperator {
-    border-top: 1px solid var(--brand-shadow);
+    color: var(--brand-darktone);
+    background: var(--brand-default-bg);
+    font-size: 0.9em;
 }
 
 .kiwi-messagelist-seperator > span {
@@ -788,7 +796,7 @@
 
 .kiwi-messagelist-message--info-open,
 .kiwi-messagelist-message--authorrepeat.kiwi-messagelist-message--info-open {
-    /* background: var(--brand-midtone); */
+    background: var(--brand-midtone);
 }
 
 .kiwi-messagelist-message-action .kiwi-messagelist-body {
@@ -796,12 +804,12 @@
 }
 
 .kiwi-messagelist-message--highlight {
-    /* background-color: var(--brand-midtone); */
+    background-color: var(--brand-midtone);
 }
 
 /* Notice Message styling */
 .kiwi-messagelist-message-notice {
-    /* background: #EFD1A4; */
+    background: #EFD1A4;
 }
 
 /* Standard username and usertime styling */
@@ -823,7 +831,7 @@
 .kiwi-messagelist-message--compact .kiwi-messagelist-message-privmsg:hover,
 .kiwi-messagelist-message--compact .kiwi-messagelist-message-action:hover,
 .kiwi-messagelist-message--compact .kiwi-messagelist-message-notice:hover {
-    /* background: var(--brand-primary-hover); */
+    background: var(--brand-primary-hover);
 }
 
 /* The shadow over the main text area that displays when the sidebar is open */
@@ -834,11 +842,6 @@
 /* Messagelayout inline */
 .kiwi-messagelist-message--text .kiwi-messagelist-time {
     color: var(--brand-default-fg);
-}
-
-/* Connection Styling */
-.kiwi-messagelist-message-connection {
-    background-color: var(--brand-default-bg);
 }
 
 /* ---- Traffic Messages ---- */
@@ -858,10 +861,13 @@
 }
 
 /* ---- Modern Layout Styling ---- */
-.kiwi-avatar > span {
-    background-color: var(--brand-default-fg);
+.kiwi-avatar-inner {
     color: var(--brand-default-bg);
     border-color: var(--brand-primary);
+}
+
+.kiwi-avatar--default {
+    background-color: var(--brand-default-fg);
 }
 
 .kiwi-messagelist .kiwi-messagelist-body a,
@@ -940,12 +946,12 @@
 }
 
 .kiwi-messageinfo-actions .kiwi-messageinfo-reply {
-    /* background: var(--brand-primary); */
+    background: var(--brand-primary);
     color: var(--brand-default-bg);
 }
 
 .kiwi-messageinfo-actions .kiwi-messageinfo-kick-user {
-    /* background: var(--brand-warning); */
+    background: var(--brand-warning);
     color: var(--brand-default-bg);
 }
 

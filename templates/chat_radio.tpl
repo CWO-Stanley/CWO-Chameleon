@@ -164,7 +164,7 @@
 				fontratio: "0.4",
 				radioname: "{$metadata['radio_name']}",
 				scroll: "true",
-				coverimage: "https://horus.chattersworld.nl/dist/img/c4all.png",
+				coverimage: "https://chameleon.chattersworld.nl/dist/img/c4all.png",
 				coverstyle: "circle",
 				usevisualizer: "real",
 				visualizertype: "8",
@@ -322,7 +322,7 @@
 			fontratio: "0.4",
 			radioname: "{$metadata['radio_name']}",
 			scroll: "true",
-			coverimage: "https://horus.chattersworld.nl/dist/img/c4all.png",
+			coverimage: "https://chameleon.chattersworld.nl/dist/img/c4all.png",
 			coverstyle: "circle",
 			usevisualizer: "real",
 			visualizertype: "8",
@@ -353,7 +353,7 @@
 		</center>
 		{elseif $metadata['radio_player'] == "clever"}
 		<!-- must have -->
-		<link href="radiolibs/clever/audio11_html5.css?v=1.4" rel="stylesheet" type="text/css">
+		<link href="{$fullurl}/radiolibs/clever/audio11_html5.css?v=1.4" rel="stylesheet" type="text/css">
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.1/jquery.min.js" type="text/javascript"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>

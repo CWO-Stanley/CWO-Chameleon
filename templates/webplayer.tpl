@@ -221,7 +221,7 @@ return true;
         <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
-		<a href="https://www.newsxs.nl?source=chattersworld"><img style="border: 1px solid black;" src="img/NewsXS-banner.gif" /></a> 
+		<a href="https://www.newsxs.nl?source=chattersworld"><img style="border: 1px solid black;" src="https://www.newsxs.nl/NewsXS-HappyHour.gif?source=chattersworld" /></a> 
     </center>
 </div>
 </section>
