@@ -65,7 +65,7 @@
 		<br />
 		<center>
 		<br /><br />
-		<a href="https://www.newsxs.nl/?source=chattersworld"><img style="border: 1px solid black;" src="https://www.newsxs.nl/images/banner/nl/groot_rechthoek_banner_newsXS.jpg" /></a>
+		<a href="https://www.newsxs.nl/?source=chattersworld" target="_blank"><img style="border: 1px solid black;" src="https://www.newsxs.nl/images/banner/nl/groot_rechthoek_banner_newsXS.jpg" /></a>
 		</center>
 
 
