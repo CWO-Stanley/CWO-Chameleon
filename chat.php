@@ -72,10 +72,8 @@ if ($mobile_browser > 0) {
         $smarty->display('kiwi.tpl');
 
         if ($metadata['radio'] == "true") {
-			if ($metadata['radio_player'] == "internal") {
-				$smarty->display('chat_ads.tpl');
-			}else{ 
-				$smarty->display('chat_radio.tpl'); 
+			if ($metadata['radio_player'] != "internal") {
+				$smarty->display('chat_radio.tpl');
 			}
         }
 		echo '</div>';
@@ -113,10 +111,8 @@ else {
         $smarty->display('chat.tpl');
 		}
         if ($metadata['radio'] == "true") {
-			if ($metadata['radio_player'] == "internal") {
-				$smarty->display('chat_ads.tpl');
-			}else{ 
-				$smarty->display('chat_radio.tpl'); 
+			if ($metadata['radio_player'] != "internal") {
+				$smarty->display('chat_radio.tpl');
 			}
         }
 		if (($metadata['html_redirect'] == "true")) {

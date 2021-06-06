@@ -29,10 +29,18 @@
 <link rel="stylesheet" href="{$fullurl}/dist/magnific-popup.css">
 <link rel="stylesheet" href="{$fullurl}/app-assets/css/material-design-iconic-font/dist/css/material-design-iconic-font.min.css">
 <!-- Kiwi script reloaders -->
+{if $metadata['radio_player'] == "internal"}
+<!-- Kiwi script reloaders fullscreen -->
+<link href="{$fullurl}/static/css/app.dc61080c.css" rel="preload" as="style">
+  <link href="{$fullurl}/static/js/app.71aa3858.js" rel="preload" as="script">
+  <link href="{$fullurl}/static/js/vendor.f4484484.js" rel="preload" as="script">
+  <link href="{$fullurl}/static/css/app.dc61080c.css" rel="stylesheet">
+ {else}
 <link href="{$fullurl}/static/css/app.20d8ac7f.css" rel="preload" as="style">
   <link href="{$fullurl}/static/js/app.71aa3858.js" rel="preload" as="script">
   <link href="{$fullurl}/static/js/vendor.f4484484.js" rel="preload" as="script">
   <link href="{$fullurl}/static/css/app.20d8ac7f.css" rel="stylesheet">
+ {/if}
 <!-- END -->
 <meta charset=utf-8><meta name=viewport content="user-scalable=no,width=device-width,initial-scale=1,maximum-scale=1">
 <title>..::Chattersworld Chameleon::.. #{$metadata['name']}</title>
@@ -40,7 +48,11 @@
 
 <body>
 	<div class="left">
+	{if $metadata['radio_player'] != "internal"}
 		<a target="_blank" href="{$fullurl}"><img src="{$logo}" style="z-index: 102;" height="50" alt="Chattersworld"></a>
+	{else}
+		<a href="#" onclick="openNav()"><img src="{$logo}" style="z-index: 102;" height="50" alt="Chattersworld"></a>
+	{/if}
 	</div>
 
 	<div id="mySidenav" class="sidenav">
@@ -71,15 +83,16 @@
 
 	</div>
 	<div class="right">
+	{if $metadata['radio_player'] != "internal"}
 		<span style="font-size:30px;cursor:pointer;color:#FFF;" onclick="openNav()">MENU&#9776;</span>
+	{/if}
 	</div>
 	<noscript>
 		<div class="kiwi-noscript-warn">Please enable JavaScript and refresh the page to use this website.
 		</div>
 	</noscript>
 	<div id="app">
-	</div>
-	
+	</div>	
   <script type="text/javascript" src="{$fullurl}/static/js/vendor.f4484484.js"></script>
   <script type="text/javascript" src="{$fullurl}/static/js/app.71aa3858.js"></script>
 		<script type="text/javascript">

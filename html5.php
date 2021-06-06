@@ -47,10 +47,8 @@ if (isset($_GET['id'])) {
         $smarty->display('kiwi.tpl');
 
         if ($metadata['radio'] == "true") {
-			if ($metadata['radio_player'] == "internal") {
-				$smarty->display('chat_ads.tpl');
-			}else{ 
-				$smarty->display('chat_radio.tpl'); 
+			if ($metadata['radio_player'] != "internal") {
+				$smarty->display('chat_radio.tpl');
 			}
         }
 		echo '</div>';
