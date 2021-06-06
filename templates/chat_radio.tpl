@@ -2,7 +2,7 @@
 {if $metadata['radio'] == "true"}
     {if $metadata['radio_player'] == "stenly"}
 		<!-- must have -->
-		<link href="radiolibs/sticky/audio8_html5.css?v=2.1" rel="stylesheet" type="text/css">
+		<link href="{$fullurl}/radiolibs/sticky/audio8_html5.css?v=2.1" rel="stylesheet" type="text/css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.1/jquery.min.js" type="text/javascript"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
 		<script src="{$fullurl}/radiolibs/sticky/js/jquery.mousewheel.min.js" type="text/javascript"></script>
@@ -194,7 +194,7 @@
          
         </center>
 {elseif $metadata['radio_player'] == "hero"}
-<link href="radiolibs/hero/audio6_html5.css?v=2.1" rel="stylesheet" type="text/css">
+<link href="{$fullurl}/radiolibs/hero/audio6_html5.css?v=2.1" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.1/jquery.min.js" type="text/javascript"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
