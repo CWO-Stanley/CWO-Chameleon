@@ -85,7 +85,7 @@ window.kiwiConfig = function kiwiConfig() {
 				{"name": "plugin-radio","url": "{/literal}{$fullurl}{literal}/static/plugins/plugin-radio.html"},
 				{/literal}{/if}{literal}
 				{"name": "nickserv", "url": "{/literal}{$fullurl}{literal}/static/plugins/plugin-nickserv.js"},
-				{"name": "analitics", "url": "{/literal}{$fullurl}{literal}/static/plugins/analitics.html?v=1.3"},
+				{"name": "analitics", "url": "{/literal}{$fullurl}{literal}/static/plugins/analitics.html?v=1.4"},
 				{"name": "custom-selfuser", "url": "{/literal}{$fullurl}{literal}/static/plugins/plugin-custom-selfuser.js"},
 				{/literal}{if $metadata['tags'] == "true"}{literal}
 				{ "name": "services", "url": "{/literal}{$fullurl}{literal}/static/plugins/services.html?v=1.2" },

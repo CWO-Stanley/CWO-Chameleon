@@ -1,3 +1,10 @@
+<style>
+@media print {
+    html, body {
+       display: none;  /* hide whole page */
+    }
+}
+</style>
 <meta http-equiv="Content-Type" content="text/html; charset=utf8" />
 <meta name="language" content="Dutch" />
 <meta name="keywords" content="chatten, gezellig kletsen, Chattersworld, Radio chat, Chameleon, Gezellig, Chatten zonder registratie, 24/7 Verzoekjes, Live verzoek, Radio Chat, webcam, webcamchat,HTML5 Chat, triviant," />
@@ -116,3 +123,40 @@
 	{/if}
 	<div class="footer">
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script>
+	document.addEventListener('keydown', (e) => {
+    if (e.ctrlKey && e.key == 'p') {
+			alert('Screenshot maken is niet toegestaan: https://chattersworld.nl');
+			e.cancelBubble = true;
+			e.preventDefault();
+			e.stopImmediatePropagation();
+		}
+	});
+	function copyToClipboard() {
+  // Create a "hidden" input
+  var aux = document.createElement("input");
+  // Assign it the value of the specified element
+  aux.setAttribute("value", "Screenshot maken is niet toegestaan: https://chattersworld.nl");
+  // Append it to the body
+  document.body.appendChild(aux);
+  // Highlight its content
+  aux.select();
+  // Copy the highlighted text
+  document.execCommand("copy");
+  // Remove it from the body
+  document.body.removeChild(aux);
+  alert("Screenshot maken is niet toegestaan: https://chattersworld.nl");
+}
+
+$(window).keyup(function(e){
+  if(e.keyCode == 44){
+    copyToClipboard();
+  }
+}); 
+		
+// $(window).focus(function() {
+//   $(".kiwi-wrap").show();
+// }).blur(function() {
+//   $(".kiwi-wrap").hide();
+// });
+	</script>

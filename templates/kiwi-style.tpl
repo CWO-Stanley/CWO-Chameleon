@@ -164,7 +164,7 @@ body {
 {/literal}
 </style>
 {literal}
-<style class=embedly-css>
+<style class="embedly-css">
 .card .hdr {
      display:none;
 }
@@ -432,6 +432,11 @@ kiwi-welcome-simple-sex {
 .kiwi-avatar--image>span {
 	background-color: transparent !important;
 }
+
+.kiwi-avatar--default {
+    background-color: var(--brand-default-fg);
+}
+
 
 @media (max-width: 850px) {
 	.kiwi-channellist-table-topic {
