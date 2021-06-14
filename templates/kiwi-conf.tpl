@@ -73,7 +73,7 @@ window.kiwiConfig = function kiwiConfig() {
 				{/literal}{if $metadata['style'] == "nightswatch"}{literal}
 				{"name": "theme-dark-fluid", "url": "{/literal}{$fullurl}{literal}/static/plugins/theme-dark-fluid.js"},
 				{/literal}{/if}{literal}
-				{"name": "emoji", "url": "{/literal}{$fullurl}{literal}/static/plugins/plugin-emoji-prelim.min.js"},
+				{"name": "emoji", "url": "{/literal}{$fullurl}{literal}/static/plugins/plugin-emoji.min.js?v=2"},
 				{/literal}{if $metadata['private'] == "true"}{literal}
 				{"name": "simosnapcss","url": "{/literal}{$fullurl}{literal}/static/plugins/block-queries.html"},
 				{/literal}{/if}{literal}
