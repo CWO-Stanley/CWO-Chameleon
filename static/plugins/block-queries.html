@@ -23,6 +23,7 @@
                     var msg = 'Je hebt zojuist je priveberichten ' + (this.blockPM ? 'ingeschakeld' : 'uitgeschakeld');
                     var network = this.$state.getActiveNetwork();
                     kiwi.state.setting('buffers.block_pms', !this.blockPM);
+					kiwi.emit('input.raw', (this.blockPM ? '/umode2 +D' : '/umode -D') )
                     kiwi.state.addMessage(kiwi.state.getActiveBuffer(), { nick: 'Automatisch bericht', message: msg, type: 'notice' });
                 }
             },

@@ -38,15 +38,15 @@
 <!-- Kiwi script reloaders -->
 {if $metadata['radio_player'] == "internal"}
 <!-- Kiwi script reloaders fullscreen -->
-<link href="{$fullurl}/static/css/app.dc61080c.css" rel="preload" as="style">
-  <link href="{$fullurl}/static/js/app.71aa3858.js" rel="preload" as="script">
+<link href="{$fullurl}/static/css/app.8f883b0a.css" rel="preload" as="style">
+  <link href="{$fullurl}/static/js/app.c8c2ef4b.js" rel="preload" as="script">
   <link href="{$fullurl}/static/js/vendor.f4484484.js" rel="preload" as="script">
-  <link href="{$fullurl}/static/css/app.dc61080c.css" rel="stylesheet">
+  <link href="{$fullurl}/static/css/app.8f883b0a.css" rel="stylesheet">
  {else}
-<link href="{$fullurl}/static/css/app.20d8ac7f.css" rel="preload" as="style">
-  <link href="{$fullurl}/static/js/app.71aa3858.js" rel="preload" as="script">
+<link href="{$fullurl}/static/css/app.819b4c96.css" rel="preload" as="style">
+  <link href="{$fullurl}/static/js/app.27e8d507.js" rel="preload" as="script">
   <link href="{$fullurl}/static/js/vendor.f4484484.js" rel="preload" as="script">
-  <link href="{$fullurl}/static/css/app.20d8ac7f.css" rel="stylesheet">
+  <link href="{$fullurl}/static/css/app.819b4c96.css" rel="stylesheet">
  {/if}
 <!-- END -->
 <meta charset=utf-8><meta name=viewport content="user-scalable=no,width=device-width,initial-scale=1,maximum-scale=1">
@@ -99,9 +99,14 @@
 		</div>
 	</noscript>
 	<div id="app">
-	</div>	
+	</div>
+	{if $metadata['radio_player'] == "internal"}
+	<script type="text/javascript" src="{$fullurl}/static/js/vendor.f4484484.js"></script>
+  <script type="text/javascript" src="{$fullurl}/static/js/app.c8c2ef4b.js"></script>
+  {else}
   <script type="text/javascript" src="{$fullurl}/static/js/vendor.f4484484.js"></script>
-  <script type="text/javascript" src="{$fullurl}/static/js/app.71aa3858.js"></script>
+  <script type="text/javascript" src="{$fullurl}/static/js/app.27e8d507.js"></script>
+  {/if}
 		<script type="text/javascript">
 			function openNav() {
 				document.getElementById("mySidenav").style.width = "33%";
@@ -121,7 +126,7 @@
 		<iframe src="https://stats.chattersworld.nl/statistieken/{$metadata['name']}.html" name="iReQuest_ReQuestForm" scrolling="auto" frameborder="no" align="center" height = "650px" width = "100%"></iframe>
 	</div>
 	{/if}
-	<div class="footer">
+	
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script>
 	document.addEventListener('keydown', (e) => {
@@ -160,3 +165,6 @@ $(window).keyup(function(e){
 //   $(".kiwi-wrap").hide();
 // });
 	</script>
+	{if $metadata['radio_player'] != "internal"}
+	<div class="footer">
+	{/if}
