@@ -62,6 +62,10 @@ The player will play audio without a licensekey, but other functions will not wo
 Chameleon has full support on PHP 8.
 But since XML-RPC has been moved to PECL, be sure the xmlrpc extension is installed in your PHP enviroment.
 
+# Bug Report
+If you find any kind of bugs, then file a bug report at:
+https://bugs.chattersworld.nl/
+
 # Installation
 
 Requires;
