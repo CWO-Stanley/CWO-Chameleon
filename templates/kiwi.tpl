@@ -38,15 +38,15 @@
 <!-- Kiwi script reloaders -->
 {if $metadata['radio_player'] == "internal"}
 <!-- Kiwi script reloaders fullscreen -->
-<link href="{$fullurl}/static/css/app.8f883b0a.css" rel="preload" as="style">
-  <link href="{$fullurl}/static/js/app.c8c2ef4b.js" rel="preload" as="script">
+<link href="{$fullurl}/static/css//app.f1212043.css" rel="preload" as="style">
+  <link href="{$fullurl}/static/js/app.12ec715c.js" rel="preload" as="script">
   <link href="{$fullurl}/static/js/vendor.f4484484.js" rel="preload" as="script">
-  <link href="{$fullurl}/static/css/app.8f883b0a.css" rel="stylesheet">
+  <link href="{$fullurl}/static/css//app.f1212043.css" rel="stylesheet">
  {else}
-<link href="{$fullurl}/static/css/app.819b4c96.css" rel="preload" as="style">
-  <link href="{$fullurl}/static/js/app.27e8d507.js" rel="preload" as="script">
+<link href="{$fullurl}/static/css/app.f5d0c354.css" rel="preload" as="style">
+  <link href="{$fullurl}/static/js/app.136a801e.js" rel="preload" as="script">
   <link href="{$fullurl}/static/js/vendor.f4484484.js" rel="preload" as="script">
-  <link href="{$fullurl}/static/css/app.819b4c96.css" rel="stylesheet">
+  <link href="{$fullurl}/static/css/app.f5d0c354.css" rel="stylesheet">
  {/if}
 <!-- END -->
 <meta charset=utf-8><meta name=viewport content="user-scalable=no,width=device-width,initial-scale=1,maximum-scale=1">
@@ -102,10 +102,10 @@
 	</div>
 	{if $metadata['radio_player'] == "internal"}
 	<script type="text/javascript" src="{$fullurl}/static/js/vendor.f4484484.js"></script>
-  <script type="text/javascript" src="{$fullurl}/static/js/app.c8c2ef4b.js"></script>
+  <script type="text/javascript" src="{$fullurl}/static/js/app.12ec715c.js"></script>
   {else}
   <script type="text/javascript" src="{$fullurl}/static/js/vendor.f4484484.js"></script>
-  <script type="text/javascript" src="{$fullurl}/static/js/app.27e8d507.js"></script>
+  <script type="text/javascript" src="{$fullurl}/static/js/app.136a801e.js"></script>
   {/if}
 		<script type="text/javascript">
 			function openNav() {
