@@ -38,7 +38,7 @@ body {
 {if $metadata['bgurl'] != ""}
 {if $metadata['style'] != "transparent"}
 	background-color:#001a33;
-	{else}background-color:transparent;
+	{else}/* background-color:transparent; */
 	{/if}
 {else}
 	background-image:url("https://chattersworld.nl/wp-content/uploads/2019/12/CWO-Webbanner.jpg");
@@ -683,7 +683,10 @@ kiwi-welcome-simple-sex {
 }
 {else}
 {if $metadata['bgurl'] != ""}
+	{if $metadata['style'] == "transparent"}
+	{else}
 	background-image:url("{$metadata['bgurl']}");
+	{/if}
 {else}
 	background-image:url("https://chattersworld.nl/wp-content/uploads/2019/12/CWO-Webbanner.jpg");
 {/if}
