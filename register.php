@@ -121,7 +121,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 					}
 				if ($matches && $matches["return"] != "") { $errors = $matches["return"]; }else{
 				if ($ret && $ret["result"] == "Success") {
-					$success = "Succesvol geregistreerd, je kan nu inloggen! Uw nicknaam registeren is niet meer nodig, log in met uw nickaam die u hier heeft gebruikt";
+					$success = "Succesvol geregistreerd, je kan nu inloggen! Uw nicknaam registeren is niet meer nodig, log in met uw nickaam die u hier heeft gebruikt en bevestig uw email adres met de instructies in uw mailbox, let op deze kan in uw ongewenste postvak zijn terecht gekomen.";
 					$message = "Beste $user<br />
 								Gefeliciteerd, uw account is geregistreerd op uw emailadres <b>$email</b><br />
 								Uw gekozen wachtwoord is <b>$password</b><br /><br />
@@ -130,7 +130,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 								Hier kunt u uw chatbox maken en registreren.<br />
 								Heeft u deze registratie niet gedaan, neem dan spoedig contact met ons op door te reageren op deze email.<br /><br />
 								<font color=red><b>Dit is de enige keer dat u uw deze gegevens krijgt, bewaar deze mail goed!</b></font><br /><br />
-								<b>Let op! Uw gebruikersnaam is ook uw nicknaam op de chat!</b><br /><br />
+								<b>Let op! Uw gebruikersnaam is ook uw nicknaam op de chat!</b><br />U krijgt nog een 2e mail om uw mailadres te bevestigen.<br /><br />
 								Met vriendelijke groet,<br />
 								Chattersworld";
 					$message = wordwrap($message, 70, "\r\n");
