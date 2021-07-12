@@ -23,6 +23,12 @@ body {
 body {
     font-family: "Lato", sans-serif;
 }
+.kiwi-wrap {
+{if $metadata['radio_player'] == "internal"}
+		height: 100%;
+		{else}height: calc(100% - 120px);
+		{/if}
+	}
 			   {literal}
 .footer { 
 	position: absolute; 

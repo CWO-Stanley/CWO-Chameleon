@@ -36,18 +36,10 @@
 <link rel="stylesheet" href="{$fullurl}/dist/magnific-popup.css">
 <link rel="stylesheet" href="{$fullurl}/app-assets/css/material-design-iconic-font/dist/css/material-design-iconic-font.min.css">
 <!-- Kiwi script reloaders -->
-{if $metadata['radio_player'] == "internal"}
-<!-- Kiwi script reloaders fullscreen -->
-<link href="{$fullurl}/static/css//app.f1212043.css" rel="preload" as="style">
-  <link href="{$fullurl}/static/js/app.12ec715c.js" rel="preload" as="script">
+<link href="{$fullurl}/static/css/app.77a4dd49.css" rel="preload" as="style">
+  <link href="{$fullurl}/static/js/app.13052196.js" rel="preload" as="script">
   <link href="{$fullurl}/static/js/vendor.f4484484.js" rel="preload" as="script">
-  <link href="{$fullurl}/static/css//app.f1212043.css" rel="stylesheet">
- {else}
-<link href="{$fullurl}/static/css/app.f5d0c354.css" rel="preload" as="style">
-  <link href="{$fullurl}/static/js/app.136a801e.js" rel="preload" as="script">
-  <link href="{$fullurl}/static/js/vendor.f4484484.js" rel="preload" as="script">
-  <link href="{$fullurl}/static/css/app.f5d0c354.css" rel="stylesheet">
- {/if}
+  <link href="{$fullurl}/static/css/app.77a4dd49.css" rel="stylesheet">
 <!-- END -->
 <meta charset=utf-8><meta name=viewport content="user-scalable=no,width=device-width,initial-scale=1,maximum-scale=1">
 <title>..::Chattersworld Chameleon::.. #{$metadata['name']}</title>
@@ -100,13 +92,8 @@
 	</noscript>
 	<div id="app">
 	</div>
-	{if $metadata['radio_player'] == "internal"}
 	<script type="text/javascript" src="{$fullurl}/static/js/vendor.f4484484.js"></script>
-  <script type="text/javascript" src="{$fullurl}/static/js/app.12ec715c.js"></script>
-  {else}
-  <script type="text/javascript" src="{$fullurl}/static/js/vendor.f4484484.js"></script>
-  <script type="text/javascript" src="{$fullurl}/static/js/app.136a801e.js"></script>
-  {/if}
+  <script type="text/javascript" src="{$fullurl}/static/js/app.13052196.js"></script>
 		<script type="text/javascript">
 			function openNav() {
 				document.getElementById("mySidenav").style.width = "33%";
