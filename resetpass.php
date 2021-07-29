@@ -103,16 +103,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['recaptcha_response'])
     // Take action based on the score returned:
     if ($recaptcha->score >= 0.5) {
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-	if(trim($_POST['email']) == '' || trim($_POST['login']) == '' || trim($_POST['pass']) == '' || trim($_POST['pass2']) == '') {
+	if(trim($_POST['email']) == '' || trim($_POST['login']) == '' || trim($_POST['code']) == '') {
 				$errors =  'Alle velden dienen ingevuld te worden!';
 	}else{
-		if($_POST['pass'] == $_POST['pass2']) {
 			if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
 				$user = $_POST['login'];
-				$password = $_POST['pass'];
-				$email = $_POST['email'];
-				$ret = $anope->DoCommand("NickServ", "$user", "REGISTER $password $email");
-				$searchword = 'al geregistreerd';
+				$password = $_POST['code'];
+				// $email = $_POST['email'];
+				$ret = $anope->DoCommand("NickServ", "$user", "CONFIRM $user $password");
+				$searchword = 'Ongeldige bevestigingscode';
 				$matches = array();
 					foreach($ret as $k=>$v) {
 						if( preg_match("/\b$searchword\b/i", $v) === 1 ) {
@@ -121,33 +120,32 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 					}
 				if ($matches && $matches["return"] != "") { $errors = $matches["return"]; }else{
 				if ($ret && $ret["result"] == "Success") {
-					$success = "Succesvol geregistreerd, je kan nu inloggen! Uw nicknaam registeren is niet meer nodig, log in met uw nickaam die u hier heeft gebruikt en bevestig uw email adres met de instructies in uw mailbox, let op deze kan in uw ongewenste postvak zijn terecht gekomen.";
-					$message = "Beste $user<br />
-								Gefeliciteerd, uw account is geregistreerd op uw emailadres <b>$email</b><br />
-								Uw gekozen wachtwoord is <b>$password</b><br /><br />
-								Uw account is per direct actief en geldt ook als nicknaam voor uw chat.<br />
-								U kunt nu inloggen op <a href='https://chameleon.chattersworld.nl/'>Chameleon</a><br />
-								Hier kunt u uw chatbox maken en registreren.<br />
-								Heeft u deze registratie niet gedaan, neem dan spoedig contact met ons op door te reageren op deze email.<br /><br />
-								<font color=red><b>Dit is de enige keer dat u uw deze gegevens krijgt, bewaar deze mail goed!</b></font><br /><br />
-								<b>Let op! Uw gebruikersnaam is ook uw nicknaam op de chat!</b><br />U krijgt nog een 2e mail om uw mailadres te bevestigen.<br /><br />
-								Met vriendelijke groet,<br />
-								Chattersworld";
-					$message = wordwrap($message, 70, "\r\n");
-					$subject = 'Chattersworld Chameleon registratie voor '.$user;
-					$headers = 'From: Chattersworld Chameleon <info@chattersworld.nl>' . "\r\n" .
-							   'Reply-To: support@hosting2chat.nl' . "\r\n" .
-							   'MIME-Version: 1.0' . "\r\n" .
-							   'Content-type: text/html; charset=iso-8859-1' . "\r\n" .
-							   'X-Mailer: PHP/' . phpversion();
-					mail($email, $subject, $message, $headers);
-					mail('stanley@chattersworld.nl', $subject, $message, $headers);
+					$success = "Succesvol uw nicknaam bevestigd, je kan nu inloggen! Uw nicknaam registeren is niet meer nodig, log in met uw nickaam die u hier heeft gebruikt.";
+					// $message = "Beste $user<br />
+					// 			Gefeliciteerd, uw account is geregistreerd op uw emailadres <b>$email</b><br />
+					// 			Uw gekozen wachtwoord is <b>$password</b><br /><br />
+					// 			Uw account is per direct actief en geldt ook als nicknaam voor uw chat.<br />
+					// 			U kunt nu inloggen op <a href='https://chameleon.chattersworld.nl/'>Chameleon</a><br />
+					// 			Hier kunt u uw chatbox maken en registreren.<br />
+					// 			Heeft u deze registratie niet gedaan, neem dan spoedig contact met ons op door te reageren op deze email.<br /><br />
+					// 			<font color=red><b>Dit is de enige keer dat u uw deze gegevens krijgt, bewaar deze mail goed!</b></font><br /><br />
+					// 			<b>Let op! Uw gebruikersnaam is ook uw nicknaam op de chat!</b><br />U krijgt nog een 2e mail om uw mailadres te bevestigen.<br /><br />
+					// 			Met vriendelijke groet,<br />
+					// 			Chattersworld";
+					// $message = wordwrap($message, 70, "\r\n");
+					// $subject = 'Chattersworld Chameleon registratie voor '.$user;
+					// $headers = 'From: Chattersworld Chameleon <info@chattersworld.nl>' . "\r\n" .
+					// 		   'Reply-To: support@hosting2chat.nl' . "\r\n" .
+					// 		   'MIME-Version: 1.0' . "\r\n" .
+					// 		   'Content-type: text/html; charset=iso-8859-1' . "\r\n" .
+					// 		   'X-Mailer: PHP/' . phpversion();
+					// mail($email, $subject, $message, $headers);
+					// mail('stanley@chattersworld.nl', $subject, $message, $headers);
 				}else{ 
 					$errors = "Er is iets fout gegaan!";
 				}
 				}
 }
-		}
 	}
 }
 } else {
@@ -203,7 +201,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <!-- Custom CSS -->
 		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 		<script src='https://www.google.com/recaptcha/api.js' async defer></script>
-		<title>..::Chattersworld Chameleon::.. Register</title>
+		<title>..::Chattersworld Chameleon::.. ResetPass</title>
     </head>
     <body class="vertical-layout vertical-menu-modern 1-column  bg-full-screen-image blank-page blank-page" data-open="click" data-menu="vertical-menu-modern" data-color="bg-gradient-x-purple-red" data-col="1-column">
        	
@@ -222,7 +220,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         <img src="img/cwo-chameleon2.png" height="50px" alt="branding logo">
                                     </div>
                                     <div class="font-large-1  text-center">
-                                        Registeer nu!
+                                        Bevestig uw wachtwoordwijziging!
                                     </div>
                                 </div>
                                 <div class="card-content">
@@ -236,14 +234,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             if(isset($success)) {
                                 echo '<div class="alert alert-success alert-dismissable"><strong>' . htmlentities($success) . '</strong>';
 								echo '<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button></div>';
-								echo '<meta http-equiv="refresh" content="5; url=index.php" />';
+								echo '<meta http-equiv="refresh" content="1; url=resetpass2.php?login='.$_GET['login'].'" />';
 								
                             }
 
                            
                         } ?>
                                     <div class="card-body">
-									<div class="alert alert-warning alert-dismissable"><strong>Let op!</strong> Uw wachtwoord dient minimaal 6 tekens te bevatten! <br /> Registeren geldt gelijk voor het netwerk, na registratie keer je gelijk terug naar het inlogscherm, je kunt dan direct inloggen!<br /> Bevestig uw registratie met de vervolgmail en voorkom dat uw registratie komt te vervallen.
+									<div class="alert alert-success alert-dismissable"><strong>Let op!</strong> Vul uw bevestigingscode in, u word daarna gevraagd om een nieuw wachtwoord in te vullen!
 								</div>
                                         <form class="form-horizontal" method="POST" action="">
 											<fieldset class="form-group position-relative has-icon-left">
@@ -264,23 +262,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 					}
 				}
 				</script>
-                                                <input type="text" name="login" class="form-control round" id="user-name" pattern="^[a-zA-Z0-9][a-zA-Z0-9-_]{2,}$" onkeypress="CheckSpace(event)" placeholder="Nicknaam (ook voor de chat)" required>
+                                                <input type="text" name="login" class="form-control round" id="user-name" pattern="^[a-zA-Z0-9][a-zA-Z0-9-_]{2,}$" onkeypress="CheckSpace(event)" placeholder="Nicknaam (ook voor de chat)" value="<?php if(!empty($_GET['login'])) : ?><?php echo htmlspecialchars($_GET['login']); ?><?php endif; ?>" required>
                                                 <div class="form-control-position">
                                                     <i class="ft-user"></i>
                                                 </div>
                                             </fieldset>
                                             <fieldset class="form-group position-relative has-icon-left">
-                                                <input type="password" class="form-control round" name="pass" id="user-password" placeholder="Wachtwoord" required>
+                                                <input type="text" class="form-control round" name="code" id="user-password" placeholder="CONFIRM Code" required>
                                                 <div class="form-control-position">
                                                     <i class="ft-lock"></i>
                                                 </div>
                                             </fieldset>
-											<fieldset class="form-group position-relative has-icon-left">
+											<!-- <fieldset class="form-group position-relative has-icon-left">
                                                 <input type="password" class="form-control round" name="pass2" id="user-password" placeholder="Wachtwoord" required>
                                                 <div class="form-control-position">
                                                     <i class="ft-lock"></i>
                                                 </div>
-                                            </fieldset>
+                                            </fieldset> -->
                                             <div class="form-group row">
                                                 <div class="col-md-6 col-12 text-center text-sm-left">
 
@@ -289,7 +287,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                             </div>
                                             <div class="form-group text-center">
 												<!-- <center><div class="g-recaptcha" data-sitekey="6LdZ_nIUAAAAANK_JiB2qsRbSPnldqaYTjFwNj8G"></div></center><br /> -->
-                                                <button type="submit" class="btn round btn-block btn-glow btn-bg-gradient-x-purple-blue col-12 mr-1 mb-1">Registreer</button>
+                                                <button type="submit" class="btn round btn-block btn-glow btn-bg-gradient-x-purple-blue col-12 mr-1 mb-1">Bevestig</button>
 												<input type="hidden" name="recaptcha_response" id="recaptchaResponse">
                                             </div>
 

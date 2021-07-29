@@ -99,7 +99,7 @@
                                     </div>
                                     
 
-                                    <p class="card-subtitle text-muted text-right font-small-3 mx-2 my-1"><span>Nog geen account ? <a href="register.php" class="card-link">Registreer hier</a></span></p>
+                                    <p class="card-subtitle text-muted text-right font-small-3 mx-2 my-1"><span>Nog geen account ? <a href="register.php" class="card-link">Registreer hier</a></span><br /><span>Wachtwoord vergeten ? <a href="forgotpw.php" class="card-link">Herstel deze hier</a></span></p>
                                 </div>
                             </div>
                         </div>
