@@ -20,6 +20,7 @@ Yes, I also know that there are some passwords hidden in the code ;) They don't 
 - IRCcloud avatars
 - imgur support for image uploads
 - Anope Cpanel intergration
+- Forgot/Confirm Password pages (requires XML-RPC)
 - Register with your chat nickname
 - Channel register
 - recaptcha
@@ -71,12 +72,13 @@ https://bugs.chattersworld.nl/
 Requires;
 - Anope Services running on MySQL and at least 1 encryption module has to be enabled
 - Anope XMLRPC module and XMLRPC-main has to be enabled and working!
+- XMLRPC installed in your php!
 - lightIRC webcam module license
 - Self hosted Jitsi-Meet for KiwiIRC conference or use jitsi-meet's public server
 - Some license's for web radioplayers
-- Red5 RTPM server for webcam via LightIRC (License needed)
 - Gravatar plugin/server wich is connected to Anope Services
 - ReCaptcha v3 Secret and Public Key for your domain
+- Webircgateway from the kiwi github repo's
 
 Installation is quite straight forward;
 - Setup a database account
@@ -89,3 +91,16 @@ Installation is quite straight forward;
 - edit classes/Config.php with your IRC credentials, webircgateway and jitsi-meet server
 - edit register.php with the anope xmlrpc URL for registration to work properly (same with chanregister.php)
 - Look for recaptcha in register.php and fill in the needs
+
+# Support for subdomain control
+
+This version of chameleon has a support for subdomains for every channel created in this panel.
+For this a reversed proxy of nginx has been installed.
+
+No support will be given for this setup.
+
+# Chameleon defaults
+
+Chameleon will be installed as a default with a lot of references to Chatterworld IRC network.
+Some files needs to be adjusted to your own suites to your network, SEO preconfigured will point to Chattersworld.
+Be carefull while adjusting the files.

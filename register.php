@@ -125,10 +125,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 					$message = "Beste $user<br />
 								Gefeliciteerd, uw account is geregistreerd op uw emailadres <b>$email</b><br />
 								Uw gekozen wachtwoord is <b>$password</b><br /><br />
-								Uw account is per direct actief en geldt ook als nicknaam voor uw chat.<br />
-								U kunt nu inloggen op <a href='https://chameleon.chattersworld.nl/'>Chameleon</a><br />
+								Uw account is nog niet actief, U krijgt nog een 2e email met instructies om uw email te bevestigen.<br />
+								Daarna kunt u inloggen op <a href='https://chameleon.chattersworld.nl/'>Chameleon</a><br />
 								Hier kunt u uw chatbox maken en registreren.<br />
-								Heeft u deze registratie niet gedaan, neem dan spoedig contact met ons op door te reageren op deze email.<br /><br />
+								Heeft u deze registratie niet gedaan, Negeer dan deze en de bevestigings email, binnen 24 uur word de registratie zonder bevestiging automatisch verwijderd.<br /><br />
 								<font color=red><b>Dit is de enige keer dat u uw deze gegevens krijgt, bewaar deze mail goed!</b></font><br /><br />
 								<b>Let op! Uw gebruikersnaam is ook uw nicknaam op de chat!</b><br />U krijgt nog een 2e mail om uw mailadres te bevestigen.<br /><br />
 								Met vriendelijke groet,<br />

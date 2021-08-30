@@ -50,6 +50,7 @@
 													<div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
 														<a href="{$fullurl}/chat/{$ids[chat]}" target='_blank' title="Preview Webchat" class="btn btn-outline-info"><span class="ft-share"></span></a>
 														<a href="{$fullurl}/html5.php?id={$ids[chat]}" target="_blank" title="Preview HTML5" class="btn btn-outline-info"><span class="ft-chrome"></span></a>
+														<a href="{if !$names[chat]|strstr:'.'}https://{$names[chat]}.chameleon.chattersworld.nl/{else}https://chameleon.chattersworld.nl/chat/{$ids[chat]}{/if}" target="_blank" title="Preview short link" class="btn btn-outline-info"><span class="ft-external-link"></span></a>
 													</div></center>
 														
 													</td>
@@ -57,6 +58,7 @@
 													<div class="btn-group btn-group-sm" role="group" aria-label="Basic example">   
 														<a href="{$fullurl}/edit/{$ids[chat]}" title="Bewerk Webchat" class="btn btn-outline-info"><span class="ft-settings"></span></a>
 														<a href="{$fullurl}/transfer/{$ids[chat]}" title="Transfer Webchat" class="btn btn-outline-info"><span class="ft-repeat"></span></a>
+														
 														</div>
 														<div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
 														<a href="#" id="custom-html" title="HTML codes Webchat" class="btn btn-outline-info" data-toggle="modal" data-target="#apiToolkit{$ids[chat]}"><span class="ft-link"></span></a>
