@@ -10,7 +10,7 @@ Yes, I also know that there are some passwords hidden in the code ;) They don't 
 
 # Latest Update
 
-11-05-2021
+30-08-2021
 
 # Features
 - LightIRC chat generator
