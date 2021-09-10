@@ -404,6 +404,9 @@
 								No HTML5 audio playback capabilities for this browser. Use <a href="https://www.google.com/intl/en/chrome/browser/">Chrome Browser!</a>
 							</audio>
 		</div>
+		{elseif $metadata['radio_player'] == "jervoo"}
+		<center><iframe src="https://chattersworld.nl/testplayer/Jervoo2/index.php?type={if $metadata['radio_type'] == "icecast2"}icecast{else}{$metadata['radio_type']}{/if}&host={$metadata['radio_link']|parse_url:$smarty.const.PHP_URL_HOST}&port={$metadata['radio_link']|parse_url:$smarty.const.PHP_URL_PORT}&{if $metadata['mountpoint']|strstr:','}mounts={$metadata['mountpoint']|replace:'/':''}{else}stream_mount={$metadata['mountpoint']|replace:'/':''}{/if}&proto={$metadata['radio_link']|parse_url:$smarty.const.PHP_URL_SCHEME}&frontcolor={$metadata['playerkleur']|replace:'#':'%23'}&backcolor={$metadata['tekstkleur']|replace:'#':'%23'}" width="70%" height="100" border="0" style="border:0;position: absolute; bottom: 0; left: 15%; transform: translate(0,0);"></iframe></center>
+		
     {else}
         <center>
             <!-- BEGINS: AUTO-GENERATED MUSES RADIO PLAYER CODE -->

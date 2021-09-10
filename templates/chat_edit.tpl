@@ -559,6 +559,7 @@
 								<option id="luna" value="luna" {if $radio_style=="luna"}selected="selected"{/if}>Luna Alora (Luna Radio (Native Radio v5))</option>
 								<option id="internal" value="internal" {if $radio_style=="internal"}selected="selected"{/if}>Bailey Brooke (HTML5 internal (Luna flash fallback))</option>
 								<option id="clever" value="clever" {if $radio_style=="clever"}selected="selected"{/if}>Megan Fox (Clever)</option>
+								<option id="jervoo" value="jervoo" {if $radio_style=="jervoo"}selected="selected"{/if}>JerVoo</option>
                             </select>
                         </div>
                     </div>
