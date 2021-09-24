@@ -13,7 +13,7 @@
 					<audio id="lbg_audio8_html5_shoutcast_2" preload="metadata">
 						<div class="xaudioplaylist">
 							<ul>
-								<li class="xradiostream">{$metadata['radio_link']}{$metadata['mountpoint']}</li>
+								<li class="xradiostream">{if $metadata['radio_link']|parse_url:$smarty.const.PHP_URL_SCHEME == 'http'}https://api.codetabs.com/v1/proxy?quest={$metadata['radio_link']}{$metadata['mountpoint']}{else}{$metadata['radio_link']}{$metadata['mountpoint']}{/if}</li>
 							</ul>
 							
 						</div>
@@ -114,7 +114,7 @@
         <script type="text/javascript">
                     $("#flashradio").flashradio({
                         themecolor: "{$metadata['playerkleur']}", 
-                        channelurls: "{$metadata['radio_link']}{$metadata['mountpoint']}", 
+                        channelurls: "{if $metadata['radio_link']|parse_url:$smarty.const.PHP_URL_SCHEME == 'http'}https://api.codetabs.com/v1/proxy?quest={$metadata['radio_link']}{$metadata['mountpoint']}{else}{$metadata['radio_link']}{$metadata['mountpoint']}{/if}", 
                         radioname: "{$metadata['radio_name']}", 
                         scroll: "AUTO", 
                         autoplay: "TRUE", 
@@ -186,9 +186,9 @@
 				metadatainterval: "30000",
 				volume: "50",
 				debug: "false",
-				usestreamcorsproxy: "false", 
+				usestreamcorsproxy: "{if $metadata['radio_link']|parse_url:$smarty.const.PHP_URL_SCHEME == 'http'}true{else}false{/if}", 
 				autoplay: "true",
-				corsproxy: "{if $metadata['radio_type'] == "shoutcast"}{else}https://www.my-webalbum.com/simple-cors/?q={/if}",
+				corsproxy: "{if $metadata['radio_type'] == "shoutcast"}{else}https://api.codetabs.com/v1/proxy?quest={/if}",
 			});
 		</script>
          
@@ -206,7 +206,7 @@
 			jQuery(function() {
 				setTimeout(function(){
 						jQuery("#lbg_audio6_html5_shoutcast_1").audio6_html5({
-							radio_stream:"{$metadata['radio_link']}{$metadata['mountpoint']}",
+							radio_stream:"{if $metadata['radio_link']|parse_url:$smarty.const.PHP_URL_SCHEME == 'http'}https://api.codetabs.com/v1/proxy?quest={$metadata['radio_link']}{$metadata['mountpoint']}{else}{$metadata['radio_link']}{$metadata['mountpoint']}{/if}",
 							radio_name:"{$metadata['radio_name']}",
 							playerWidth:355,
 							imageHeight:355,
@@ -272,7 +272,7 @@
             <script type="text/javascript" src="//hosted.muses.org/mrp.js"></script>
             <script type="text/javascript">
                 MRP.insert({
-                'url':'{$metadata['radio_link']}{if $metadata['radio_type'] == "shoutcast"}/;{/if}',
+                'url':'{if $metadata['radio_link']|parse_url:$smarty.const.PHP_URL_SCHEME == 'http'}https://api.codetabs.com/v1/proxy?quest={$metadata['radio_link']}{$metadata['mountpoint']}{else}{$metadata['radio_link']}{$metadata['mountpoint']}{/if}{if $metadata['radio_type'] == "shoutcast"}/;{/if}',
                 'codec':'mp3',
                 'volume':65,
                 'autoplay':false,
@@ -363,7 +363,7 @@
 	jQuery(function() {
 		setTimeout(function(){
 				jQuery("#lbg_audio11_html5_shoutcast_1").audio11_html5({
-						radio_stream:"{$metadata['radio_link']}{$metadata['mountpoint']}",
+						radio_stream:"{if $metadata['radio_link']|parse_url:$smarty.const.PHP_URL_SCHEME == 'http'}https://api.codetabs.com/v1/proxy?quest={$metadata['radio_link']}{$metadata['mountpoint']}{else}{$metadata['radio_link']}{$metadata['mountpoint']}{/if}",
 						playerWidth:800,
 						width100Proc:true,
 						sticky:true,
@@ -405,7 +405,7 @@
 							</audio>
 		</div>
 		{elseif $metadata['radio_player'] == "jervoo"}
-		<center><iframe src="https://chattersworld.nl/testplayer/Jervoo2/index.php?type={if $metadata['radio_type'] == "icecast2"}icecast{else}{$metadata['radio_type']}{/if}&host={$metadata['radio_link']|parse_url:$smarty.const.PHP_URL_HOST}&port={$metadata['radio_link']|parse_url:$smarty.const.PHP_URL_PORT}&{if $metadata['mountpoint']|strstr:','}mounts={$metadata['mountpoint']|replace:'/':''}{else}stream_mount={$metadata['mountpoint']|replace:'/':''}{/if}&proto={$metadata['radio_link']|parse_url:$smarty.const.PHP_URL_SCHEME}&frontcolor={$metadata['playerkleur']|replace:'#':'%23'}&backcolor={$metadata['tekstkleur']|replace:'#':'%23'}" width="70%" height="100" border="0" style="border:0;position: absolute; bottom: 0; left: 15%; transform: translate(0,0);"></iframe></center>
+		<center><iframe src="https://chattersworld.nl/testplayer/Jervoo2/index.php?type={if $metadata['radio_type'] == "icecast2"}icecast{else}{$metadata['radio_type']}{/if}&host={$metadata['radio_link']|parse_url:$smarty.const.PHP_URL_HOST}&port={$metadata['radio_link']|parse_url:$smarty.const.PHP_URL_PORT}&{if $metadata['mountpoint']|strstr:','}mounts={$metadata['mountpoint']|replace:'/':''}{else}stream_mount={$metadata['mountpoint']|replace:'/':''}{/if}&proto={$metadata['radio_link']|parse_url:$smarty.const.PHP_URL_SCHEME}&frontcolor={$metadata['playerkleur']|replace:'#':'%23'}&backcolor={$metadata['tekstkleur']|replace:'#':'%23'}" width="50%" height="100" border="0" style="border:0;position: absolute; bottom: 0; left: 25%; transform: translate(0,0);"></iframe></center>
 		
     {else}
         <center>

@@ -241,7 +241,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                            
                         } ?>
                                     <div class="card-body">
-									<div class="alert alert-success alert-dismissable"><strong>Let op!</strong> Registeren geldt gelijk voor het netwerk, na registratie keer je gelijk terug naar het inlogscherm, je kunt dan direct inloggen!
+									<div class="alert alert-success alert-dismissable"><strong>Ziezo!</strong> Controleer uw email en bevestig uw email adres met opgegeven code, na bevestiging keer je gelijk terug naar het inlogscherm, je kunt dan direct inloggen!
 								</div>
                                         <form class="form-horizontal" method="POST" action="">
 											<fieldset class="form-group position-relative has-icon-left">

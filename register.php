@@ -236,7 +236,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             if(isset($success)) {
                                 echo '<div class="alert alert-success alert-dismissable"><strong>' . htmlentities($success) . '</strong>';
 								echo '<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button></div>';
-								echo '<meta http-equiv="refresh" content="5; url=index.php" />';
+								echo '<meta http-equiv="refresh" content="5; url=confirm.php?login=' . $user . '" />';
 								
                             }
 
