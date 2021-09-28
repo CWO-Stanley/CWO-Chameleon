@@ -69,7 +69,7 @@ if ($mobile_browser > 0) {
 				$smarty->display('chat_radio.tpl');
 			}
         } elseif ($metadata['ads_enabled'] == "true") {
-            $smarty->display('chat_ads.tpl');
+            //$smarty->display('chat_end.tpl');
         }
 
         $smarty->display('chat_end.tpl');
@@ -113,7 +113,7 @@ else {
 				$smarty->display('chat_radio.tpl');
 			}
         } elseif ($metadata['ads_enabled'] == "true") {
-            $smarty->display('chat_ads.tpl');
+            //$smarty->display('chat_end.tpl');
         }
 		if (($metadata['html_redirect'] == "true")) {
 			echo '</div>';

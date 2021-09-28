@@ -52,7 +52,7 @@ if (isset($_GET['id'])) {
 				$smarty->display('chat_radio.tpl');
 			}
         } elseif ($metadata['ads_enabled'] == "true") {
-            $smarty->display('chat_ads.tpl');
+            // $smarty->display('chat_end.tpl');
         }
 		echo '</div>';
         $smarty->display('chat_end.tpl');

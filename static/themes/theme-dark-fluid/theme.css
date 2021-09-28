@@ -900,12 +900,12 @@ button.u-button.u-button-primary.u-submit.kiwi-welcome-znc-start {
     color: var(--brand-default-fg);
 }
 
-.kiwi-appsettings-title {
+.kiwi-appsettings-close {
     background-color: var(--brand-primary);
     color: var(--brand-default-fg);
 }
 
-.kiwi-appsettings-title:hover {
+.kiwi-appsettings-close:hover {
     background: var(--brand-error);
 }
 
