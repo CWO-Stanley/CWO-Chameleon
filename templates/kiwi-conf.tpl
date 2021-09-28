@@ -20,6 +20,22 @@ window.kiwiConfig = function kiwiConfig() {
 				{ "name": "CWO", "url": "{/literal}{$fullurl}{literal}/static/themes/theme-dark-fluid" }
 				{/literal}{elseif $metadata['style'] == "transparent"}{literal}
 				{ "name": "CWO", "url": "{/literal}{$fullurl}{literal}/static/themes/transparent2" }
+				{/literal}{elseif $metadata['style'] == "coffee"}{literal}
+				{ "name": "CWO", "url": "{/literal}{$fullurl}{literal}/static/themes/coffee" }
+				{/literal}{elseif $metadata['style'] == "dark"}{literal}
+				{ "name": "CWO", "url": "{/literal}{$fullurl}{literal}/static/themes/dark" }
+				{/literal}{elseif $metadata['style'] == "default"}{literal}
+				{ "name": "CWO", "url": "{/literal}{$fullurl}{literal}/static/themes/default" }
+				{/literal}{elseif $metadata['style'] == "elite"}{literal}
+				{ "name": "CWO", "url": "{/literal}{$fullurl}{literal}/static/themes/elite2" }
+				{/literal}{elseif $metadata['style'] == "grayfox"}{literal}
+				{ "name": "CWO", "url": "{/literal}{$fullurl}{literal}/static/themes/grayfox" }
+				{/literal}{elseif $metadata['style'] == "osprey"}{literal}
+				{ "name": "CWO", "url": "{/literal}{$fullurl}{literal}/static/themes/osprey" }
+				{/literal}{elseif $metadata['style'] == "radioactive"}{literal}
+				{ "name": "CWO", "url": "{/literal}{$fullurl}{literal}/static/themes/radioactive" }
+				{/literal}{elseif $metadata['style'] == "sky"}{literal}
+				{ "name": "CWO", "url": "{/literal}{$fullurl}{literal}/static/themes/sky" }
 				{/literal}{else}{literal}
 				{ "name": "CWO", "url": "{/literal}{$fullurl}{literal}/static/themes/cwo-chameleon-kiwiirc4" }
 				{/literal}{/if}{literal}
@@ -30,7 +46,7 @@ window.kiwiConfig = function kiwiConfig() {
 				"infoBackground": "{/literal}{if $metadata['bgurl'] != ''}{$metadata['bgurl']}{else}https://chattersworld.nl/wp-content/uploads/2019/12/CWO-Webbanner.jpg{/if}{literal}", 
 				"infoContent": "<a class=\"netlogo\" href=\"{/literal}{$fullurl}{literal}\"><span></span><img src=\"{/literal}{$logo}{literal}\"></a><div><a href=\"{/literal}{$fullurl}{literal}/register.php\" target=\"_blank\" class=\"u-cpanel\"><i class=\"fa fa-lock\"></i> Registreer</a><a href=\"{/literal}{$fullurl}{literal}/chat.php?id=1\" target=\"_blank\" class=\"u-cpanel\"><i class=\"fa fa-life-ring\"></i> Helpdesk</a><a href=\"https://wiki.chattersworld.nl/\" target=\"_blank\" class=\"u-cpanel\"><i class=\"fa fa-life-ring\"></i> CWO Wiki</a></div>",
 				"greetingText": "<div style='margin:0px 0px 0px 0px'><center><a class=\"netlogo\" href=\"{/literal}{$fullurl}{literal}\"><span></span><img src=\"{/literal}{$logo}{literal}\" height='60px'></a></center></div>",
-				"state_key": "CWO-Chameleon-160",
+				"state_key": "CWO-Chameleon-170",
 				"buttonText": "<center><i class='fa fa-sign-in' style='margin-right:5px !important;'></i> Chatten</center>",
 				"gecos": "..::{/literal}{$sitename}{literal} HTML5 Webchat::..",
 				"port": 6697, 

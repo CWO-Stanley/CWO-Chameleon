@@ -231,11 +231,11 @@ body {
 	background-image: linear-gradient(rgba(255,255,255, {/literal}{$metadata['transparantie']}{literal}), rgba(255,255,255, {/literal}{$metadata['transparantie']}{literal})), url({/literal}{$metadata['bgurl']}{literal});background-size: 100% 100%;{/literal}{/if}
 	{else}
 		{if $metadata['bgurl'] == ""}{literal}
-    background-image: linear-gradient(rgba(255,255,255, {/literal}{$metadata['transparantie']}{literal}), rgba(255,255,255, {/literal}{$metadata['transparantie']}{literal})), url({/literal}https://chattersworld.nl/wp-content/uploads/2019/12/CWO-Webbanner.jpg{literal});background-size: 100% 100%;{/literal}{else}{literal}
-	background-image: linear-gradient(rgba(255,255,255, {/literal}{$metadata['transparantie']}{literal}), rgba(255,255,255, {/literal}{$metadata['transparantie']}{literal})), url({/literal}{$metadata['bgurl']}{literal});background-size: 100% 100%;{/literal}{/if}{/if}{literal}
+    background-image: linear-gradient(rgba(0,0,0, {/literal}{$metadata['transparantie']}{literal}), rgba(0,0,0, {/literal}{$metadata['transparantie']}{literal})), url({/literal}https://chattersworld.nl/wp-content/uploads/2019/12/CWO-Webbanner.jpg{literal});background-size: 100% 100%;{/literal}{else}{literal}
+	background-image: linear-gradient(rgba(0,0,0, {/literal}{$metadata['transparantie']}{literal}), rgba(0,0,0, {/literal}{$metadata['transparantie']}{literal})), url({/literal}{$metadata['bgurl']}{literal});background-size: 100% 100%;{/literal}{/if}{/if}{literal}
 }
 {/literal}{else}{if $metadata['style'] != "transparent"}{literal}
-    background-image: linear-gradient(rgba(255,255,255, {/literal}{$metadata['transparantie']}{literal}), rgba(255,255,255, {/literal}{$metadata['transparantie']}{literal})), url({/literal}{$metadata['bgurl']}{literal});background-size: 100% 100%; 
+    background-image: linear-gradient(rgba(0,0,0, {/literal}{$metadata['transparantie']}{literal}), rgba(0,0,0, {/literal}{$metadata['transparantie']}{literal})), url({/literal}{$metadata['bgurl']}{literal});background-size: 100% 100%; 
 	{/literal}{/if}{literal}
 } 
 {/literal}{/if}{literal}
@@ -2182,4 +2182,11 @@ kiwi-welcome-simple-sex {
 </style>
 {/literal}
 {/if}
-
+{if $metadata['style'] == "coffee"}{/if}
+{if $metadata['style'] == "dark"}{/if}
+{if $metadata['style'] == "default"}{/if}
+{if $metadata['style'] == "elite"}{/if}
+{if $metadata['style'] == "grayfox"}{/if}
+{if $metadata['style'] == "osprey"}{/if}
+{if $metadata['style'] == "radioactive"}{/if}
+{if $metadata['style'] == "sky"}{/if}

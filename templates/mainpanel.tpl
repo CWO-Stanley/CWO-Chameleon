@@ -228,7 +228,7 @@ input[type='range']:focus {
 		</div>
 	</div>
 	<footer class="footer footer-static footer-dark navbar-border navbar-shadow">
-        <div class="clearfix blue-grey lighten-2 text-sm-center mb-0 px-2"><span class="float-md-left d-block d-md-inline-block">© {$sitename} All rights reserved. v10.0 {if isset($god)}Geregistreerd aan: {$registeredname}, Verval datum: {$nextduedate}, Product: {$productname}{/if}</span>
+        <div class="clearfix blue-grey lighten-2 text-sm-center mb-0 px-2"><span class="float-md-left d-block d-md-inline-block">© {$sitename} All rights reserved. v10.5 {if isset($god)}Geregistreerd aan: {$registeredname}, Verval datum: {$nextduedate}, Product: {$productname}{/if}</span>
             <ul class="list-inline float-md-right d-block d-md-inline-blockd-none d-lg-block mb-0">
                 <li class="list-inline-item"><a class="my-1" href="https://chattersworld.nl" target="_blank"> Homepage</a></li>
                 <li class="list-inline-item"><a class="my-1" href="https://wiki.chattersworld.nl" target="_blank"> Wikipedia</a></li>
@@ -500,6 +500,46 @@ $(function() {
       $("#html5color").fadeOut(1000);
 	  $("#omswitch").fadeOut(1000);
     } 
+	else if ($("#coffee").is(":selected")) {
+      // $("#pilot_graph_form").show();
+      $("#html5color").fadeOut(1000);
+	  $("#omswitch").fadeOut(1000);
+    }
+	else if ($("#dark").is(":selected")) {
+      // $("#pilot_graph_form").show();
+      $("#html5color").fadeOut(1000);
+	  $("#omswitch").fadeOut(1000);
+    }
+	else if ($("#default").is(":selected")) {
+      // $("#pilot_graph_form").show();
+      $("#html5color").fadeOut(1000);
+	  $("#omswitch").fadeOut(1000);
+    }
+	else if ($("#elite").is(":selected")) {
+      // $("#pilot_graph_form").show();
+      $("#html5color").fadeOut(1000);
+	  $("#omswitch").fadeOut(1000);
+    }
+	else if ($("#grayfox").is(":selected")) {
+      // $("#pilot_graph_form").show();
+      $("#html5color").fadeOut(1000);
+	  $("#omswitch").fadeOut(1000);
+    }
+	else if ($("#osprey").is(":selected")) {
+      // $("#pilot_graph_form").show();
+      $("#html5color").fadeOut(1000);
+	  $("#omswitch").fadeOut(1000);
+    }
+	else if ($("#radioactive").is(":selected")) {
+      // $("#pilot_graph_form").show();
+      $("#html5color").fadeOut(1000);
+	  $("#omswitch").fadeOut(1000);
+    }
+	else if ($("#sky").is(":selected")) {
+      // $("#pilot_graph_form").show();
+      $("#html5color").fadeOut(1000);
+	  $("#omswitch").fadeOut(1000);
+    }
 	else if ($("#nightswatch").is(":selected")) {
       // $("#pilot_graph_form").show();
       $("#html5color").fadeOut(1000);
@@ -752,6 +792,46 @@ $(function() {
       $("#html5color").fadeOut(1000);
 	  $("#omswitch").fadeOut(1000);
     } 
+	else if ($("#coffee").is(":selected")) {
+      // $("#pilot_graph_form").show();
+      $("#html5color").fadeOut(1000);
+	  $("#omswitch").fadeOut(1000);
+    }
+	else if ($("#dark").is(":selected")) {
+      // $("#pilot_graph_form").show();
+      $("#html5color").fadeOut(1000);
+	  $("#omswitch").fadeOut(1000);
+    }
+	else if ($("#default").is(":selected")) {
+      // $("#pilot_graph_form").show();
+      $("#html5color").fadeOut(1000);
+	  $("#omswitch").fadeOut(1000);
+    }
+	else if ($("#elite").is(":selected")) {
+      // $("#pilot_graph_form").show();
+      $("#html5color").fadeOut(1000);
+	  $("#omswitch").fadeOut(1000);
+    }
+	else if ($("#grayfox").is(":selected")) {
+      // $("#pilot_graph_form").show();
+      $("#html5color").fadeOut(1000);
+	  $("#omswitch").fadeOut(1000);
+    }
+	else if ($("#osprey").is(":selected")) {
+      // $("#pilot_graph_form").show();
+      $("#html5color").fadeOut(1000);
+	  $("#omswitch").fadeOut(1000);
+    }
+	else if ($("#radioactive").is(":selected")) {
+      // $("#pilot_graph_form").show();
+      $("#html5color").fadeOut(1000);
+	  $("#omswitch").fadeOut(1000);
+    }
+	else if ($("#sky").is(":selected")) {
+      // $("#pilot_graph_form").show();
+      $("#html5color").fadeOut(1000);
+	  $("#omswitch").fadeOut(1000);
+    }
 	else if ($("#nightswatch").is(":selected")) {
       // $("#pilot_graph_form").show();
       $("#html5color").fadeOut(1000);

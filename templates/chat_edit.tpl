@@ -145,6 +145,14 @@
                                 <option id="pink" value="pink" {if $chat_style=="pink"}selected="selected"{/if}>Roze</option>
                                 <option id="darkred" value="darkred" {if $chat_style=="darkred"}selected="selected"{/if}>Donkerrood</option>
 								<option id="nightswatch" value="nightswatch" {if $chat_style=="nightswatch"}selected="selected"{/if}>NightSwatch (Alleen HTML5)</option>
+								<option id="coffee" value="coffee" {if $chat_style=="coffee"}selected="selected"{/if}>Coffee (Alleen HTML5)</option>
+								<option id="dark" value="dark" {if $chat_style=="dark"}selected="selected"{/if}>Dark (Alleen HTML5)</option>
+								<option id="default" value="default" {if $chat_style=="default"}selected="selected"{/if}>Standaard (Alleen HTML5)</option>
+								<option id="elite" value="elite" {if $chat_style=="elite"}selected="selected"{/if}>Elite (Alleen HTML5)</option>
+								<option id="grayfox" value="grayfox" {if $chat_style=="grayfox"}selected="selected"{/if}>GrayFox (Alleen HTML5)</option>
+								<option id="osprey" value="osprey" {if $chat_style=="osprey"}selected="selected"{/if}>Osprey (Alleen HTML5)</option>
+								<option id="radioactive" value="radioactive" {if $chat_style=="radioactive"}selected="selected"{/if}>RadioActive (Alleen HTML5)</option>
+								<option id="sky" value="sky" {if $chat_style=="sky"}selected="selected"{/if}>Sky (Alleen HTML5)</option>
 								<option value="html5color" {if $chat_style=="html5color"}selected="selected"{/if}>Eigen kleur (Alleen HTML5)</option>
                             </select>
                         </div>
@@ -688,42 +696,6 @@
 			</div>
                     </div>
         </form>
-		<div class="card-header">
-                                    <h4 class="card-title white">Voorbeeld</h4>
-									<p class="card-text"><center>De getoonde voorbeeld is een fractie voor hoe de chat daadwerkelijk is! <br />
-Niet mogelijk om in te loggen!</center></p>
-                                    <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
-                                    <div class="heading-elements">
-                                        
-                                    </div>
-                                </div>
-		{literal}
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-		<script>
-$(document).ready(function() {
-	$('input[name=chat_name],input[name=chat_bgurl],select[name=cam],select[name=chat_style],select[name=mic],select[name=query],input[name=kiwi_asl],input[name=html5color]').on('change keyup', function() {
-		var channel = $('input[name=chat_name]').val();
-		var bg = $('input[name=chat_bgurl]').val();
-		var html5color = $('input[name=html5color]').val();
-		var style = $('select[name=chat_style]').val();
-		var asl = $('input[name=kiwi_asl]').is(':checked');
 		
-		
-		var url = 'https://www.chattersworld.nl/preview/chat.php?chan=' + channel + '&style=' + style + '&bg=' + bg + '&html5color=' + html5color.replace("#", "%23") + '&asl=' + asl;
-		// var frame = '<iframe id="iframe" src="https://www.chattersworld.nl/preview/chat.php?chan=' + channel + '&mic=' + mic + '&cam=' + cam + '&icons=' + icons + '&style=transparent&query=' + query + '&bg=' + bg +'&asl=' + asl + '" style="width:600px; height:500px;"></iframe>';
-		var mob = 'https://mobilechat.chattersworld.nl/?channel=#' + channel;
-      
-		// $('#url').val(frame);
-		$('#iframe').attr('src', url);
-		$('#href').html('<a href="' + url + '" target="_blank">' + url +'</a>');
-        $('#mobhref').html('<a href="' + mob + '" target="_blank">' + mob +'</a>');
-
-		
-	});
-});
-</script>
-{/literal}
-<iframe id="iframe" src="https://www.chattersworld.nl/preview/chat.php?chan=default" style="width:100%; height:700px; border:0;"></iframe>
-<p class="card-text"><small><center>Het voorbeeld betreft een nietwerkbaar exemplaar;<br />Het voorbeeld word ook bij elke aanpassing ververst;<br />Gebruik de daadwerkelijke URL om in te loggen;<br />Aan dit voorbeeld kunnen geen rechten worden ontleend.</center></small></p>
     </div>
 </div>

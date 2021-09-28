@@ -779,6 +779,46 @@ class Chatbox {
                 $this->_style ='transparent';
                 $this->setBgcolor("rgba(0,0,0,0,0.8)");
                 break;
+			case 'coffee':
+                $this->LightIRC->setStyleURL('css/transparent.css');
+                $this->_style ='coffee';
+                $this->setBgcolor("rgba(0,0,0,0,0.8)");
+                break;
+			case 'dark':
+                $this->LightIRC->setStyleURL('css/transparent.css');
+                $this->_style ='dark';
+                $this->setBgcolor("rgba(0,0,0,0,0.8)");
+                break;
+			case 'default':
+                $this->LightIRC->setStyleURL('css/transparent.css');
+                $this->_style ='default';
+                $this->setBgcolor("rgba(0,0,0,0,0.8)");
+                break;
+			case 'elite':
+                $this->LightIRC->setStyleURL('css/transparent.css');
+                $this->_style ='elite';
+                $this->setBgcolor("rgba(0,0,0,0,0.8)");
+                break;
+			case 'grayfox':
+                $this->LightIRC->setStyleURL('css/transparent.css');
+                $this->_style ='grayfox';
+                $this->setBgcolor("rgba(0,0,0,0,0.8)");
+                break;
+			case 'osprey':
+                $this->LightIRC->setStyleURL('css/transparent.css');
+                $this->_style ='osprey';
+                $this->setBgcolor("rgba(0,0,0,0,0.8)");
+                break;
+			case 'radioactive':
+                $this->LightIRC->setStyleURL('css/transparent.css');
+                $this->_style ='radioactive';
+                $this->setBgcolor("rgba(0,0,0,0,0.8)");
+                break;
+			case 'sky':
+                $this->LightIRC->setStyleURL('css/transparent.css');
+                $this->_style ='sky';
+                $this->setBgcolor("rgba(0,0,0,0,0.8)");
+                break;
         }
     }
     public function getStyle() {
