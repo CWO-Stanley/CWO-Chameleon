@@ -236,7 +236,9 @@ body {
 }
 {/literal}{else}{if $metadata['style'] != "transparent"}{literal}
     background-image: linear-gradient(rgba({/literal}{if $metadata['dark'] == 'true'}0,0,0{else}255,255,255{/if}{literal}, {/literal}{$metadata['transparantie']}{literal}), rgba({/literal}{if $metadata['dark'] == 'true'}0,0,0{else}255,255,255{/if}{literal}, {/literal}{$metadata['transparantie']}{literal})), url({/literal}{$metadata['bgurl']}{literal});background-size: 100% 100%; 
-	{/literal}{/if}{literal}
+	{/literal}
+		{else}{literal}background-color:rgba({/literal}{if $metadata['dark'] == 'true'}0,0,0{else}255,255,255{/if}{literal}, {/literal}{$metadata['transparantie']}{literal});{/literal}
+	{/if}{literal}
 } 
 {/literal}{/if}{literal}
 	{/literal}{/if}{literal}

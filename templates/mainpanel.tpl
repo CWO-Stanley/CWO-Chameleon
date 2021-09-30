@@ -737,8 +737,8 @@ $(function() {
   $("#graph_select").change(function() {
     if ($("#transparent").is(":selected")) {
       // $("#pilot_graph_form").show();
-      $("#transparantie").fadeOut(1000);
-	  $("#omswitch").fadeIn(1000);
+      //$("#transparantie").fadeOut(1000);
+	  //$("#omswitch").fadeIn(1000);
     } else {
       // $("#pilot_graph_form").hide();
       $("#transparantie").fadeIn(1000);
