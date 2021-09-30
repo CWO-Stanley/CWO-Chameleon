@@ -217,6 +217,14 @@ if ($id) {
                     else {
                         $smarty->assign('omswitch', "false");
                     }
+					// dark
+					$dark = $chat->getDark();
+                    if ($dark == "true") {
+                        $smarty->assign('dark', "true");
+                    }
+                    else {
+                        $smarty->assign('dark', "false");
+                    }
 					// html5 bg transparantie
 					$conflink = $chat->getConflink();
                     if ($conflink == "true") {
@@ -495,6 +503,7 @@ if ($id) {
 			$smarty->assign('tags', "true");
 			$smarty->assign('warnonexit', "true");
 			$smarty->assign('titledata', "fallback");
+			$smarty->assign('dark', "true");
 	    $smarty->assign('page','new');
         }
     }

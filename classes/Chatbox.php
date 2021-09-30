@@ -67,6 +67,7 @@ class Chatbox {
 	private $_tags;
 	private $_warnonexit;
 	private $_titledata;
+	private $_dark;
 
     public function __construct($db) {
         $this->_dBase = $db;
@@ -81,6 +82,12 @@ class Chatbox {
     }
     public function setId($id) {
         $this->_id = $id;
+    }
+	public function getDark() {
+        return $this->_dark;
+    }
+    public function setDark($dark) {
+        $this->_dark = $dark;
     }
 	public function getWarnonexit() {
         return $this->_warnonexit;
@@ -300,6 +307,12 @@ class Chatbox {
         } else {
             $this->setWarnonexit("false");
         }
+		// Dark
+		if (isset($form['dark'])) {
+            $this->setDark("true");
+        } else {
+            $this->setDark("false");
+        }
 		// tags
 		if (isset($form['tags'])) {
             $this->setTags($form['tags']);
@@ -516,7 +529,7 @@ class Chatbox {
     public function save() {
         $this->LightIRC->save();
         $this->setLightIRCId($this->LightIRC->getId());
-        $qry = $this->_db->prepare("INSERT INTO ".$this->_table."(lirc_id,createdby,createrip,created,lastcalled,calls,name,height,bgcolor,bgurl,style,iconstyle,radio_enabled,radio_name,radio_streamtype,radio_link,verzoek_url,radio_type,mountpoint,playerkleur,tekstkleur,ads_enabled,kiwi_avatar,kiwi_upload,kiwi_giphy,kiwi_imgur,kiwi_asl,html_redirect,showstats,html5color,transparantie,omswitch,embedly,volslide,conflink,viewheight,tags,warnonexit,titledata) VALUES(:lirc_id,:createdby,:createrip,NOW(),NOW(),:calls,:name,:height,:bgcolor,:bgurl,:style,:iconstyle,:radio_enabled,:radio_name,:radio_streamtype,:radio_link,:verzoek_url,:radio_type,:mountpoint,:playerkleur,:tekstkleur,:ads_enabled,:kiwi_avatar,:kiwi_upload,:kiwi_giphy,:kiwi_imgur,:kiwi_asl,:html_redirect,:showstats,:html5color,:transparantie,:omswitch,:embedly,:volslide,:conflink,:viewheight,:tags,:warnonexit,:titledata);");
+        $qry = $this->_db->prepare("INSERT INTO ".$this->_table."(lirc_id,createdby,createrip,created,lastcalled,calls,name,height,bgcolor,bgurl,style,iconstyle,radio_enabled,radio_name,radio_streamtype,radio_link,verzoek_url,radio_type,mountpoint,playerkleur,tekstkleur,ads_enabled,kiwi_avatar,kiwi_upload,kiwi_giphy,kiwi_imgur,kiwi_asl,html_redirect,showstats,html5color,transparantie,omswitch,embedly,volslide,conflink,viewheight,tags,warnonexit,titledata,dark) VALUES(:lirc_id,:createdby,:createrip,NOW(),NOW(),:calls,:name,:height,:bgcolor,:bgurl,:style,:iconstyle,:radio_enabled,:radio_name,:radio_streamtype,:radio_link,:verzoek_url,:radio_type,:mountpoint,:playerkleur,:tekstkleur,:ads_enabled,:kiwi_avatar,:kiwi_upload,:kiwi_giphy,:kiwi_imgur,:kiwi_asl,:html_redirect,:showstats,:html5color,:transparantie,:omswitch,:embedly,:volslide,:conflink,:viewheight,:tags,:warnonexit,:titledata,:dark);");
         $data = array(
             ':lirc_id' => $this->getLightIRCId(),
             ':createdby' => $this->getOwner(),
@@ -554,7 +567,8 @@ class Chatbox {
 			':viewheight' => $this->getViewheight(),
 			':tags' => $this->getTags(),
 			':warnonexit' => $this->getWarnonexit(),
-			':titledata' => $this->getTitledata()
+			':titledata' => $this->getTitledata(),
+			':dark' => $this->getDark()
         );
 
         $qry->execute($data);
@@ -570,7 +584,7 @@ class Chatbox {
     public function update() {
         $this->LightIRC->update();
 
-        $qry = $this->_db->prepare("UPDATE ".$this->_table." SET lirc_id=:lirc_id,createdby=:createdby,createrip=:createrip,created=NOW(),lastcalled=NOW(),calls=:calls,name=:name,height=:height,bgcolor=:bgcolor,bgurl=:bgurl,style=:style,iconstyle=:iconstyle,radio_enabled=:radio_enabled,radio_name=:radio_name,radio_streamtype=:radio_streamtype,radio_link=:radio_link,verzoek_url=:verzoek_url,radio_type=:radio_type,mountpoint=:mountpoint,playerkleur=:playerkleur,tekstkleur=:tekstkleur,ads_enabled=:ads_enabled,kiwi_avatar=:kiwi_avatar,kiwi_upload=:kiwi_upload,kiwi_giphy=:kiwi_giphy,kiwi_imgur=:kiwi_imgur,kiwi_asl=:kiwi_asl,html_redirect=:html_redirect,showstats=:showstats,html5color=:html5color,transparantie=:transparantie,omswitch=:omswitch,embedly=:embedly,volslide=:volslide,conflink=:conflink,viewheight=:viewheight,tags=:tags,warnonexit=:warnonexit,titledata=:titledata WHERE id=:id;");
+        $qry = $this->_db->prepare("UPDATE ".$this->_table." SET lirc_id=:lirc_id,createdby=:createdby,createrip=:createrip,created=NOW(),lastcalled=NOW(),calls=:calls,name=:name,height=:height,bgcolor=:bgcolor,bgurl=:bgurl,style=:style,iconstyle=:iconstyle,radio_enabled=:radio_enabled,radio_name=:radio_name,radio_streamtype=:radio_streamtype,radio_link=:radio_link,verzoek_url=:verzoek_url,radio_type=:radio_type,mountpoint=:mountpoint,playerkleur=:playerkleur,tekstkleur=:tekstkleur,ads_enabled=:ads_enabled,kiwi_avatar=:kiwi_avatar,kiwi_upload=:kiwi_upload,kiwi_giphy=:kiwi_giphy,kiwi_imgur=:kiwi_imgur,kiwi_asl=:kiwi_asl,html_redirect=:html_redirect,showstats=:showstats,html5color=:html5color,transparantie=:transparantie,omswitch=:omswitch,embedly=:embedly,volslide=:volslide,conflink=:conflink,viewheight=:viewheight,tags=:tags,warnonexit=:warnonexit,titledata=:titledata,dark=:dark WHERE id=:id;");
         $data = array(
             ':lirc_id' => $this->getLightIRCId(),
             ':createdby' => $this->getOwner(),
@@ -609,7 +623,8 @@ class Chatbox {
 			':viewheight' => $this->getViewheight(),
 			':tags' => $this->getTags(),
 			':warnonexit' => $this->getWarnonexit(),
-			':titledata' => $this->getTitledata()
+			':titledata' => $this->getTitledata(),
+			':dark' => $this->getDark()
         );
 
         $qry->execute($data);
@@ -690,6 +705,7 @@ class Chatbox {
 			$this->setTags($row['tags']);
 			$this->setWarnonexit($row['warnonexit']);
 			$this->setTitledata($row['titledata']);
+			$this->setDark($row['dark']);
 			
             return true;
         }
@@ -960,6 +976,7 @@ class Chatbox {
 		$data['tags'] = $this->getTags();
 		$data['warnonexit'] = $this->getWarnonexit();
 		$data['titledata'] = $this->getTitledata();
+		$data['dark'] = $this->getDark();
         return $data;
     }
 

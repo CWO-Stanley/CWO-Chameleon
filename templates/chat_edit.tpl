@@ -191,6 +191,17 @@
 					</div>
 					</div>
                     <br /><br />
+					<div id="dark" class="row">
+					        <label for="dark" title="Donkere of lichte overlay" class="control-label col-sm-2 white">Donkere overlay over de achtergrond<br /><small>Bij aan is het een donkere overlay, bij uit een lichte overlay over de achtergrond</small></label>
+                                <div class="col-sm-4"><div class="form-group">
+								<div class="toggle-switch toggle-switch--green">
+                                    <input type="checkbox" name="dark" class="switchery" value="true" {if $dark=="true"}checked="checked"{/if}>
+                                       <i class="toggle-switch__helper"></i>
+                                </div>
+                        </div>
+					</div>
+					</div>
+                    <br /><br />
                     <!-- Icoon style -->
                     <div class="form-group">
 					<div class="row">
