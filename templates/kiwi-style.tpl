@@ -655,7 +655,7 @@ kiwi-welcome-simple-sex {
 :root{
     --brand-primary: {/literal}{if $metadata['html5color'] == ""}#0099cc{else}{$metadata['html5color']}{/if}{literal};
     --brand-primary-hover: #ff3300;
-    --brand-midtone: #2b2b2b;
+    --brand-midtone: #e4e4e4;
     --brand-darktone: #969696;
     --brand-default-bg: transparent;
     --brand-default-fg: {/literal}{if $metadata['omswitch'] == "true"}#000{else}#bdbdbd{/if}{literal};

@@ -7,7 +7,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
 		<script src="{$fullurl}/radiolibs/sticky/js/jquery.mousewheel.min.js" type="text/javascript"></script>
 		<script src="{$fullurl}/radiolibs/sticky/js/jquery.touchSwipe.min.js" type="text/javascript"></script>
-		<script src="{$fullurl}/radiolibs/sticky/js/audio8_html5.js?v=2.3" type="text/javascript"></script>
+		<script src="{$fullurl}/radiolibs/sticky/js/audio8_html5.js?v=2.5" type="text/javascript"></script>
         <div class="audio8_html5_sticky">
 				<div class="audio8_html5">
 					<audio id="lbg_audio8_html5_shoutcast_2" preload="metadata">
@@ -52,7 +52,7 @@
 					nowPlayingInterval:30,
 					grabLastFmPhoto:true,
 					grabStreamnameAndGenre:true,
-					noImageAvailable:"https://horus.chattersworld.nl/dist/img/c4all.png",
+					noImageAvailable:"https://chameleon.chattersworld.nl/dist/img/c4all.png",
 					translateRadioStation:"",
 					translateReadingData:"reading data...",
 					translateAllRadioStations:"ALL RADIO STATIONS",
@@ -131,7 +131,7 @@
 
 {elseif $metadata['radio_player'] == "luna"}
 		<script src="{$fullurl}/radiolibs/luna/jquery-3.2.1.min.js"></script>
-		<script type="text/javascript" src="{$fullurl}/radiolibs/luna/lunaradio.min.js?v=5.20.09.08"></script>
+		<script type="text/javascript" src="{$fullurl}/radiolibs/luna/lunaradio.min.js?v=5.21.04.16"></script>
 		
 		<center>
 		<div id="lunaradio" style='width:50%;
@@ -251,7 +251,7 @@
 							historyRecordTitleLimit:28,
 							historyRecordAuthorLimit:36,
 							nowPlayingInterval:35,
-							noImageAvailable:"https://horus.chattersworld.nl/dist/img/c4all.png"
+							noImageAvailable:"https://chameleon.chattersworld.nl/dist/img/c4all.png"
 						});
 				}, 1000);
 			});
@@ -289,7 +289,7 @@
         </center>
 	{elseif $metadata['radio_player'] == "internal"}
         <script src="{$fullurl}/radiolibs/luna/jquery-3.2.1.min.js"></script>
-        <script type="text/javascript" src="{$fullurl}/radiolibs/luna/lunaradio.min.js?v=5.20.09.08"></script>
+        <script type="text/javascript" src="{$fullurl}/radiolibs/luna/lunaradio.min.js?v=5.21.04.16"></script>
 
 		<center>
 		<div id="lunaradio" style='width:50%;
