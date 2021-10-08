@@ -17,7 +17,7 @@ window.kiwiConfig = function kiwiConfig() {
 		"themes": [
 				{/literal}
 				{if $metadata['style'] == "nightswatch"}{literal}
-				{ "name": "CWO", "url": "{/literal}{$fullurl}{literal}/static/themes/theme-dark-fluid" }
+				{ "name": "CWO", "url": "{/literal}{$fullurl}{literal}/static/themes/theme-dark-fluid2" }
 				{/literal}{elseif $metadata['style'] == "transparent"}{literal}
 				{ "name": "CWO", "url": "{/literal}{$fullurl}{literal}/static/themes/transparent4" }
 				{/literal}{elseif $metadata['style'] == "coffee"}{literal}

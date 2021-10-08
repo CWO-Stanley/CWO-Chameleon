@@ -403,6 +403,19 @@ button.u-button.u-button-primary.u-submit.kiwi-welcome-znc-start {
     background: #f6f6f6;
 }
 
+.kiwi-controlinput-button {
+    background-color: var(--brand-primary);
+    border: 2px solid var(--brand-primary);
+}
+
+.kiwi-controlinput-button:hover,
+.kiwi-controlinput-tools,
+.kiwi-controlinput-tools-container,
+.kiwi-controlinput-send {
+    color: var(--brand-default-fg);
+    background-color: var(--brand-default-bg);
+}
+
 /* ---- Self User ( SelfUser.vue ) ---- */
 .kiwi-controlinput-selfuser {
     background: var(--brand-default-bg);
