@@ -14,7 +14,7 @@ body {
 {if $metadata['bgurl'] != ""}
 	background-image:url("{$metadata['bgurl']}");
 {else}
-	background-image:url("https://chattersworld.nl/wp-content/uploads/2019/12/CWO-Webbanner.jpg");
+	background-image:url("https://chattersworld.nl/wp-content/uploads/2021/10/WebsiteBackground2.jpg");
 {/if}
 	background-repeat: no-repeat;
 	background-size: 100% 100%; 
@@ -47,7 +47,7 @@ body {
 	{else}/* background-color:transparent; */
 	{/if}
 {else}
-	background-image:url("https://chattersworld.nl/wp-content/uploads/2019/12/CWO-Webbanner.jpg");
+	background-image:url("https://chattersworld.nl/wp-content/uploads/2021/10/WebsiteBackground2.jpg");
 {/if}
  }
 {/if}
@@ -231,7 +231,7 @@ body {
 	background-image: linear-gradient(rgba(255,255,255, {/literal}{$metadata['transparantie']}{literal}), rgba(255,255,255, {/literal}{$metadata['transparantie']}{literal})), url({/literal}{$metadata['bgurl']}{literal});background-size: 100% 100%;{/literal}{/if}
 	{else}
 		{if $metadata['bgurl'] == ""}{literal}
-    background-image: linear-gradient(rgba({/literal}{if $metadata['dark'] == 'true'}0,0,0{else}255,255,255{/if}{literal}, {/literal}{$metadata['transparantie']}{literal}), rgba({/literal}{if $metadata['dark'] == 'true'}0,0,0{else}255,255,255{/if}{literal}, {/literal}{$metadata['transparantie']}{literal})), url({/literal}https://chattersworld.nl/wp-content/uploads/2019/12/CWO-Webbanner.jpg{literal});background-size: 100% 100%;{/literal}{else}{literal}
+    background-image: linear-gradient(rgba({/literal}{if $metadata['dark'] == 'true'}0,0,0{else}255,255,255{/if}{literal}, {/literal}{$metadata['transparantie']}{literal}), rgba({/literal}{if $metadata['dark'] == 'true'}0,0,0{else}255,255,255{/if}{literal}, {/literal}{$metadata['transparantie']}{literal})), url({/literal}https://chattersworld.nl/wp-content/uploads/2021/10/WebsiteBackground2.jpg{literal});background-size: 100% 100%;{/literal}{else}{literal}
 	background-image: linear-gradient(rgba({/literal}{if $metadata['dark'] == 'true'}0,0,0{else}255,255,255{/if}{literal}, {/literal}{$metadata['transparantie']}{literal}), rgba({/literal}{if $metadata['dark'] == 'true'}0,0,0{else}255,255,255{/if}{literal}, {/literal}{$metadata['transparantie']}{literal})), url({/literal}{$metadata['bgurl']}{literal});background-size: 100% 100%;{/literal}{/if}{/if}{literal}
 }
 {/literal}{else}{if $metadata['style'] != "transparent"}{literal}
@@ -696,7 +696,7 @@ kiwi-welcome-simple-sex {
 	background-image:url("{$metadata['bgurl']}");
 	{/if}
 {else}
-	background-image:url("https://chattersworld.nl/wp-content/uploads/2019/12/CWO-Webbanner.jpg");
+	background-image:url("https://chattersworld.nl/wp-content/uploads/2021/10/WebsiteBackground2.jpg");
 {/if}
 	background-repeat: no-repeat;
 	background-size: 100% 100%; 

@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-	<title>{$sitename} Webplayer voor: #{$metadata['radio_name']}</title>
+	<!-- <title>{$sitename} Webplayer voor: #{$metadata['radio_name']}</title> -->
 		<meta charset="utf-8">
     		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     		<meta name="apple-mobile-web-app-capable" content="yes" />
@@ -34,13 +34,23 @@
           enable_page_level_ads: true
      });
 </script>
+<script src="radiolibs/luna/jquery-3.2.1.min.js"></script>
+<script> 
+  $(document).ready(function updateChatCount() {
+	$.get('playing.php?the_stream={$metadata['radio_link']}{$metadata['mountpoint']}', function(data) {
+	  $("#users").html(data);
+	}, 'text');
+	setTimeout(updateChatCount,30000);
+});
+</script>
+<title id="users">Chattersworld Webplayer</title>
 		<link href="webplayer/css/bootstrap.min.css?v=1.18.03.18" rel="stylesheet" type="text/css" media="all" />
 		<link href="webplayer/css/themify-icons.min.css?v=1.18.03.18" rel="stylesheet" type="text/css" media="all" />
 		<link href="webplayer/css/flexslider.min.css?v=1.18.03.18" rel="stylesheet" type="text/css" media="all" />
 		<link href="webplayer/css/lightbox.min.css?v=1.18.03.18" rel="stylesheet" type="text/css" media="all" />
 		<link href="webplayer/css/ytplayer.min.css?v=1.18.03.18" rel="stylesheet" type="text/css" media="all" />
 		<link href="webplayer/css/theme-nativehtml5radio.min.css?v=1.20.07.02" rel="stylesheet" type="text/css" media="all" />
-    			<script src="radiolibs/luna/jquery-3.2.1.min.js"></script>
+    			
 				<script type="text/javascript" src="radiolibs/luna/lunaradio.min.js?v=5.21.04.16"></script>
 			<script>{literal}
   				(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -189,7 +199,7 @@ return true;
 	</div>
 	<div class="fs-vid-background" style="height:100%; width:100%;">
 		<video autoplay muted loop>
-			<source src="webplayer/home3.mp4" type="video/mp4" />
+			<source src="webplayer/space.mp4" type="video/mp4" />
 		</video>
 	</div>
 	<div id="lunaradio" style="width:100%; height: 100%; position: absolute; left:0; top:0; z-index: 300;">
