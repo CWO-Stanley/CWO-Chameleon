@@ -5,6 +5,7 @@ header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: GET, POST, OPTIONS');
 // header('Access-Control-Max-Age: 1000');
 header('Access-Control-Allow-Headers: *');
+header('Content-Type: text/html; charset=UTF-8');
 
 
 ?>
