@@ -55,20 +55,20 @@ class Config {
         /**
          * MySQL gegevens
          */
-        $this->_mysqlHost = "127.0.0.1";
-        $this->_mysqlUser = "chatters_chameleon";
+        $this->_mysqlHost = "host/IP";
+        $this->_mysqlUser = "DB_username";
         $this->_mysqlPass = "";
-        $this->_mysqlDbName = "chatters_chameleon";
+        $this->_mysqlDbName = "DB_username";
         $this->_mysqlPrefix = "chameleon_";
 
-        $this->_mysqlHostDev = "127.0.0.1";
-        $this->_mysqlUserDev = "chatters_chameleon";
+        $this->_mysqlHostDev = "host/IP";
+        $this->_mysqlUserDev = "DB_username";
         $this->_mysqlPassDev = "";
-        $this->_mysqlDbNameDev = "chatters_chameleon";
+        $this->_mysqlDbNameDev = "DB_username";
         $this->_mysqlPrefixDev = "chameleon_";
 
-        $this->_mysqlAnopeHost = "127.0.0.1";
-        $this->_mysqlAnopeUser = "chatters_anope";
+        $this->_mysqlAnopeHost = "host/IP";
+        $this->_mysqlAnopeUser = "anopedb_username";
         $this->_mysqlAnopePass = "";
         $this->_mysqlAnopeDbName = "anope";
     }
