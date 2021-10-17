@@ -162,7 +162,7 @@ function H2O_check_license($licensekey, $localkey='') {
 // Get the license key and local key from storage
 // These are typically stored either in flat files or an SQL database
 
-$licensekey = "H2C4b73a";
+$licensekey = "license-key";
 $localkey = '9tjIxIzNwgDMwIjI6gjOztjIlRXYkt2Ylh2YioTO6M3OicmbpNnblNWasx1cyVmdyV2ccNXZsVHZv1GX
 zNWbodHXlNmc192czNWbodHXzN2bkRHacBFUNFEWcNHduVWb1N2bExFd0FWTcNnclNXVcpzQioDM4ozc
 7ISey9GdjVmcpRGZpxWY2JiO0EjOztjIx4CMuAjL3ITMioTO6M3OiAXaklGbhZnI6cjOztjI0N3boxWY
