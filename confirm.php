@@ -86,7 +86,7 @@ class AnopeXMLRPC
 	}
 }
 
-$anope = new AnopeXMLRPC("http://IP:8085/xmlrpc");
+$anope = new AnopeXMLRPC("http://212.114.110.118:8085/xmlrpc");
 ?>
 <?php // Check if form was submitted:
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['recaptcha_response'])) {
@@ -103,10 +103,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['recaptcha_response'])
     // Take action based on the score returned:
     if ($recaptcha->score >= 0.5) {
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-	if(trim($_POST['email']) == '' || trim($_POST['login']) == '' || trim($_POST['code']) == '') {
+	if(trim($_POST['login']) == '' || trim($_POST['code']) == '') {
 				$errors =  'Alle velden dienen ingevuld te worden!';
 	}else{
-			if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+			
 				$user = $_POST['login'];
 				$password = $_POST['code'];
 				// $email = $_POST['email'];
@@ -145,7 +145,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 					$errors = "Er is iets fout gegaan!";
 				}
 				}
-}
+
 	}
 }
 } else {
@@ -244,12 +244,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 									<div class="alert alert-success alert-dismissable"><strong>Ziezo!</strong> Controleer uw email en bevestig uw email adres met opgegeven code, na bevestiging keer je gelijk terug naar het inlogscherm, je kunt dan direct inloggen!
 								</div>
                                         <form class="form-horizontal" method="POST" action="">
-											<fieldset class="form-group position-relative has-icon-left">
-                                                <input type="email" name="email" class="form-control round" id="user-name" placeholder="E-Mail" required>
+											<!-- <fieldset class="form-group position-relative has-icon-left">
+                                                <input type="email" name="email" class="form-control round" id="user-name" placeholder="E-Mail" value="<?php if(!empty($_GET['email'])) : ?><?php echo htmlspecialchars($_GET['email']); ?><?php endif; ?>" required>
                                                 <div class="form-control-position">
                                                     <i class="ft-at-sign"></i>
                                                 </div>
-                                            </fieldset>
+                                            </fieldset> -->
                                             <fieldset class="form-group position-relative has-icon-left">
 											<script type="text/javascript">
 
@@ -268,7 +268,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                                 </div>
                                             </fieldset>
                                             <fieldset class="form-group position-relative has-icon-left">
-                                                <input type="text" class="form-control round" name="code" id="user-password" placeholder="CONFIRM Code" required>
+                                                <input type="text" class="form-control round" name="code" id="user-password" placeholder="CONFIRM Code" value="<?php if(!empty($_GET['code'])) : ?><?php echo htmlspecialchars($_GET['code']); ?><?php endif; ?>" required>
                                                 <div class="form-control-position">
                                                     <i class="ft-lock"></i>
                                                 </div>
