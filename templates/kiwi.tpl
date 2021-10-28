@@ -48,7 +48,11 @@
 <body>
 	<div class="left">
 	{if $metadata['radio_player'] != "internal"}
-		<a target="_blank" href="{$fullurl}"><img src="{$logo}" style="z-index: 102;" height="50" alt="Chattersworld"></a>
+		{if $metadata['radio'] == "false"}
+			<a href="#" onclick="openNav()"><img src="{$logo}" style="z-index: 102;" height="50" alt="Chattersworld"></a>
+		{else}
+			<a target="_blank" href="{$fullurl}"><img src="{$logo}" style="z-index: 102;" height="50" alt="Chattersworld"></a>
+		{/if}
 	{else}
 		<a href="#" onclick="openNav()"><img src="{$logo}" style="z-index: 102;" height="50" alt="Chattersworld"></a>
 	{/if}
@@ -83,7 +87,11 @@
 	</div>
 	<div class="right">
 	{if $metadata['radio_player'] != "internal"}
+		{if $metadata['radio'] != "false"}
 		<span style="font-size:30px;cursor:pointer;color:#FFF;" onclick="openNav()">MENU&#9776;</span>
+		{else}
+		<!-- <span style="font-size:30px;cursor:pointer;color:#FFF;" onclick="openNav()">MENU&#9776;</span> -->
+		{/if}
 	{/if}
 	</div>
 	<noscript>

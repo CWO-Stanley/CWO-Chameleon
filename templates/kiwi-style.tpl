@@ -24,11 +24,15 @@ body {
     font-family: "Lato", sans-serif;
 }
 .kiwi-wrap {
-{if $metadata['radio_player'] == "internal"}
-		height: 100%;
-		{else}height: calc(100% - 120px);
-		{/if}
-	}
+{if $metadata['radio'] != "false"}
+	{if $metadata['radio_player'] == "internal"}
+			height: 100%;
+	{else}
+			height: calc(100% - 120px);
+	{/if}
+	{else}height: 100%;
+{/if}
+}
 			   {literal}
 .footer { 
 	position: absolute; 
