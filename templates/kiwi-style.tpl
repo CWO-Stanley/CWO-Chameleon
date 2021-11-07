@@ -36,8 +36,12 @@ body {
 			   {literal}
 .footer { 
 	position: absolute; 
-	bottom: 0; 
-	height: 120px; 
+	bottom: 0;
+{/literal}{if $metadata['radio'] != "false"}
+	{if $metadata['radio_player'] != "internal"}
+		height: 120px;
+	{/if}
+{/if}{literal} 
 	width: 100%; 
 	margin: auto;
 {/literal} 

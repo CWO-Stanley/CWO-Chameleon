@@ -124,7 +124,7 @@ window.kiwiConfig = function kiwiConfig() {
 				{"name": "fileuploader", "url": "{/literal}{$fullurl}{literal}/static/plugins/plugin-fileuploader.js?v=2.1"}{/literal}{if $metadata['kiwi_asl'] == 'true'},{/if}{literal}
 				{/literal}{/if}{literal}
 				{/literal}{if $metadata['kiwi_asl'] == 'true'}{literal}
-				{"name": "asl","url": "{/literal}{$fullurl}{literal}/static/plugins/plugin-asl.js?cb=66"}
+				{"name": "asl","url": "{/literal}{$fullurl}{literal}/static/plugins/plugin-asl.js?cb=11"}
 				{/literal}{/if}{literal}
 		],
 		{/literal}{if $metadata['kiwi_asl'] == 'true'}{literal}
