@@ -37,8 +37,8 @@
 <link rel="stylesheet" href="{$fullurl}/app-assets/css/material-design-iconic-font/dist/css/material-design-iconic-font.min.css">
 <!-- Kiwi script reloaders -->
   <link href="{$fullurl}/static/css/app.e70344bf.css" rel="preload" as="style">
-  <link href="{$fullurl}/static/js/app.0f0acc96.js" rel="preload" as="script">
-  <link href="{$fullurl}/static/js/vendor.838671e3.js" rel="preload" as="script">
+  <link href="{$fullurl}/static/js/app.c7c233b3.js" rel="preload" as="script">
+  <link href="{$fullurl}/static/js/vendor.7243e6ad.js" rel="preload" as="script">
   <link href="{$fullurl}/static/css/app.e70344bf.css" rel="stylesheet">
 <!-- END -->
 <meta charset=utf-8><meta name=viewport content="user-scalable=no,width=device-width,initial-scale=1,maximum-scale=1">
@@ -100,8 +100,8 @@
 	</noscript>
 	<div id="app">
 	</div>
-  <script type="text/javascript" src="{$fullurl}/static/js/vendor.838671e3.js"></script>
-  <script type="text/javascript" src="{$fullurl}/static/js/app.0f0acc96.js"></script></body>
+  <script type="text/javascript" src="{$fullurl}/static/js/vendor.7243e6ad.js"></script>
+  <script type="text/javascript" src="{$fullurl}/static/js/app.c7c233b3.js"></script></body>
 		<script type="text/javascript">
 			function openNav() {
 				document.getElementById("mySidenav").style.width = "33%";
