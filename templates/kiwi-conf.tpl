@@ -102,7 +102,7 @@ window.kiwiConfig = function kiwiConfig() {
 				{/literal}{/if}{literal}
 				{"name": "nickserv", "url": "{/literal}{$fullurl}{literal}/static/plugins/plugin-nickserv.js"},
 				{"name": "analitics", "url": "{/literal}{$fullurl}{literal}/static/plugins/analitics.html?v=1.4"},
-				{"name": "analitics", "url": "{/literal}{$fullurl}{literal}/static/plugins/invite_alert.js?v=1.5"},
+				{"name": "analitics", "url": "{/literal}{$fullurl}{literal}/static/plugins/invite_alert.js?v=2.0"},
 				{"name": "sidebar_centered", "url": "{/literal}{$fullurl}{literal}/static/plugins/sidebar_centered.html"},
 				{/literal}{if $metadata['tags'] == "true"}{literal}
 				{ "name": "services", "url": "{/literal}{$fullurl}{literal}/static/plugins/services.html?v=1.2" },
