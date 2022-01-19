@@ -48,7 +48,7 @@ window.kiwiConfig = function kiwiConfig() {
 				"greetingText": "<div style='margin:0px 0px 0px 0px'><center><a class=\"netlogo\" href=\"{/literal}{$fullurl}{literal}\"><span></span><img src=\"{/literal}{$logo}{literal}\" height='60px'></a></center></div>",
 				"state_key": "CWO-Chameleon-175",
 				"buttonText": "<center><i class='fa fa-sign-in' style='margin-right:5px !important;'></i> Chatten</center>",
-				"gecos": "..::{/literal}{$sitename}{literal} HTML5 Webchat::..",
+				"gecos": "..::{/literal}{$sitename}{literal} HTML5 Webchat::.. Chameleon ID: {/literal}{$smarty.get.id}{literal}",
 				"port": 6697, 
 				"tls": true, 
 				"direct": false, 
@@ -121,7 +121,7 @@ window.kiwiConfig = function kiwiConfig() {
 				{/literal}{/if}{literal}
 				{"name": "ident", "url": "{/literal}{$fullurl}{literal}/static/plugins/ident.js?v=1.5"},
 				{/literal}{if $metadata['kiwi_upload'] == "true"}{literal}
-				{"name": "fileuploader", "url": "{/literal}{$fullurl}{literal}/static/plugins/plugin-fileuploader.js?v=2.1"}{/literal}{if $metadata['kiwi_asl'] == 'true'},{/if}{literal}
+				{"name": "fileuploader", "url": "{/literal}{$fullurl}{literal}/static/plugins/plugin-fileuploader.js?v=2.5"}{/literal}{if $metadata['kiwi_asl'] == 'true'},{/if}{literal}
 				{/literal}{/if}{literal}
 				{/literal}{if $metadata['kiwi_asl'] == 'true'}{literal}
 				{"name": "asl","url": "{/literal}{$fullurl}{literal}/static/plugins/plugin-asl.js?cb=11"}
