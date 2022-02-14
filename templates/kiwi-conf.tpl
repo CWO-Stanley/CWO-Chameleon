@@ -19,7 +19,7 @@ window.kiwiConfig = function kiwiConfig() {
 				{if $metadata['style'] == "nightswatch"}{literal}
 				{ "name": "CWO", "url": "{/literal}{$fullurl}{literal}/static/themes/theme-dark-fluid2" }
 				{/literal}{elseif $metadata['style'] == "transparent"}{literal}
-				{ "name": "CWO", "url": "{/literal}{$fullurl}{literal}/static/themes/transparent4" }
+				{ "name": "CWO", "url": "{/literal}{$fullurl}{literal}/static/themes/transparent7" }
 				{/literal}{elseif $metadata['style'] == "coffee"}{literal}
 				{ "name": "CWO", "url": "{/literal}{$fullurl}{literal}/static/themes/coffee" }
 				{/literal}{elseif $metadata['style'] == "dark"}{literal}

@@ -450,7 +450,7 @@ kiwi-welcome-simple-sex {
 }
 
 .kiwi-avatar--default {
-    background-color: var(--brand-default-fg);
+    background-color: var(--brand-default-bg);
 }
 
 
