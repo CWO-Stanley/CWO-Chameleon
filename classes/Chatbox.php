@@ -873,6 +873,16 @@ class Chatbox {
                 $this->_iconStyle = "whatsapp";
                 $this->LightIRC->setUseUserListIcons("true");
                 break;
+			case 'djbol':
+                $this->LightIRC->setIconPath("icons/djbol/");
+                $this->_iconStyle = "djbol";
+                $this->LightIRC->setUseUserListIcons("true");
+                break;
+			case 'msndj':
+                $this->LightIRC->setIconPath("icons/msndj/");
+                $this->_iconStyle = "msndj";
+                $this->LightIRC->setUseUserListIcons("true");
+                break;
             case 'none':
                 $this->LightIRC->setIconPath("icons/bolletje/");
                 $this->_iconStyle = "none";

@@ -214,6 +214,8 @@
                                 <option value="dj" {if $icon_style=="dj"}selected="selected"{/if}>DJ</option>
 								<option value="pins" {if $icon_style=="pins"}selected="selected"{/if}>Punaises</option>
 								<option value="whatsapp" {if $icon_style=="whatsapp"}selected="selected"{/if}>WhatsApp</option>
+								<option value="djbol" {if $icon_style=="djbol"}selected="selected"{/if}>Bolletjes met DJ</option>
+								<option value="msndj" {if $icon_style=="msndj"}selected="selected"{/if}>MSN poppetjes met DJ</option>
                                 <option value="none" {if $icon_style=="none"}selected="selected"{/if}>Standaard (~&@%+)</option>
                             </select>
                         </div>
