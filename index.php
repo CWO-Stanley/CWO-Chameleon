@@ -225,6 +225,14 @@ if ($id) {
                     else {
                         $smarty->assign('dark', "false");
                     }
+					// Displayname
+					$hidedisplayname = $chat->getHideDisplayname();
+                    if ($hidedisplayname == "true") {
+                        $smarty->assign('hidedisplayname', "true");
+                    }
+                    else {
+                        $smarty->assign('hidedisplayname', "false");
+                    }
 					// html5 bg transparantie
 					$conflink = $chat->getConflink();
                     if ($conflink == "true") {
@@ -504,6 +512,7 @@ if ($id) {
 			$smarty->assign('warnonexit', "true");
 			$smarty->assign('titledata', "fallback");
 			$smarty->assign('dark', "true");
+			$smarty->assign('hidedisplayname', "true");
 	    $smarty->assign('page','new');
         }
     }

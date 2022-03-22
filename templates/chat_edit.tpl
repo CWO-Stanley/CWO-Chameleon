@@ -299,6 +299,16 @@
 						</div>
                     </div>
 					</div>
+					<!-- Webcam Namen inschakelen -->
+                    <div class="form-group">
+					<div class="row">
+                        <label for="hidedisplayname" title="Hiermee verbergt u de namen bij de webcams." class="control-label col-sm-2 white">Verberg namen bij de webcams</label>
+                        <div class="toggle-switch toggle-switch--green">
+                            <input type="checkbox" class="switchery" name="hidedisplayname" value="true" {if $hidedisplayname=="true"}checked="checked"{/if}>
+                        <i class="toggle-switch__helper"></i>
+						</div>
+                    </div>
+					</div>
                 </div>
 
                 <!-- GEAVANCEERDE INSTELLINGEN -->

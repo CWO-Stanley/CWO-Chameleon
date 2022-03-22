@@ -75,6 +75,7 @@ window.kiwiConfig = function kiwiConfig() {
 				"inline_link_auto_preview_whitelist": ".*",
 				"messageLayout": "{/literal}{if $metadata['kiwi_avatar'] == "true"}modern{else}inline{/if}{literal}",
 				"default_kick_reason": "Gedraag je!",
+				"show_mode_changes": true,
 				"default_ban_mask": "*!*@%h",
 				"show_presence_changes": true,
 				"show_timestamps": {/literal}{if $metadata['time'] == "true"}true{else}false{/if}{literal},
@@ -173,7 +174,7 @@ window.kiwiConfig = function kiwiConfig() {
 		{/literal}{/if}{literal}
 		{/literal}{if $metadata['webcam'] == "true"}{literal}
 		"plugin-conference":{ 
-				"server": "meet.chattersworld.nl",
+				"server": "cams.chattersworld.nl",
 				"secure": true,
 				"queries": true,
 				"channels": true,
@@ -205,7 +206,30 @@ window.kiwiConfig = function kiwiConfig() {
 				},
 				"configOverwrite": {
 					"startWithVideoMuted": false,
-					"startWithAudioMuted": true
+					"startWithAudioMuted": true,
+					"hideDisplayName": {/literal}{if $metadata['hidedisplayname'] == "true"}true{else}false{/if}{literal},
+					"disableTileEnlargement": true,
+					"toolbarButtons": [
+       							"camera",
+       							"filmstrip",
+       							"fullscreen",
+       							"hangup",
+      							"help",
+       							{/literal}{if $metadata['mic'] == "true"}{else}"microphone",{/if}{literal}
+       							"mute-everyone",
+       							"mute-video-everyone",
+       							"participants-pane",
+       							"raisehand",
+       							"recording",
+       							"security",
+      							"select-background",
+       							"settings",
+       							"stats",
+       							"tileview",
+       							"toggle-camera",
+       							"videoquality",
+       							"__end"
+    					],
 				}
 		},
 		{/literal}{/if}{literal}
@@ -339,6 +363,7 @@ window.kiwiConfig = function kiwiConfig() {
             '=)': '1f642.png',
             ':]': '1f642.png',
 			'(chameleon)': 'cwo-chameleon2.png',
+			'(gay)': '6n8.gif',
         },
 		emojiLocation: '{/literal}{$fullurl}{literal}/emoticons/kiwi/',
 		{/literal}{/if}{literal}
