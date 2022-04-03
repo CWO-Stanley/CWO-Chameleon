@@ -65,11 +65,12 @@ CREATE TABLE `chameleon_chat` (
   `titledata` varchar(25) DEFAULT NULL,
   `dark` varchar(15) DEFAULT NULL,
   `hidedisplayname` varchar(15) DEFAULT NULL,
+  `videoheight` varchar(255) DEFAULT NULL,
   `obsolete` tinyint(4) DEFAULT 0,
   PRIMARY KEY (`id`),
   KEY `FK_chameleon_chat_chameleon_lirc` (`lirc_id`),
   CONSTRAINT `FK_chameleon_chat_chameleon_lirc` FOREIGN KEY (`lirc_id`) REFERENCES `chameleon_lirc` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4341 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4383 DEFAULT CHARSET=utf8;
 
 /*Table structure for table `chameleon_dev_chat` */
 
@@ -305,7 +306,7 @@ CREATE TABLE `chameleon_lirc` (
   `contextMenuExternalEvent` varchar(128) DEFAULT '0',
   `obsolete` tinyint(4) DEFAULT 0,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9999 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4556 DEFAULT CHARSET=utf8;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

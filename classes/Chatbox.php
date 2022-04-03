@@ -69,6 +69,7 @@ class Chatbox {
 	private $_titledata;
 	private $_dark;
 	private $_hidedisplayname;
+	private $_videoheight;
 
     public function __construct($db) {
         $this->_dBase = $db;
@@ -96,6 +97,14 @@ class Chatbox {
     public function setHideDisplayname($hidedisplayname) {
         $this->_hidedisplayname = $hidedisplayname;
     }
+	
+	public function getVideoHeight() {
+        return $this->_videoheight;
+    }
+    public function setVideoHeight($videoheight) {
+        $this->_videoheight = $videoheight;
+    }
+	
 	public function getWarnonexit() {
         return $this->_warnonexit;
     }
@@ -302,6 +311,11 @@ class Chatbox {
 		if (isset($form['viewheight'])) {
             $this->setViewheight($form['viewheight']);
         }
+		
+		// View Height
+		if (isset($form['videoheight'])) {
+            $this->setVideoHeight($form['videoheight']);
+        }
 		// omswitch
 		if (isset($form['omswitch'])) {
             $this->setOmswitch($form['omswitch']);
@@ -356,6 +370,12 @@ class Chatbox {
         if (isset($form['icon_style'])) {
             $this->setIconStyle($form['icon_style']);
         }
+		
+		//Videoheight
+        if (isset($form['videoheight'])) {
+            $this->setVideoHeight($form['videoheight']);
+        }
+		
         //Moeten icoontjes als nick prefix in de chat gebruikt worden?
         if (isset($form['icon_prefix'])) {
             $this->LightIRC->setShowNickprefixIcons("true");
@@ -542,7 +562,7 @@ class Chatbox {
     public function save() {
         $this->LightIRC->save();
         $this->setLightIRCId($this->LightIRC->getId());
-        $qry = $this->_db->prepare("INSERT INTO ".$this->_table."(lirc_id,createdby,createrip,created,lastcalled,calls,name,height,bgcolor,bgurl,style,iconstyle,radio_enabled,radio_name,radio_streamtype,radio_link,verzoek_url,radio_type,mountpoint,playerkleur,tekstkleur,ads_enabled,kiwi_avatar,kiwi_upload,kiwi_giphy,kiwi_imgur,kiwi_asl,html_redirect,showstats,html5color,transparantie,omswitch,embedly,volslide,conflink,viewheight,tags,warnonexit,titledata,dark,hidedisplayname) VALUES(:lirc_id,:createdby,:createrip,NOW(),NOW(),:calls,:name,:height,:bgcolor,:bgurl,:style,:iconstyle,:radio_enabled,:radio_name,:radio_streamtype,:radio_link,:verzoek_url,:radio_type,:mountpoint,:playerkleur,:tekstkleur,:ads_enabled,:kiwi_avatar,:kiwi_upload,:kiwi_giphy,:kiwi_imgur,:kiwi_asl,:html_redirect,:showstats,:html5color,:transparantie,:omswitch,:embedly,:volslide,:conflink,:viewheight,:tags,:warnonexit,:titledata,:dark,:hidedisplayname);");
+        $qry = $this->_db->prepare("INSERT INTO ".$this->_table."(lirc_id,createdby,createrip,created,lastcalled,calls,name,height,bgcolor,bgurl,style,iconstyle,radio_enabled,radio_name,radio_streamtype,radio_link,verzoek_url,radio_type,mountpoint,playerkleur,tekstkleur,ads_enabled,kiwi_avatar,kiwi_upload,kiwi_giphy,kiwi_imgur,kiwi_asl,html_redirect,showstats,html5color,transparantie,omswitch,embedly,volslide,conflink,viewheight,tags,warnonexit,titledata,dark,hidedisplayname,videoheight) VALUES(:lirc_id,:createdby,:createrip,NOW(),NOW(),:calls,:name,:height,:bgcolor,:bgurl,:style,:iconstyle,:radio_enabled,:radio_name,:radio_streamtype,:radio_link,:verzoek_url,:radio_type,:mountpoint,:playerkleur,:tekstkleur,:ads_enabled,:kiwi_avatar,:kiwi_upload,:kiwi_giphy,:kiwi_imgur,:kiwi_asl,:html_redirect,:showstats,:html5color,:transparantie,:omswitch,:embedly,:volslide,:conflink,:viewheight,:tags,:warnonexit,:titledata,:dark,:hidedisplayname,:videoheight);");
         $data = array(
             ':lirc_id' => $this->getLightIRCId(),
             ':createdby' => $this->getOwner(),
@@ -582,7 +602,8 @@ class Chatbox {
 			':warnonexit' => $this->getWarnonexit(),
 			':titledata' => $this->getTitledata(),
 			':dark' => $this->getDark(),
-			':hidedisplayname' => $this->getHideDisplayname()
+			':hidedisplayname' => $this->getHideDisplayname(),
+			':videoheight' => $this->getVideoHeight()
         );
 
         $qry->execute($data);
@@ -598,7 +619,7 @@ class Chatbox {
     public function update() {
         $this->LightIRC->update();
 
-        $qry = $this->_db->prepare("UPDATE ".$this->_table." SET lirc_id=:lirc_id,createdby=:createdby,createrip=:createrip,created=NOW(),lastcalled=NOW(),calls=:calls,name=:name,height=:height,bgcolor=:bgcolor,bgurl=:bgurl,style=:style,iconstyle=:iconstyle,radio_enabled=:radio_enabled,radio_name=:radio_name,radio_streamtype=:radio_streamtype,radio_link=:radio_link,verzoek_url=:verzoek_url,radio_type=:radio_type,mountpoint=:mountpoint,playerkleur=:playerkleur,tekstkleur=:tekstkleur,ads_enabled=:ads_enabled,kiwi_avatar=:kiwi_avatar,kiwi_upload=:kiwi_upload,kiwi_giphy=:kiwi_giphy,kiwi_imgur=:kiwi_imgur,kiwi_asl=:kiwi_asl,html_redirect=:html_redirect,showstats=:showstats,html5color=:html5color,transparantie=:transparantie,omswitch=:omswitch,embedly=:embedly,volslide=:volslide,conflink=:conflink,viewheight=:viewheight,tags=:tags,warnonexit=:warnonexit,titledata=:titledata,dark=:dark,hidedisplayname=:hidedisplayname WHERE id=:id;");
+        $qry = $this->_db->prepare("UPDATE ".$this->_table." SET lirc_id=:lirc_id,createdby=:createdby,createrip=:createrip,created=NOW(),lastcalled=NOW(),calls=:calls,name=:name,height=:height,bgcolor=:bgcolor,bgurl=:bgurl,style=:style,iconstyle=:iconstyle,radio_enabled=:radio_enabled,radio_name=:radio_name,radio_streamtype=:radio_streamtype,radio_link=:radio_link,verzoek_url=:verzoek_url,radio_type=:radio_type,mountpoint=:mountpoint,playerkleur=:playerkleur,tekstkleur=:tekstkleur,ads_enabled=:ads_enabled,kiwi_avatar=:kiwi_avatar,kiwi_upload=:kiwi_upload,kiwi_giphy=:kiwi_giphy,kiwi_imgur=:kiwi_imgur,kiwi_asl=:kiwi_asl,html_redirect=:html_redirect,showstats=:showstats,html5color=:html5color,transparantie=:transparantie,omswitch=:omswitch,embedly=:embedly,volslide=:volslide,conflink=:conflink,viewheight=:viewheight,tags=:tags,warnonexit=:warnonexit,titledata=:titledata,dark=:dark,hidedisplayname=:hidedisplayname,videoheight=:videoheight WHERE id=:id;");
         $data = array(
             ':lirc_id' => $this->getLightIRCId(),
             ':createdby' => $this->getOwner(),
@@ -639,7 +660,8 @@ class Chatbox {
 			':warnonexit' => $this->getWarnonexit(),
 			':titledata' => $this->getTitledata(),
 			':dark' => $this->getDark(),
-			':hidedisplayname' => $this->getHideDisplayname()
+			':hidedisplayname' => $this->getHideDisplayname(),
+			':videoheight' => $this->getVideoHeight()
         );
 
         $qry->execute($data);
@@ -722,6 +744,7 @@ class Chatbox {
 			$this->setTitledata($row['titledata']);
 			$this->setDark($row['dark']);
 			$this->setHideDisplayname($row['hidedisplayname']);
+			$this->setVideoHeight($row['videoheight']);
 			
             return true;
         }
@@ -1004,6 +1027,7 @@ class Chatbox {
 		$data['titledata'] = $this->getTitledata();
 		$data['dark'] = $this->getDark();
 		$data['hidedisplayname'] = $this->getHideDisplayname();
+		$data['videoheight'] = $this->getVideoHeight();
         return $data;
     }
 

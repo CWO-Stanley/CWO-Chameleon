@@ -208,6 +208,7 @@ window.kiwiConfig = function kiwiConfig() {
 					"startWithVideoMuted": false,
 					"startWithAudioMuted": true,
 					"hideDisplayName": {/literal}{if $metadata['hidedisplayname'] == "true"}true{else}false{/if}{literal},
+					"resolution": {/literal}{$metadata['videoheight']}{literal},
 					"disableTileEnlargement": true,
 					"toolbarButtons": [
        							"camera",
@@ -227,7 +228,6 @@ window.kiwiConfig = function kiwiConfig() {
        							"stats",
        							"tileview",
        							"toggle-camera",
-       							"videoquality",
        							"__end"
     					],
 				}

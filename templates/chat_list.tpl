@@ -29,7 +29,7 @@
                                             <table id="data-table2" class="table compact">
 												<thead>
 													<tr>
-														<td style="vertical-align:middle"><strong>ID</strong></td><td style="vertical-align:middle"><strong>Achtergrond</strong></td><td style="vertical-align:middle"><strong>Style</strong></td><td style="vertical-align:middle"><center><strong>Naam</strong></center></td>{if isset($god)}<td style="vertical-align:middle"><strong>Eigenaar</strong></td><td style="vertical-align:middle"><strong>Speler</strong></td><td style="vertical-align:middle"><center><strong>Aantal keer bezocht</strong></center></td><td style="vertical-align:middle"><center><strong>Laatst bezocht</strong></center></td>{/if}<td style="vertical-align:middle"><strong>Chat/HTML5</strong></td><td style="vertical-align:middle"><strong>Chat Opties</strong></td>
+														<td style="vertical-align:middle"><strong>ID</strong></td><td style="vertical-align:middle"><strong>Achtergrond</strong></td><td style="vertical-align:middle"><strong>Style</strong></td><td style="vertical-align:middle"><strong>Video Kwaliteit</strong></td><td style="vertical-align:middle"><center><strong>Naam</strong></center></td>{if isset($god)}<td style="vertical-align:middle"><strong>Eigenaar</strong></td><td style="vertical-align:middle"><strong>Speler</strong></td><td style="vertical-align:middle"><center><strong>Aantal keer bezocht</strong></center></td><td style="vertical-align:middle"><center><strong>Laatst bezocht</strong></center></td>{/if}<td style="vertical-align:middle"><strong>Chat/HTML5</strong></td><td style="vertical-align:middle"><strong>Chat Opties</strong></td>
 													</tr>
 												</thead><tbody>
 
@@ -39,6 +39,7 @@
 													<td style="vertical-align:middle"><center><span class="badge badge-pill bg-info float-right">{$ids[chat]}</span></center></td>
 													<td style="vertical-align:middle">{if $bgurl[chat] != ""}<center><img src="{$bgurl[chat]}" style="border-radius: 50% 50% 50% 50%;height:50px;width:50px;"></center>{else}<center><div style="padding:10px 0;text-align:center;vertical-align:middle;background-color:{$bgcolor[chat]};color:#FFF;border-radius: 50% 50% 50% 50%;height:50px;width:50px;">{$chatstyle[chat]}</div></center>{/if}</td>
 													<td style="vertical-align:middle"><center><div style="padding:10px 0;text-align:center;vertical-align:middle;background-color:{if $chatstyle[chat] == "html5color"}{$html5_color[chat]}{else}{$bgcolor[chat]}{/if};color:#FFF;border-radius: 50% 50% 50% 50%;height:50px;width:50px;">{$chatstyle[chat]}</div></center></td>
+													<td style="vertical-align:middle"><center><p class="white">{$videoheight[chat]}p</p></center></td>
 													<td style="vertical-align:middle"><center><p class="white">{$names[chat]}</p></center></td>
 													{if isset($god)}
 													<td style="vertical-align:middle"><center><p class="white">{$owners[chat]}</p></center></td>

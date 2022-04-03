@@ -199,6 +199,11 @@ if ($id) {
                     if($viewheight) {
                         $smarty->assign('viewheight',$viewheight);
                     }
+					// Videoheight
+					$videoheight = $chat->getVideoHeight();
+                    if($videoheight) {
+                        $smarty->assign('videoheight1',$videoheight);
+                    }
 					// tags
 					$tags = $chat->getTags();
                     if($tags) {
@@ -513,6 +518,7 @@ if ($id) {
 			$smarty->assign('titledata', "fallback");
 			$smarty->assign('dark', "true");
 			$smarty->assign('hidedisplayname', "true");
+			$smarty->assign('videoheight', "480");
 	    $smarty->assign('page','new');
         }
     }
@@ -543,6 +549,7 @@ if ($id) {
 		$trans_parantie = array();
 		$om_swtich = array();
 		$em_bedly = array();
+		$video_height = array();
         foreach ($chatboxes as $chatbox) {
             $owner = new Member($aDb);
             $owner->getById($chatbox->getOwner());
@@ -558,6 +565,7 @@ if ($id) {
 			array_push($om_swtich,$chatbox->getOmswitch());
 			array_push($em_bedly,$chatbox->getEmbedly());
 			array_push($chatstyle,$chatbox->getStyle());
+			array_push($video_height,$chatbox->getVideoHeight());
 			array_push($playerstyle,$chatbox->Radio->getPlayer());
         }
         $smarty->assign('ids',$ids);
@@ -573,6 +581,7 @@ if ($id) {
 		$smarty->assign('trans_parantie', $trans_parantie);
 		$smarty->assign('om_swtich', $om_swtich);
 		$smarty->assign('em_bedly', $em_bedly);
+		$smarty->assign('videoheight', $video_height);
     }
     else {
         $member = new Member($db);
