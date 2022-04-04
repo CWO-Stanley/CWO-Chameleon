@@ -83,10 +83,16 @@ window.kiwiConfig = function kiwiConfig() {
 			},
 		"plugins": [
 			{/literal}{if $metadata['webcam'] == "true"}{literal}
+			{/literal}{if $metadata['mic'] == "true"}{literal}
+			{
+				"name": "conference",
+				"url": "{/literal}{$fullurl}{literal}/static/plugins/conference/plugin-conference.micdisabled.js?v=1.4"
+			},
+			{/literal}{else}{literal}
 			{
 				"name": "conference",
 				"url": "{/literal}{$fullurl}{literal}/static/plugins/conference/plugin-conference.min.js?v=1.4"
-			},{/literal}{/if}{literal}
+			},{/literal}{/if}{/if}{literal}
 				{/literal}{if $metadata['style'] == "nightswatch"}{literal}
 				{"name": "theme-dark-fluid", "url": "{/literal}{$fullurl}{literal}/static/plugins/theme-dark-fluid.js"},
 				{/literal}{/if}{literal}
