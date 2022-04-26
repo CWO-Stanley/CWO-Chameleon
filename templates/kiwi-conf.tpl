@@ -86,12 +86,12 @@ window.kiwiConfig = function kiwiConfig() {
 			{/literal}{if $metadata['mic'] == "true"}{literal}
 			{
 				"name": "conference",
-				"url": "{/literal}{$fullurl}{literal}/static/plugins/conference/plugin-conference.micdisabled.js?v=1.4"
+				"url": "{/literal}{$fullurl}{literal}/static/plugins/conference/plugin-conference.micdisabled.js?v=1.5"
 			},
 			{/literal}{else}{literal}
 			{
 				"name": "conference",
-				"url": "{/literal}{$fullurl}{literal}/static/plugins/conference/plugin-conference.min.js?v=1.4"
+				"url": "{/literal}{$fullurl}{literal}/static/plugins/conference/plugin-conference.min.js?v=1.5"
 			},{/literal}{/if}{/if}{literal}
 				{/literal}{if $metadata['style'] == "nightswatch"}{literal}
 				{"name": "theme-dark-fluid", "url": "{/literal}{$fullurl}{literal}/static/plugins/theme-dark-fluid.js"},
@@ -192,8 +192,8 @@ window.kiwiConfig = function kiwiConfig() {
 				"disabledText": "Sorry. The sysop has not enabled conferences in this channel.",
 				"linkShortenerAPIToken":"",
 				"showLink": {/literal}{if $metadata['conflink'] == "true"}true{else}false{/if}{literal},
-				"useLinkShortener": false,
-				"linkShortenerURL": "https://x0.no/api/?{{ link }}",
+				"useLinkShortener": true,
+				"linkShortenerURL": "https://short.chattersworld.nl/yourls-api.php?signature=bf750be8db&action=shorturl&format=simple&url={{ link }}",
 				"interfaceConfigOverwrite": {
 					"SHOW_JITSI_WATERMARK": true,
 					"SHOW_WATERMARK_FOR_GUESTS": true,

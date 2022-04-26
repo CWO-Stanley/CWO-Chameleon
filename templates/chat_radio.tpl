@@ -130,8 +130,8 @@
 
 
 {elseif $metadata['radio_player'] == "luna"}
-		<script src="{$fullurl}/radiolibs/luna/jquery-3.2.1.min.js"></script>
-		<script type="text/javascript" src="{$fullurl}/radiolibs/luna/lunaradio.min.js?v=5.21.04.16"></script>
+		<!-- <script src="{$fullurl}/radiolibs/luna/jquery-3.2.1.min.js"></script> -->
+		<script type="text/javascript" src="{$fullurl}/radiolibs/luna/lunaradio.min.js?v=6.22.04.25"></script>
 		
 		<center>
 		<div id="lunaradio" style='width:50%;
@@ -153,7 +153,8 @@
 			</div>
 		</div>
         <script>
-			$("#lunaradio").lunaradio({
+			window.addEventListener("load", function () {
+    lunaRadio("lunaradio",{
 				token: "VVpTZmZXZGVpYWReViBgXg==",
 				userinterface: "small",
 				backgroundcolor: "{$metadata['playerkleur']}",
@@ -167,7 +168,7 @@
 				coverimage: "https://chameleon.chattersworld.nl/dist/img/c4all.png",
 				coverstyle: "circle",
 				usevisualizer: "real",
-				visualizertype: "8",
+				visualizertype: "3",
 				multicolorvisualizer: "true",
 				visualizeropacity: "1.0",
 				itunestoken: "1000lIPN",
@@ -179,6 +180,7 @@
 				radionomyid: "",
 				radionomyapikey: "",
 				radiojarid: "",
+				uselocalstorage: "true",
 				radiocoid: "sdef46f462",
 				shoutcastpath: "{if $metadata['radio_type'] == "shoutcast2"}{$metadata['mountpoint']}{/if}",
 				shoutcastid: "1",
@@ -189,6 +191,7 @@
 				usestreamcorsproxy: "{if $metadata['radio_link']|parse_url:$smarty.const.PHP_URL_SCHEME == 'http'}true{else}false{/if}", 
 				autoplay: "true",
 				corsproxy: "{if $metadata['radio_type'] == "shoutcast"}{else}https://api.codetabs.com/v1/proxy?quest={/if}",
+			});
 			});
 		</script>
          
@@ -288,8 +291,8 @@
             <!-- ENDS: AUTO-GENERATED MUSES RADIO PLAYER CODE -->
         </center>
 	{elseif $metadata['radio_player'] == "internal"}
-        <script src="{$fullurl}/radiolibs/luna/jquery-3.2.1.min.js"></script>
-        <script type="text/javascript" src="{$fullurl}/radiolibs/luna/lunaradio.min.js?v=5.21.04.16"></script>
+        <!-- <script src="{$fullurl}/radiolibs/luna/jquery-3.2.1.min.js"></script> -->
+        <script type="text/javascript" src="{$fullurl}/radiolibs/luna/lunaradio.min.js?v=6.22.04.25"></script>
 
 		<center>
 		<div id="lunaradio" style='width:50%;
@@ -311,42 +314,45 @@
 			</div>
 		</div>
 		<script>
-		$("#lunaradio").lunaradio({
+		window.addEventListener("load", function () {
+    lunaRadio("lunaradio",{
 			token: "VVpTZmZXZGVpYWReViBgXg==",
-			userinterface: "small",
-			backgroundcolor: "{$metadata['playerkleur']}",
-			fontcolor: "{$metadata['tekstkleur']}",
-			hightlightcolor: "{$metadata['volslide']}",
-			fontname: "",
-			googlefont: "",
-			fontratio: "0.4",
-			radioname: "{$metadata['radio_name']}",
-			scroll: "true",
-			coverimage: "https://chameleon.chattersworld.nl/dist/img/c4all.png",
-			coverstyle: "circle",
-			usevisualizer: "real",
-			visualizertype: "8",
-			multicolorvisualizer: "true",
-			visualizeropacity: "1.0",
-			itunestoken: "1000lIPN",
-			metadatatechnic: "stream-icy-meta",
-			ownmetadataurl: "",
-			streamurl: "{$metadata['radio_link']}",
-			streamtype: "{$metadata['radio_type']}",
-			icecastmountpoint: "{if $metadata['radio_type'] == "icecast2"}{$metadata['mountpoint']}{/if}",
-			radionomyid: "",
-			radionomyapikey: "",
-			radiojarid: "",
-			radiocoid: "sdef46f462",
-			shoutcastpath: "{if $metadata['radio_type'] == "shoutcast2"}{$metadata['mountpoint']}{/if}",
-			shoutcastid: "1",
-			streamsuffix: "",
-			metadatainterval: "30000",
-			volume: "50",
-			debug: "false",
-			usestreamcorsproxy: "false",
-			autoplay: "true",
-			corsproxy: "{if $metadata['radio_type'] == "shoutcast"}{else}https://www.my-webalbum.com/simple-cors/?q={/if}",
+				userinterface: "small",
+				backgroundcolor: "{$metadata['playerkleur']}",
+				fontcolor: "{$metadata['tekstkleur']}",
+				hightlightcolor: "{$metadata['volslide']}",
+				fontname: "",
+				googlefont: "",
+				fontratio: "0.4",
+				radioname: "{$metadata['radio_name']}",
+				scroll: "true",
+				coverimage: "https://chameleon.chattersworld.nl/dist/img/c4all.png",
+				coverstyle: "circle",
+				usevisualizer: "real",
+				visualizertype: "3",
+				multicolorvisualizer: "true",
+				visualizeropacity: "1.0",
+				itunestoken: "1000lIPN",
+				metadatatechnic: "{$metadata['titledata']}",
+				ownmetadataurl: "",
+				streamurl: "{$metadata['radio_link']}",
+				streamtype: "{$metadata['radio_type']}",
+				icecastmountpoint: "{if $metadata['radio_type'] == "icecast2"}{$metadata['mountpoint']}{/if}",
+				radionomyid: "",
+				radionomyapikey: "",
+				radiojarid: "",
+				radiocoid: "sdef46f462",
+				shoutcastpath: "{if $metadata['radio_type'] == "shoutcast2"}{$metadata['mountpoint']}{/if}",
+				shoutcastid: "1",
+				streamsuffix: "",
+				metadatainterval: "30000",
+				volume: "50",
+				debug: "false",
+				uselocalstorage: "true",
+				usestreamcorsproxy: "{if $metadata['radio_link']|parse_url:$smarty.const.PHP_URL_SCHEME == 'http'}true{else}false{/if}", 
+				autoplay: "true",
+				corsproxy: "{if $metadata['radio_type'] == "shoutcast"}{else}https://api.codetabs.com/v1/proxy?quest={/if}",
+		});
 		});
 		</script>
 				

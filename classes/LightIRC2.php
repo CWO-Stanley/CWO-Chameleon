@@ -1,4 +1,3 @@
-<?php
 function H2O_check_license($licensekey, $localkey='') {
 
     // -----------------------------------
@@ -6,7 +5,7 @@ function H2O_check_license($licensekey, $localkey='') {
     // -----------------------------------
 
     // Enter the url to your WHMCS installation here
-    $whmcsurl = 'https://klantenpaneel.hosting2chat.nl/';
+    $whmcsurl = 'https://www.hosting2chat.nl/';
     // Must match what is specified in the MD5 Hash Verification field
     // of the licensing product that will be used with this check.
     $licensing_secret_key = 'Chameleon';
@@ -205,4 +204,3 @@ switch ($results['status']) {
 		die();
         break;
 }
-?>

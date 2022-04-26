@@ -139,7 +139,7 @@ class Member {
     public function verify() {
         // $stmp = $this->_db->prepare("SELECT `id`,`email` FROM `anope_db_NickCore` WHERE `display`= ?;");
         // $stmp->execute(array($this->_username,$this->_password));
-		$anope = new AnopeXMLRPC("http://IP:8085/xmlrpc");
+		$anope = new AnopeXMLRPC("http://IP:PORT/xmlrpc");
 		$ret = $anope->CheckAuthentication("$this->_username", "$this->_password");
         
         if ($ret == $this->_username) {

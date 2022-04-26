@@ -16,7 +16,7 @@ header('Cache-Control: pre-check=0, post-check=0, max-age=0');
 header('Pragma: no-cache'); 
 header('Expires: 0'); 
 
-if (isset($_POST['url']) && $_POST['url'] != ""):
+if (isset($_POST['url']) && @$_POST['url'] != ""):
     echo (getMp3StreamTitle($_POST['url']));
 else:
 	echo "";

@@ -51,7 +51,7 @@
 		<link href="webplayer/css/ytplayer.min.css?v=1.18.03.18" rel="stylesheet" type="text/css" media="all" />
 		<link href="webplayer/css/theme-nativehtml5radio.min.css?v=1.20.07.02" rel="stylesheet" type="text/css" media="all" />
     			
-				<script type="text/javascript" src="radiolibs/luna/lunaradio.min.js?v=5.21.04.16"></script>
+				<script type="text/javascript" src="radiolibs/luna/lunaradio.min.js?v=6.22.04.25"></script>
 			<script>{literal}
   				(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -260,7 +260,8 @@ return true;
 <script src="webplayer/js/scripts.js?v=1.18.03.18"></script>
 
 <script>
-$("#lunaradio").lunaradio({
+window.addEventListener("load", function () {
+    lunaRadio("lunaradio",{
 	token: "VVpTZmZXZGVpYWReViBgXg==",
 	userinterface: "big",
 	backgroundcolor: "{$metadata['playerkleur']}",
@@ -274,7 +275,7 @@ $("#lunaradio").lunaradio({
 	coverimage: "{$fullurl}/dist/img/c4all.png",
 	coverstyle: "circle",
 	usevisualizer: "real",
-	visualizertype: "",
+	visualizertype: "3",
 	multicolorvisualizer: "true",
 	visualizeropacity: "1.0",
 	itunestoken: "1000lIPN",
@@ -291,11 +292,13 @@ $("#lunaradio").lunaradio({
 	shoutcastid: "1",
 	streamsuffix: "",
 	metadatainterval: "20000",
+	uselocalstorage: "true",
 	volume: "90",
 	debug: "false",
 	usestreamcorsproxy: "false", 
 	autoplay: "true",
 	corsproxy: "{if $metadata['radio_type'] == "shoutcast"}{else}https://api.allorigins.win/raw?url={/if}",
+});
 });
 </script>
 

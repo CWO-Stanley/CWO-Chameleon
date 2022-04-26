@@ -1,5 +1,5 @@
 /*
- * SHOUT - HTML5 Radio Player With Ads - ShoutCast and IceCast Support - v3.2
+ * SHOUT - HTML5 Radio Player With Ads - ShoutCast and IceCast Support - v3.2.0
  *
  * Copyright 2017-2021, LambertGroup
  *

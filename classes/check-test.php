@@ -1,5 +1,36 @@
 <?php
-function H2O_check_license($licensekey, $localkey='') {
+/**
+ * WHMCS Licensing Addon - Integration Code Sample
+ * https://www.whmcs.com/addons/licensing-addon/
+ *
+ * The following code is a fully working code sample demonstrating how to
+ * perform license checks using the WHMCS Licensing Addon. It is PHP 4 and
+ * 5 compatible.  Requires the WHMCS Licensing Addon to be used.
+ *
+ * @package    WHMCS
+ * @author     WHMCS Limited <development@whmcs.com>
+ * @copyright  Copyright (c) WHMCS Limited 2005-2018
+ * @license    https://www.whmcs.com/license/ WHMCS Eula
+ * @version    $Id$
+ * @link       https://www.whmcs.com/
+ */
+
+/**
+ * This is just example code, and is not intended to be invoked directly.
+ *
+ * To ensure this code isn't unintentionally invoked on the command line or
+ * via the web interface, any attempt to actually execute this code will
+ * be exited:
+ */
+// exit;
+/**
+ * If you are using this file as a template for your own module, once
+ * you've modified the code for your use, remove the exit above.
+ */
+
+// Replace "yourprefix" with your own unique prefix to avoid conflicts with
+// other instances of the licensing addon included within the same scope
+function yourprefix123_check_license($licensekey, $localkey='') {
 
     // -----------------------------------
     //  -- Configuration Values --
@@ -175,12 +206,10 @@ pFWblJiO1ozc7IyUD1ESXBCd0FWTioDMxozc7ISZtFmbkVmclR3cpdWZyJiO0EjOztjIlZXa0NWQiojN
 c5e399e3c16a';
 
 // Validate the license key information
-$results = H2O_check_license($licensekey, $localkey);
+$results = yourprefix123_check_license($licensekey, $localkey);
 
 // Raw output of results for debugging purpose
-// echo '<textarea cols="100" rows="20">' . print_r($results, true) . '</textarea>';
-// echo ($results['registeredname']);
-
+echo '<textarea cols="100" rows="20">' . print_r($results, true) . '</textarea>';
 
 // Interpret response
 switch ($results['status']) {
@@ -189,20 +218,15 @@ switch ($results['status']) {
         $localkeydata = $results['localkey'];
         break;
     case "Invalid":
-        include("under-maintenance.html");
-		die();
+        die("License key is Invalid");
         break;
     case "Expired":
-        include("under-maintenance.html");
-		die();
+        die("License key is Expired");
         break;
     case "Suspended":
-        include("under-maintenance.html");
-		die();
+        die("License key is Suspended");
         break;
     default:
-        include("under-maintenance.html");
-		die();
+        die("Invalid Response");
         break;
 }
-?>
