@@ -29,7 +29,7 @@
                                             <table id="data-table2" class="table compact">
 												<thead>
 													<tr>
-														<td style="vertical-align:middle"><strong>ID</strong></td><td style="vertical-align:middle"><strong>Achtergrond</strong></td><td style="vertical-align:middle"><strong>Style</strong></td><td style="vertical-align:middle"><strong>Video Kwaliteit</strong></td><td style="vertical-align:middle"><center><strong>Naam</strong></center></td>{if isset($god)}<td style="vertical-align:middle"><strong>Eigenaar</strong></td><td style="vertical-align:middle"><strong>Speler</strong></td><td style="vertical-align:middle"><center><strong>Aantal keer bezocht</strong></center></td><td style="vertical-align:middle"><center><strong>Laatst bezocht</strong></center></td>{/if}<td style="vertical-align:middle"><strong>Chat/HTML5</strong></td><td style="vertical-align:middle"><strong>Chat Opties</strong></td>
+														<td style="vertical-align:middle"><strong>ID</strong></td><td style="vertical-align:middle"><strong>Achtergrond</strong></td><td style="vertical-align:middle"><strong>Style</strong></td><td style="vertical-align:middle"><strong>Video Kwaliteit</strong></td><td style="vertical-align:middle"><center><strong>Naam</strong></center></td>{if isset($god)}<td style="vertical-align:middle"><strong>Eigenaar</strong></td><td style="vertical-align:middle"><strong>Speler</strong></td><td style="vertical-align:middle"><center><strong>Aantal keer bezocht</strong></center></td><td style="vertical-align:middle"><center><strong>Laatst bezocht</strong></center></td>{/if}<td style="vertical-align:middle"><strong>Chat</strong></td><td style="vertical-align:middle"><strong>Chat Opties</strong></td>
 													</tr>
 												</thead><tbody>
 
@@ -50,8 +50,8 @@
 													<td style="vertical-align:middle"><center>
 													<div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
 														<a href="{$fullurl}/chat/{$ids[chat]}" target='_blank' title="Preview Webchat" class="btn btn-outline-info"><span class="ft-share"></span></a>
-														<a href="{$fullurl}/html5.php?id={$ids[chat]}" target="_blank" title="Preview HTML5" class="btn btn-outline-info"><span class="ft-chrome"></span></a>
-														<a href="{if !$names[chat]|strstr:'.'}https://{$names[chat]}.chameleon.chattersworld.nl/{else}https://chameleon.chattersworld.nl/chat/{$ids[chat]}{/if}" target="_blank" title="Preview short link" class="btn btn-outline-info"><span class="ft-external-link"></span></a>
+														<!-- <a href="{$fullurl}/html5.php?id={$ids[chat]}" target="_blank" title="Preview HTML5" class="btn btn-outline-info"><span class="ft-chrome"></span></a>
+														<a href="{if !$names[chat]|strstr:'.'}https://{$names[chat]}.chameleon.chattersworld.nl/{else}https://chameleon.chattersworld.nl/chat/{$ids[chat]}{/if}" target="_blank" title="Preview short link" class="btn btn-outline-info"><span class="ft-external-link"></span></a> -->
 													</div></center>
 														
 													</td>

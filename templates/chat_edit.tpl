@@ -306,9 +306,9 @@
                         <label for="videoheight" title="Zet hier de kwaliteit van de webcam streams." class="control-label col-sm-2 white">Video kwaliteit</label>
                         <div class="col-sm-4"><div class="form-group">
                             <select id="videoheight" class="select2 form-control" id="default-select2" name="videoheight">
-                                <option value="720" {if $videoheight1=="720"}selected="selected"{/if}>720 (Hoog)</option>
+                                <option value="360" {if $videoheight1=="360"}selected="selected"{/if}>360 (Laag)</option>
 								<option value="480" {if $videoheight1=="480"}selected="selected"{/if}>480 (Middel)</option>
-                                <option value="360" {if $videoheight1=="360"}selected="selected"{/if}>360 (laag)</option>
+                                <option value="720" {if $videoheight1=="720"}selected="selected"{/if}>720 (Hoog)</option>
                             </select>
                         </div>
                     </div>

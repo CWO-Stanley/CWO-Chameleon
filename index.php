@@ -518,7 +518,7 @@ if ($id) {
 			$smarty->assign('titledata', "fallback");
 			$smarty->assign('dark', "true");
 			$smarty->assign('hidedisplayname', "true");
-			$smarty->assign('videoheight', "480");
+			$smarty->assign('videoheight1', "480");
 	    $smarty->assign('page','new');
         }
     }
