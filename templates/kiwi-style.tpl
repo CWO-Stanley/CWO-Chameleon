@@ -183,6 +183,11 @@ body {
      display:none;
 }
 {/literal}{if $metadata['icons'] != ""}{literal}
+.kiwi-nicklist-user-prefix {
+        height:15px;
+		width: 15px;
+        content: url({/literal}{$fullurl}{literal}/lirc-resources/icons/default.png);
+}
 .kiwi-nicklist-user--mode-q .kiwi-nicklist-user-prefix {
 	content: url({/literal}{$fullurl}{literal}/lirc-resources/icons/{/literal}{$metadata['icons']}{literal}/owner.png)
 }
@@ -199,6 +204,11 @@ body {
 	content: url({/literal}{$fullurl}{literal}/lirc-resources/icons/{/literal}{$metadata['icons']}{literal}/voice.png)
 }
 {/literal}{if $metadata['prefixicons'] == "true"}{literal}
+.kiwi-messagelist-nick--prefix {
+		height:15px;
+		width: 15px;
+        content: url({/literal}{$fullurl}{literal}/lirc-resources/icons/default.png);
+}
 .kiwi-messagelist-nick--mode-q .kiwi-messagelist-nick--prefix {
 	content: url({/literal}{$fullurl}{literal}/lirc-resources/icons/{/literal}{$metadata['icons']}{literal}/owner.png)
 }
@@ -228,6 +238,11 @@ body {
 }
 .kiwi-messagelist-nick--mode-v .kiwi-messagelist-nick-prefix {
 	content: url({/literal}{$fullurl}{literal}/lirc-resources/icons/{/literal}{$metadata['icons']}{literal}/voice.png)
+}
+.kiwi-messagelist-nick-prefix {
+        height:15px;
+		width: 15px;
+        content: url({/literal}{$fullurl}{literal}/lirc-resources/icons/default.png);
 }
 {/literal}{/if}{/if}{literal}{/literal}
 {if $metadata['style'] != "nightswatch"}{literal}
