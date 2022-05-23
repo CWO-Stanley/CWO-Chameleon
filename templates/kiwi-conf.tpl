@@ -215,6 +215,11 @@ window.kiwiConfig = function kiwiConfig() {
 					"startWithAudioMuted": true,
 					"hideDisplayName": {/literal}{if $metadata['hidedisplayname'] == "true"}true{else}false{/if}{literal},
 					"resolution": {/literal}{$metadata['videoheight']}{literal},
+					"constraints": {
+						"video": {
+							"aspectRatio": 16 / 9,
+							}
+					},
 					"disableTileEnlargement": true,
 					"toolbarButtons": [
        							"camera",
