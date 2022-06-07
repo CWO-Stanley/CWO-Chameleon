@@ -131,7 +131,7 @@
 
 {elseif $metadata['radio_player'] == "luna"}
 		<!-- <script src="{$fullurl}/radiolibs/luna/jquery-3.2.1.min.js"></script> -->
-		<script type="text/javascript" src="{$fullurl}/radiolibs/luna/lunaradio.min.js?v=6.22.04.25"></script>
+		<script type="text/javascript" src="{$fullurl}/radiolibs/luna/lunaradio.min.js?v=6.22.05.25"></script>
 		
 		<center>
 		<div id="lunaradio" style='width:50%;
@@ -164,11 +164,13 @@
 				googlefont: "",
 				fontratio: "0.4",
 				radioname: "{$metadata['radio_name']}",
-				scroll: "true",
 				coverimage: "https://chameleon.chattersworld.nl/dist/img/c4all.png",
 				coverstyle: "circle",
 				usevisualizer: "real",
-				visualizertype: "3",
+				visualizertype: "9",
+				scroll: "true",
+				scrollradioname: "left",
+				scrolltitle: "left",
 				multicolorvisualizer: "true",
 				visualizeropacity: "1.0",
 				itunestoken: "1000lIPN",
@@ -292,7 +294,7 @@
         </center>
 	{elseif $metadata['radio_player'] == "internal"}
         <!-- <script src="{$fullurl}/radiolibs/luna/jquery-3.2.1.min.js"></script> -->
-        <script type="text/javascript" src="{$fullurl}/radiolibs/luna/lunaradio.min.js?v=6.22.04.25"></script>
+        <script type="text/javascript" src="{$fullurl}/radiolibs/luna/lunaradio.min.js?v=6.22.05.25"></script>
 
 		<center>
 		<div id="lunaradio" style='width:50%;
@@ -329,7 +331,10 @@
 				coverimage: "https://chameleon.chattersworld.nl/dist/img/c4all.png",
 				coverstyle: "circle",
 				usevisualizer: "real",
-				visualizertype: "3",
+				scroll: "true",
+				scrollradioname: "left",
+				scrolltitle: "right",
+				visualizertype: "9",
 				multicolorvisualizer: "true",
 				visualizeropacity: "1.0",
 				itunestoken: "1000lIPN",

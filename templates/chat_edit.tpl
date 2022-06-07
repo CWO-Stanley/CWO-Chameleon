@@ -561,7 +561,7 @@
                     <!-- URL van de radio -->
                     
 					<div class="row">
-                        <label for="radio_link" class="control-label col-sm-2 white">Radio URL</label>
+                        <label for="radio_link" class="control-label col-sm-2 white">Radio URL<br /><small>Let op: gebruikt u een 'http' link, kan deze haperen!</small></label>
                         <div class="col-sm-4"><div class="form-group">
                             <input type="text" class="form-control" name="radio_link" {literal}pattern="^.*\/\/[^\/]+:?[0-9]"{/literal} title="Geef hier de URL de radiostream in (beginnen met http:// en zonder / achteraan in de link)." placeholder="Radio URL" value="{if isset($radio_link)}{$radio_link}{/if}" data-toggle="tooltip" data-placement="top">
 							<i class="form-group__bar"></i>
