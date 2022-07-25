@@ -27,6 +27,7 @@
 	<link rel="stylesheet" href="{$fullurl}/app-assets/vendors/js/extensions/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.css">
 	<link rel="stylesheet" type="text/css" href="{$fullurl}/app-assets/vendors/css/extensions/toastr.css">
 	<link rel="stylesheet" type="text/css" href="{$fullurl}/app-assets/vendors/css/tables/datatable/datatables.min.css">
+	<link rel="stylesheet" type="text/css" href="{$fullurl}/app-assets/vendors/css/ui/prism.min.css">
 	
     {literal}<style>
 input[type='range'] {
@@ -251,6 +252,7 @@ input[type='range']:focus {
     <script src="{$fullurl}/app-assets/js/core/app.js" type="text/javascript"></script>
 	<script src="{$fullurl}/app-assets/vendors/js/extensions/toastr.min.js" type="text/javascript"></script>
 	<script src="{$fullurl}/app-assets/js/scripts/forms/wizard-steps.js?v=1.6" type="text/javascript"></script>
+	<script src="{$fullurl}/app-assets/vendors/js/ui/prism.min.js" type="text/javascript"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
 	{if isset($success)}
 	{literal}

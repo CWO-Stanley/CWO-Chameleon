@@ -474,6 +474,8 @@ if ($id) {
             $chat->readForm($_POST);
             $chat->save();
             $smarty->assign('success',"Je chatbox is aangemaakt! Vergeet niet je chatbox te registeren op de chat!");
+			$smarty->assign('success2',"Uw chatbox is aangemaakt. Log nu in op uw chatbox en typ:");
+		    $smarty->assign('chatname', $_POST['chat_name']);
             $smarty->assign('page',"list");
         }
         else {

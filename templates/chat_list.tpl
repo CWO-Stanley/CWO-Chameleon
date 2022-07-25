@@ -18,7 +18,16 @@
                                     <h4 class="card-title white">Chatbox lijst</h4>
                                     <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
                                     <div class="heading-elements">
-                                        
+											{if isset($success2)}
+											<div class="alert alert-success border-0 alert-dismissible mb-2" role="alert">
+											<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+												<span aria-hidden="true">&times;</span>
+											</button>
+											<h4 class="alert-heading mb-2"><strong>Gelukt!</strong> #{$chatname} is opgeslagen!</h4>
+											<p>{$success2} <pre><code>/cs register #{$chatname}</code></pre></p>
+											<!-- {$success2} /cs register #{$chatname} -->
+											</div>
+											{/if}
                                     </div>
                                 </div>
                                 <div class="card-content collapse show">
@@ -80,14 +89,14 @@
 															<div class="modal-body">
 																<h5 class="white">Je chatbox op je website plaatsen</h5>
 																Als je je chatbox op je website wil plaatsen, kan je dit doen met het volgende stukje HTML code:
-																<blockquote><pre class="text-left bg-blue-grey bg-darken-4">&lt;iframe src='{$fullurl}/chat/{$ids[chat]}' allow="camera;microphone" width='710' height='500' framespacing='0' frameborder='no' scrolling='no' &gt;&lt;/iframe&gt;</pre></blockquote>
+																<pre><code class="language-markup">&lt;iframe src='{$fullurl}/chat/{$ids[chat]}' allow="camera;microphone" width='710' height='500' framespacing='0' frameborder='no' scrolling='no' &gt;&lt;/iframe&gt;</code></pre>
 																	<h5 class="white">Je HTML5 chatbox op je website plaatsen</h5>
 																Als je je HTML5 chatbox op je website wil plaatsen, kan je dit doen met het volgende stukje HTML code:
-																<blockquote><pre class="text-left bg-blue-grey bg-darken-4">&lt;iframe src='{$fullurl}/html5/{$ids[chat]}' allow="camera;microphone" width='710' height='500' framespacing='0' frameborder='no' scrolling='no' &gt;&lt;/iframe&gt;</pre></blockquote>
+																<pre><code class="language-markup">&lt;iframe src='{$fullurl}/html5/{$ids[chat]}' allow="camera;microphone" width='710' height='500' framespacing='0' frameborder='no' scrolling='no' &gt;&lt;/iframe&gt;</code></pre>
 										
 																<h5 class="white">Het aantal chatters op je website laten zien</h5>
 																Om het aantal chatters dat zich in je chatbox bevindt op je site weer te geven, plaats je het volgende stukje javascript code tussen de <code>&lt;HEAD&gt;</code> tags van je webpagina.
-																<blockquote><pre class="text-left bg-blue-grey bg-darken-4">&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"&gt;&lt;/script&gt;
+																<pre><code class="language-js">&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"&gt;&lt;/script&gt;
 &lt;script&gt;
 $(document).ready(function updateChatCount() {
 	$.get('https://chattersworld.nl/usercount.php?channel={$names[chat]}', function(data) {
@@ -95,9 +104,9 @@ $(document).ready(function updateChatCount() {
 	}, 'text');
 	setTimeout(updateChatCount, 3000);
 });
-&lt;/script&gt;</pre></blockquote>
+&lt;/script&gt;</code></pre>
 																Zet vervolgens tussen de <code>&lt;BODY&gt;</code> tags op de plaats waar je het chattersaantal wil hebben een HTML-element met het id users, bijvoorbeeld:
-																<blockquote><pre class="text-left bg-blue-grey bg-darken-4">&lt;p&gt;Aantal Chatters: &lt;span id="users"&gt;&lt;/span&gt;&lt;/p&gt;</pre></blockquote>
+																<pre><code class="language-markup">&lt;p&gt;Aantal Chatters: &lt;span id="users"&gt;&lt;/span&gt;&lt;/p&gt;</code></pre>
 															</div>
 															<div class="modal-footer">
 																<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
