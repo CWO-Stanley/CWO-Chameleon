@@ -245,6 +245,7 @@ input[type='range']:focus {
 	<script src="{$fullurl}/app-assets/vendors/js/forms/toggle/switchery.min.js" type="text/javascript"></script>
     <script src="{$fullurl}/app-assets/js/scripts/forms/switch.min.js" type="text/javascript"></script>
     <script src="{$fullurl}/app-assets/vendors/js/tables/datatable/datatables.min.js" type="text/javascript"></script>
+	<script src="{$fullurl}/app-assets/vendors/js/tables/datatable/dataTables.responsive.min.js" type="text/javascript"></script>
 	<script src="{$fullurl}/app-assets/vendors/js/extensions/sweetalert2.all.js" type="text/javascript"></script>
 	<script src="{$fullurl}/app-assets/vendors/js/extensions/jquery.steps.min.js" type="text/javascript"></script>
 	<script src="{$fullurl}/app-assets/vendors/js/forms/validation/jquery.validate.min.js?v=1.0" type="text/javascript"></script>
@@ -299,7 +300,6 @@ $(document).ready(function() {
         "language": {
             "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Dutch.json"
         },
-		
 		"pageLength" : 25,
 		"lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "Alles"]],
 		"responsive": true,

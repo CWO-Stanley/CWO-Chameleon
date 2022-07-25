@@ -24,7 +24,7 @@
 												<span aria-hidden="true">&times;</span>
 											</button>
 											<h4 class="alert-heading mb-2"><strong>Gelukt!</strong> #{$chatname} is opgeslagen!</h4>
-											<p>{$success2} <pre><code>/cs register #{$chatname}</code></pre></p>
+											<p>{$success2} <br /><pre><code>/cs register #{$chatname}</code></pre></p>
 											<!-- {$success2} /cs register #{$chatname} -->
 											</div>
 											{/if}
@@ -35,10 +35,10 @@
                                         <p class="card-text white">Hier vind je al je chatboxen die jij gemaakt hebt</p>
                                         <div class="table-responsive">
 										{if {$ids|@count} > 0}
-                                            <table id="data-table2" class="table compact">
+                                            <table id="data-table2" class="table compact table-hover">
 												<thead>
 													<tr>
-														<td style="vertical-align:middle"><strong>ID</strong></td><td style="vertical-align:middle"><strong>Achtergrond</strong></td><td style="vertical-align:middle"><strong>Style</strong></td><td style="vertical-align:middle"><strong>Video Kwaliteit</strong></td><td style="vertical-align:middle"><center><strong>Naam</strong></center></td>{if isset($god)}<td style="vertical-align:middle"><strong>Eigenaar</strong></td><td style="vertical-align:middle"><strong>Speler</strong></td><td style="vertical-align:middle"><center><strong>Aantal keer bezocht</strong></center></td><td style="vertical-align:middle"><center><strong>Laatst bezocht</strong></center></td>{/if}<td style="vertical-align:middle"><strong>Chat</strong></td><td style="vertical-align:middle"><strong>Chat Opties</strong></td>
+														<th style="vertical-align:middle"><strong>ID</strong></th><th style="vertical-align:middle"><strong>Achtergrond</strong></th><th style="vertical-align:middle"><strong>Style</strong></th><th style="vertical-align:middle"><strong>Video Kwaliteit</strong></th><th style="vertical-align:middle"><center><strong>Naam</strong></center></th>{if isset($god)}<th style="vertical-align:middle"><strong>Eigenaar</strong></th><th style="vertical-align:middle"><strong>Speler</strong></th><th style="vertical-align:middle"><center><strong>Aantal keer bezocht</strong></center></th><th style="vertical-align:middle"><center><strong>Laatst bezocht</strong></center></th>{/if}<th style="vertical-align:middle"><strong>Chat</strong></th><th style="vertical-align:middle"><strong>Chat Opties</strong></th>
 													</tr>
 												</thead><tbody>
 
