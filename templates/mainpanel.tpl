@@ -28,7 +28,7 @@
 	<link rel="stylesheet" type="text/css" href="{$fullurl}/app-assets/vendors/css/extensions/toastr.css">
 	<link rel="stylesheet" type="text/css" href="{$fullurl}/app-assets/vendors/css/tables/datatable/datatables.min.css">
 	<link rel="stylesheet" type="text/css" href="{$fullurl}/app-assets/vendors/css/ui/prism.min.css">
-	
+	<script src="{$fullurl}/js/copyclipboard.js?v=2" type="text/javascript"></script>
     {literal}<style>
 input[type='range'] {
   box-sizing: border-box;
@@ -254,6 +254,7 @@ input[type='range']:focus {
 	<script src="{$fullurl}/app-assets/vendors/js/extensions/toastr.min.js" type="text/javascript"></script>
 	<script src="{$fullurl}/app-assets/js/scripts/forms/wizard-steps.js?v=1.6" type="text/javascript"></script>
 	<script src="{$fullurl}/app-assets/vendors/js/ui/prism.min.js" type="text/javascript"></script>
+	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
 	{if isset($success)}
 	{literal}
@@ -312,7 +313,7 @@ $(document).ready(function() {
 				"header": false,
 				"headerOffset": $('#header').height()
 			},
-		"order": [[ 8, "desc" ]],
+		"order": [[ 7, "desc" ]],
     } );
 	
 } );
