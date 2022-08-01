@@ -28,7 +28,7 @@
 	<link rel="stylesheet" type="text/css" href="{$fullurl}/app-assets/vendors/css/extensions/toastr.css">
 	<link rel="stylesheet" type="text/css" href="{$fullurl}/app-assets/vendors/css/tables/datatable/datatables.min.css">
 	<link rel="stylesheet" type="text/css" href="{$fullurl}/app-assets/vendors/css/ui/prism.min.css">
-	<script src="{$fullurl}/js/copyclipboard.js?v=2" type="text/javascript"></script>
+	<script src="{$fullurl}/js/copyclipboard.js?v=3" type="text/javascript"></script>
     {literal}<style>
 input[type='range'] {
   box-sizing: border-box;

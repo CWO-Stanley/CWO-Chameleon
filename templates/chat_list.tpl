@@ -104,7 +104,7 @@
 																	{literal}<script>
 																	// `clipboard` is defined on the global `window` object.
 																	function copycode{/literal}{$ids[chat]}{literal}() {
-																		clipboard.writeText("<iframe src='https://chameleon.chattersworld.nl/chat/4240' allow='camera;microphone' width='710' height='500' framespacing='0' frameborder='no' scrolling='no' ></iframe>");
+																		clipboard.writeText("<iframe src='https://chameleon.chattersworld.nl/chat/{/literal}{$ids[chat]}{literal}' allow='camera;microphone' width='710' height='500' framespacing='0' frameborder='no' scrolling='no' ></iframe>");
 																	}
 																	</script>{/literal}
 																<br />
