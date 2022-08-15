@@ -86,7 +86,7 @@ class AnopeXMLRPC
 	}
 }
 
-$anope = new AnopeXMLRPC("http://IP:8085/xmlrpc");
+$anope = new AnopeXMLRPC("http://IP:PORT/xmlrpc");
 ?>
 <?php // Check if form was submitted:
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['recaptcha_response'])) {
@@ -113,13 +113,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 				$email = $_POST['email'];
 				$ret = $anope->DoCommand("NickServ", "$user", "REGISTER $password $email");
 				$searchword = 'al geregistreerd';
+				$searchword2 = 'limiet bereikt';
 				$matches = array();
 					foreach($ret as $k=>$v) {
 						if( preg_match("/\b$searchword\b/i", $v) === 1 ) {
 							$matches[$k] = $v;
 						}
+						if( preg_match("/\b$searchword2\b/i", $v) === 1 ) {
+							$matches[$k] = $v;
+						}
 					}
-				if ($matches && $matches["return"] != "") { $errors = $matches["return"]; }else{
+				if ($matches && $matches["return"] != "") { $errors = str_replace("&#xA;", "", $ret["return"]); }else{
 				if ($ret && $ret["result"] == "Success") {
 					$success = "Succesvol geregistreerd, je kan nu inloggen! Uw nicknaam registeren is niet meer nodig, log in met uw nickaam die u hier heeft gebruikt en bevestig uw email adres met de instructies in uw mailbox, let op deze kan in uw ongewenste postvak zijn terecht gekomen.";
 					$message = "Beste $user<br />

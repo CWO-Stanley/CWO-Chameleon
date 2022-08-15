@@ -86,7 +86,7 @@ class AnopeXMLRPC
 	}
 }
 
-$anope = new AnopeXMLRPC("http://IP:8085/xmlrpc");
+$anope = new AnopeXMLRPC("http://IP:PORT/xmlrpc");
 ?>
 <?php // Check if form was submitted:
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['recaptcha_response'])) {
@@ -118,7 +118,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 							$matches[$k] = $v;
 						}
 					}
-				if ($matches && $matches["return"] != "") { $errors = $matches["return"]; }else{
+				if ($matches && $matches["return"] != "") { $errors = str_replace("&#xA;", "", $ret["return"]); }else{
 				if ($ret && $ret["result"] == "Success") {
 					$success = "Succesvol uw nicknaam bevestigd, je kan nu inloggen! Uw nicknaam registeren is niet meer nodig, log in met uw nickaam die u hier heeft gebruikt.";
 					// $message = "Beste $user<br />
