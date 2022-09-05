@@ -113,6 +113,7 @@
     "channel_topic": "Topic",
     "channel_moderated": "Moderated chat",
     "channel_invite": "Invite only",
+    "channel_secret": "Hide this channel from lists",
     "channel_moderated_topic": "Only moderators can change the topic",
     "channel_external": "Block messages from outside this channel",
     "channel_list_fetch": "Click the refresh button to update the channel list",

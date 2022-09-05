@@ -113,6 +113,7 @@
     "channel_topic": "Tópico",
     "channel_moderated": "Bate-papo moderado",
     "channel_invite": "Só por convite",
+    "channel_secret": "Hide this channel from lists",
     "channel_moderated_topic": "Só moderadores podem mudar o tópico",
     "channel_external": "Bloquear mensagens de fora deste canal",
     "channel_list_fetch": "Clique no botão atualizar pra atualizar a lista de canais",
@@ -268,6 +269,7 @@
     "was_kicked_from": "{{nick}} foi chutado de {{channel}} por {{chanop}}",
     "has_left": "{{nick}} saiu",
     "invited_you": "{{nick}} convidou você pra entrar em {{channel}}",
+    "invited_other": "{{nick}} invited {{invited}} to join {{channel}}",
     "nick_in_use_retrying": "O apelido {{nick}} já está em uso. Tentando com {{newnick}}...",
     "now_known_as": "{{nick}} agora é conhecido como {{newnick}}",
     "changed_topic_to": "{{nick}} mudou o tópico pra: {{topic}}"

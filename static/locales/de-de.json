@@ -113,6 +113,7 @@
     "channel_topic": "Thematik",
     "channel_moderated": "Moderierter Channel",
     "channel_invite": "Nur mit Einladung",
+    "channel_secret": "Hide this channel from lists",
     "channel_moderated_topic": "Moderiertes Topic",
     "channel_external": "Blocke externe Nachrichten",
     "channel_list_fetch": "Bestätige den Refresh-Button, um die Raumliste zu aktualisieren",
@@ -268,6 +269,7 @@
     "was_kicked_from": "{{nick}} wurde von {{chanop}} aus {{channel}} gekickt",
     "has_left": "{{nick}} hat den Raum verlassen",
     "invited_you": "{{nick}} hat dich dazu eingeladen, {{channel}} zu betreten",
+    "invited_other": "{{nick}} invited {{invited}} to join {{channel}}",
     "nick_in_use_retrying": "Der Nickname {{nick}}} wird bereits verwendet. Versuche {{newnick}}}.....",
     "now_known_as": "{{nick}} ist jetzt als {{newnick}} bekannt.",
     "changed_topic_to": "{{nick}} hat das Thema geändert zu: {{topic}}"

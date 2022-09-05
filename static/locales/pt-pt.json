@@ -113,6 +113,7 @@
     "channel_topic": "Tópico",
     "channel_moderated": "Canal moderado",
     "channel_invite": "Apenas por convite",
+    "channel_secret": "Hide this channel from lists",
     "channel_moderated_topic": "Apenas OPs podem alterar o tópico",
     "channel_external": "Bloquear mensagens externas ao canal",
     "channel_list_fetch": "Clique no botão actualizar para actualizar a lista de canais",
@@ -268,6 +269,7 @@
     "was_kicked_from": "{{nick}} foi kickado do {{channel}} por {{chanop}}",
     "has_left": "{{nick}} saiu",
     "invited_you": "{{nick}} convidou-te para o canal {{channel}}",
+    "invited_other": "{{nick}} invited {{invited}} to join {{channel}}",
     "nick_in_use_retrying": "Nick {{nick}} já em uso. Tentando com {{newnick}}...",
     "now_known_as": "{{nick}} é agora conhecido como {{newnick}}",
     "changed_topic_to": "{{nick}} alterou o tópico para: {{topic}}"

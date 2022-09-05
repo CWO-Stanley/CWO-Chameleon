@@ -113,6 +113,7 @@
     "channel_topic": "Τίτλος Καναλιού:",
     "channel_moderated": "Περιορισμένη συνομιλία",
     "channel_invite": "Είσοδος με πρόσκληση μόνο",
+    "channel_secret": "Hide this channel from lists",
     "channel_moderated_topic": "Μόνο οι συντονιστές θα μπορούν να αλλάζουν το θέμα",
     "channel_external": "Αποκλείστε τα μηνύματα εκτός του καναλιού",
     "channel_list_fetch": "Κάντε κλικ στο κουμπί ανανέωσης για να ενημερώσετε τη λίστα καναλιών",
@@ -268,6 +269,7 @@
     "was_kicked_from": "{{nick}} απομακρύνθηκε από το {{channel}} κανάλι από {{chanop}}",
     "has_left": "{{nick}} αποχώρισε από το κανάλι",
     "invited_you": "{{nick}} σας προσκάλεσε να εισέλθετε στο {{channel}}",
+    "invited_other": "{{nick}} Σας προσκαλεί {{invited}} να εισέλθετε στο {{channel}}",
     "nick_in_use_retrying": "Το ψευδώνυμο {{nick}} είναι ήδη σε χρηση. Δοκιμάζουμε το {{newnick}}...",
     "now_known_as": "{{nick}} άλλαξε ψευδώνυμο σε {{newnick}}",
     "changed_topic_to": "{{nick}} άλλαξε το θέμα του καναλιού σε: {{topic}}"

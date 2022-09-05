@@ -113,6 +113,7 @@
     "channel_topic": "Topic",
     "channel_moderated": "Chat moderat",
     "channel_invite": "Doar pe bază de invitație",
+    "channel_secret": "Hide this channel from lists",
     "channel_moderated_topic": "Doar moderatorii pot modifica topicul",
     "channel_external": "Blochează mesajele sosite din afara acestui canal",
     "channel_list_fetch": "Dă clic pe butonul de reîmprospătare pentru a actualiza lista canalelor",
@@ -268,6 +269,7 @@
     "was_kicked_from": "{{nick}} a primit kick pe {{channel}} de la {{chanop}}",
     "has_left": "{{nick}} a plecat",
     "invited_you": "{{nick}} te-a invitat pe canalul {{channel}}",
+    "invited_other": "{{nick}} invited {{invited}} to join {{channel}}",
     "nick_in_use_retrying": "Pseudonimul {{nick}} este folosit de către altcineva. Încerc cu {{newnick}}...",
     "now_known_as": "{{nick}} și-a modificat pseudonimul în {{newnick}}",
     "changed_topic_to": "{{nick}} a modificat topicul în: {{topic}}"

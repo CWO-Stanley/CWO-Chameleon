@@ -113,6 +113,7 @@
     "channel_topic": "Gaia",
     "channel_moderated": "Kanal moderatua",
     "channel_invite": "Gonbidatuak bakarrik",
+    "channel_secret": "Hide this channel from lists",
     "channel_moderated_topic": "Moderatzaileek bakarrik alda dezakete gaia",
     "channel_external": "Kanpoko mezuak bloketu",
     "channel_list_fetch": "Egin klik berritu botoian zerrenda eguneratzeko",
@@ -185,8 +186,8 @@
     "filter_channels": "Iragazi kanalak",
     "find_more_channels": "Kanal gehiago bilatu",
     "prompt_leave_channel": "Kanala utzi nahi duzu?",
-    "prompt_close_queries": "Really close all messages?",
-    "prompt_close_query": "Really close this chat?",
+    "prompt_close_queries": "Benetan itxi nahi dituzu mezu guztiak?",
+    "prompt_close_query": "Benetan itxi nahi duzu txat hau?",
     "change_nick": "Ezizena aldatu",
     "enter_new_nick": "Sartu ezizen berria...",
     "user_you": "Hau zu zara!",
@@ -268,7 +269,8 @@
     "was_kicked_from": "{{chanop}}-k {{nick}} {{channel}} kanaletik  bota du ",
     "has_left": "{{nick}} irten da",
     "invited_you": "{{nick}} gonbidatu zaitu {{channel}}-ra sartzera",
+    "invited_other": "{{nick}} invited {{invited}} to join {{channel}}",
     "nick_in_use_retrying": "{{nick}} erabiltzailea okupatuta dago. Saiatu {{newnick}}...",
     "now_known_as": "{{nick}} orain {{newnick}} da",
-    "changed_topic_to": "Gaia aldatu da, gai berria {{topic}} da"
+    "changed_topic_to": "{{nick}} Gaia aldatu da, gai berria {{topic}} da"
 }

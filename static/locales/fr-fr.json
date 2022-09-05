@@ -113,6 +113,7 @@
     "channel_topic": "Thème",
     "channel_moderated": "Salon modéré",
     "channel_invite": "Sur invitation",
+    "channel_secret": "Cacher ce salon dans les listes",
     "channel_moderated_topic": "Seuls les modérateurs peuvent modifier le thème",
     "channel_external": "Bloquer les messages envoyés depuis l'extérieur",
     "channel_list_fetch": "Cliquez sur le bouton rafraichir pour mettre à jour la liste des salons",
@@ -268,6 +269,7 @@
     "was_kicked_from": "{{nick}} a été éjecté de {{channel}} par {{chanop}}",
     "has_left": "{{nick}} est parti",
     "invited_you": "{{nick}} vous a invité à joindre {{channel}}",
+    "invited_other": "{{nick}} a invité {{invited}} à joindre {{channel}}",
     "nick_in_use_retrying": "Le pseudo {{nick}} est déjà utilisé. Essai avec {{newnick}}...",
     "now_known_as": "{{nick}} est maintenant connu en tant que {{newnick}}",
     "changed_topic_to": "{{nick}} a changé le thème : {{topic}}"

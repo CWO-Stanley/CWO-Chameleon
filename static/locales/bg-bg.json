@@ -113,6 +113,7 @@
     "channel_topic": "Тема",
     "channel_moderated": "Модериран чат",
     "channel_invite": "Само с покана",
+    "channel_secret": "Hide this channel from lists",
     "channel_moderated_topic": "Само модераторите могат да променят темата",
     "channel_external": "Блокиране на външни съобщения",
     "channel_list_fetch": "Щракнете върху бутона опресняване, за да се обнови списъка с канали",
@@ -268,6 +269,7 @@
     "was_kicked_from": "Изритаха {{nick}} от {{channel}} от {{chanop}}",
     "has_left": "{{nick}} напусна ",
     "invited_you": "{{nick}} ви покани да се присъедините към {{channel}}",
+    "invited_other": "{{nick}} invited {{invited}} to join {{channel}}",
     "nick_in_use_retrying": "Прякорът {{nick}} вече се употребява. Опитайте {{newnick}}...",
     "now_known_as": "{{nick}} сега е известен като {{newnick}}",
     "changed_topic_to": "{{nick}} промени темата на: {{topic}}"

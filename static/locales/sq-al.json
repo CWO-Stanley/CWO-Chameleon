@@ -113,6 +113,7 @@
     "channel_topic": "Temë",
     "channel_moderated": "Fjalosje e moderuar",
     "channel_invite": "Vetëm me ftesa",
+    "channel_secret": "Hide this channel from lists",
     "channel_moderated_topic": "Temën mund ta ndryshojnë vetëm moderatorët",
     "channel_external": "Blloko mesazhe prej nga jashtë këtij kanali",
     "channel_list_fetch": "Që të përditësohet lista e kanaleve, klikoni mbi butonin e rifreskimit",
@@ -268,6 +269,7 @@
     "was_kicked_from": "{{nick}} u përzu prej {{channel}} nga {{chanop}}",
     "has_left": "{{nick}} iku",
     "invited_you": "{{nick}} ju ftoi të vini te {{channel}}",
+    "invited_other": "{{nick}} ftoi {{invited}} të vijë te {{channel}}",
     "nick_in_use_retrying": "Nofka {{nick}} është tashmë në përdorim. Po provohet {{newnick}}…",
     "now_known_as": "{{nick}} tani njihet si {{newnick}}",
     "changed_topic_to": "{{nick}} ndryshoi temën në: {{topic}}"

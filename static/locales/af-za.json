@@ -113,6 +113,7 @@
     "channel_topic": "Onderwerp",
     "channel_moderated": "Moderated chat",
     "channel_invite": "Slegs genooides",
+    "channel_secret": "Hide this channel from lists",
     "channel_moderated_topic": "Only moderators can change the topic",
     "channel_external": "Verbied boodskappe vanaf buite kanaal",
     "channel_list_fetch": "Click the refresh button to update the channel list",
@@ -268,6 +269,7 @@
     "was_kicked_from": "{{nick}} was kicked from {{channel}} by {{chanop}}",
     "has_left": "{{nick}} has left",
     "invited_you": "{{nick}} invited you to join {{channel}}",
+    "invited_other": "{{nick}} invited {{invited}} to join {{channel}}",
     "nick_in_use_retrying": "Nickname {{nick}} is already in use. Trying {{newnick}}...",
     "now_known_as": "{{nick}} is now known as {{newnick}}",
     "changed_topic_to": "{{nick}} changed the topic to: {{topic}}"
