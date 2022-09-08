@@ -37,7 +37,7 @@
 <link rel="stylesheet" href="{$fullurl}/app-assets/css/material-design-iconic-font/dist/css/material-design-iconic-font.min.css">
 <!-- Kiwi script reloaders -->
   <link href="{$fullurl}/static/css/app.90f02247.css" rel="preload" as="style">
-  <link href="{$fullurl}/static/js/app.5cd70dfa.js" rel="preload" as="script">
+  <link href="{$fullurl}/static/js/app.3aca92b6.js" rel="preload" as="script">
   <link href="{$fullurl}/static/js/vendor.bb122892.js" rel="preload" as="script">
   <link href="{$fullurl}/static/css/app.90f02247.css" rel="stylesheet">
 <!-- END -->
@@ -101,7 +101,7 @@
 	<div id="app">
 	</div>
   <script type="text/javascript" src="{$fullurl}/static/js/vendor.bb122892.js"></script>
-  <script type="text/javascript" src="{$fullurl}/static/js/app.5cd70dfa.js"></script></body>
+  <script type="text/javascript" src="{$fullurl}/static/js/app.3aca92b6.js"></script></body>
 		<script type="text/javascript">
 			function openNav() {
 				document.getElementById("mySidenav").style.width = "33%";
