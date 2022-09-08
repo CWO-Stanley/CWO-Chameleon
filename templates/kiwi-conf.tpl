@@ -19,7 +19,7 @@ window.kiwiConfig = function kiwiConfig() {
 				{if $metadata['style'] == "nightswatch"}{literal}
 				{ "name": "CWO", "url": "{/literal}{$fullurl}{literal}/static/themes/theme-dark-fluid2" }
 				{/literal}{elseif $metadata['style'] == "transparent"}{literal}
-				{ "name": "CWO", "url": "{/literal}{$fullurl}{literal}/static/themes/transparent7" }
+				{ "name": "CWO", "url": "{/literal}{$fullurl}{literal}/static/themes/transparent8" }
 				{/literal}{elseif $metadata['style'] == "coffee"}{literal}
 				{ "name": "CWO", "url": "{/literal}{$fullurl}{literal}/static/themes/coffee" }
 				{/literal}{elseif $metadata['style'] == "dark"}{literal}
@@ -37,7 +37,7 @@ window.kiwiConfig = function kiwiConfig() {
 				{/literal}{elseif $metadata['style'] == "sky"}{literal}
 				{ "name": "CWO", "url": "{/literal}{$fullurl}{literal}/static/themes/sky" }
 				{/literal}{else}{literal}
-				{ "name": "CWO", "url": "{/literal}{$fullurl}{literal}/static/themes/cwo-chameleon-kiwiirc5" }
+				{ "name": "CWO", "url": "{/literal}{$fullurl}{literal}/static/themes/cwo-chameleon-kiwiirc6" }
 				{/literal}{/if}{literal}
 				],
 		"showColorPicker": true,
