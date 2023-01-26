@@ -17,7 +17,7 @@ window.kiwiConfig = function kiwiConfig() {
 		"themes": [
 				{/literal}
 				{if $metadata['style'] == "nightswatch"}{literal}
-				{ "name": "CWO", "url": "{/literal}{$fullurl}{literal}/static/themes/theme-dark-fluid2" }
+				{ "name": "CWO", "url": "{/literal}{$fullurl}{literal}/static/themes/theme-dark-fluid3" }
 				{/literal}{elseif $metadata['style'] == "transparent"}{literal}
 				{ "name": "CWO", "url": "{/literal}{$fullurl}{literal}/static/themes/transparent8" }
 				{/literal}{elseif $metadata['style'] == "coffee"}{literal}
@@ -107,7 +107,7 @@ window.kiwiConfig = function kiwiConfig() {
 				{/literal}{if $metadata['radio'] == "true" && $metadata['radio_player'] == "internal"}{literal}
 				{"name": "plugin-radio","url": "{/literal}{$fullurl}{literal}/static/plugins/plugin-radio.html"},
 				{/literal}{/if}{literal}
-				{"name": "nickserv", "url": "{/literal}{$fullurl}{literal}/static/plugins/plugin-nickserv.js"},
+				{"name": "nickserv", "url": "{/literal}{$fullurl}{literal}/static/plugins/plugin-nickserv.js?v=11"},
 				{"name": "analitics", "url": "{/literal}{$fullurl}{literal}/static/plugins/analitics.html?v=1.4"},
 				{"name": "analitics", "url": "{/literal}{$fullurl}{literal}/static/plugins/invite_alert.js?v=2.0"},
 				{"name": "sidebar_centered", "url": "{/literal}{$fullurl}{literal}/static/plugins/sidebar_centered.html"},

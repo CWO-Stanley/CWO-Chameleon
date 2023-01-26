@@ -51,7 +51,7 @@
 		<link href="webplayer/css/ytplayer.min.css?v=1.18.03.18" rel="stylesheet" type="text/css" media="all" />
 		<link href="webplayer/css/theme-nativehtml5radio.min.css?v=1.20.07.02" rel="stylesheet" type="text/css" media="all" />
     			
-				<script type="text/javascript" src="radiolibs/luna/lunaradio.min.js?v=6.22.05.25"></script>
+				<script type="text/javascript" src="radiolibs/luna/lunaradio.min.js?v=6.22.09.23"></script>
 			<script>{literal}
   				(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

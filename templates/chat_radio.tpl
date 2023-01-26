@@ -131,7 +131,7 @@
 
 {elseif $metadata['radio_player'] == "luna"}
 		<!-- <script src="{$fullurl}/radiolibs/luna/jquery-3.2.1.min.js"></script> -->
-		<script type="text/javascript" src="{$fullurl}/radiolibs/luna/lunaradio.min.js?v=6.22.05.25"></script>
+		<script type="text/javascript" src="{$fullurl}/radiolibs/luna/lunaradio.min.js?v=6.22.09.23"></script>
 		
 		<center>
 		<div id="lunaradio" style='width:50%;
@@ -294,7 +294,7 @@
         </center>
 	{elseif $metadata['radio_player'] == "internal"}
         <!-- <script src="{$fullurl}/radiolibs/luna/jquery-3.2.1.min.js"></script> -->
-        <script type="text/javascript" src="{$fullurl}/radiolibs/luna/lunaradio.min.js?v=6.22.05.25"></script>
+        <script type="text/javascript" src="{$fullurl}/radiolibs/luna/lunaradio.min.js?v=6.22.09.23"></script>
 
 		<center>
 		<div id="lunaradio" style='width:50%;

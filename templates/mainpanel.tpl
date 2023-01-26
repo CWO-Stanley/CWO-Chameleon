@@ -179,6 +179,10 @@ input[type='range']:focus {
                 </li>
 				<li class=" nav-item {if $page == "settings"}active{/if}"><a href="{$fullurl}/settings"><i class="ft-settings"></i><span class="menu-title" data-i18n="">Instellingen</span></a>
                 </li>
+				{if isset($god)}
+				<li class=" nav-item {if $page == "unrealsettings"}active{/if}"><a href="{$fullurl}/unrealsettings"><i class="ft-hash"></i><span class="menu-title" data-i18n="">IRCd Instellingen</span></a>
+                </li>
+				{/if}
 				<li class=" nav-item {if $page == "help"}active{/if}"><a href="{$fullurl}/help"><i class="ft-life-buoy"></i><span class="menu-title" data-i18n="">Help</span></a>
                 </li>
                 
@@ -210,6 +214,8 @@ input[type='range']:focus {
                 {include file='chat_help.tpl'}
             {elseif $page=='settings'}
                 {include file='chat_settings.tpl'}
+			{elseif $page=='unrealsettings'}
+                {include file='unreal_settings.tpl'}
             {else}
                 {include file='chat_list.tpl'}
             {/if}
